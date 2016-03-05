@@ -1,0 +1,20 @@
+/* Representación mundo */
+.containerWorld{
+	display: table;
+    border: 2px solid #000;
+    margin: 0 auto;
+    float: left;
+}
+
+.contentWorld{
+	display: table-row;
+}
+
+.colWorld{
+	display: table-cell;
+    border: 1px solid #000;
+    vertical-align: middle;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+}
