@@ -63,11 +63,6 @@
 	 */
 	class Dynamic extends Element{
 		/**
-		 * @var string Dirección hacia la que mira el elemento
-		 */
-		private $lookTo;
-
-		/**
 		 * @var int Acciones por turno que puede realizar un elemento
 		 */
 		private $actPerTurn;
@@ -92,21 +87,10 @@
 		 */
 		function __construct(){
 			parent::__construct();
-			$this->position = array();
-			$this->lookTo = '';
 			$this->actPerTurn = 0;
 			$this->eating = false;
 			$this->sleeping = false;
 			$this->hidden = null;
-		}
-
-		/**
-		 * Devuelve la dirección hacia la que mira el elemento
-		 *
-		 * @return string Dirección
-		 */
-		public function getLookTo(){
-			return $this->lookTo;
 		}
 
 		/**
@@ -143,15 +127,6 @@
 		 */
 		public function getHidden(){
 			return $this->hidden;
-		}
-
-		/**
-		 * Modifica la dirección hacia dónde mira el elemento
-		 *
-		 * @param string Dirección
-		 */
-		public function setLookTo($lookTo){
-			$this->lookTo = $lookTo;
 		}
 
 		/**

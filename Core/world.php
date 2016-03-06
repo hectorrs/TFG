@@ -12,12 +12,20 @@
 	/* ** Mundo ** */
 	$vars['world'] = array();
 	$vars['size'] = array();
+	$vars['length'] = 0;
+	$vars['day'] = 0;
+	$vars['night'] = 0;
+	$vars['daylight'] = null;
+	$vars['weather'] = array('sunny', 'rainy', 'windy', 'foggy');
+	$vars['currentWeather'] = '';
+	$vars['changeWeather'] = 0;
+	$vars['time'] = 1;
 
 	/* ** Elemento ** */
 	$vars['static'] = array();
 	$vars['dynamic'] = array();
 	$vars['prize'] = array();
-	$vars['lookTo'] = array('up', 'down', 'left', 'right');
+	//$vars['moveTo'] = array('up', 'down', 'left', 'right');
 
 	/* ** Fichero ** */
 	$vars['fileWorld'] = openFile('world');
@@ -26,21 +34,39 @@
 
 	/* ------------------------------- Mundo ------------------------------- */
 	/**
+	 * Recoge los datos de configuración inicial del mundo y los registra en el log
+	 */
+	function conf(){
+		$GLOBALS['vars']['size']['row'] = $_POST['sizeX'];
+		$GLOBALS['vars']['size']['col'] = $_POST['sizeY'];
+		writeFile('Log', 'Dimensions: ' . getSizeWorld()['row'] . ' x ' . getSizeWorld()['col'] . "\n");
+
+		$GLOBALS['vars']['length'] = $_POST['turn'];
+		writeFile('Log', 'Turns: ' . getLength() . "\n");
+
+		$GLOBALS['vars']['day'] = $_POST['day'];
+		writeFile('Log', 'Length day: ' . getLengthDay() . "\n");
+
+		$GLOBALS['vars']['night'] = $_POST['night'];
+		writeFile('Log', 'Length night: ' . getLengthNight() . "\n");
+
+		$GLOBALS['vars']['daylight'] = $_POST['daylight'];
+		writeFile('Log', 'Status day: ' . getStatusDay() . "\n");
+
+		$GLOBALS['vars']['currentWeather'] = $_POST['weather'];
+		writeFile('Log', 'Weather: ' . getWeather() . "\n");
+
+		$GLOBALS['vars']['changeWeather'] = $_POST['changeWeather'];
+		writeFile('Log', 'Change weather every ' . getChangeWeather() . ' turns' . "\n");
+	}
+
+	/**
 	 * Obtiene el tamaño del mundo
 	 *
 	 * @return int[] Largo y ancho
 	 */
 	function getSizeWorld(){
 		return $GLOBALS['vars']['size'];
-	}
-
-	/**
-	 * Almacena el tamaño del mundo
-	 */
-	function addSizeWorld(){
-		$GLOBALS['vars']['size']['row'] = $_POST['sizeX'];
-		$GLOBALS['vars']['size']['col'] = $_POST['sizeY'];
-		writeFile('Log', 'Dimensiones: ' . getSizeWorld()['row'] . ' x ' . getSizeWorld()['col'] . "\n");
 	}
 
 	/**
@@ -100,6 +126,95 @@
 			return true;
 		}
 	}
+
+	/**
+	 * Retorna el estado del día (día o noche)
+	 *
+	 * @return bool True, si es de día; false, si es de noche
+	 */
+	function getStatusDay(){
+		return $GLOBALS['vars']['daylight'];
+	}
+
+	/**
+	 * Modifica el estado del día
+	 */
+	function setStatusDay(){
+		if($GLOBALS['vars']['daylight']){
+			$GLOBALS['vars']['daylight'] = false;
+		}else{
+			$GLOBALS['vars']['daylight'] = true;
+		}
+	}
+
+	/**
+	 * Retorna los turnos de ejecución
+	 *
+	 * @return int Turnos
+	 */
+	function getLength(){
+		return $GLOBALS['vars']['length'];
+	}
+
+	/**
+	 * Retorna la duración de un día
+	 *
+	 * @return int Duración
+	 */
+	function getLengthDay(){
+		return $GLOBALS['vars']['day'];
+	}
+
+	/**
+	 * Retorna la duración de una noche
+	 *
+	 * @return int Duración
+	 */
+	function getLengthNight(){
+		return $GLOBALS['vars']['night'];
+	}
+
+	/**
+	 * Retorna el tiempo atmosférico actual
+	 *
+	 * @return string Tiempo atmosférico
+	 */
+	function getWeather(){
+		return $GLOBALS['vars']['currentWeather'];
+	}
+
+	/**
+	 * Modifica el tiempo atmosférico actual
+	 */
+	function setWeather(){
+		$GLOBALS['vars']['currentWeather'] = $GLOBALS['vars']['weather'][rand(0, 3)];
+	}
+
+	/**
+	 * Retorna cada cuántos turnos cambia el tiempo atmosférico
+	 *
+	 * @return int Turnos
+	 */
+	function getChangeWeather(){
+		return $GLOBALS['vars']['changeWeather'];
+	}
+
+	/**
+	 * Retorna el instante de tiempo actual
+	 *
+	 * @return int Tiempo
+	 */
+	function getTime(){
+		return $GLOBALS['vars']['time'];
+	}
+
+	/**
+	 * Avanza el tiempo
+	 */
+	function setTime(){
+		$GLOBALS['vars']['time']++;
+	}
+
 	/* --------------------------------------------------------------------- */
 
 	/* ----------------------------- Elementos ----------------------------- */
@@ -181,15 +296,6 @@
 	}
 
 	/**
-	 * Devuelve las direcciones hacia las que puede mirar un elemento
-	 *
-	 * @return array Direcciones
-	 */
-	function getLookTo(){
-		return $GLOBALS['vars']['lookTo'];
-	}
-
-	/**
 	 * Comprueba si un elemento se puede colocar en el mundo
 	 *
 	 * @param Element Elemento
@@ -226,15 +332,14 @@
             }
 
             $rabbit->setPosition(array($row, $col));
-            $rabbit->setLookTo(randLookTo());
             $rabbit->setActPerTurn($_POST['maxUseRabbit']);
             $rabbit->setHidden(false);
 
             addDynamic($rabbit);
 
-            writeFile('Log', '( ' . $rabbit->getPosition()[0] . ' , ' . $rabbit->getPosition()[1] . ' ) - Conejo' . "\n");
+            writeFile('Log', '( ' . $rabbit->getPosition()[0] . ' , ' . $rabbit->getPosition()[1] . ' ) - Rabbit ' . $rabbit->getId() . "\n");
 		}else{
-			writeFile('Log', 'Mundo lleno! No se ha podido colocar el conejo' . "\n");
+			writeFile('Log', 'World is full! It can\'t put a rabbit' . "\n");
 		}
 	}
 
@@ -254,14 +359,13 @@
             }
 
             $wolf->setPosition(array($row, $col));
-            $wolf->setLookTo(randLookTo());
             $wolf->setActPerTurn($_POST['maxUseWolf']);
 
             addDynamic($wolf);
 
-            writeFile('Log', '( ' . $wolf->getPosition()[0] . ' , ' . $wolf->getPosition()[1] . ' ) - Lobo' . "\n");
+            writeFile('Log', '( ' . $wolf->getPosition()[0] . ' , ' . $wolf->getPosition()[1] . ' ) - Wolf ' . $wolf->getId() . "\n");
 		}else{
-			writeFile('Log', 'Mundo lleno! No se ha podido colocar el lobo' . "\n");
+			writeFile('Log', 'World is full! It can\'t put a wolf' . "\n");
 		}
 	}
 
@@ -284,9 +388,9 @@
 
             addPrize($carrot);
 
-            writeFile('Log', '( ' . $carrot->getPosition()[0] . ' , ' . $carrot->getPosition()[1] . ' ) - Zanahoria' . "\n");
+            writeFile('Log', '( ' . $carrot->getPosition()[0] . ' , ' . $carrot->getPosition()[1] . ' ) - Carrot' . "\n");
 		}else{
-			writeFile('Log', 'Mundo lleno! No se ha podido colocar la zanahoria' . "\n");
+			writeFile('Log', 'World is full! It can\'t put a carrot' . "\n");
 		}
 	}
 
@@ -311,7 +415,7 @@
 
             writeFile('Log', '( ' . $lair->getPosition()[0] . ' , ' . $lair->getPosition()[1] . ' ) - Madriguera' . "\n");
 		}else{
-			writeFile('Log', 'Mundo lleno! No se ha podido colocar la madriguera' . "\n");
+			writeFile('Log', 'World is full! It can\'t put a lair' . "\n");
 		}
 	}
 
@@ -336,17 +440,125 @@
 
             writeFile('Log', '( ' . $tree->getPosition()[0] . ' , ' . $tree->getPosition()[1] . ' ) - Árbol' . "\n");
 		}else{
-			writeFile('Log', 'Mundo lleno! No se ha podido colocar el árbol' . "\n");
+			writeFile('Log', 'World is full! It can\'t put a tree' . "\n");
 		}
 	}
 
 	/**
-	 * Dirección, aleatoria, hacia la que mira un elemento
+	 * Maneja las acciones que puede realizar cada elemento
 	 *
-	 * @return string Dirección
+	 * @return array|void Varía según el tipo de acción a realizar
 	 */
-	function randLookTo(){
-		return getLookTo()[rand(0, 3)];
+	function actionManager(...$args){
+		switch($args[1]){
+			case 'see':
+				if(canAct($args[0], $args[1])){
+					$see = see($args[0]);
+					return $see;
+				}else{
+					writeFile('Log', get_class($args[0]) . ' ' . $args[0]->getId() . ' can\'t act' . "\n");
+				}
+				break;
+		}
+	}
+
+	/**
+	 * Comprueba si un elemento puede realizar una acción en base a los puntos que le queden de turno
+	 *
+	 * @return bool True, si puede realizar la acción; false, si no puede
+	 */
+	function canAct($element, $action){
+		$remain = $element->getActPerTurn();
+		$use = usePerAction($element, $action);
+
+		if($use <= $remain){
+			return true;
+		}else{
+			return false;
+		}
+	}
+
+	/**
+	 * Devuelve el consumo de una acción
+	 *
+	 * @return int Consumo
+	 */
+	function usePerAction($element, $action){
+		switch($action){
+			case 'see':
+				if(get_class($element) == 'Rabbit'){
+					return $_POST['seeRabbitUse'];
+				}else{
+					return $_POST['seeWolfUse'];
+				}
+				break;
+		}
+	}
+
+	/**
+	 * Retorna las posiciones y los elementos que puede ver el elemento en el caso de que dichas posiciones contengan un elemento
+	 *
+	 * @return array Posiciones
+	 */
+	function see($element){
+		writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - see - ');
+
+		$see = array();
+
+		$position = $element->getPosition();
+
+		switch(get_class($element)){
+			case 'Rabbit':
+				if(getWeather() == 'foggy' || !getStatusDay()){
+					$viewRange = 0;
+				}else{
+					$viewRange = $_POST['seeRabbit'];
+				}
+				break;
+			case 'Wolf':
+				if(getWeather() == 'foggy' || !getStatusDay()){
+					$viewRange = 0;
+				}else{
+					$viewRange = $_POST['seeWolf'];
+				}
+				break;
+		}
+
+		$rowStart = $position[0] - $viewRange;
+        $colStart = $position[1] - $viewRange;
+        $rowEnd = $position[0] + $viewRange;
+        $colEnd = $position[1] + $viewRange;
+
+        while($rowStart <= $rowEnd){
+        	while($colStart <= $colEnd){
+        		if(!isLocked($rowStart, $colStart)){
+        			if(!($rowStart == $position[0] && $colStart == $position[1]) && getWorld()[$rowStart][$colStart] != null){
+        				array_push($see, array(get_class(getWorld()[$rowStart][$colStart]), array($rowStart, $rowEnd)));
+        				writeFile('Log', get_class(getWorld()[$rowStart][$colStart]) . ' ( ' . $rowStart . ' , ' . $colStart . ' ) ');
+        			}
+        		}
+        		$colStart++;
+        	}
+        	$colStart = $position[1] - $viewRange;
+        	$rowStart++;
+        }
+
+        writeFile('Log', "\n");
+
+		return $see;
+	}
+
+	/**
+	 * Retorna si una posición se encuentra fuera de los límites del mundo
+	 *
+	 * @return bool True, en caso afirmativo; false, en caso contrario
+	 */
+	function isLocked($row, $col){
+		if($row < 0 || $row >= getSizeWorld()['row'] || $col < 0 || $col >= getSizeWorld()['col']){
+			return true;
+		}else{
+			return false;
+		}
 	}
 	/* --------------------------------------------------------------------- */
 
@@ -382,7 +594,7 @@
 	/* --------------------------------------------------------------------- */
 
 	/* **** Main **** */
-	addSizeWorld();
+	conf();
 	createWorld();
 
 	for($i = 0; $i < $_POST['rabbit']; $i++) addRabbit();
@@ -393,13 +605,18 @@
 
 	writeWorld();
 
-	for($i = 0; $i < $_POST['rabbit']; $i++) addRabbit();
-	for($i = 0; $i < $_POST['wolf']; $i++) addWolf();
-	for($i = 0; $i < $_POST['carrot']; $i++) addCarrot();
-	for($i = 0; $i < $_POST['lair']; $i++) addLair();
-	for($i = 0; $i < $_POST['tree']; $i++) addTree();
-		
-	writeWorld();
+	while(getTime() <= getLength()){
+		writeFile('Log', '----Turn ' . getTime() . "\n");
+
+		foreach(getDynamic() as $element){
+			$element->act();
+		}
+
+		setTime();
+		writeWorld();
+
+		writeFile('Log', "\n");
+	}
 
 	$memory = memory_get_usage(true);
     $timeFinish = microtime(true);
@@ -413,5 +630,5 @@
 
 	session_write_close();
 
-	header('Location: ../View/output.php');
+	header('Location: ../View/output.php', false);
 ?>

@@ -11,7 +11,7 @@
 		 * Realiza una acción del elemento
 		 */
 		public function act(){
-
+			$see = actionManager($this, 'see');
 		}
 	}
 
@@ -25,7 +25,7 @@
 		 * Realiza una acción del elemento
 		 */
 		public function act(){
-
+			$see = actionManager($this, 'see');
 		}
 	}
 
