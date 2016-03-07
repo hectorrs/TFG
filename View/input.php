@@ -112,20 +112,12 @@
 						<hr class="dividing2">
 						<div class="row">
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-								<label>Estado inicial del día</label>
-								<div class="form-group">
-									<select class="form-control" name="daylight" required>
-										<option selected value="daylight">día</option>
-										<option value="night">noche</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 								<label>Cambiar tiempo cada (turnos)</label>
 								<div class="form-group">
 									<input class="form-control" name="changeWeather" value="10" required>
 								</div>
 							</div>
+							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"></div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"></div>
 						</div>
 					</div>

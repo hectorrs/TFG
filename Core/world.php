@@ -50,8 +50,8 @@
 		$GLOBALS['vars']['night'] = $_POST['night'];
 		writeFile('Log', 'Length night: ' . getLengthNight() . "\n");
 
-		$GLOBALS['vars']['daylight'] = $_POST['daylight'];
-		writeFile('Log', 'Status day: ' . getStatusDay() . "\n");
+		$GLOBALS['vars']['daylight'] = false;
+		writeFile('Log', 'Status day: night' . "\n");
 
 		$GLOBALS['vars']['currentWeather'] = $_POST['weather'];
 		writeFile('Log', 'Weather: ' . getWeather() . "\n");
@@ -137,13 +137,15 @@
 	}
 
 	/**
-	 * Modifica el estado del día
+	 * Cambia el estado del mundo a día si es de noche o noche si es de día
 	 */
 	function setStatusDay(){
 		if($GLOBALS['vars']['daylight']){
 			$GLOBALS['vars']['daylight'] = false;
+			writeFile('Log', 'Status day changed to night' . "\n");
 		}else{
 			$GLOBALS['vars']['daylight'] = true;
+			writeFile('Log', 'Status day changed to day' . "\n");
 		}
 	}
 
@@ -214,7 +216,6 @@
 	function setTime(){
 		$GLOBALS['vars']['time']++;
 	}
-
 	/* --------------------------------------------------------------------- */
 
 	/* ----------------------------- Elementos ----------------------------- */
@@ -604,9 +605,38 @@
 	for($i = 0; $i < $_POST['tree']; $i++) addTree();
 
 	writeWorld();
+	
+	$iTime = 1;
+
+	if(getLengthNight() % 2 == 0){
+		$x = 0;
+	}else{
+		$x = 1;
+	}
 
 	while(getTime() <= getLength()){
+		while(getTime() < getLengthDay() * $iTime && getTime() <= getLength()){
+			writeFile('Log', '----Turn ' . getTime() . "\n");
+
+			if(getTime() == getLengthDay() * $iTime - intval(getLengthNight() / 2) || getTime() ==  getLengthDay() * ($iTime - 1) + intval(getLengthNight() / 2) + $x){
+				setStatusDay();
+			}
+
+			foreach(getDynamic() as $element){
+				$element->act();
+			}
+
+			setTime();
+			writeWorld();
+
+			writeFile('Log', "\n");
+		}
+
 		writeFile('Log', '----Turn ' . getTime() . "\n");
+
+		if(getTime() == getLengthDay() * $iTime - intval(getLengthNight() / 2) || getTime() == getLengthDay() * ($iTime - 1) + intval(getLengthNight() / 2) + $x){
+			setStatusDay();
+		}
 
 		foreach(getDynamic() as $element){
 			$element->act();
@@ -614,6 +644,8 @@
 
 		setTime();
 		writeWorld();
+		
+		$iTime++;
 
 		writeFile('Log', "\n");
 	}
