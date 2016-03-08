@@ -1,203 +1,116 @@
-Dimensions: 4 x 4
-Turns: 30
+Dimensions: 2 x 2
+Turns: 20
 Length day: 10
 Length night: 2
 Status day: night
 Weather: sunny
 Change weather every 10 turns
+Rabbit need 2 turns to eat
+Wolf need 4 turns to eat
+Rabbit need 4 turns to sleep
+Wolf need 4 turns to sleep
 ( 1 , 0 ) - Rabbit 0
-( 0 , 1 ) - Rabbit 1
-( 0 , 3 ) - Wolf 2
-( 1 , 2 ) - Wolf 3
-( 3 , 1 ) - Carrot
-( 0 , 2 ) - Carrot
-( 2 , 3 ) - Madriguera
-( 1 , 1 ) - Madriguera
-( 3 , 2 ) - Árbol
-( 3 , 0 ) - Árbol
 ----Turn 1
 Status day changed to day
-Rabbit 0 - see - Rabbit ( 0 , 1 ) Lair ( 1 , 1 ) 
-Rabbit 1 - see - Carrot ( 0 , 2 ) Rabbit ( 1 , 0 ) Lair ( 1 , 1 ) Wolf ( 1 , 2 ) 
-Wolf 2 - see - Carrot ( 0 , 2 ) Wolf ( 1 , 2 ) 
-Wolf 3 - see - Rabbit ( 0 , 1 ) Carrot ( 0 , 2 ) Wolf ( 0 , 3 ) Lair ( 1 , 1 ) Lair ( 2 , 3 ) 
+Rabbit 0 - see - 
+Rabbit 0 - move - down - Denied
+Rabbit 0 can't sleep, hasn't enough uses
 
 ----Turn 2
-Rabbit 0 - see - Rabbit ( 0 , 1 ) Lair ( 1 , 1 ) 
-Rabbit 1 - see - Carrot ( 0 , 2 ) Rabbit ( 1 , 0 ) Lair ( 1 , 1 ) Wolf ( 1 , 2 ) 
-Wolf 2 - see - Carrot ( 0 , 2 ) Wolf ( 1 , 2 ) 
-Wolf 3 - see - Rabbit ( 0 , 1 ) Carrot ( 0 , 2 ) Wolf ( 0 , 3 ) Lair ( 1 , 1 ) Lair ( 2 , 3 ) 
+Rabbit 0 - see - 
+Rabbit 0 - move - up - ( 0 , 0 )
+Rabbit 0 can't sleep, hasn't enough uses
 
 ----Turn 3
-Rabbit 0 - see - Rabbit ( 0 , 1 ) Lair ( 1 , 1 ) 
-Rabbit 1 - see - Carrot ( 0 , 2 ) Rabbit ( 1 , 0 ) Lair ( 1 , 1 ) Wolf ( 1 , 2 ) 
-Wolf 2 - see - Carrot ( 0 , 2 ) Wolf ( 1 , 2 ) 
-Wolf 3 - see - Rabbit ( 0 , 1 ) Carrot ( 0 , 2 ) Wolf ( 0 , 3 ) Lair ( 1 , 1 ) Lair ( 2 , 3 ) 
+Rabbit 0 - see - 
+Rabbit 0 - move - left - Denied
+Rabbit 0 can't sleep, hasn't enough uses
 
 ----Turn 4
-Rabbit 0 - see - Rabbit ( 0 , 1 ) Lair ( 1 , 1 ) 
-Rabbit 1 - see - Carrot ( 0 , 2 ) Rabbit ( 1 , 0 ) Lair ( 1 , 1 ) Wolf ( 1 , 2 ) 
-Wolf 2 - see - Carrot ( 0 , 2 ) Wolf ( 1 , 2 ) 
-Wolf 3 - see - Rabbit ( 0 , 1 ) Carrot ( 0 , 2 ) Wolf ( 0 , 3 ) Lair ( 1 , 1 ) Lair ( 2 , 3 ) 
+Rabbit 0 - see - 
+Rabbit 0 - move - right - ( 0 , 1 )
+Rabbit 0 can't sleep, hasn't enough uses
 
 ----Turn 5
-Rabbit 0 - see - Rabbit ( 0 , 1 ) Lair ( 1 , 1 ) 
-Rabbit 1 - see - Carrot ( 0 , 2 ) Rabbit ( 1 , 0 ) Lair ( 1 , 1 ) Wolf ( 1 , 2 ) 
-Wolf 2 - see - Carrot ( 0 , 2 ) Wolf ( 1 , 2 ) 
-Wolf 3 - see - Rabbit ( 0 , 1 ) Carrot ( 0 , 2 ) Wolf ( 0 , 3 ) Lair ( 1 , 1 ) Lair ( 2 , 3 ) 
+Rabbit 0 - see - 
+Rabbit 0 - move - right - Denied
+Rabbit 0 can't sleep, hasn't enough uses
 
 ----Turn 6
-Rabbit 0 - see - Rabbit ( 0 , 1 ) Lair ( 1 , 1 ) 
-Rabbit 1 - see - Carrot ( 0 , 2 ) Rabbit ( 1 , 0 ) Lair ( 1 , 1 ) Wolf ( 1 , 2 ) 
-Wolf 2 - see - Carrot ( 0 , 2 ) Wolf ( 1 , 2 ) 
-Wolf 3 - see - Rabbit ( 0 , 1 ) Carrot ( 0 , 2 ) Wolf ( 0 , 3 ) Lair ( 1 , 1 ) Lair ( 2 , 3 ) 
+Rabbit 0 - see - 
+Rabbit 0 - move - left - ( 0 , 0 )
+Rabbit 0 can't sleep, hasn't enough uses
 
 ----Turn 7
-Rabbit 0 - see - Rabbit ( 0 , 1 ) Lair ( 1 , 1 ) 
-Rabbit 1 - see - Carrot ( 0 , 2 ) Rabbit ( 1 , 0 ) Lair ( 1 , 1 ) Wolf ( 1 , 2 ) 
-Wolf 2 - see - Carrot ( 0 , 2 ) Wolf ( 1 , 2 ) 
-Wolf 3 - see - Rabbit ( 0 , 1 ) Carrot ( 0 , 2 ) Wolf ( 0 , 3 ) Lair ( 1 , 1 ) Lair ( 2 , 3 ) 
+Rabbit 0 - see - 
+Rabbit 0 - move - right - ( 0 , 1 )
+Rabbit 0 can't sleep, hasn't enough uses
 
 ----Turn 8
-Rabbit 0 - see - Rabbit ( 0 , 1 ) Lair ( 1 , 1 ) 
-Rabbit 1 - see - Carrot ( 0 , 2 ) Rabbit ( 1 , 0 ) Lair ( 1 , 1 ) Wolf ( 1 , 2 ) 
-Wolf 2 - see - Carrot ( 0 , 2 ) Wolf ( 1 , 2 ) 
-Wolf 3 - see - Rabbit ( 0 , 1 ) Carrot ( 0 , 2 ) Wolf ( 0 , 3 ) Lair ( 1 , 1 ) Lair ( 2 , 3 ) 
+Rabbit 0 - see - 
+Rabbit 0 - move - right - Denied
+Rabbit 0 can't sleep, hasn't enough uses
 
 ----Turn 9
 Status day changed to night
 Rabbit 0 - see - 
-Rabbit 1 - see - 
-Wolf 2 - see - 
-Wolf 3 - see - 
+Rabbit 0 - move - left - ( 0 , 0 )
+Rabbit 0 can't sleep, hasn't enough uses
 
 ----Turn 10
 Rabbit 0 - see - 
-Rabbit 1 - see - 
-Wolf 2 - see - 
-Wolf 3 - see - 
+Rabbit 0 - move - up - Denied
+Rabbit 0 can't sleep, hasn't enough uses
 
 ----Turn 11
 Status day changed to day
-Rabbit 0 - see - Rabbit ( 0 , 1 ) Lair ( 1 , 1 ) 
-Rabbit 1 - see - Carrot ( 0 , 2 ) Rabbit ( 1 , 0 ) Lair ( 1 , 1 ) Wolf ( 1 , 2 ) 
-Wolf 2 - see - Carrot ( 0 , 2 ) Wolf ( 1 , 2 ) 
-Wolf 3 - see - Rabbit ( 0 , 1 ) Carrot ( 0 , 2 ) Wolf ( 0 , 3 ) Lair ( 1 , 1 ) Lair ( 2 , 3 ) 
+Rabbit 0 can't see, hasn't enough uses
+Rabbit 0 can't move, hasn't enough uses
+Rabbit 0 can't sleep, hasn't enough uses
 
 ----Turn 12
-Rabbit 0 - see - Rabbit ( 0 , 1 ) Lair ( 1 , 1 ) 
-Rabbit 1 - see - Carrot ( 0 , 2 ) Rabbit ( 1 , 0 ) Lair ( 1 , 1 ) Wolf ( 1 , 2 ) 
-Wolf 2 - see - Carrot ( 0 , 2 ) Wolf ( 1 , 2 ) 
-Wolf 3 - see - Rabbit ( 0 , 1 ) Carrot ( 0 , 2 ) Wolf ( 0 , 3 ) Lair ( 1 , 1 ) Lair ( 2 , 3 ) 
+Rabbit 0 - see - 
+Rabbit 0 - move - right - ( 0 , 1 )
+Rabbit 0 can't sleep, hasn't enough uses
 
 ----Turn 13
-Rabbit 0 - see - Rabbit ( 0 , 1 ) Lair ( 1 , 1 ) 
-Rabbit 1 - see - Carrot ( 0 , 2 ) Rabbit ( 1 , 0 ) Lair ( 1 , 1 ) Wolf ( 1 , 2 ) 
-Wolf 2 - see - Carrot ( 0 , 2 ) Wolf ( 1 , 2 ) 
-Wolf 3 - see - Rabbit ( 0 , 1 ) Carrot ( 0 , 2 ) Wolf ( 0 , 3 ) Lair ( 1 , 1 ) Lair ( 2 , 3 ) 
+Rabbit 0 - see - 
+Rabbit 0 - move - left - ( 0 , 0 )
+Rabbit 0 can't sleep, hasn't enough uses
 
 ----Turn 14
-Rabbit 0 - see - Rabbit ( 0 , 1 ) Lair ( 1 , 1 ) 
-Rabbit 1 - see - Carrot ( 0 , 2 ) Rabbit ( 1 , 0 ) Lair ( 1 , 1 ) Wolf ( 1 , 2 ) 
-Wolf 2 - see - Carrot ( 0 , 2 ) Wolf ( 1 , 2 ) 
-Wolf 3 - see - Rabbit ( 0 , 1 ) Carrot ( 0 , 2 ) Wolf ( 0 , 3 ) Lair ( 1 , 1 ) Lair ( 2 , 3 ) 
+Rabbit 0 - see - 
+Rabbit 0 - move - left - Denied
+Rabbit 0 can't sleep, hasn't enough uses
 
 ----Turn 15
-Rabbit 0 - see - Rabbit ( 0 , 1 ) Lair ( 1 , 1 ) 
-Rabbit 1 - see - Carrot ( 0 , 2 ) Rabbit ( 1 , 0 ) Lair ( 1 , 1 ) Wolf ( 1 , 2 ) 
-Wolf 2 - see - Carrot ( 0 , 2 ) Wolf ( 1 , 2 ) 
-Wolf 3 - see - Rabbit ( 0 , 1 ) Carrot ( 0 , 2 ) Wolf ( 0 , 3 ) Lair ( 1 , 1 ) Lair ( 2 , 3 ) 
+Rabbit 0 - see - 
+Rabbit 0 - move - right - ( 0 , 1 )
+Rabbit 0 can't sleep, hasn't enough uses
 
 ----Turn 16
-Rabbit 0 - see - Rabbit ( 0 , 1 ) Lair ( 1 , 1 ) 
-Rabbit 1 - see - Carrot ( 0 , 2 ) Rabbit ( 1 , 0 ) Lair ( 1 , 1 ) Wolf ( 1 , 2 ) 
-Wolf 2 - see - Carrot ( 0 , 2 ) Wolf ( 1 , 2 ) 
-Wolf 3 - see - Rabbit ( 0 , 1 ) Carrot ( 0 , 2 ) Wolf ( 0 , 3 ) Lair ( 1 , 1 ) Lair ( 2 , 3 ) 
+Rabbit 0 - see - 
+Rabbit 0 - move - down - ( 1 , 1 )
+Rabbit 0 can't sleep, hasn't enough uses
 
 ----Turn 17
-Rabbit 0 - see - Rabbit ( 0 , 1 ) Lair ( 1 , 1 ) 
-Rabbit 1 - see - Carrot ( 0 , 2 ) Rabbit ( 1 , 0 ) Lair ( 1 , 1 ) Wolf ( 1 , 2 ) 
-Wolf 2 - see - Carrot ( 0 , 2 ) Wolf ( 1 , 2 ) 
-Wolf 3 - see - Rabbit ( 0 , 1 ) Carrot ( 0 , 2 ) Wolf ( 0 , 3 ) Lair ( 1 , 1 ) Lair ( 2 , 3 ) 
+Rabbit 0 - see - 
+Rabbit 0 - move - right - Denied
+Rabbit 0 can't sleep, hasn't enough uses
 
 ----Turn 18
-Rabbit 0 - see - Rabbit ( 0 , 1 ) Lair ( 1 , 1 ) 
-Rabbit 1 - see - Carrot ( 0 , 2 ) Rabbit ( 1 , 0 ) Lair ( 1 , 1 ) Wolf ( 1 , 2 ) 
-Wolf 2 - see - Carrot ( 0 , 2 ) Wolf ( 1 , 2 ) 
-Wolf 3 - see - Rabbit ( 0 , 1 ) Carrot ( 0 , 2 ) Wolf ( 0 , 3 ) Lair ( 1 , 1 ) Lair ( 2 , 3 ) 
+Rabbit 0 - see - 
+Rabbit 0 - move - left - ( 1 , 0 )
+Rabbit 0 can't sleep, hasn't enough uses
 
 ----Turn 19
 Status day changed to night
 Rabbit 0 - see - 
-Rabbit 1 - see - 
-Wolf 2 - see - 
-Wolf 3 - see - 
+Rabbit 0 - move - up - ( 0 , 0 )
+Rabbit 0 can't sleep, hasn't enough uses
 
 ----Turn 20
 Rabbit 0 - see - 
-Rabbit 1 - see - 
-Wolf 2 - see - 
-Wolf 3 - see - 
-
-----Turn 21
-Status day changed to day
-Rabbit 0 - see - Rabbit ( 0 , 1 ) Lair ( 1 , 1 ) 
-Rabbit 1 - see - Carrot ( 0 , 2 ) Rabbit ( 1 , 0 ) Lair ( 1 , 1 ) Wolf ( 1 , 2 ) 
-Wolf 2 - see - Carrot ( 0 , 2 ) Wolf ( 1 , 2 ) 
-Wolf 3 - see - Rabbit ( 0 , 1 ) Carrot ( 0 , 2 ) Wolf ( 0 , 3 ) Lair ( 1 , 1 ) Lair ( 2 , 3 ) 
-
-----Turn 22
-Rabbit 0 - see - Rabbit ( 0 , 1 ) Lair ( 1 , 1 ) 
-Rabbit 1 - see - Carrot ( 0 , 2 ) Rabbit ( 1 , 0 ) Lair ( 1 , 1 ) Wolf ( 1 , 2 ) 
-Wolf 2 - see - Carrot ( 0 , 2 ) Wolf ( 1 , 2 ) 
-Wolf 3 - see - Rabbit ( 0 , 1 ) Carrot ( 0 , 2 ) Wolf ( 0 , 3 ) Lair ( 1 , 1 ) Lair ( 2 , 3 ) 
-
-----Turn 23
-Rabbit 0 - see - Rabbit ( 0 , 1 ) Lair ( 1 , 1 ) 
-Rabbit 1 - see - Carrot ( 0 , 2 ) Rabbit ( 1 , 0 ) Lair ( 1 , 1 ) Wolf ( 1 , 2 ) 
-Wolf 2 - see - Carrot ( 0 , 2 ) Wolf ( 1 , 2 ) 
-Wolf 3 - see - Rabbit ( 0 , 1 ) Carrot ( 0 , 2 ) Wolf ( 0 , 3 ) Lair ( 1 , 1 ) Lair ( 2 , 3 ) 
-
-----Turn 24
-Rabbit 0 - see - Rabbit ( 0 , 1 ) Lair ( 1 , 1 ) 
-Rabbit 1 - see - Carrot ( 0 , 2 ) Rabbit ( 1 , 0 ) Lair ( 1 , 1 ) Wolf ( 1 , 2 ) 
-Wolf 2 - see - Carrot ( 0 , 2 ) Wolf ( 1 , 2 ) 
-Wolf 3 - see - Rabbit ( 0 , 1 ) Carrot ( 0 , 2 ) Wolf ( 0 , 3 ) Lair ( 1 , 1 ) Lair ( 2 , 3 ) 
-
-----Turn 25
-Rabbit 0 - see - Rabbit ( 0 , 1 ) Lair ( 1 , 1 ) 
-Rabbit 1 - see - Carrot ( 0 , 2 ) Rabbit ( 1 , 0 ) Lair ( 1 , 1 ) Wolf ( 1 , 2 ) 
-Wolf 2 - see - Carrot ( 0 , 2 ) Wolf ( 1 , 2 ) 
-Wolf 3 - see - Rabbit ( 0 , 1 ) Carrot ( 0 , 2 ) Wolf ( 0 , 3 ) Lair ( 1 , 1 ) Lair ( 2 , 3 ) 
-
-----Turn 26
-Rabbit 0 - see - Rabbit ( 0 , 1 ) Lair ( 1 , 1 ) 
-Rabbit 1 - see - Carrot ( 0 , 2 ) Rabbit ( 1 , 0 ) Lair ( 1 , 1 ) Wolf ( 1 , 2 ) 
-Wolf 2 - see - Carrot ( 0 , 2 ) Wolf ( 1 , 2 ) 
-Wolf 3 - see - Rabbit ( 0 , 1 ) Carrot ( 0 , 2 ) Wolf ( 0 , 3 ) Lair ( 1 , 1 ) Lair ( 2 , 3 ) 
-
-----Turn 27
-Rabbit 0 - see - Rabbit ( 0 , 1 ) Lair ( 1 , 1 ) 
-Rabbit 1 - see - Carrot ( 0 , 2 ) Rabbit ( 1 , 0 ) Lair ( 1 , 1 ) Wolf ( 1 , 2 ) 
-Wolf 2 - see - Carrot ( 0 , 2 ) Wolf ( 1 , 2 ) 
-Wolf 3 - see - Rabbit ( 0 , 1 ) Carrot ( 0 , 2 ) Wolf ( 0 , 3 ) Lair ( 1 , 1 ) Lair ( 2 , 3 ) 
-
-----Turn 28
-Rabbit 0 - see - Rabbit ( 0 , 1 ) Lair ( 1 , 1 ) 
-Rabbit 1 - see - Carrot ( 0 , 2 ) Rabbit ( 1 , 0 ) Lair ( 1 , 1 ) Wolf ( 1 , 2 ) 
-Wolf 2 - see - Carrot ( 0 , 2 ) Wolf ( 1 , 2 ) 
-Wolf 3 - see - Rabbit ( 0 , 1 ) Carrot ( 0 , 2 ) Wolf ( 0 , 3 ) Lair ( 1 , 1 ) Lair ( 2 , 3 ) 
-
-----Turn 29
-Status day changed to night
-Rabbit 0 - see - 
-Rabbit 1 - see - 
-Wolf 2 - see - 
-Wolf 3 - see - 
-
-----Turn 30
-Rabbit 0 - see - 
-Rabbit 1 - see - 
-Wolf 2 - see - 
-Wolf 3 - see - 
+Rabbit 0 - move - up - Denied
+Rabbit 0 can't sleep, hasn't enough uses
 

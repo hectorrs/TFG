@@ -11,7 +11,7 @@
 
 	<script type="text/javascript" src="../Resources/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="../Resources/js/npm.js"></script>
-	<script type="text/javascript" src="../Resources/js/world.js"></script>
+	<script type="text/javascript" src="../Resources/js/output.js"></script>
 </head>
 <body>
 <?php
@@ -64,6 +64,10 @@
 			<button type="button" onclick="update('previous')">Anterior</button>
 			<button type="button" onclick="update('next')">Siguiente</button>
 			<button type="button" onclick="update('end')">Fin</button>
+			<br><br>
+			<button type="button" onclick="transition = setInterval(function(){play()}, 750)">Play</button>
+			<button type="button" onclick="pause()">Pause</button>
+			<button type="button" onclick="stop()">Stop</button>
 		</div>
 	</div>
 	<br>
@@ -76,6 +80,11 @@
 			<h5><img src='' width='20px' height='20px' style='background-color:grey'/> Madriguera</h5>
 			<h5><img src='' width='20px' height='20px' style='background-color:purple'/> Árbol</h5>
 			<h5><img src='' width='20px' height='20px' style='background-color:green'/> Hierba</h5>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<h4><a href="../Resources/log/log.txt">Descargar log</a></h4>
 		</div>
 	</div>
 </div>

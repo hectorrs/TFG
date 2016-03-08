@@ -20,12 +20,20 @@
 	$vars['currentWeather'] = '';
 	$vars['changeWeather'] = 0;
 	$vars['time'] = 1;
+	$vars['iTime'] = 1;
+	$vars['ground'] = null;
+
+	$vars['auxSleep'] = intval(getLengthNight() * 25 / 100);
 
 	/* ** Elemento ** */
 	$vars['static'] = array();
 	$vars['dynamic'] = array();
 	$vars['prize'] = array();
 	//$vars['moveTo'] = array('up', 'down', 'left', 'right');
+	$vars['turnEatRabbit'] = 0;
+	$vars['turnEatWolf'] = 0;
+	$vars['turnSleepRabbit'] = 0;
+	$vars['turnSleepWolf'] = 0;
 
 	/* ** Fichero ** */
 	$vars['fileWorld'] = openFile('world');
@@ -58,6 +66,20 @@
 
 		$GLOBALS['vars']['changeWeather'] = $_POST['changeWeather'];
 		writeFile('Log', 'Change weather every ' . getChangeWeather() . ' turns' . "\n");
+
+		$GLOBALS['vars']['ground'] = new Ground();
+
+		$GLOBALS['vars']['turnEatRabbit'] = $_POST['eatRabbit'];
+		writeFile('Log', 'Rabbit need ' . getTurnEatRabbit() . ' turns to eat' . "\n");
+		
+		$GLOBALS['vars']['turnEatWolf'] = $_POST['eatWolf'];
+		writeFile('Log', 'Wolf need ' . getTurnEatWolf() . ' turns to eat' . "\n");
+
+		$GLOBALS['vars']['turnSleepRabbit'] = $_POST['sleepRabbit'];
+		writeFile('Log', 'Rabbit need ' . getTurnSleepRabbit() . ' turns to sleep' . "\n");
+		
+		$GLOBALS['vars']['turnSleepWolf'] = $_POST['sleepWolf'];
+		writeFile('Log', 'Wolf need ' . getTurnSleepWolf() . ' turns to sleep' . "\n");
 	}
 
 	/**
@@ -75,7 +97,7 @@
 	function createWorld(){
 		for($row = 0; $row < getSizeWorld()['row']; $row++){
 			for($col = 0; $col < getSizeWorld()['col']; $col++){
-				$GLOBALS['vars']['world'][$row][$col] = null;
+				$GLOBALS['vars']['world'][$row][$col] = getGround();
 			}
 		}
 	}
@@ -106,12 +128,21 @@
 	function writeWorld(){
 		for($row = 0; $row < getSizeWorld()['row']; $row++){
 			for($col = 0; $col < getSizeWorld()['col']; $col++){
-				if($GLOBALS['vars']['world'][$row][$col] != null){
+				if(get_class($GLOBALS['vars']['world'][$row][$col]) != 'Ground'){
 					writeFile('World', $row . ':' . $col . ':' . substr(get_class($GLOBALS['vars']['world'][$row][$col]), 0, 1) . ';');
 				}
 			}
 		}
 		writeFile('World', '.');
+	}
+
+	/**
+	 * Retorna un objeto de tipo Ground
+	 *
+	 * @return Ground Objeto de tipo Ground
+	 */
+	function getGround(){
+		return $GLOBALS['vars']['ground'];
 	}
 
 	/**
@@ -216,9 +247,62 @@
 	function setTime(){
 		$GLOBALS['vars']['time']++;
 	}
+
+	/**
+	 * Retorna el día actual
+	 *
+	 * @return int Contador de días
+	 */
+	function getiTime(){
+		return $GLOBALS['vars']['iTime'];
+	}
+
+	/**
+	 * Incrementa en 1 el contador de día actual
+	 */
+	function setiTime(){
+		$GLOBALS['vars']['iTime']++;
+	}
+
 	/* --------------------------------------------------------------------- */
 
 	/* ----------------------------- Elementos ----------------------------- */
+	/**
+	 * Devuelve los turnos que necesita un elemento Conejo para comer
+	 *
+	 * @return int Turnos
+	 */
+	function getTurnEatRabbit(){
+		return $GLOBALS['vars']['turnEatRabbit'];
+	}
+
+	/**
+	 * Devuelve los turnos que necesita un elemento Lobo para comer
+	 *
+	 * @return int Turnos
+	 */
+	function getTurnEatWolf(){
+		return $GLOBALS['vars']['turnEatWolf'];
+	}
+
+	/**
+	 * Devuelve los turnos que necesita un elemento Conejo para dormir
+	 *
+	 * @return int Turnos
+	 */
+	function getTurnSleepRabbit(){
+		return $GLOBALS['vars']['turnSleepRabbit'];
+	}
+
+	/**
+	 * Devuelve los turnos que necesita un elemento Lobo para dormir
+	 *
+	 * @return int Turnos
+	 */
+	function getTurnSleepWolf(){
+		return $GLOBALS['vars']['turnSleepWolf'];
+	}
+
 	/**
 	 * Devuelve el hashmap que contiene los elementos estáticos
 	 *
@@ -258,7 +342,7 @@
 	}
 
 	/**
-	 * Elimina un elemento del hashmap de elementos dinámicos
+	 * Elimina un elemento del hashmap de elementos dinámicos y del array mundo
 	 *
 	 * @param Element Elemento
 	 */
@@ -287,7 +371,7 @@
 	}
 
 	/**
-	 * Elimina un elemento del hashmap de elementos premio
+	 * Elimina un elemento del hashmap de elementos premio y del array mundo
 	 *
 	 * @param Element Elemento
 	 */
@@ -309,7 +393,7 @@
 		if($row < 0 || $row > (getSizeWorld()['row'] - 1) || $col < 0 || $col > (getSizeWorld()['col'] - 1)){
 			return false;
 		}else{
-			if(getWorld()[$row][$col] == null){
+			if(get_class(getWorld()[$row][$col]) == 'Ground'){
 				return true;
 			}else{
 				return false;
@@ -414,7 +498,7 @@
 
             addStatic($lair);
 
-            writeFile('Log', '( ' . $lair->getPosition()[0] . ' , ' . $lair->getPosition()[1] . ' ) - Madriguera' . "\n");
+            writeFile('Log', '( ' . $lair->getPosition()[0] . ' , ' . $lair->getPosition()[1] . ' ) - Lair' . "\n");
 		}else{
 			writeFile('Log', 'World is full! It can\'t put a lair' . "\n");
 		}
@@ -439,7 +523,7 @@
 
             addStatic($tree);
 
-            writeFile('Log', '( ' . $tree->getPosition()[0] . ' , ' . $tree->getPosition()[1] . ' ) - Árbol' . "\n");
+            writeFile('Log', '( ' . $tree->getPosition()[0] . ' , ' . $tree->getPosition()[1] . ' ) - Tree' . "\n");
 		}else{
 			writeFile('Log', 'World is full! It can\'t put a tree' . "\n");
 		}
@@ -455,9 +539,26 @@
 			case 'see':
 				if(canAct($args[0], $args[1])){
 					$see = see($args[0]);
+					useAction($args[0], 'see');
 					return $see;
 				}else{
-					writeFile('Log', get_class($args[0]) . ' ' . $args[0]->getId() . ' can\'t act' . "\n");
+					writeFile('Log', get_class($args[0]) . ' ' . $args[0]->getId() . ' can\'t see, hasn\'t enough uses' . "\n");
+				}
+				break;
+			case 'move':
+				if(canAct($args[0], $args[1])){
+					move($args[0], $args[2]);
+					useAction($args[0], 'move');
+				}else{
+					writeFile('Log', get_class($args[0]) . ' ' . $args[0]->getId() . ' can\'t move, hasn\'t enough uses' . "\n");
+				}
+				break;
+			case 'sleep':
+				if(canAct($args[0], $args[1])){
+					toSleep($args[0]);
+					useAction($args[0], 'sleep');
+				}else{
+					writeFile('Log', get_class($args[0]) . ' ' . $args[0]->getId() . ' can\'t sleep, hasn\'t enough uses' . "\n");
 				}
 				break;
 		}
@@ -493,10 +594,80 @@
 					return $_POST['seeWolfUse'];
 				}
 				break;
+			case 'move':
+				if(get_class($element) == 'Rabbit'){
+					return $_POST['moveRabbitUse'];
+				}else{
+					return $_POST['moveWolfUse'];
+				}
+				break;
+			case 'sleep':
+				if(get_class($element) == 'Rabbit'){
+					return $_POST['sleepRabbitUse'];
+				}else{
+					return $_POST['sleepWolfUse'];
+				}
+				break;
 		}
 	}
 
 	/**
+	 * Decrementa los puntos por uno que tiene un elemento para realizar una acción en base a los puntos que consuma una acción
+	 *
+	 * @param Element Elemento
+	 * @param string Acción
+	 */
+	function useAction($element, $action){
+		switch(get_class($element)){
+			case 'Rabbit':
+				switch($action){
+					case 'see':
+						$element->setActPerTurn($element->getActPerTurn() - $_POST['seeRabbitUse']);
+						break;
+					case 'move':
+						$element->setActPerTurn($element->getActPerTurn() - $_POST['moveRabbitUse']);
+						break;
+					case 'sleep':
+						$element->setActPerTurn($element->getActPerTurn() - $_POST['sleepRabbitUse']);
+						break;
+					case 'smell':
+						$element->setActPerTurn($element->getActPerTurn() - $_POST['smellRabbitUse']);
+						break;
+					case 'hear':
+						$element->setActPerTurn($element->getActPerTurn() - $_POST['hearRabbitUse']);
+						break;
+					default:
+						$element->setActPerTurn($_POST['maxUseRabbit']);
+						break;
+				}
+				break;
+			case 'Wolf':
+				switch($action){
+					case 'see':
+						$element->setActPerTurn($element->getActPerTurn() - $_POST['seeWolfUse']);
+						break;
+					case 'move':
+						$element->setActPerTurn($element->getActPerTurn() - $_POST['moveWolfUse']);
+						break;
+					case 'sleep':
+						$element->setActPerTurn($element->getActPerTurn() - $_POST['sleepWolfUse']);
+						break;
+					case 'smell':
+						$element->setActPerTurn($element->getActPerTurn() - $_POST['smellWolfUse']);
+						break;
+					case 'hear':
+						$element->setActPerTurn($element->getActPerTurn() - $_POST['hearWolfUse']);
+						break;
+					default:
+						$element->setActPerTurn($_POST['maxUseWolf']);
+						break;
+				}
+				break;
+		}
+	}
+
+	/**
+	 * Acción ver
 	 * Retorna las posiciones y los elementos que puede ver el elemento en el caso de que dichas posiciones contengan un elemento
 	 *
 	 * @return array Posiciones
@@ -533,7 +704,7 @@
         while($rowStart <= $rowEnd){
         	while($colStart <= $colEnd){
         		if(!isLocked($rowStart, $colStart)){
-        			if(!($rowStart == $position[0] && $colStart == $position[1]) && getWorld()[$rowStart][$colStart] != null){
+        			if(!($rowStart == $position[0] && $colStart == $position[1]) && get_class(getWorld()[$rowStart][$colStart]) != 'Ground'){
         				array_push($see, array(get_class(getWorld()[$rowStart][$colStart]), array($rowStart, $rowEnd)));
         				writeFile('Log', get_class(getWorld()[$rowStart][$colStart]) . ' ( ' . $rowStart . ' , ' . $colStart . ' ) ');
         			}
@@ -561,6 +732,142 @@
 			return false;
 		}
 	}
+
+	/**
+	 * Acción mover
+	 * Realiza el movimiento de un elemento en caso de que sea posible
+	 */
+	function move($element, $movement){
+		$position = $element->getPosition();
+
+		switch($movement){
+			case 'up';
+				$row = $position[0] - 1;
+				$col = $position[1];
+				break;
+			case 'down':
+				$row = $position[0] + 1;
+				$col = $position[1];
+				break;
+			case 'left':
+				$row = $position[0];
+				$col = $position[1] - 1;
+				break;
+			case 'right':
+				$row = $position[0];
+				$col = $position[1] + 1;
+				break;
+		}
+
+		if($row < 0 || $row >= getSizeWorld()['row'] || $col < 0 || $col >= getSizeWorld()['col']){
+			writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - move - ' . $movement . ' - Denied' . "\n");
+		}else{
+			switch(get_class($element)){
+				case 'Rabbit':
+					switch(get_class(getWorld()[$row][$col])){
+						case 'Ground':
+							if($element->getHidden()){
+								$element->setHidden(false);
+								getWorld()[$position[0]][$position[1]]->leaveElement();
+							}else{
+								setWorld(getGround(), $position[0], $position[1]);
+							}
+
+							$element->setPosition(array($row, $col));
+							setWorld($element, $row, $col);
+
+							writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - move - ' . $movement . ' - ( ' . $row . ' , ' . $col . ' )' . "\n");
+							break;
+						case 'Carrot':
+							if($element->getHidden()){
+								$element->setHidden(false);
+								getWorld()[$position[0]][$position[1]]->leaveElement();
+							}else{
+								setWorld(getGround(), $position[0], $position[1]);
+							}
+
+							$element->setEating(getTurnEatRabbit());
+							$element->setPosition(array($row, $col));
+							delPrize(getWorld()[$row][$col]);
+							setWorld($element, $row, $col);
+
+							writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - move - ' . $movement . ' - ( ' . $row . ' , ' . $col . ' ) - Eating' . "\n");
+							break;
+						case 'Lair':
+							if(getWorld()[$row][$col]->getElement() == null){
+								if($element->getHidden()){
+									getWorld()[$position[0]][$position[1]]->leaveElement();
+								}else{
+									$element->setHidden(true);
+									setWorld(getGround(), $position[0], $position[1]);
+								}
+								getWorld()[$row][$col]->saveElement($element);
+								$element->setPosition(array($row, $col));
+							}else{
+								writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - move - ' . $movement . ' - Denied - Lair busy' . "\n");
+							}
+
+							writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - move - ' . $movement . ' - ( ' . $row . ' , ' . $col . ' )' . "\n");
+							break;
+						default:
+							writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - move - ' . $movement . ' - Denied' . "\n");
+					}
+					break;
+				case 'Wolf':
+					switch(get_class(getWorld()[$row][$col])){
+						case 'Ground':
+							setWorld(getGround(), $position[0], $position[1]);
+							$element->setPosition(array($row, $col));
+							setWorld($element, $row, $col);
+
+							writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - move - ' . $movement . ' - ( ' . $row . ' , ' . $col . ' )' . "\n");
+							break;
+						case 'Rabbit':
+							setWorld(getGround(), $position[0], $position[1]);
+							$element->setPosition(array($row, $col));
+							$element->setEating(getTurnEatWolf());
+							delDynamic(getWorld()[$row][$col]);
+							setWorld($element, $row, $col);
+
+							writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - move - ' . $movement . ' - ( ' . $row . ' , ' . $col . ' ) - Eating' . "\n");
+							break;
+						default:
+							writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - move - ' . $movement . ' - Denied' . "\n");
+					}
+					break;
+			}
+		}
+	}
+
+	/**
+	 * Acción dormir
+	 * Cambia el estado del elemento a 'durmiendo'
+	 */
+	function toSleep($element){
+		if(getTime() >= (getLengthDay() * getiTime() - getLengthNight() / 2 - $GLOBALS['vars']['auxSleep']) && getTime() < (getLengthDay() * getiTime() + getLengthNight() / 2 + $GLOBALS['vars']['auxSleep'])){
+			switch(get_class($element)){
+				case 'Rabbit':
+					if($_POST['placeToSleepRabbit'] == 'ground'){
+						$element->setSleeping(getTurnSleepRabbit());
+						writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - sleep' . "\n");
+					}else{
+						if($element->getHidden()){
+							$element->setSleeping(getTurnSleepRabbit());
+							writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - sleep' . "\n");
+						}else{
+							writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - sleep - Denied' . "\n");
+						}
+					}
+					break;
+				case 'Wolf':
+					$element->setSleeping(getTurnSleepRabbit());
+					break;
+			}
+		}else{
+			writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - sleep - Denied' . "\n");
+		}
+	}
+
 	/* --------------------------------------------------------------------- */
 
 	/* ------------------------------ Archivos ----------------------------- */
@@ -590,7 +897,7 @@
 	 * @param object Fichero al cual se va a cerrar la conexión
 	 */
 	function closeFile($file){
-		fclose($file);
+		fclose($GLOBALS['vars']['file' . $file]);
 	}
 	/* --------------------------------------------------------------------- */
 
@@ -606,8 +913,6 @@
 
 	writeWorld();
 	
-	$iTime = 1;
-
 	if(getLengthNight() % 2 == 0){
 		$x = 0;
 	}else{
@@ -615,15 +920,26 @@
 	}
 
 	while(getTime() <= getLength()){
-		while(getTime() < getLengthDay() * $iTime && getTime() <= getLength()){
+		while(getTime() < getLengthDay() * getiTime() && getTime() <= getLength()){
 			writeFile('Log', '----Turn ' . getTime() . "\n");
 
-			if(getTime() == getLengthDay() * $iTime - intval(getLengthNight() / 2) || getTime() ==  getLengthDay() * ($iTime - 1) + intval(getLengthNight() / 2) + $x){
+			if(getTime() == getLengthDay() * getiTime() - intval(getLengthNight() / 2) || getTime() ==  getLengthDay() * (getiTime() - 1) + intval(getLengthNight() / 2) + $x){
 				setStatusDay();
 			}
 
 			foreach(getDynamic() as $element){
-				$element->act();
+				if($element->getEating() > 0){
+					$element->setEating($element->getEating() - 1);
+					writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - eating' . "\n");
+				}else{
+					if($element->getSleeping() > 0){
+						$element->setSleeping($element->getSleeping() - 1);
+						writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - sleeping' . "\n");
+					}else{
+						$element->act();
+						useAction($element, '');
+					}
+				}
 			}
 
 			setTime();
@@ -634,21 +950,35 @@
 
 		writeFile('Log', '----Turn ' . getTime() . "\n");
 
-		if(getTime() == getLengthDay() * $iTime - intval(getLengthNight() / 2) || getTime() == getLengthDay() * ($iTime - 1) + intval(getLengthNight() / 2) + $x){
+		if(getTime() == getLengthDay() * getiTime() - intval(getLengthNight() / 2) || getTime() == getLengthDay() * (getiTime() - 1) + intval(getLengthNight() / 2) + $x){
 			setStatusDay();
 		}
 
 		foreach(getDynamic() as $element){
-			$element->act();
+			if($element->getEating() > 0){
+				$element->setEating($element->getEating() - 1);
+				writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - eating' . "\n");
+			}else{
+				if($element->getSleeping() > 0){
+					$element->setSleeping($element->getSleeping() - 1);
+					writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - sleeping' . "\n");
+				}else{
+					$element->act();
+				}
+			}
 		}
 
 		setTime();
 		writeWorld();
 		
-		$iTime++;
+		setiTime();
 
 		writeFile('Log', "\n");
 	}
+
+	closeFile('Log');
+	closeFile('World');
+	closeFile('Debug');
 
 	$memory = memory_get_usage(true);
     $timeFinish = microtime(true);

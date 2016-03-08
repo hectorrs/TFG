@@ -68,12 +68,12 @@
 		private $actPerTurn;
 
 		/**
-		 * @var bool Estado "comiendo" del elemento
+		 * @var int Estado "comiendo" del elemento. 0, si no está comiendo; > 0, en caso contrario | Turnos que le quedan al elemento para terminar de comer
 		 */
 		private $eating;
 
 		/**
-		 * @var bool Estado "durmiendo" del elemento
+		 * @var int Estado "durmiendo" del elemento. 0, si no está durmiendo; > 0, en caso contrario | Turnos que le quedan al elemento para terminar de dormir
 		 */
 		private $sleeping;
 
@@ -88,8 +88,8 @@
 		function __construct(){
 			parent::__construct();
 			$this->actPerTurn = 0;
-			$this->eating = false;
-			$this->sleeping = false;
+			$this->eating = 0;
+			$this->sleeping = 0;
 			$this->hidden = null;
 		}
 
@@ -103,18 +103,18 @@
 		}
 
 		/**
-		 * Devuelve el estado "comiendo" del elemento
+		 * Devuelve el estado "comiendo" del elemento. 0, si no está comiendo; > 0, en caso contrario | Turnos que le quedan al elemento para terminar de comer
 		 *
-		 * @return bool Estado
+		 * @return int Estado|Turnos
 		 */
 		public function getEating(){
 			return $this->eating;
 		}
 
 		/**
-		 * Devuelve el estado "durmiendo" del elemento
+		 * Devuelve el estado "durmiendo" del elemento. 0, si no está durmiendo; > 0, en caso contrario | Turnos que le quedan al elemento para terminar de dormir
 		 *
-		 * @return bool Estado
+		 * @return int Estado|Turnos
 		 */
 		public function getSleeping(){
 			return $this->sleeping;
@@ -141,7 +141,7 @@
 		/**
 		 * Modifica el estado "comiendo" del elemento
 		 *
-		 * @param bool Estado
+		 * @param int Estado
 		 */
 		public function setEating($eating){
 			$this->eating = $eating;
@@ -150,7 +150,7 @@
 		/**
 		 * Modifica el estado "durmiendo" del elemento
 		 *
-		 * @param bool Estado
+		 * @param int Estado
 		 */
 		public function setSleeping($sleeping){
 			$this->sleeping = $sleeping;

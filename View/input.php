@@ -54,7 +54,7 @@
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 								<label>Turnos de ejecución</label>
 								<div class="form-group">
-									<input class="form-control" name="turn" value="200" required>
+									<input class="form-control" name="turn" value="1000" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"></div>
@@ -82,14 +82,14 @@
 								<label>Tamaño</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Largo</span>
-									<input type="text" class="form-control" name="sizeX" value="2" required>
+									<input type="text" class="form-control" name="sizeX" value="25" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 								<label>&nbsp;</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Ancho</span>
-									<input type="text" class="form-control" name="sizeY" value="2" required>
+									<input type="text" class="form-control" name="sizeY" value="60" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"></div>

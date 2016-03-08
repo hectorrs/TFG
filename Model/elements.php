@@ -12,6 +12,9 @@
 		 */
 		public function act(){
 			$see = actionManager($this, 'see');
+			$move = array('up', 'down', 'left', 'right');
+			actionManager($this, 'move', $move[rand(0, 3)]);
+			actionManager($this, 'sleep');
 		}
 	}
 
@@ -26,6 +29,9 @@
 		 */
 		public function act(){
 			$see = actionManager($this, 'see');
+			$move = array('up', 'down', 'left', 'right');
+			actionManager($this, 'move', $move[rand(0, 3)]);
+			actionManager($this, 'sleep');
 		}
 	}
 
@@ -90,5 +96,12 @@
 		public function leaveElement(){
 			$this->element = null;
 		}
+	}
+
+	/**
+	 * Class Ground
+	 */
+	class Ground{
+
 	}
 ?>

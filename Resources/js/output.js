@@ -9,7 +9,6 @@ function update(option){
 			time = 0;
 			var current = data[time].split(';');
 			current.pop();
-			console.log(current);
 			printWorld(current);
 			main.innerHTML = '<div>Tiempo: ' + time + '</div>';
 			break;
@@ -27,7 +26,6 @@ function update(option){
 				time++;
 				var current = data[time].split(';');
 				current.pop();
-				console.log(current);
 				printWorld(current);
 				main.innerHTML = '<div>Tiempo: ' + time + '</div>';
 			}
@@ -70,4 +68,29 @@ function printWorld(current){
 				break;
 		}
 	}
+}
+
+function play(){
+	if(time < data.length - 1){
+		var current = data[time].split(";");
+		current.pop();
+		printWorld(current);
+		main.innerHTML = '<div>Tiempo: ' + time + '</div>';
+		time++;
+	}else{
+		pause();
+	}
+}
+
+function pause(){
+	clearInterval(transition);
+}
+
+function stop(){
+	clearInterval(transition);
+	time = 0;
+	var current = data[time].split(";");
+	current.pop();
+	printWorld(current);
+	main.innerHTML = '<div>Tiempo: ' + time + '</div>';
 }
