@@ -80,6 +80,27 @@
 		
 		$GLOBALS['vars']['turnSleepWolf'] = $_POST['sleepWolf'];
 		writeFile('Log', 'Wolf need ' . getTurnSleepWolf() . ' turns to sleep' . "\n");
+
+		writeFile('Log', 'Rabbits have ' . $_POST['maxUseRabbit'] . ' points to do actions' . "\n");
+		writeFile('Log', 'Wolfs have ' . $_POST['maxUseWolf'] . ' points to do actions' . "\n");
+
+		writeFile('Log', 'See spend ' . $_POST['smellRabbitUse'] . ' points in Rabbits' . "\n");
+		writeFile('Log', 'See spend ' . $_POST['smellWolfUse'] . ' points in Wolfs' . "\n");
+		writeFile('Log', 'Move spend ' . $_POST['smellRabbitUse'] . ' points in Rabbits' . "\n");
+		writeFile('Log', 'Move spend ' . $_POST['smellWolfUse'] . ' points in Wolfs' . "\n");
+		writeFile('Log', 'Sleep spend ' . $_POST['sleepRabbitUse'] . ' points in Rabbits' . "\n");
+		writeFile('Log', 'Sleep spend ' . $_POST['sleepWolfUse'] . ' points in Wolfs' . "\n");
+		writeFile('Log', 'Smell spend ' . $_POST['smellRabbitUse'] . ' points in Rabbits' . "\n");
+		writeFile('Log', 'Smell spend ' . $_POST['smellWolfUse'] . ' points in Wolfs' . "\n");
+		writeFile('Log', 'Hear spend ' . $_POST['hearRabbitUse'] . ' points in Rabbits' . "\n");
+		writeFile('Log', 'Hear spend ' . $_POST['hearWolfUse'] . ' points in Wolfs' . "\n");
+
+		writeFile('Log', 'Rabbits have ' . $_POST['seeRabbit'] . ' of view range' . "\n");
+		writeFile('Log', 'Wolfs have ' . $_POST['seeWolf'] . ' of view range' . "\n");
+		writeFile('Log', 'Rabbits have ' . $_POST['smellRabbit'] . ' of smell range' . "\n");
+		writeFile('Log', 'Wolfs have ' . $_POST['smellWolf'] . ' of smell range' . "\n");
+		writeFile('Log', 'Rabbits have ' . $_POST['hearRabbit'] . ' of hear range' . "\n");
+		writeFile('Log', 'Wolfs have ' . $_POST['hearWolf'] . ' of hear range' . "\n");
 	}
 
 	/**
@@ -221,6 +242,7 @@
 	 */
 	function setWeather(){
 		$GLOBALS['vars']['currentWeather'] = $GLOBALS['vars']['weather'][rand(0, 3)];
+		writeFile('Log', 'Weather changed to ' . getWeather() . "\n");
 	}
 
 	/**
@@ -561,6 +583,24 @@
 					writeFile('Log', get_class($args[0]) . ' ' . $args[0]->getId() . ' can\'t sleep, hasn\'t enough uses' . "\n");
 				}
 				break;
+			case 'smell':
+				if(canAct($args[0], $args[1])){
+					$smell = smell($args[0]);
+					useAction($args[0], 'smell');
+					return $smell;
+				}else{
+					writeFile('Log', get_class($args[0]) . ' ' . $args[0]->getId() . ' can\'t smell, hasn\'t enough uses' . "\n");
+				}
+				break;
+			case 'hear':
+				if(canAct($args[0], $args[1])){
+					$hear = hear($args[0]);
+					useAction($args[0], 'hear');
+					return $hear;
+				}else{
+					writeFile('Log', get_class($args[0]) . ' ' . $args[0]->getId() . ' can\'t hear, hasn\'t enough uses' . "\n");
+				}
+				break;
 		}
 	}
 
@@ -608,6 +648,20 @@
 					return $_POST['sleepWolfUse'];
 				}
 				break;
+			case 'smell':
+				if(get_class($element) == 'Rabbit'){
+					return $_POST['smellRabbitUse'];
+				}else{
+					return $_POST['smellWolfUse'];
+				}
+				break;
+			case 'hear':
+				if(get_class($element) == 'Rabbit'){
+					return $_POST['hearRabbitUse'];
+				}else{
+					return $_POST['hearWolfUse'];
+				}
+				break;
 		}
 	}
 
@@ -618,51 +672,10 @@
 	 * @param string Acción
 	 */
 	function useAction($element, $action){
-		switch(get_class($element)){
-			case 'Rabbit':
-				switch($action){
-					case 'see':
-						$element->setActPerTurn($element->getActPerTurn() - $_POST['seeRabbitUse']);
-						break;
-					case 'move':
-						$element->setActPerTurn($element->getActPerTurn() - $_POST['moveRabbitUse']);
-						break;
-					case 'sleep':
-						$element->setActPerTurn($element->getActPerTurn() - $_POST['sleepRabbitUse']);
-						break;
-					case 'smell':
-						$element->setActPerTurn($element->getActPerTurn() - $_POST['smellRabbitUse']);
-						break;
-					case 'hear':
-						$element->setActPerTurn($element->getActPerTurn() - $_POST['hearRabbitUse']);
-						break;
-					default:
-						$element->setActPerTurn($_POST['maxUseRabbit']);
-						break;
-				}
-				break;
-			case 'Wolf':
-				switch($action){
-					case 'see':
-						$element->setActPerTurn($element->getActPerTurn() - $_POST['seeWolfUse']);
-						break;
-					case 'move':
-						$element->setActPerTurn($element->getActPerTurn() - $_POST['moveWolfUse']);
-						break;
-					case 'sleep':
-						$element->setActPerTurn($element->getActPerTurn() - $_POST['sleepWolfUse']);
-						break;
-					case 'smell':
-						$element->setActPerTurn($element->getActPerTurn() - $_POST['smellWolfUse']);
-						break;
-					case 'hear':
-						$element->setActPerTurn($element->getActPerTurn() - $_POST['hearWolfUse']);
-						break;
-					default:
-						$element->setActPerTurn($_POST['maxUseWolf']);
-						break;
-				}
-				break;
+		if($action == 'max'){
+			$element->setActPerTurn($_POST['maxUse' . get_class($element)]);
+		}else{
+			$element->setActPerTurn($element->getActPerTurn() - $_POST[$action . get_class($element) . 'Use']);
 		}
 	}
 
@@ -868,6 +881,117 @@
 		}
 	}
 
+	/**
+	 * Acción olfatear
+	 * Retorna las posiciones y los elementos que puede olfatear el elemento en el caso de que dichas posiciones contengan un elemento
+	 *
+	 * @return array Posiciones
+	 */
+	function smell($element){
+		$position = $element->getPosition();
+		
+		switch(get_class($element)){
+            case 'Rabbit':
+                $smellRange = $_POST['smellRabbit'];
+                break;
+            case 'Wolf':
+                $smellRange = $_POST['smellWolf'];
+                break;
+        }
+
+        $rowStart = $position[0] - $smellRange;
+        $colStart = $position[1] - $smellRange;
+        $rowEnd = $position[0] + $smellRange;
+        $colEnd = $position[1] + $smellRange;
+
+        $numRabbit = 0;
+        $numWolf = 0;
+        $numCarrot = 0;
+
+        while($rowStart <= $rowEnd){
+        	while($colStart <= $colEnd){
+        		if(!isLocked($rowStart, $colStart)){
+        			if(!($rowStart == $position[0] && $colStart == $position[1]) && get_class(getWorld()[$rowStart][$colStart]) != 'Ground'){
+        				$currentElement = get_class(getWorld()[$rowStart][$colStart]);
+        				switch($currentElement){
+        					case 'Rabbit':
+        						$numRabbit++;
+        						break;
+        					case 'Wolf':
+        						$numWolf++;
+        						break;
+        					case 'Carrot':
+        						$numCarrot++;
+        						break;
+        					case 'Lair':
+        						if(getWorld()[$rowStart][$colStart]->getElement() != null){
+        							$numRabbit++;
+        						}
+        						break;
+        				}
+        			}
+        		}
+        		$colStart++;
+        	}
+        	$colStart = $position[1] - $smellRange;
+        	$rowStart++;
+        }
+
+        writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - smell - Rabbit: ' . $numRabbit . ', Wolf: ' . $numWolf . ', Carrot: ' . $numCarrot . "\n");
+
+        return array('Rabbit' => $numRabbit, 'Wolf' => $numWolf, 'Carrot' => $numCarrot);
+	}
+
+	function hear($element){
+		$position = $element->getPosition();
+		
+		switch(get_class($element)){
+            case 'Rabbit':
+                $hearRange = $_POST['hearRabbit'];
+                break;
+            case 'Wolf':
+                $hearRange = $_POST['hearWolf'];
+                break;
+        }
+
+        $rowStart = $position[0] - $hearRange;
+        $colStart = $position[1] - $hearRange;
+        $rowEnd = $position[0] + $hearRange;
+        $colEnd = $position[1] + $hearRange;
+
+        $numRabbit = 0;
+        $numWolf = 0;
+        $numCarrot = 0;
+
+        while($rowStart <= $rowEnd){
+        	while($colStart <= $colEnd){
+        		if(!isLocked($rowStart, $colStart)){
+        			if(!($rowStart == $position[0] && $colStart == $position[1]) && get_class(getWorld()[$rowStart][$colStart]) != 'Ground'){
+        				$currentElement = get_class(getWorld()[$rowStart][$colStart]);
+        				switch($currentElement){
+        					case 'Rabbit':
+        						$numRabbit++;
+        						break;
+        					case 'Wolf':
+        						$numWolf++;
+        						break;
+        					case 'Carrot':
+        						$numCarrot++;
+        						break;
+        				}
+        			}
+        		}
+        		$colStart++;
+        	}
+        	$colStart = $position[1] - $hearRange;
+        	$rowStart++;
+        }
+
+        writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - hear - Rabbit: ' . $numRabbit . ', Wolf: ' . $numWolf . ', Carrot: ' . $numCarrot . "\n");
+
+        return array('Rabbit' => $numRabbit, 'Wolf' => $numWolf, 'Carrot' => $numCarrot);
+	}
+
 	/* --------------------------------------------------------------------- */
 
 	/* ------------------------------ Archivos ----------------------------- */
@@ -927,6 +1051,10 @@
 				setStatusDay();
 			}
 
+			if(getTime() == getChangeWeather() * getiTime()){
+				setWeather();
+			}
+
 			foreach(getDynamic() as $element){
 				if($element->getEating() > 0){
 					$element->setEating($element->getEating() - 1);
@@ -937,7 +1065,7 @@
 						writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - sleeping' . "\n");
 					}else{
 						$element->act();
-						useAction($element, '');
+						useAction($element, 'max');
 					}
 				}
 			}
@@ -954,6 +1082,10 @@
 			setStatusDay();
 		}
 
+		if(getTime() == getChangeWeather() * getiTime()){
+			setWeather();
+		}
+
 		foreach(getDynamic() as $element){
 			if($element->getEating() > 0){
 				$element->setEating($element->getEating() - 1);
@@ -964,6 +1096,7 @@
 					writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - sleeping' . "\n");
 				}else{
 					$element->act();
+					useAction($element, 'max');
 				}
 			}
 		}

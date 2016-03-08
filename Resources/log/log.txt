@@ -1,5 +1,5 @@
-Dimensions: 2 x 2
-Turns: 20
+Dimensions: 3 x 3
+Turns: 1000
 Length day: 10
 Length night: 2
 Status day: night
@@ -9,108 +9,5713 @@ Rabbit need 2 turns to eat
 Wolf need 4 turns to eat
 Rabbit need 4 turns to sleep
 Wolf need 4 turns to sleep
-( 1 , 0 ) - Rabbit 0
+Rabbits have 5 points to do actions
+Wolfs have 5 points to do actions
+See spend 1 points in Rabbits
+See spend 1 points in Wolfs
+Move spend 1 points in Rabbits
+Move spend 1 points in Wolfs
+Sleep spend 1 points in Rabbits
+Sleep spend 1 points in Wolfs
+Smell spend 1 points in Rabbits
+Smell spend 1 points in Wolfs
+Hear spend 1 points in Rabbits
+Hear spend 1 points in Wolfs
+Rabbits have 1 of view range
+Wolfs have 1 of view range
+Rabbits have 1 of smell range
+Wolfs have 1 of smell range
+Rabbits have 1 of hear range
+Wolfs have 1 of hear range
+( 2 , 1 ) - Rabbit 0
+( 0 , 1 ) - Wolf 1
+( 0 , 0 ) - Carrot
 ----Turn 1
 Status day changed to day
 Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
 Rabbit 0 - move - down - Denied
-Rabbit 0 can't sleep, hasn't enough uses
+Rabbit 0 - sleep - Denied
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 0 , 2 )
+Wolf 1 - sleep - Denied
 
 ----Turn 2
 Rabbit 0 - see - 
-Rabbit 0 - move - up - ( 0 , 0 )
-Rabbit 0 can't sleep, hasn't enough uses
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - down - Denied
+Rabbit 0 - sleep - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 0 , 1 )
+Wolf 1 - sleep - Denied
 
 ----Turn 3
 Rabbit 0 - see - 
-Rabbit 0 - move - left - Denied
-Rabbit 0 can't sleep, hasn't enough uses
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - left - ( 2 , 0 )
+Rabbit 0 - sleep - Denied
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 0 , 2 )
+Wolf 1 - sleep - Denied
 
 ----Turn 4
 Rabbit 0 - see - 
-Rabbit 0 - move - right - ( 0 , 1 )
-Rabbit 0 can't sleep, hasn't enough uses
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - down - Denied
+Rabbit 0 - sleep - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
 
 ----Turn 5
 Rabbit 0 - see - 
-Rabbit 0 - move - right - Denied
-Rabbit 0 can't sleep, hasn't enough uses
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - down - Denied
+Rabbit 0 - sleep - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
 
 ----Turn 6
 Rabbit 0 - see - 
-Rabbit 0 - move - left - ( 0 , 0 )
-Rabbit 0 can't sleep, hasn't enough uses
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - right - ( 2 , 1 )
+Rabbit 0 - sleep - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
 
 ----Turn 7
 Rabbit 0 - see - 
-Rabbit 0 - move - right - ( 0 , 1 )
-Rabbit 0 can't sleep, hasn't enough uses
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - up - ( 1 , 1 )
+Rabbit 0 - sleep - Denied
+Wolf 1 - see - Rabbit ( 1 , 1 ) 
+Wolf 1 - smell - Rabbit: 1, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 1, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 0 , 1 )
+Wolf 1 - sleep - Denied
 
 ----Turn 8
-Rabbit 0 - see - 
-Rabbit 0 - move - right - Denied
-Rabbit 0 can't sleep, hasn't enough uses
+Rabbit 0 - see - Carrot ( 0 , 0 ) Wolf ( 0 , 1 ) 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 1, Carrot: 1
+Rabbit 0 - hear - Rabbit: 0, Wolf: 1, Carrot: 1
+Rabbit 0 - move - left - ( 1 , 0 )
+Rabbit 0 - sleep - Denied
+Wolf 1 - see - Carrot ( 0 , 0 ) Rabbit ( 1 , 0 ) 
+Wolf 1 - smell - Rabbit: 1, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 1, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 1 , 1 )
+Wolf 1 - sleep - Denied
 
 ----Turn 9
 Status day changed to night
 Rabbit 0 - see - 
-Rabbit 0 - move - left - ( 0 , 0 )
-Rabbit 0 can't sleep, hasn't enough uses
+Rabbit 0 - smell - Rabbit: 0, Wolf: 1, Carrot: 1
+Rabbit 0 - hear - Rabbit: 0, Wolf: 1, Carrot: 1
+Rabbit 0 - move - down - ( 2 , 0 )
+Rabbit 0 - sleep
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 1, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 1, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - ( 1 , 0 )
 
 ----Turn 10
-Rabbit 0 - see - 
-Rabbit 0 - move - up - Denied
-Rabbit 0 can't sleep, hasn't enough uses
+Weather changed to sunny
+Rabbit 0 - sleeping
+Wolf 1 - sleeping
 
 ----Turn 11
 Status day changed to day
-Rabbit 0 can't see, hasn't enough uses
-Rabbit 0 can't move, hasn't enough uses
-Rabbit 0 can't sleep, hasn't enough uses
+Rabbit 0 - sleeping
+Wolf 1 - sleeping
 
 ----Turn 12
-Rabbit 0 - see - 
-Rabbit 0 - move - right - ( 0 , 1 )
-Rabbit 0 can't sleep, hasn't enough uses
+Rabbit 0 - sleeping
+Wolf 1 - sleeping
 
 ----Turn 13
-Rabbit 0 - see - 
-Rabbit 0 - move - left - ( 0 , 0 )
-Rabbit 0 can't sleep, hasn't enough uses
+Rabbit 0 - sleeping
+Wolf 1 - sleeping
 
 ----Turn 14
-Rabbit 0 - see - 
-Rabbit 0 - move - left - Denied
-Rabbit 0 can't sleep, hasn't enough uses
+Rabbit 0 - see - Wolf ( 1 , 0 ) 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 1, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 1, Carrot: 0
+Rabbit 0 - move - right - ( 2 , 1 )
+Rabbit 0 - sleep - Denied
+Wolf 1 - see - Carrot ( 0 , 0 ) Rabbit ( 2 , 1 ) 
+Wolf 1 - smell - Rabbit: 1, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 1, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 2 , 0 )
+Wolf 1 - sleep - Denied
 
 ----Turn 15
-Rabbit 0 - see - 
-Rabbit 0 - move - right - ( 0 , 1 )
-Rabbit 0 can't sleep, hasn't enough uses
+Rabbit 0 - see - Wolf ( 2 , 0 ) 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 1, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 1, Carrot: 0
+Rabbit 0 - move - left - Denied
+Rabbit 0 - sleep - Denied
+Wolf 1 - see - Rabbit ( 2 , 1 ) 
+Wolf 1 - smell - Rabbit: 1, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 1, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
 
 ----Turn 16
-Rabbit 0 - see - 
-Rabbit 0 - move - down - ( 1 , 1 )
-Rabbit 0 can't sleep, hasn't enough uses
+Rabbit 0 - see - Wolf ( 2 , 0 ) 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 1, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 1, Carrot: 0
+Rabbit 0 - move - up - ( 1 , 1 )
+Rabbit 0 - sleep - Denied
+Wolf 1 - see - Rabbit ( 1 , 1 ) 
+Wolf 1 - smell - Rabbit: 1, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 1, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 0 )
+Wolf 1 - sleep - Denied
 
 ----Turn 17
-Rabbit 0 - see - 
-Rabbit 0 - move - right - Denied
-Rabbit 0 can't sleep, hasn't enough uses
+Rabbit 0 - see - Carrot ( 0 , 0 ) Wolf ( 1 , 0 ) 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 1, Carrot: 1
+Rabbit 0 - hear - Rabbit: 0, Wolf: 1, Carrot: 1
+Rabbit 0 - move - up - ( 0 , 1 )
+Rabbit 0 - sleep - Denied
+Wolf 1 - see - Carrot ( 0 , 0 ) Rabbit ( 0 , 1 ) 
+Wolf 1 - smell - Rabbit: 1, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 1, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 1 , 1 )
+Wolf 1 - sleep - Denied
 
 ----Turn 18
-Rabbit 0 - see - 
-Rabbit 0 - move - left - ( 1 , 0 )
-Rabbit 0 can't sleep, hasn't enough uses
+Rabbit 0 - see - Carrot ( 0 , 0 ) Wolf ( 1 , 1 ) 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 1, Carrot: 1
+Rabbit 0 - hear - Rabbit: 0, Wolf: 1, Carrot: 1
+Rabbit 0 - move - right - ( 0 , 2 )
+Rabbit 0 - sleep - Denied
+Wolf 1 - see - Carrot ( 0 , 0 ) Rabbit ( 0 , 2 ) 
+Wolf 1 - smell - Rabbit: 1, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 1, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 2 , 1 )
+Wolf 1 - sleep - Denied
 
 ----Turn 19
 Status day changed to night
 Rabbit 0 - see - 
-Rabbit 0 - move - up - ( 0 , 0 )
-Rabbit 0 can't sleep, hasn't enough uses
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - right - Denied
+Rabbit 0 - sleep
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
 
 ----Turn 20
+Weather changed to windy
+Rabbit 0 - sleeping
+Wolf 1 - sleeping
+
+----Turn 21
+Status day changed to day
+Rabbit 0 - sleeping
+Wolf 1 - sleeping
+
+----Turn 22
+Rabbit 0 - sleeping
+Wolf 1 - sleeping
+
+----Turn 23
+Rabbit 0 - sleeping
+Wolf 1 - sleeping
+
+----Turn 24
 Rabbit 0 - see - 
-Rabbit 0 - move - up - Denied
-Rabbit 0 can't sleep, hasn't enough uses
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - down - ( 1 , 2 )
+Rabbit 0 - sleep - Denied
+Wolf 1 - see - Rabbit ( 1 , 2 ) 
+Wolf 1 - smell - Rabbit: 1, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 1, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 25
+Rabbit 0 - see - Wolf ( 1 , 1 ) 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 1, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 1, Carrot: 0
+Rabbit 0 - move - right - Denied
+Rabbit 0 - sleep - Denied
+Wolf 1 - see - Carrot ( 0 , 0 ) Rabbit ( 1 , 2 ) 
+Wolf 1 - smell - Rabbit: 1, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 1, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 1 , 2 ) - Eating
+Wolf 1 - sleep - Denied
+
+----Turn 26
+Wolf 1 - eating
+
+----Turn 27
+Wolf 1 - eating
+
+----Turn 28
+Wolf 1 - eating
+
+----Turn 29
+Status day changed to night
+Wolf 1 - eating
+
+----Turn 30
+Weather changed to sunny
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+
+----Turn 31
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 32
+Wolf 1 - sleeping
+
+----Turn 33
+Wolf 1 - sleeping
+
+----Turn 34
+Wolf 1 - sleeping
+
+----Turn 35
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 36
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - ( 0 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 37
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 38
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 39
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 1 , 2 )
+
+----Turn 40
+Weather changed to rainy
+Wolf 1 - sleeping
+
+----Turn 41
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 42
+Wolf 1 - sleeping
+
+----Turn 43
+Wolf 1 - sleeping
+
+----Turn 44
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 45
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - ( 1 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 46
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 47
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - ( 0 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 48
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 49
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - Denied
+
+----Turn 50
+Weather changed to rainy
+Wolf 1 - sleeping
+
+----Turn 51
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 52
+Wolf 1 - sleeping
+
+----Turn 53
+Wolf 1 - sleeping
+
+----Turn 54
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 55
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 56
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 2 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 57
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 58
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 59
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 0 )
+
+----Turn 60
+Weather changed to rainy
+Wolf 1 - sleeping
+
+----Turn 61
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 62
+Wolf 1 - sleeping
+
+----Turn 63
+Wolf 1 - sleeping
+
+----Turn 64
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 65
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 2 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 66
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 67
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 68
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 69
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+
+----Turn 70
+Weather changed to sunny
+Wolf 1 - sleeping
+
+----Turn 71
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 72
+Wolf 1 - sleeping
+
+----Turn 73
+Wolf 1 - sleeping
+
+----Turn 74
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 2 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 75
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 76
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - ( 1 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 77
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 2 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 78
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 79
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 2 , 1 )
+
+----Turn 80
+Weather changed to windy
+Wolf 1 - sleeping
+
+----Turn 81
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 82
+Wolf 1 - sleeping
+
+----Turn 83
+Wolf 1 - sleeping
+
+----Turn 84
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 85
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 86
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 87
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 88
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 89
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 1 , 1 )
+
+----Turn 90
+Weather changed to sunny
+Wolf 1 - sleeping
+
+----Turn 91
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 92
+Wolf 1 - sleeping
+
+----Turn 93
+Wolf 1 - sleeping
+
+----Turn 94
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - ( 0 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 95
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 0 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 96
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 97
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 98
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 99
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 0 , 2 )
+
+----Turn 100
+Weather changed to windy
+Wolf 1 - sleeping
+
+----Turn 101
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 102
+Wolf 1 - sleeping
+
+----Turn 103
+Wolf 1 - sleeping
+
+----Turn 104
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 105
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 106
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 107
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 108
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 109
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 2 , 2 )
+
+----Turn 110
+Weather changed to windy
+Wolf 1 - sleeping
+
+----Turn 111
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 112
+Wolf 1 - sleeping
+
+----Turn 113
+Wolf 1 - sleeping
+
+----Turn 114
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 115
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 116
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 117
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 2 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 118
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 119
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+
+----Turn 120
+Weather changed to foggy
+Wolf 1 - sleeping
+
+----Turn 121
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 122
+Wolf 1 - sleeping
+
+----Turn 123
+Wolf 1 - sleeping
+
+----Turn 124
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 125
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 126
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 0 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 127
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 128
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 129
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+
+----Turn 130
+Weather changed to rainy
+Wolf 1 - sleeping
+
+----Turn 131
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 132
+Wolf 1 - sleeping
+
+----Turn 133
+Wolf 1 - sleeping
+
+----Turn 134
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 2 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 135
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 136
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 137
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 138
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 2 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 139
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 0 )
+
+----Turn 140
+Weather changed to windy
+Wolf 1 - sleeping
+
+----Turn 141
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 142
+Wolf 1 - sleeping
+
+----Turn 143
+Wolf 1 - sleeping
+
+----Turn 144
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 145
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - ( 1 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 146
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 147
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 148
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 149
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 1 , 2 )
+
+----Turn 150
+Weather changed to sunny
+Wolf 1 - sleeping
+
+----Turn 151
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 152
+Wolf 1 - sleeping
+
+----Turn 153
+Wolf 1 - sleeping
+
+----Turn 154
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 2 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 155
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 156
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 157
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 2 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 158
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 159
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+
+----Turn 160
+Weather changed to sunny
+Wolf 1 - sleeping
+
+----Turn 161
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 162
+Wolf 1 - sleeping
+
+----Turn 163
+Wolf 1 - sleeping
+
+----Turn 164
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 165
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 166
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 167
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 168
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - ( 1 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 169
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 2 , 0 )
+
+----Turn 170
+Weather changed to sunny
+Wolf 1 - sleeping
+
+----Turn 171
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 172
+Wolf 1 - sleeping
+
+----Turn 173
+Wolf 1 - sleeping
+
+----Turn 174
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 175
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 176
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 177
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 2 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 178
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 2 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 179
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+
+----Turn 180
+Weather changed to windy
+Wolf 1 - sleeping
+
+----Turn 181
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 182
+Wolf 1 - sleeping
+
+----Turn 183
+Wolf 1 - sleeping
+
+----Turn 184
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 185
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 0 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 186
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 187
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 188
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 189
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 1 , 2 )
+
+----Turn 190
+Weather changed to sunny
+Wolf 1 - sleeping
+
+----Turn 191
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 192
+Wolf 1 - sleeping
+
+----Turn 193
+Wolf 1 - sleeping
+
+----Turn 194
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 0 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 195
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 0 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 196
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 197
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 0 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 198
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 0 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 199
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - Denied
+
+----Turn 200
+Weather changed to windy
+Wolf 1 - sleeping
+
+----Turn 201
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 202
+Wolf 1 - sleeping
+
+----Turn 203
+Wolf 1 - sleeping
+
+----Turn 204
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 205
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 206
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 207
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 208
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 0 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 209
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - Denied
+
+----Turn 210
+Weather changed to rainy
+Wolf 1 - sleeping
+
+----Turn 211
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 212
+Wolf 1 - sleeping
+
+----Turn 213
+Wolf 1 - sleeping
+
+----Turn 214
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 215
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 216
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 217
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 218
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 219
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 2 , 2 )
+
+----Turn 220
+Weather changed to windy
+Wolf 1 - sleeping
+
+----Turn 221
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 222
+Wolf 1 - sleeping
+
+----Turn 223
+Wolf 1 - sleeping
+
+----Turn 224
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 225
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 226
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 227
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 228
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 229
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 0 , 2 )
+
+----Turn 230
+Weather changed to sunny
+Wolf 1 - sleeping
+
+----Turn 231
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 232
+Wolf 1 - sleeping
+
+----Turn 233
+Wolf 1 - sleeping
+
+----Turn 234
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 235
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 236
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 237
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 238
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 2 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 239
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+
+----Turn 240
+Weather changed to foggy
+Wolf 1 - sleeping
+
+----Turn 241
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 242
+Wolf 1 - sleeping
+
+----Turn 243
+Wolf 1 - sleeping
+
+----Turn 244
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 245
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 246
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 2 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 247
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 248
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 249
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - Denied
+
+----Turn 250
+Weather changed to rainy
+Wolf 1 - sleeping
+
+----Turn 251
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 252
+Wolf 1 - sleeping
+
+----Turn 253
+Wolf 1 - sleeping
+
+----Turn 254
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 255
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 256
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 257
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 2 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 258
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 259
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+
+----Turn 260
+Weather changed to foggy
+Wolf 1 - sleeping
+
+----Turn 261
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 262
+Wolf 1 - sleeping
+
+----Turn 263
+Wolf 1 - sleeping
+
+----Turn 264
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 265
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 2 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 266
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 267
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 268
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 269
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - Denied
+
+----Turn 270
+Weather changed to sunny
+Wolf 1 - sleeping
+
+----Turn 271
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 272
+Wolf 1 - sleeping
+
+----Turn 273
+Wolf 1 - sleeping
+
+----Turn 274
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 275
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - ( 1 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 276
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 277
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 278
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - ( 0 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 279
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - Denied
+
+----Turn 280
+Weather changed to foggy
+Wolf 1 - sleeping
+
+----Turn 281
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 282
+Wolf 1 - sleeping
+
+----Turn 283
+Wolf 1 - sleeping
+
+----Turn 284
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 0 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 285
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 286
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 287
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 288
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 289
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 0 , 1 )
+
+----Turn 290
+Weather changed to sunny
+Wolf 1 - sleeping
+
+----Turn 291
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 292
+Wolf 1 - sleeping
+
+----Turn 293
+Wolf 1 - sleeping
+
+----Turn 294
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 295
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 296
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 297
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 298
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 299
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 1 , 1 )
+
+----Turn 300
+Weather changed to foggy
+Wolf 1 - sleeping
+
+----Turn 301
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 302
+Wolf 1 - sleeping
+
+----Turn 303
+Wolf 1 - sleeping
+
+----Turn 304
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - ( 0 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 305
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 0 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 306
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 307
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 308
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 0 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 309
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - Denied
+
+----Turn 310
+Weather changed to rainy
+Wolf 1 - sleeping
+
+----Turn 311
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 312
+Wolf 1 - sleeping
+
+----Turn 313
+Wolf 1 - sleeping
+
+----Turn 314
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 315
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 316
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 317
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 318
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 319
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - Denied
+
+----Turn 320
+Weather changed to windy
+Wolf 1 - sleeping
+
+----Turn 321
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 322
+Wolf 1 - sleeping
+
+----Turn 323
+Wolf 1 - sleeping
+
+----Turn 324
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 325
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 2 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 326
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 327
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 328
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 2 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 329
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+
+----Turn 330
+Weather changed to windy
+Wolf 1 - sleeping
+
+----Turn 331
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 332
+Wolf 1 - sleeping
+
+----Turn 333
+Wolf 1 - sleeping
+
+----Turn 334
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 335
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 336
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 2 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 337
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 338
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 339
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 1 )
+
+----Turn 340
+Weather changed to sunny
+Wolf 1 - sleeping
+
+----Turn 341
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 342
+Wolf 1 - sleeping
+
+----Turn 343
+Wolf 1 - sleeping
+
+----Turn 344
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 345
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 346
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 347
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 348
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 349
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 1 , 1 )
+
+----Turn 350
+Weather changed to windy
+Wolf 1 - sleeping
+
+----Turn 351
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 352
+Wolf 1 - sleeping
+
+----Turn 353
+Wolf 1 - sleeping
+
+----Turn 354
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 355
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 356
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - ( 1 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 357
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 358
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 2 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 359
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 2 , 1 )
+
+----Turn 360
+Weather changed to foggy
+Wolf 1 - sleeping
+
+----Turn 361
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 362
+Wolf 1 - sleeping
+
+----Turn 363
+Wolf 1 - sleeping
+
+----Turn 364
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 2 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 365
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 366
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 367
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 2 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 368
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 369
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+
+----Turn 370
+Weather changed to foggy
+Wolf 1 - sleeping
+
+----Turn 371
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 372
+Wolf 1 - sleeping
+
+----Turn 373
+Wolf 1 - sleeping
+
+----Turn 374
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 375
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 2 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 376
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 377
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 378
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 0 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 379
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 1 , 2 )
+
+----Turn 380
+Weather changed to sunny
+Wolf 1 - sleeping
+
+----Turn 381
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 382
+Wolf 1 - sleeping
+
+----Turn 383
+Wolf 1 - sleeping
+
+----Turn 384
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 2 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 385
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 386
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 387
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 2 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 388
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 2 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 389
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 1 )
+
+----Turn 390
+Weather changed to windy
+Wolf 1 - sleeping
+
+----Turn 391
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 392
+Wolf 1 - sleeping
+
+----Turn 393
+Wolf 1 - sleeping
+
+----Turn 394
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 2 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 395
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 396
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 0 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 397
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 398
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 399
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+
+----Turn 400
+Weather changed to windy
+Wolf 1 - sleeping
+
+----Turn 401
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 402
+Wolf 1 - sleeping
+
+----Turn 403
+Wolf 1 - sleeping
+
+----Turn 404
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 405
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 406
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 407
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 408
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 409
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 2 , 2 )
+
+----Turn 410
+Weather changed to foggy
+Wolf 1 - sleeping
+
+----Turn 411
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 412
+Wolf 1 - sleeping
+
+----Turn 413
+Wolf 1 - sleeping
+
+----Turn 414
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 415
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 416
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 417
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 418
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 419
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+
+----Turn 420
+Weather changed to sunny
+Wolf 1 - sleeping
+
+----Turn 421
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 422
+Wolf 1 - sleeping
+
+----Turn 423
+Wolf 1 - sleeping
+
+----Turn 424
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 2 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 425
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 426
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 427
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 428
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 429
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 2 , 1 )
+
+----Turn 430
+Weather changed to foggy
+Wolf 1 - sleeping
+
+----Turn 431
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 432
+Wolf 1 - sleeping
+
+----Turn 433
+Wolf 1 - sleeping
+
+----Turn 434
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 2 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 435
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 436
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 2 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 437
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 438
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 439
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+
+----Turn 440
+Weather changed to foggy
+Wolf 1 - sleeping
+
+----Turn 441
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 442
+Wolf 1 - sleeping
+
+----Turn 443
+Wolf 1 - sleeping
+
+----Turn 444
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 445
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 446
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 447
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 448
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 2 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 449
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 2 , 1 )
+
+----Turn 450
+Weather changed to windy
+Wolf 1 - sleeping
+
+----Turn 451
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 452
+Wolf 1 - sleeping
+
+----Turn 453
+Wolf 1 - sleeping
+
+----Turn 454
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 455
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 456
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 457
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 458
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 2 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 459
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 1 )
+
+----Turn 460
+Weather changed to sunny
+Wolf 1 - sleeping
+
+----Turn 461
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 462
+Wolf 1 - sleeping
+
+----Turn 463
+Wolf 1 - sleeping
+
+----Turn 464
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 465
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 466
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 467
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 2 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 468
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 469
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 2 , 1 )
+
+----Turn 470
+Weather changed to windy
+Wolf 1 - sleeping
+
+----Turn 471
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 472
+Wolf 1 - sleeping
+
+----Turn 473
+Wolf 1 - sleeping
+
+----Turn 474
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 475
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - ( 0 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 476
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 0 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 477
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 478
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 479
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 1 , 2 )
+
+----Turn 480
+Weather changed to rainy
+Wolf 1 - sleeping
+
+----Turn 481
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 482
+Wolf 1 - sleeping
+
+----Turn 483
+Wolf 1 - sleeping
+
+----Turn 484
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 0 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 485
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 0 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 486
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 487
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 0 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 488
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 489
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 2 , 2 )
+
+----Turn 490
+Weather changed to sunny
+Wolf 1 - sleeping
+
+----Turn 491
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 492
+Wolf 1 - sleeping
+
+----Turn 493
+Wolf 1 - sleeping
+
+----Turn 494
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 495
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 496
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 497
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 498
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 499
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 2 , 2 )
+
+----Turn 500
+Weather changed to rainy
+Wolf 1 - sleeping
+
+----Turn 501
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 502
+Wolf 1 - sleeping
+
+----Turn 503
+Wolf 1 - sleeping
+
+----Turn 504
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 505
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 506
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - ( 1 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 507
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 508
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 509
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 2 , 2 )
+
+----Turn 510
+Weather changed to sunny
+Wolf 1 - sleeping
+
+----Turn 511
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 512
+Wolf 1 - sleeping
+
+----Turn 513
+Wolf 1 - sleeping
+
+----Turn 514
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 515
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 516
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 517
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 518
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 519
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 1 )
+
+----Turn 520
+Weather changed to sunny
+Wolf 1 - sleeping
+
+----Turn 521
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 522
+Wolf 1 - sleeping
+
+----Turn 523
+Wolf 1 - sleeping
+
+----Turn 524
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 525
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 526
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 527
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 528
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 529
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - Denied
+
+----Turn 530
+Weather changed to foggy
+Wolf 1 - sleeping
+
+----Turn 531
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 532
+Wolf 1 - sleeping
+
+----Turn 533
+Wolf 1 - sleeping
+
+----Turn 534
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 2 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 535
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 536
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 537
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 538
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 539
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - ( 0 , 1 )
+
+----Turn 540
+Weather changed to sunny
+Wolf 1 - sleeping
+
+----Turn 541
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 542
+Wolf 1 - sleeping
+
+----Turn 543
+Wolf 1 - sleeping
+
+----Turn 544
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 0 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 545
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 546
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 0 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 547
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 548
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 549
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 2 , 2 )
+
+----Turn 550
+Weather changed to windy
+Wolf 1 - sleeping
+
+----Turn 551
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 552
+Wolf 1 - sleeping
+
+----Turn 553
+Wolf 1 - sleeping
+
+----Turn 554
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 555
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 556
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 0 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 557
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 0 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 558
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 559
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 1 , 1 )
+
+----Turn 560
+Weather changed to sunny
+Wolf 1 - sleeping
+
+----Turn 561
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 562
+Wolf 1 - sleeping
+
+----Turn 563
+Wolf 1 - sleeping
+
+----Turn 564
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - ( 0 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 565
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 566
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 567
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 0 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 568
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 569
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+
+----Turn 570
+Weather changed to sunny
+Wolf 1 - sleeping
+
+----Turn 571
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 572
+Wolf 1 - sleeping
+
+----Turn 573
+Wolf 1 - sleeping
+
+----Turn 574
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 575
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 0 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 576
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 577
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 578
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 579
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 2 , 2 )
+
+----Turn 580
+Weather changed to sunny
+Wolf 1 - sleeping
+
+----Turn 581
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 582
+Wolf 1 - sleeping
+
+----Turn 583
+Wolf 1 - sleeping
+
+----Turn 584
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 585
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 2 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 586
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 587
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 588
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 2 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 589
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 1 )
+
+----Turn 590
+Weather changed to foggy
+Wolf 1 - sleeping
+
+----Turn 591
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 592
+Wolf 1 - sleeping
+
+----Turn 593
+Wolf 1 - sleeping
+
+----Turn 594
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 2 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 595
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 596
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 597
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 598
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 599
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - Denied
+
+----Turn 600
+Weather changed to sunny
+Wolf 1 - sleeping
+
+----Turn 601
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 602
+Wolf 1 - sleeping
+
+----Turn 603
+Wolf 1 - sleeping
+
+----Turn 604
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 605
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 606
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - ( 0 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 607
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 0 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 608
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 0 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 609
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - Denied
+
+----Turn 610
+Weather changed to windy
+Wolf 1 - sleeping
+
+----Turn 611
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 612
+Wolf 1 - sleeping
+
+----Turn 613
+Wolf 1 - sleeping
+
+----Turn 614
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 615
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 0 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 616
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 617
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 618
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 619
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 1 , 2 )
+
+----Turn 620
+Weather changed to sunny
+Wolf 1 - sleeping
+
+----Turn 621
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 622
+Wolf 1 - sleeping
+
+----Turn 623
+Wolf 1 - sleeping
+
+----Turn 624
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 625
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 2 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 626
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 627
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 628
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - ( 1 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 629
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 2 , 0 )
+
+----Turn 630
+Weather changed to rainy
+Wolf 1 - sleeping
+
+----Turn 631
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 632
+Wolf 1 - sleeping
+
+----Turn 633
+Wolf 1 - sleeping
+
+----Turn 634
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 635
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 636
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 637
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 638
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - ( 1 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 639
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 2 , 0 )
+
+----Turn 640
+Weather changed to sunny
+Wolf 1 - sleeping
+
+----Turn 641
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 642
+Wolf 1 - sleeping
+
+----Turn 643
+Wolf 1 - sleeping
+
+----Turn 644
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 645
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 646
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 647
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 648
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 649
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - Denied
+
+----Turn 650
+Weather changed to foggy
+Wolf 1 - sleeping
+
+----Turn 651
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 652
+Wolf 1 - sleeping
+
+----Turn 653
+Wolf 1 - sleeping
+
+----Turn 654
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 2 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 655
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 656
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - ( 1 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 657
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 658
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - ( 1 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 659
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 2 , 0 )
+
+----Turn 660
+Weather changed to windy
+Wolf 1 - sleeping
+
+----Turn 661
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 662
+Wolf 1 - sleeping
+
+----Turn 663
+Wolf 1 - sleeping
+
+----Turn 664
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 665
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 2 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 666
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 667
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 668
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 669
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 0 )
+
+----Turn 670
+Weather changed to foggy
+Wolf 1 - sleeping
+
+----Turn 671
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 672
+Wolf 1 - sleeping
+
+----Turn 673
+Wolf 1 - sleeping
+
+----Turn 674
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 2 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 675
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 676
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 677
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 678
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 679
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 2 , 1 )
+
+----Turn 680
+Weather changed to windy
+Wolf 1 - sleeping
+
+----Turn 681
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 682
+Wolf 1 - sleeping
+
+----Turn 683
+Wolf 1 - sleeping
+
+----Turn 684
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 685
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 2 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 686
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 687
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 688
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 0 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 689
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 0 , 1 )
+
+----Turn 690
+Weather changed to sunny
+Wolf 1 - sleeping
+
+----Turn 691
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 692
+Wolf 1 - sleeping
+
+----Turn 693
+Wolf 1 - sleeping
+
+----Turn 694
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 695
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 2 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 696
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 697
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 698
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 699
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - Denied
+
+----Turn 700
+Weather changed to rainy
+Wolf 1 - sleeping
+
+----Turn 701
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 702
+Wolf 1 - sleeping
+
+----Turn 703
+Wolf 1 - sleeping
+
+----Turn 704
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 2 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 705
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 706
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 2 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 707
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 708
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 709
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+
+----Turn 710
+Weather changed to windy
+Wolf 1 - sleeping
+
+----Turn 711
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 712
+Wolf 1 - sleeping
+
+----Turn 713
+Wolf 1 - sleeping
+
+----Turn 714
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 715
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 716
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 717
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 718
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - ( 0 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 719
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 0 , 2 )
+
+----Turn 720
+Weather changed to rainy
+Wolf 1 - sleeping
+
+----Turn 721
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 722
+Wolf 1 - sleeping
+
+----Turn 723
+Wolf 1 - sleeping
+
+----Turn 724
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 725
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 726
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 727
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 728
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 0 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 729
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 1 , 1 )
+
+----Turn 730
+Weather changed to rainy
+Wolf 1 - sleeping
+
+----Turn 731
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 732
+Wolf 1 - sleeping
+
+----Turn 733
+Wolf 1 - sleeping
+
+----Turn 734
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - ( 0 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 735
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 736
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 737
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 738
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 739
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 2 , 1 )
+
+----Turn 740
+Weather changed to sunny
+Wolf 1 - sleeping
+
+----Turn 741
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 742
+Wolf 1 - sleeping
+
+----Turn 743
+Wolf 1 - sleeping
+
+----Turn 744
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 745
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 746
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 747
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - ( 0 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 748
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 0 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 749
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 0 , 1 )
+
+----Turn 750
+Weather changed to foggy
+Wolf 1 - sleeping
+
+----Turn 751
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 752
+Wolf 1 - sleeping
+
+----Turn 753
+Wolf 1 - sleeping
+
+----Turn 754
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 755
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 756
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 2 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 757
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 758
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 759
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+
+----Turn 760
+Weather changed to rainy
+Wolf 1 - sleeping
+
+----Turn 761
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 762
+Wolf 1 - sleeping
+
+----Turn 763
+Wolf 1 - sleeping
+
+----Turn 764
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 2 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 765
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 766
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - ( 0 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 767
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 768
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 769
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 2 , 2 )
+
+----Turn 770
+Weather changed to foggy
+Wolf 1 - sleeping
+
+----Turn 771
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 772
+Wolf 1 - sleeping
+
+----Turn 773
+Wolf 1 - sleeping
+
+----Turn 774
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 775
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 0 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 776
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 777
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 778
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - ( 1 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 779
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 1 , 1 )
+
+----Turn 780
+Weather changed to sunny
+Wolf 1 - sleeping
+
+----Turn 781
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 782
+Wolf 1 - sleeping
+
+----Turn 783
+Wolf 1 - sleeping
+
+----Turn 784
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - ( 0 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 785
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 0 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 786
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 787
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 788
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 789
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 2 , 2 )
+
+----Turn 790
+Weather changed to foggy
+Wolf 1 - sleeping
+
+----Turn 791
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 792
+Wolf 1 - sleeping
+
+----Turn 793
+Wolf 1 - sleeping
+
+----Turn 794
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 795
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 2 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 796
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 797
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 798
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 2 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 799
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 1 )
+
+----Turn 800
+Weather changed to sunny
+Wolf 1 - sleeping
+
+----Turn 801
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 802
+Wolf 1 - sleeping
+
+----Turn 803
+Wolf 1 - sleeping
+
+----Turn 804
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 805
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 806
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 2 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 807
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 808
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 2 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 809
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 1 )
+
+----Turn 810
+Weather changed to rainy
+Wolf 1 - sleeping
+
+----Turn 811
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 812
+Wolf 1 - sleeping
+
+----Turn 813
+Wolf 1 - sleeping
+
+----Turn 814
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 815
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 816
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 817
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 818
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 819
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - Denied
+
+----Turn 820
+Weather changed to windy
+Wolf 1 - sleeping
+
+----Turn 821
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 822
+Wolf 1 - sleeping
+
+----Turn 823
+Wolf 1 - sleeping
+
+----Turn 824
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 825
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - ( 1 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 826
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 827
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 2 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 828
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 829
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 2 , 1 )
+
+----Turn 830
+Weather changed to sunny
+Wolf 1 - sleeping
+
+----Turn 831
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 832
+Wolf 1 - sleeping
+
+----Turn 833
+Wolf 1 - sleeping
+
+----Turn 834
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 2 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 835
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 836
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 0 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 837
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 838
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 839
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 0 , 1 )
+
+----Turn 840
+Weather changed to rainy
+Wolf 1 - sleeping
+
+----Turn 841
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 842
+Wolf 1 - sleeping
+
+----Turn 843
+Wolf 1 - sleeping
+
+----Turn 844
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 845
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 846
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - ( 1 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 847
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 2 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 848
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 849
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 2 , 0 )
+
+----Turn 850
+Weather changed to foggy
+Wolf 1 - sleeping
+
+----Turn 851
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 852
+Wolf 1 - sleeping
+
+----Turn 853
+Wolf 1 - sleeping
+
+----Turn 854
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 855
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 2 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 856
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 857
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 858
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 859
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - Denied
+
+----Turn 860
+Weather changed to foggy
+Wolf 1 - sleeping
+
+----Turn 861
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 862
+Wolf 1 - sleeping
+
+----Turn 863
+Wolf 1 - sleeping
+
+----Turn 864
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 865
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 866
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 867
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 2 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 868
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 2 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 869
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 1 )
+
+----Turn 870
+Weather changed to rainy
+Wolf 1 - sleeping
+
+----Turn 871
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 872
+Wolf 1 - sleeping
+
+----Turn 873
+Wolf 1 - sleeping
+
+----Turn 874
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - ( 0 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 875
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 876
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 877
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 878
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 879
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - ( 0 , 1 )
+
+----Turn 880
+Weather changed to foggy
+Wolf 1 - sleeping
+
+----Turn 881
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 882
+Wolf 1 - sleeping
+
+----Turn 883
+Wolf 1 - sleeping
+
+----Turn 884
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 0 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 885
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 1 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 886
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 0 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 887
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 0 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 888
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 0 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 889
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 0 , 1 )
+
+----Turn 890
+Weather changed to windy
+Wolf 1 - sleeping
+
+----Turn 891
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 892
+Wolf 1 - sleeping
+
+----Turn 893
+Wolf 1 - sleeping
+
+----Turn 894
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 0 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 895
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 0 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 896
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 0 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 897
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 898
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 0 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 899
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - Denied
+
+----Turn 900
+Weather changed to windy
+Wolf 1 - sleeping
+
+----Turn 901
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 902
+Wolf 1 - sleeping
+
+----Turn 903
+Wolf 1 - sleeping
+
+----Turn 904
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 905
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - ( 1 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 906
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 907
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 908
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 909
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 1 , 2 )
+
+----Turn 910
+Weather changed to rainy
+Wolf 1 - sleeping
+
+----Turn 911
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 912
+Wolf 1 - sleeping
+
+----Turn 913
+Wolf 1 - sleeping
+
+----Turn 914
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 2 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 915
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 916
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 917
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 918
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 919
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 1 )
+
+----Turn 920
+Weather changed to foggy
+Wolf 1 - sleeping
+
+----Turn 921
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 922
+Wolf 1 - sleeping
+
+----Turn 923
+Wolf 1 - sleeping
+
+----Turn 924
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 925
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 2 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 926
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 927
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 2 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 928
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 929
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 2 , 0 )
+
+----Turn 930
+Weather changed to windy
+Wolf 1 - sleeping
+
+----Turn 931
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 932
+Wolf 1 - sleeping
+
+----Turn 933
+Wolf 1 - sleeping
+
+----Turn 934
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 935
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 936
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 937
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 938
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 2 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 939
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 1 )
+
+----Turn 940
+Weather changed to windy
+Wolf 1 - sleeping
+
+----Turn 941
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 942
+Wolf 1 - sleeping
+
+----Turn 943
+Wolf 1 - sleeping
+
+----Turn 944
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - ( 0 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 945
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 946
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 2 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 947
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 948
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 949
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - ( 0 , 1 )
+
+----Turn 950
+Weather changed to sunny
+Wolf 1 - sleeping
+
+----Turn 951
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 952
+Wolf 1 - sleeping
+
+----Turn 953
+Wolf 1 - sleeping
+
+----Turn 954
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 955
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 956
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - ( 1 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 957
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 958
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 959
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - ( 1 , 0 )
+
+----Turn 960
+Weather changed to foggy
+Wolf 1 - sleeping
+
+----Turn 961
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 962
+Wolf 1 - sleeping
+
+----Turn 963
+Wolf 1 - sleeping
+
+----Turn 964
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 965
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 966
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - ( 1 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 967
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 968
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - ( 1 , 0 )
+Wolf 1 - sleep - Denied
+
+----Turn 969
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - Denied
+
+----Turn 970
+Weather changed to foggy
+Wolf 1 - sleeping
+
+----Turn 971
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 972
+Wolf 1 - sleeping
+
+----Turn 973
+Wolf 1 - sleeping
+
+----Turn 974
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 975
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - ( 0 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 976
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 977
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 978
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 979
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - Denied
+
+----Turn 980
+Weather changed to windy
+Wolf 1 - sleeping
+
+----Turn 981
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 982
+Wolf 1 - sleeping
+
+----Turn 983
+Wolf 1 - sleeping
+
+----Turn 984
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 1 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 985
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - ( 0 , 1 )
+Wolf 1 - sleep - Denied
+
+----Turn 986
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 987
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 0 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 988
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 989
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 0 , 1 )
+
+----Turn 990
+Weather changed to rainy
+Wolf 1 - sleeping
+
+----Turn 991
+Status day changed to day
+Wolf 1 - sleeping
+
+----Turn 992
+Wolf 1 - sleeping
+
+----Turn 993
+Wolf 1 - sleeping
+
+----Turn 994
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 995
+Wolf 1 - see - Carrot ( 0 , 0 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 0 , 2 )
+Wolf 1 - sleep - Denied
+
+----Turn 996
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 997
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 998
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - Denied
+Wolf 1 - sleep - Denied
+
+----Turn 999
+Status day changed to night
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 0 , 1 )
+
+----Turn 1000
+Weather changed to foggy
+Wolf 1 - sleeping
 
