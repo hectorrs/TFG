@@ -16,7 +16,10 @@
 			$hear = actionManager($this, 'hear');
 			$move = array('up', 'down', 'left', 'right');
 			actionManager($this, 'move', $move[rand(0, 3)]);
-			//actionManager($this, 'sleep');
+			$rand = rand(0, 1);
+			if($rand == 1){
+				actionManager($this, 'sleep');
+			}
 		}
 	}
 
@@ -35,7 +38,10 @@
 			$hear = actionManager($this, 'hear');
 			$move = array('up', 'down', 'left', 'right');
 			actionManager($this, 'move', $move[rand(0, 3)]);
-			actionManager($this, 'sleep');
+			$rand = rand(0, 1);
+			if($rand == 1){
+				actionManager($this, 'sleep');
+			}
 		}
 	}
 

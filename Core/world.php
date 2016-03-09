@@ -1138,6 +1138,12 @@
 					}else{
 						if($element->getSleeping() > 0){
 							$element->setSleeping($element->getSleeping() - 1);
+							if(!$element->getHasEaten()){
+								$element->setDaysWithoutEat($element->getDaysWithoutEat() + 1);
+							}else{
+								$element->setHasEaten(false);
+								$element->setDaysWithoutEat(0);
+							}
 							writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - sleeping' . "\n");
 						}else{
 							$element->setDaysWithoutSleep($element->getDaysWithoutSleep() + 1);
