@@ -23,6 +23,9 @@
 	$vars['iTime'] = 1;
 	$vars['ground'] = null;
 
+	$vars['moreCarrot'] = 0;
+	$vars['moreWolf'] = 0;
+
 	$vars['auxSleep'] = intval(getLengthNight() * 25 / 100);
 
 	/* ** Elemento ** */
@@ -101,6 +104,11 @@
 		writeFile('Log', 'Wolfs have ' . $_POST['smellWolf'] . ' of smell range' . "\n");
 		writeFile('Log', 'Rabbits have ' . $_POST['hearRabbit'] . ' of hear range' . "\n");
 		writeFile('Log', 'Wolfs have ' . $_POST['hearWolf'] . ' of hear range' . "\n");
+
+		$GLOBALS['vars']['moreCarrot'] = $_POST['timeMoreCarrot'];
+		writeFile('Log', $_POST['amountMoreCarrot'] . ' carrots more each ' . $GLOBALS['vars']['moreCarrot'] . ' turns' . "\n");
+		$GLOBALS['vars']['moreWolf'] = $_POST['timeMoreWolf'];
+		writeFile('Log', $_POST['amountMoreWolf'] . ' wolfs more each ' . $GLOBALS['vars']['moreWolf'] . ' turns' . "\n");
 	}
 
 	/**
@@ -369,7 +377,9 @@
 	 * @param Element Elemento
 	 */
 	function delDynamic($element){
-		setWorld(null, $element->getPosition()[0], $element->getPosition()[1]);
+		if(get_class(getWorld()[$element->getPosition()[0]][$element->getPosition()[1]]) != 'Lair'){
+			setWorld(getGround(), $element->getPosition()[0], $element->getPosition()[1]);
+		}
 		unset($GLOBALS['vars']['dynamic'][$element->getId()]);
 	}
 
@@ -398,7 +408,7 @@
 	 * @param Element Elemento
 	 */
 	function delPrize($element){
-		setWorld(null, $element->getPosition()[0], $element->getPosition()[1]);
+		setWorld(getGround(), $element->getPosition()[0], $element->getPosition()[1]);
 		unset($GLOBALS['vars']['prize'][$element->getId()]);
 	}
 
@@ -801,6 +811,7 @@
 
 							$element->setEating(getTurnEatRabbit());
 							$element->setPosition(array($row, $col));
+							$element->setHasEaten(true);
 							delPrize(getWorld()[$row][$col]);
 							setWorld($element, $row, $col);
 
@@ -839,6 +850,7 @@
 							setWorld(getGround(), $position[0], $position[1]);
 							$element->setPosition(array($row, $col));
 							$element->setEating(getTurnEatWolf());
+							$element->setHasEaten(true);
 							delDynamic(getWorld()[$row][$col]);
 							setWorld($element, $row, $col);
 
@@ -857,15 +869,17 @@
 	 * Cambia el estado del elemento a 'durmiendo'
 	 */
 	function toSleep($element){
-		if(getTime() >= (getLengthDay() * getiTime() - getLengthNight() / 2 - $GLOBALS['vars']['auxSleep']) && getTime() < (getLengthDay() * getiTime() + getLengthNight() / 2 + $GLOBALS['vars']['auxSleep'])){
+		if(getTime() >= (getLengthDay() * getiTime() - getLengthNight() / 2 - $GLOBALS['vars']['auxSleep']) && getTime() < (getLengthDay() * getiTime())){ //+ getLengthNight() / 2 + $GLOBALS['vars']['auxSleep'])){
 			switch(get_class($element)){
 				case 'Rabbit':
 					if($_POST['placeToSleepRabbit'] == 'ground'){
 						$element->setSleeping(getTurnSleepRabbit());
+						$element->setDaysWithoutSleep(0);
 						writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - sleep' . "\n");
 					}else{
 						if($element->getHidden()){
 							$element->setSleeping(getTurnSleepRabbit());
+							$element->setDaysWithoutSleep(0);
 							writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - sleep' . "\n");
 						}else{
 							writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - sleep - Denied' . "\n");
@@ -874,6 +888,7 @@
 					break;
 				case 'Wolf':
 					$element->setSleeping(getTurnSleepRabbit());
+					$element->setDaysWithoutSleep(0);
 					break;
 			}
 		}else{
@@ -1047,10 +1062,12 @@
 		while(getTime() < getLengthDay() * getiTime() && getTime() <= getLength()){
 			writeFile('Log', '----Turn ' . getTime() . "\n");
 
+			// Cambiar estado día (Día / Noche)
 			if(getTime() == getLengthDay() * getiTime() - intval(getLengthNight() / 2) || getTime() ==  getLengthDay() * (getiTime() - 1) + intval(getLengthNight() / 2) + $x){
 				setStatusDay();
 			}
 
+			// Cambiar tiempo atmosférico
 			if(getTime() == getChangeWeather() * getiTime()){
 				setWeather();
 			}
@@ -1070,6 +1087,26 @@
 				}
 			}
 
+			// Generación de zanahorias
+            if($GLOBALS['vars']['moreCarrot'] > 0){
+                $GLOBALS['vars']['moreCarrot']--;
+            }else{
+                for($i = 0; $i < $_POST['amountMoreCarrot']; $i++){
+                    addCarrot();
+                }
+                $GLOBALS['vars']['moreCarrot'] = $_POST['timeMoreCarrot'];
+            }
+
+            // Generación de lobos
+            if($GLOBALS['vars']['moreWolf'] > 0){
+                $GLOBALS['vars']['moreWolf']--;
+            }else{
+                for($i = 0; $i < $_POST['amountMoreWolf']; $i++){
+                    addWolf();
+                }
+                $GLOBALS['vars']['moreWolf'] = $_POST['timeMoreWolf'];
+            }
+
 			setTime();
 			writeWorld();
 
@@ -1078,28 +1115,65 @@
 
 		writeFile('Log', '----Turn ' . getTime() . "\n");
 
+		// Cambiar estado día (Día / Noche)
 		if(getTime() == getLengthDay() * getiTime() - intval(getLengthNight() / 2) || getTime() == getLengthDay() * (getiTime() - 1) + intval(getLengthNight() / 2) + $x){
 			setStatusDay();
 		}
 
+		// Cambiar tiempo atmosférico
 		if(getTime() == getChangeWeather() * getiTime()){
 			setWeather();
 		}
 
 		foreach(getDynamic() as $element){
-			if($element->getEating() > 0){
-				$element->setEating($element->getEating() - 1);
-				writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - eating' . "\n");
+			if($element->getDaysWithoutEat() == $_POST['maxEatRabbit'] - 1){
+				delDynamic($element);
 			}else{
-				if($element->getSleeping() > 0){
-					$element->setSleeping($element->getSleeping() - 1);
-					writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - sleeping' . "\n");
+				if($element->getDaysWithoutSleep() == $_POST['maxSleepRabbit']){
+					delDynamic($element);
 				}else{
-					$element->act();
-					useAction($element, 'max');
+					if($element->getEating() > 0){
+						$element->setEating($element->getEating() - 1);
+						writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - eating' . "\n");
+					}else{
+						if($element->getSleeping() > 0){
+							$element->setSleeping($element->getSleeping() - 1);
+							writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - sleeping' . "\n");
+						}else{
+							$element->setDaysWithoutSleep($element->getDaysWithoutSleep() + 1);
+							if(!$element->getHasEaten()){
+								$element->setDaysWithoutEat($element->getDaysWithoutEat() + 1);
+							}else{
+								$element->setHasEaten(false);
+								$element->setDaysWithoutEat(0);
+							}
+							$element->act();
+							useAction($element, 'max');
+						}
+					}
 				}
 			}
 		}
+
+		// Generación de zanahorias
+        if($GLOBALS['vars']['moreCarrot'] > 0){
+            $GLOBALS['vars']['moreCarrot']--;
+        }else{
+            for($i = 0; $i < $_POST['amountMoreCarrot']; $i++){
+                addCarrot();
+            }
+            $GLOBALS['vars']['moreCarrot'] = $_POST['timeMoreCarrot'];
+        }
+
+        // Generación de lobos
+        if($GLOBALS['vars']['moreWolf'] > 0){
+            $GLOBALS['vars']['moreWolf']--;
+        }else{
+            for($i = 0; $i < $_POST['amountMoreWolf']; $i++){
+                addWolf();
+            }
+            $GLOBALS['vars']['moreWolf'] = $_POST['timeMoreWolf'];
+        }
 
 		setTime();
 		writeWorld();

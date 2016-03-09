@@ -26,6 +26,7 @@
 		 */
 		public function __construct(){
 			$this->id = $GLOBALS['stock']++;
+			$this->position = null;
 		}
 
 		/**
@@ -68,19 +69,34 @@
 		private $actPerTurn;
 
 		/**
-		 * @var int Estado "comiendo" del elemento. 0, si no está comiendo; > 0, en caso contrario | Turnos que le quedan al elemento para terminar de comer
+		 * @var int Estado 'comiendo' del elemento. 0, si no está comiendo; > 0, en caso contrario | Turnos que le quedan al elemento para terminar de comer
 		 */
 		private $eating;
 
 		/**
-		 * @var int Estado "durmiendo" del elemento. 0, si no está durmiendo; > 0, en caso contrario | Turnos que le quedan al elemento para terminar de dormir
+		 * @var int Estado 'durmiendo' del elemento. 0, si no está durmiendo; > 0, en caso contrario | Turnos que le quedan al elemento para terminar de dormir
 		 */
 		private $sleeping;
 
 		/**
-		 * @var bool|null Estado "escondido" del elemento
+		 * @var bool|null Estado 'escondido' del elemento
 		 */
 		private $hidden;
+
+		/**
+		 * @var int Días sin comer
+		 */
+		private $daysWithoutEat;
+
+		/**
+		 * @var int Días sin dormir
+		 */
+		private $daysWithoutSleep;
+
+		/**
+		 * @var bool Estado 'ha comido durante el día' del elemento
+		 */
+		private $hasEaten;
 
 		/*
 		 * Constructor
@@ -91,6 +107,9 @@
 			$this->eating = 0;
 			$this->sleeping = 0;
 			$this->hidden = null;
+			$this->daysWithoutEat = 0;
+			$this->daysWithoutSleep = 0;
+			$this->hasEaten = false;
 		}
 
 		/**
@@ -103,7 +122,7 @@
 		}
 
 		/**
-		 * Devuelve el estado "comiendo" del elemento. 0, si no está comiendo; > 0, en caso contrario | Turnos que le quedan al elemento para terminar de comer
+		 * Devuelve el estado 'comiendo' del elemento. 0, si no está comiendo; > 0, en caso contrario | Turnos que le quedan al elemento para terminar de comer
 		 *
 		 * @return int Estado|Turnos
 		 */
@@ -112,7 +131,7 @@
 		}
 
 		/**
-		 * Devuelve el estado "durmiendo" del elemento. 0, si no está durmiendo; > 0, en caso contrario | Turnos que le quedan al elemento para terminar de dormir
+		 * Devuelve el estado 'durmiendo' del elemento. 0, si no está durmiendo; > 0, en caso contrario | Turnos que le quedan al elemento para terminar de dormir
 		 *
 		 * @return int Estado|Turnos
 		 */
@@ -121,12 +140,39 @@
 		}
 
 		/**
-		 * Devuelve el estado "escondido" del elemento
+		 * Devuelve el estado 'escondido' del elemento
 		 *
 		 * @return bool Estado
 		 */
 		public function getHidden(){
 			return $this->hidden;
+		}
+
+		/**
+		 * Devuelve el número de días que lleva sin comer el elemento
+		 *
+		 * @return int Días
+		 */
+		public function getDaysWithoutEat(){
+			return $this->daysWithoutEat;
+		}
+
+		/**
+		 * Devuelve el número de días que lleva sin dormir el elemento
+		 *
+		 * @return int Días
+		 */
+		public function getDaysWithoutSleep(){
+			return $this->daysWithoutSleep;
+		}
+
+		/**
+		 * Devuelve el estado 'ha comido durante el día' del elemento
+		 *
+		 * @return bool Estado
+		 */
+		public function getHasEaten(){
+			return $this->hasEaten;
 		}
 
 		/**
@@ -139,7 +185,7 @@
 		}
 
 		/**
-		 * Modifica el estado "comiendo" del elemento
+		 * Modifica el estado 'comiendo' del elemento
 		 *
 		 * @param int Estado
 		 */
@@ -148,7 +194,7 @@
 		}
 
 		/**
-		 * Modifica el estado "durmiendo" del elemento
+		 * Modifica el estado 'durmiendo' del elemento
 		 *
 		 * @param int Estado
 		 */
@@ -157,12 +203,40 @@
 		}
 
 		/**
-		 * Modifica el estado "escondido" del elemento
+		 * Modifica el estado 'escondido' del elemento
 		 *
 		 * @param bool Estado
 		 */
 		public function setHidden($hidden){
 			$this->hidden = $hidden;
 		}
+
+		/**
+		 * Modifica los días que lleva sin comer un elemento
+		 *
+		 * @param int Días
+		 */
+		public function setDaysWithoutEat($daysWithoutEat){
+			$this->daysWithoutEat = $daysWithoutEat;
+		}
+
+		/**
+		 * Modifica los días que lleva sin dormir un elemento
+		 *
+		 * @param int Días
+		 */
+		public function setDaysWithoutSleep($daysWithoutSleep){
+			$this->daysWithoutSleep = $daysWithoutSleep;
+		}
+
+		/**
+		 * Modifica el estado 'ha comido durante el día' del elemento
+		 *
+		 * @param bool Estado
+		 */
+		public function setHasEaten($hasEaten){
+			$this->hasEaten = $hasEaten;
+		}
+
 	}
 ?>

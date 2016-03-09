@@ -210,17 +210,17 @@
 						<hr class="dividing2">
 						<div class="row">
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-								<label>Mínimo de comidas por día</label>
+								<label>Máximo de días sin comer</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Conejos</span>
-									<input type="text" class="form-control" name="minimumEatRabbit" value="1" required>
+									<input type="text" class="form-control" name="maxEatRabbit" value="1" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 								<label>&nbsp;</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Lobos</span>
-									<input type="text" class="form-control" name="minimumEatWolf" value="1" required>
+									<input type="text" class="form-control" name="maxEatWolf" value="1" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"></div>
@@ -228,23 +228,17 @@
 						<hr class="dividing2">
 						<div class="row">
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-								<label>Necesidad de dormir</label><br>
-								<label>Conejos</label>
-								<div class="form-group">
-									<select class="form-control" name="needToSleepRabbit" required>
-										<option selected value="yes">si</option>
-										<option value="no">no</option>
-									</select>
+								<label>Máximo de días sin dormir</label>
+								<div class="input-group form-group">
+									<span class="input-group-addon">Conejos</span>
+									<input type="text" class="form-control" name="maxSleepRabbit" value="1" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-								<label>&nbsp;</label><br>
-								<label>Lobos</label>
-								<div class="form-group">
-									<select class="form-control" name="needToSleepWolf" required>
-										<option selected value="yes">si</option>
-										<option value="no">no</option>
-									</select>
+								<label>&nbsp;</label>
+								<div class="input-group form-group">
+									<span class="input-group-addon">Lobos</span>
+									<input type="text" class="form-control" name="maxSleepWolf" value="1" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"></div>
