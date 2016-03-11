@@ -12,6 +12,7 @@
 	<script type="text/javascript" src="../Resources/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="../Resources/js/npm.js"></script>
 	<script type="text/javascript" src="../Resources/js/output.js"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 <body>
 <?php
@@ -25,6 +26,7 @@
 	$col = $_SESSION['col'];
 	$memory = $_SESSION['memory'];
 	$time = $_SESSION['time'];
+	$weather = $_SESSION['weather'];
 
 	session_write_close();
 
@@ -36,7 +38,10 @@
 	var data = <?php echo json_encode($data); ?>;
 	var row = <?php echo json_encode($row); ?>;
 	var col = <?php echo json_encode($col); ?>;
+	var weather = <?php echo json_encode($weather); ?>;
 </script>
+
+<script type="text/javascript" src="../Resources/js/chart.js"></script>
 
 <div class="container">
 	<h1>Mundo</h1>
@@ -85,6 +90,12 @@
 	<div class="row">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<h4><a href="../Resources/log/log.txt">Descargar log</a></h4>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+			<div id="chartWeather"></div>
 		</div>
 	</div>
 </div>

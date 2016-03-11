@@ -98,6 +98,11 @@
 		 */
 		private $hasEaten;
 
+		/**
+		 * @var int Cantidad de veces al día que se reproduce el elemento
+		 */
+		private $numHasBred;
+
 		/*
 		 * Constructor
 		 */
@@ -110,6 +115,7 @@
 			$this->daysWithoutEat = 0;
 			$this->daysWithoutSleep = 0;
 			$this->hasEaten = false;
+			$this->numHasBred = null;
 		}
 
 		/**
@@ -176,6 +182,15 @@
 		}
 
 		/**
+		 * Devuelve la cantidad de veces al día que se reproduce el elemento
+		 *
+		 * @return int Cantidad
+		 */
+		public function getNumHasBred(){
+			return $this->numHasBred;
+		}
+
+		/**
 		 * Modifica el número de acciones por turno del elemento
 		 *
 		 * @param int Acciones
@@ -238,5 +253,13 @@
 			$this->hasEaten = $hasEaten;
 		}
 
+		/**
+		 * Modifica la cantidad de veces al día que se reproduce el elemento
+		 *
+		 * @param int Cantidad
+		 */
+		public function setNumHasBred($numHasBred){
+			$this->numHasBred = $numHasBred;
+		}
 	}
 ?>

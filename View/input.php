@@ -12,9 +12,10 @@
 	<script type="text/javascript" src="../resources/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="../resources/js/npm.js"></script>
 	<script type="text/javascript" src="../resources/js/input.js"></script>
+	<script type="text/javascript" src="../resources/js/check.js"></script>
 </head>
 <body>
-	<form action="../Core/world.php" method="post">
+	<form action="../Core/world.php" method="post" onsubmit="return check()">
 		<div class="container">
 			<div class="row well">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -54,7 +55,7 @@
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 								<label>Turnos de ejecución</label>
 								<div class="form-group">
-									<input class="form-control" name="turn" value="1000" required>
+									<input class="form-control" name="turn" id="turn" value="100" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"></div>
@@ -65,13 +66,13 @@
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 								<label>Duración de un día</label>
 								<div class="form-group">
-									<input class="form-control" name="day" value="100" required>
+									<input class="form-control" name="day" id="day" value="10" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 								<label>Duración de la noche</label>
 								<div class="form-group">
-									<input class="form-control" name="night" value="20" required>
+									<input class="form-control" name="night" id="night" value="2" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"></div>
@@ -82,14 +83,14 @@
 								<label>Tamaño</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Largo</span>
-									<input type="text" class="form-control" name="sizeX" value="25" required>
+									<input type="text" class="form-control" name="sizeX" id="x" value="5" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 								<label>&nbsp;</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Ancho</span>
-									<input type="text" class="form-control" name="sizeY" value="60" required>
+									<input type="text" class="form-control" name="sizeY" id="y" value="5" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"></div>
@@ -114,7 +115,7 @@
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 								<label>Cambiar tiempo cada (turnos)</label>
 								<div class="form-group">
-									<input class="form-control" name="changeWeather" value="10" required>
+									<input class="form-control" name="changeWeather" id="changeWeather" value="10" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"></div>
@@ -126,19 +127,19 @@
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 								<label>Cantidad de zanahorias</label>
 								<div class="form-group">
-									<input class="form-control" name="carrot" value="2" required>
+									<input class="form-control" name="carrot" id="carrot" value="2" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 								<label>Cantidad de árboles</label>
 								<div class="form-group">
-									<input class="form-control" name="tree" value="2" required>
+									<input class="form-control" name="tree" id="tree" value="2" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 								<label>Cantidad de madrigueras</label>
 								<div class="form-group">
-									<input class="form-control" name="lair" value="2" required>
+									<input class="form-control" name="lair" id="lair" value="2" required>
 								</div>
 							</div>
 						</div>
@@ -147,13 +148,13 @@
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 								<label>Cantidad de conejos</label>
 								<div class="form-group">
-									<input class="form-control" name="rabbit" value="2" required>
+									<input class="form-control" name="rabbit" id="rabbit" value="2" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 								<label>Cantidad de lobos</label>
 								<div class="form-group">
-									<input class="form-control" name="wolf" value="2" required>
+									<input class="form-control" name="wolf" id="wolf" value="2" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"></div>
@@ -164,14 +165,14 @@
 								<label>Generación de zanahorias</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Cada x turnos</span>
-									<input type="text" class="form-control" name="timeMoreCarrot" value="50" required>
+									<input type="text" class="form-control" name="timeMoreCarrot" id="timeMoreCarrot" value="50" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 								<label>&nbsp;</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Cantidad</span>
-									<input type="text" class="form-control" name="amountMoreCarrot" value="4" required>
+									<input type="text" class="form-control" name="amountMoreCarrot" id="amountMoreCarrot" value="0" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"></div>
@@ -182,14 +183,14 @@
 								<label>Generación de lobos</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Cada x turnos</span>
-									<input type="text" class="form-control" name="timeMoreWolf" value="100" required>
+									<input type="text" class="form-control" name="timeMoreWolf" id="timeMoreWolf" value="50" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 								<label>&nbsp;</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Cantidad</span>
-									<input type="text" class="form-control" name="amountMoreWolf" value="2" required>
+									<input type="text" class="form-control" name="amountMoreWolf" id="amountMoreWolf" value="0" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"></div>
@@ -213,14 +214,14 @@
 								<label>Máximo de días sin comer</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Conejos</span>
-									<input type="text" class="form-control" name="maxEatRabbit" value="1" required>
+									<input type="text" class="form-control" name="maxEatRabbit" id="maxEatRabbit" value="1" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 								<label>&nbsp;</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Lobos</span>
-									<input type="text" class="form-control" name="maxEatWolf" value="1" required>
+									<input type="text" class="form-control" name="maxEatWolf" id="maxEatWolf" value="1" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"></div>
@@ -231,14 +232,14 @@
 								<label>Máximo de días sin dormir</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Conejos</span>
-									<input type="text" class="form-control" name="maxSleepRabbit" value="1" required>
+									<input type="text" class="form-control" name="maxSleepRabbit" id="maxSleepRabbit" value="1" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 								<label>&nbsp;</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Lobos</span>
-									<input type="text" class="form-control" name="maxSleepWolf" value="1" required>
+									<input type="text" class="form-control" name="maxSleepWolf" id="maxSleepWolf" value="1" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"></div>
@@ -278,14 +279,14 @@
 								<label>Turnos para comer</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Conejos</span>
-									<input type="text" class="form-control" name="eatRabbit" value="10" required>
+									<input type="text" class="form-control" name="eatRabbit" id="eatRabbit" value="2" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 								<label>&nbsp;</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Lobos</span>
-									<input type="text" class="form-control" name="eatWolf" value="10" required>
+									<input type="text" class="form-control" name="eatWolf" id="eatWolf" value="2" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"></div>
@@ -296,14 +297,14 @@
 								<label>Turnos para dormir</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Conejos</span>
-									<input type="text" class="form-control" name="sleepRabbit" value="20" required>
+									<input type="text" class="form-control" name="sleepRabbit" id="sleepRabbit" value="3" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 								<label>&nbsp;</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Lobos</span>
-									<input type="text" class="form-control" name="sleepWolf" value="20" required>
+									<input type="text" class="form-control" name="sleepWolf" id="sleepWolf" value="3" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"></div>
@@ -315,14 +316,14 @@
 								<label>Puntos por turno para acciones</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Conejos</span>
-									<input type="text" class="form-control" name="maxUseRabbit" value="3" required>
+									<input type="text" class="form-control" name="maxUseRabbit" id="maxUseRabbit" value="6" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 								<label>&nbsp;</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Lobos</span>
-									<input type="text" class="form-control" name="maxUseWolf" value="3" required>
+									<input type="text" class="form-control" name="maxUseWolf" id="maxUseWolf" value="6" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"></div>
@@ -333,32 +334,32 @@
 								<label>--Smell</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Conejos</span>
-									<input type="text" class="form-control" name="smellRabbitUse" value="1" required>
+									<input type="text" class="form-control" name="smellRabbitUse" id="smellRabbitUse" value="1" required>
 								</div>
 								<label>--Hear</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Conejos</span>
-									<input type="text" class="form-control" name="hearRabbitUse" value="1" required>
+									<input type="text" class="form-control" name="hearRabbitUse" id="hearRabbitUse" value="1" required>
 								</div>
 								<label>--See</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Conejos</span>
-									<input type="text" class="form-control" name="seeRabbitUse" value="1" required>
+									<input type="text" class="form-control" name="seeRabbitUse" id="seeRabbitUse" value="1" required>
 								</div>
 								<label>--Move</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Conejos</span>
-									<input type="text" class="form-control" name="moveRabbitUse" value="1" required>
+									<input type="text" class="form-control" name="moveRabbitUse" id="moveRabbitUse" value="1" required>
 								</div>
 								<label>--Sleep</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Conejos</span>
-									<input type="text" class="form-control" name="sleepRabbitUse" value="1" required>
+									<input type="text" class="form-control" name="sleepRabbitUse" id="sleepRabbitUse" value="1" required>
 								</div>
 								<label>--Reproduce</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Conejos</span>
-									<input type="text" class="form-control" name="reproduceRabbitUse" value="1" required>
+									<input type="text" class="form-control" name="reproduceRabbitUse" id="reproduceRabbitUse" value="1" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
@@ -366,32 +367,32 @@
 								<label>&nbsp;</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Lobos</span>
-									<input type="text" class="form-control" name="smellWolfUse" value="1" required>
+									<input type="text" class="form-control" name="smellWolfUse" id="smellWolfUse" value="1" required>
 								</div>
 								<label>&nbsp;</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Lobos</span>
-									<input type="text" class="form-control" name="hearWolfUse" value="1" required>
+									<input type="text" class="form-control" name="hearWolfUse" id="hearWolfUse" value="1" required>
 								</div>
 								<label>&nbsp;</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Lobos</span>
-									<input type="text" class="form-control" name="seeWolfUse" value="1" required>
+									<input type="text" class="form-control" name="seeWolfUse" id="seeWolfUse" value="1" required>
 								</div>
 								<label>&nbsp;</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Lobos</span>
-									<input type="text" class="form-control" name="moveWolfUse" value="1" required>
+									<input type="text" class="form-control" name="moveWolfUse" id="moveWolfUse" value="1" required>
 								</div>
 								<label>&nbsp;</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Lobos</span>
-									<input type="text" class="form-control" name="sleepWolfUse" value="1" required>
+									<input type="text" class="form-control" name="sleepWolfUse" id="sleepWolfUse" value="1" required>
 								</div>
 								<label>&nbsp;</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Lobos</span>
-									<input type="text" class="form-control" name="reproduceWolfUse" value="1" required>
+									<input type="text" class="form-control" name="reproduceWolfUse" id="reproduceWolfUse" value="1" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"></div>
@@ -403,14 +404,14 @@
 								<label>Rango de visión</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Conejos</span>
-									<input type="text" class="form-control" name="seeRabbit" value="1" required>
+									<input type="text" class="form-control" name="seeRabbit" id="seeRabbit" value="1" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 								<label>&nbsp;</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Lobos</span>
-									<input type="text" class="form-control" name="seeWolf" value="1" required>
+									<input type="text" class="form-control" name="seeWolf" id="seeWolf" value="1" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"></div>
@@ -421,14 +422,14 @@
 								<label>Rango de olfato</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Conejos</span>
-									<input type="text" class="form-control" name="smellRabbit" value="1" required>
+									<input type="text" class="form-control" name="smellRabbit" id="smellRabbit" value="1" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 								<label>&nbsp;</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Lobos</span>
-									<input type="text" class="form-control" name="smellWolf" value="1" required>
+									<input type="text" class="form-control" name="smellWolf" id="smellWolf" value="1" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"></div>
@@ -439,14 +440,14 @@
 								<label>Rango de oído</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Conejos</span>
-									<input type="text" class="form-control" name="hearRabbit" value="1" required>
+									<input type="text" class="form-control" name="hearRabbit" id="hearRabbit" value="1" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 								<label>&nbsp;</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Lobos</span>
-									<input type="text" class="form-control" name="hearWolf" value="1" required>
+									<input type="text" class="form-control" name="hearWolf" id="hearWolf" value="1" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"></div>

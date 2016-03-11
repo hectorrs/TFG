@@ -43,6 +43,9 @@
 	$vars['fileLog'] = openFile('log');
 	$vars['fileDebug'] = openFile('debug');
 
+	/* ** Estadísticas ** */
+	$vars['countWeather'] = array(0, 0, 0, 0);
+
 	/* ------------------------------- Mundo ------------------------------- */
 	/**
 	 * Recoge los datos de configuración inicial del mundo y los registra en el log
@@ -249,7 +252,7 @@
 	 * Modifica el tiempo atmosférico actual
 	 */
 	function setWeather(){
-		$GLOBALS['vars']['currentWeather'] = $GLOBALS['vars']['weather'][rand(0, 3)];
+		$GLOBALS['vars']['currentWeather'] = $GLOBALS['vars']['weather'][mt_rand(0, 3)];
 		writeFile('Log', 'Weather changed to ' . getWeather() . "\n");
 	}
 
@@ -451,6 +454,7 @@
             $rabbit->setPosition(array($row, $col));
             $rabbit->setActPerTurn($_POST['maxUseRabbit']);
             $rabbit->setHidden(false);
+            $rabbit->setNumHasBred(0);
 
             addDynamic($rabbit);
 
@@ -1007,6 +1011,10 @@
         return array('Rabbit' => $numRabbit, 'Wolf' => $numWolf, 'Carrot' => $numCarrot);
 	}
 
+	function breed($element){
+
+	}
+
 	/* --------------------------------------------------------------------- */
 
 	/* ------------------------------ Archivos ----------------------------- */
@@ -1051,12 +1059,30 @@
 	for($i = 0; $i < $_POST['tree']; $i++) addTree();
 
 	writeWorld();
+
+	// Estadísticas - Tiempo atmosférico
+	switch(getWeather()){
+		case 'sunny':
+			$GLOBALS['vars']['countWeather'][0]++;
+			break;
+		case 'rainy':
+			$GLOBALS['vars']['countWeather'][1]++;
+			break;
+		case 'windy':
+			$GLOBALS['vars']['countWeather'][2]++;
+			break;
+		case 'foggy':
+			$GLOBALS['vars']['countWeather'][3]++;
+			break;
+	}
 	
 	if(getLengthNight() % 2 == 0){
 		$x = 0;
 	}else{
 		$x = 1;
 	}
+
+	$timeWeather = 1;
 
 	while(getTime() <= getLength()){
 		while(getTime() < getLengthDay() * getiTime() && getTime() <= getLength()){
@@ -1068,8 +1094,9 @@
 			}
 
 			// Cambiar tiempo atmosférico
-			if(getTime() == getChangeWeather() * getiTime()){
+			if(getTime() == getChangeWeather() * $timeWeather){
 				setWeather();
+				$timeWeather++;
 			}
 
 			foreach(getDynamic() as $element){
@@ -1110,6 +1137,22 @@
 			setTime();
 			writeWorld();
 
+			// Estadísticas - Tiempo atmosférico
+			switch(getWeather()){
+				case 'sunny':
+					$GLOBALS['vars']['countWeather'][0]++;
+					break;
+				case 'rainy':
+					$GLOBALS['vars']['countWeather'][1]++;
+					break;
+				case 'windy':
+					$GLOBALS['vars']['countWeather'][2]++;
+					break;
+				case 'foggy':
+					$GLOBALS['vars']['countWeather'][3]++;
+					break;
+			}
+
 			writeFile('Log', "\n");
 		}
 
@@ -1121,16 +1164,19 @@
 		}
 
 		// Cambiar tiempo atmosférico
-		if(getTime() == getChangeWeather() * getiTime()){
+		if(getTime() == getChangeWeather() * $timeWeather){
 			setWeather();
+			$timeWeather++;
 		}
 
 		foreach(getDynamic() as $element){
-			if($element->getDaysWithoutEat() == $_POST['maxEatRabbit'] - 1){
+			if((get_class($element) == 'Rabbit' && $element->getDaysWithoutEat() == $_POST['maxEatRabbit']) || (get_class($element) == 'Wolf' && $element->getDaysWithoutEat() == $_POST['maxEatWolf'])){
 				delDynamic($element);
+				writeFile('Log', get_class($element) . ' ' . $element->getId() . ' has dead because he has not eaten enough' . "\n");
 			}else{
-				if($element->getDaysWithoutSleep() == $_POST['maxSleepRabbit']){
+				if((get_class($element) == 'Rabbit' && $element->getDaysWithoutSleep() == $_POST['maxSleepRabbit']) || (get_class($element) == 'Wolf' && $element->getDaysWithoutSleep() == $_POST['maxSleepWolf'])){
 					delDynamic($element);
+					writeFile('Log', get_class($element) . ' ' . $element->getId() . ' has dead because he has not slept enough' . "\n");
 				}else{
 					if($element->getEating() > 0){
 						$element->setEating($element->getEating() - 1);
@@ -1186,6 +1232,22 @@
 		
 		setiTime();
 
+		// Estadísticas - Tiempo atmosférico
+		switch(getWeather()){
+			case 'sunny':
+				$GLOBALS['vars']['countWeather'][0]++;
+				break;
+			case 'rainy':
+				$GLOBALS['vars']['countWeather'][1]++;
+				break;
+			case 'windy':
+				$GLOBALS['vars']['countWeather'][2]++;
+				break;
+			case 'foggy':
+				$GLOBALS['vars']['countWeather'][3]++;
+				break;
+		}
+
 		writeFile('Log', "\n");
 	}
 
@@ -1198,10 +1260,15 @@
 	
 	session_start();
 
+	// Mundo
 	$_SESSION['row'] = getSizeWorld()['row'];
 	$_SESSION['col'] = getSizeWorld()['col'];
+
 	$_SESSION['memory'] = $memory / 1024 / 1024;
 	$_SESSION['time'] = bcsub($timeFinish, $timeStart, 2);
+
+	// Estadísticas
+	$_SESSION['weather'] = $GLOBALS['vars']['countWeather'];
 
 	session_write_close();
 
