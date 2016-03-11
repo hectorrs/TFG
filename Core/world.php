@@ -615,6 +615,14 @@
 					writeFile('Log', get_class($args[0]) . ' ' . $args[0]->getId() . ' can\'t hear, hasn\'t enough uses' . "\n");
 				}
 				break;
+			case 'breed':
+				if(canAct($args[0], $args[1])){
+					breed($args[0]);
+					useAction($args[0], 'breed');
+				}else{
+					writeFile('Log', get_class($args[0]) . ' ' . $args[0]->getId() . ' can\'t breed, hasn\'t enough uses' . "\n");
+				}
+				break;
 		}
 	}
 
@@ -674,6 +682,13 @@
 					return $_POST['hearRabbitUse'];
 				}else{
 					return $_POST['hearWolfUse'];
+				}
+				break;
+			case 'breed':
+				if(get_class($element) == 'Rabbit'){
+					return $_POST['breedRabbitUse'];
+				}else{
+					return $_POST['breedWolfUse'];
 				}
 				break;
 		}
@@ -1012,7 +1027,33 @@
 	}
 
 	function breed($element){
+		if($element->getNumHasBred() <= $_POST['breedRabbit']){
+			$position = $element->getPosition();
 
+			$flag = false;
+			foreach(getDynamic() as $elem){
+				if(get_class($elem) == 'Rabbit'){
+					$positionCouple = $elem->getPosition();
+
+					if(($positionCouple[0] == $position[0] - 1 && $positionCouple[1] == $position[1]) ||
+						($positionCouple[0] == $position[0] + 1 && $positionCouple[1] == $position[1]) ||
+						($positionCouple[0] == $position[0] && $positionCouple[1] == $position[1] - 1) ||
+						($positionCouple[0] == $position[0] && $positionCouple[1] == $position[1] + 1)){
+						addRabbit();
+						$element->setNumHasBred($element->getNumHasBred() + 1);
+
+						$flag = true;
+						writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - breed' . "\n");
+						break;
+					}
+				}
+			}
+			if(!$flag){
+				writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - breed - Denied' . "\n");
+			}
+		}else{
+			writeFile('Log', 'Rabbit ' . $element->getId() . ' hasn\'t more times to breed today' . "\n");
+		}
 	}
 
 	/* --------------------------------------------------------------------- */
@@ -1198,6 +1239,9 @@
 							}else{
 								$element->setHasEaten(false);
 								$element->setDaysWithoutEat(0);
+							}
+							if($element->getNumHasBred() != null){
+								$element->setNumHasBred(0);
 							}
 							$element->act();
 							useAction($element, 'max');

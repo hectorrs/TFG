@@ -202,7 +202,7 @@
 								<label>Reproducción de conejos</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Límite por día</span>
-									<input type="text" class="form-control" name="reproduceRabbit" value="1" required>
+									<input type="text" class="form-control" name="breedRabbit" value="1" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"></div>
@@ -331,35 +331,35 @@
 						<div class="row">
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 								<label>Consumo por acción</label><br>
-								<label>--Smell</label>
+								<label>--Olfatear</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Conejos</span>
 									<input type="text" class="form-control" name="smellRabbitUse" id="smellRabbitUse" value="1" required>
 								</div>
-								<label>--Hear</label>
+								<label>--Oir</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Conejos</span>
 									<input type="text" class="form-control" name="hearRabbitUse" id="hearRabbitUse" value="1" required>
 								</div>
-								<label>--See</label>
+								<label>--Ver</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Conejos</span>
 									<input type="text" class="form-control" name="seeRabbitUse" id="seeRabbitUse" value="1" required>
 								</div>
-								<label>--Move</label>
+								<label>--Moverse</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Conejos</span>
 									<input type="text" class="form-control" name="moveRabbitUse" id="moveRabbitUse" value="1" required>
 								</div>
-								<label>--Sleep</label>
+								<label>--Dormir</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Conejos</span>
 									<input type="text" class="form-control" name="sleepRabbitUse" id="sleepRabbitUse" value="1" required>
 								</div>
-								<label>--Reproduce</label>
+								<label>--Reproducirse</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Conejos</span>
-									<input type="text" class="form-control" name="reproduceRabbitUse" id="reproduceRabbitUse" value="1" required>
+									<input type="text" class="form-control" name="breedRabbitUse" id="breedRabbitUse" value="1" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
@@ -392,7 +392,7 @@
 								<label>&nbsp;</label>
 								<div class="input-group form-group">
 									<span class="input-group-addon">Lobos</span>
-									<input type="text" class="form-control" name="reproduceWolfUse" id="reproduceWolfUse" value="1" required>
+									<input type="text" class="form-control" name="breedWolfUse" id="breedWolfUse" value="1" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"></div>

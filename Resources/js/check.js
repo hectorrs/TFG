@@ -17,8 +17,8 @@ function check(){
 		turnSleep(values['turnSleepRabbit'], values['turnSleepWolf'], values['night']),
 		maxUse(values['maxUseRabbit'], values['maxUseWolf']),
 		useAct(values['smellRabbitUse'], values['hearRabbitUse'], values['seeRabbitUse'], values['moveRabbitUse'], 
-			values['sleepRabbitUse'], values['reproduceRabbitUse'], values['smellWolfUse'], values['hearWolfUse'], 
-			values['seeWolfUse'], values['moveWolfUse'], values['sleepWolfUse'], values['reproduceWolfUse']),
+			values['sleepRabbitUse'], values['breedRabbitUse'], values['smellWolfUse'], values['hearWolfUse'], 
+			values['seeWolfUse'], values['moveWolfUse'], values['sleepWolfUse'], values['breedWolfUse']),
 		rangeAct(values['seeRabbit'], values['seeWolf'], values['smellRabbit'], values['smellWolf'], values['hearRabbit'], values['hearWolf'])
 	];
 
@@ -63,13 +63,13 @@ function getValues(){
 	var seeRabbitUse = document.getElementById('seeRabbitUse').value;
 	var moveRabbitUse = document.getElementById('moveRabbitUse').value;
 	var sleepRabbitUse = document.getElementById('sleepRabbitUse').value;
-	var reproduceRabbitUse = document.getElementById('reproduceRabbitUse').value;
+	var breedRabbitUse = document.getElementById('breedRabbitUse').value;
 	var smellWolfUse = document.getElementById('smellWolfUse').value;
 	var hearWolfUse = document.getElementById('hearWolfUse').value;
 	var seeWolfUse = document.getElementById('seeWolfUse').value;
 	var moveWolfUse = document.getElementById('moveWolfUse').value;
 	var sleepWolfUse = document.getElementById('sleepWolfUse').value;
-	var reproduceWolfUse = document.getElementById('reproduceWolfUse').value;
+	var breedWolfUse = document.getElementById('breedWolfUse').value;
 	var seeRabbit = document.getElementById('seeRabbit').value;
 	var seeWolf = document.getElementById('seeWolf').value;
 	var smellRabbit = document.getElementById('smellRabbit').value;
@@ -108,13 +108,13 @@ function getValues(){
 		'seeRabbitUse' : seeRabbitUse,
 		'moveRabbitUse' : moveRabbitUse,
 		'sleepRabbitUse' : sleepRabbitUse,
-		'reproduceRabbitUse' : reproduceRabbitUse,
+		'breedRabbitUse' : breedRabbitUse,
 		'smellWolfUse' : smellWolfUse,
 		'hearWolfUse' : hearWolfUse,
 		'seeWolfUse' : seeWolfUse,
 		'moveWolfUse' : moveWolfUse,
 		'sleepWolfUse' : sleepWolfUse,
-		'reproduceWolfUse' : reproduceWolfUse,
+		'breedWolfUse' : breedWolfUse,
 		'seeRabbit' : seeRabbit,
 		'seeWolf' : seeWolf,
 		'smellRabbit' : smellRabbit,
@@ -452,12 +452,12 @@ function maxUse(maxUseRabbit, maxUseWolf){
 }
 
 // Consumo de puntos por acción
-function useAct(smellRabbitUse, hearRabbitUse, seeRabbitUse, moveRabbitUse, sleepRabbitUse, reproduceRabbitUse, 
-	smellWolfUse, hearWolfUse, seeWolfUse, moveWolfUse, sleepWolfUse, reproduceWolfUse){
+function useAct(smellRabbitUse, hearRabbitUse, seeRabbitUse, moveRabbitUse, sleepRabbitUse, breedRabbitUse, 
+	smellWolfUse, hearWolfUse, seeWolfUse, moveWolfUse, sleepWolfUse, breedWolfUse){
 	if(!(/^([0-9])*$/.test(smellRabbitUse)) || !(/^([0-9])*$/.test(hearRabbitUse)) || !(/^([0-9])*$/.test(seeRabbitUse)) ||
-		!(/^([0-9])*$/.test(moveRabbitUse)) || !(/^([0-9])*$/.test(sleepRabbitUse)) || !(/^([0-9])*$/.test(reproduceRabbitUse)) ||
+		!(/^([0-9])*$/.test(moveRabbitUse)) || !(/^([0-9])*$/.test(sleepRabbitUse)) || !(/^([0-9])*$/.test(breedRabbitUse)) ||
 		!(/^([0-9])*$/.test(smellWolfUse)) || !(/^([0-9])*$/.test(hearWolfUse)) || !(/^([0-9])*$/.test(seeWolfUse)) ||
-		!(/^([0-9])*$/.test(moveWolfUse)) || !(/^([0-9])*$/.test(sleepWolfUse)) || !(/^([0-9])*$/.test(reproduceWolfUse))){
+		!(/^([0-9])*$/.test(moveWolfUse)) || !(/^([0-9])*$/.test(sleepWolfUse)) || !(/^([0-9])*$/.test(breedWolfUse))){
 		if(!(/^([0-9])*$/.test(smellRabbitUse))){
 			alert('Consumo por acción - Olfatear - Conejos - Formato incorrecto');
 		}
@@ -473,7 +473,7 @@ function useAct(smellRabbitUse, hearRabbitUse, seeRabbitUse, moveRabbitUse, slee
 		if(!(/^([0-9])*$/.test(sleepRabbitUse))){
 			alert('Consumo por acción - Dormir - Conejos - Formato incorrecto');
 		}
-		if(!(/^([0-9])*$/.test(reproduceRabbitUse))){
+		if(!(/^([0-9])*$/.test(breedRabbitUse))){
 			alert('Consumo por acción - Reproducirse - Conejos - Formato incorrecto');
 		}
 		if(!(/^([0-9])*$/.test(smellWolfUse))){
@@ -491,7 +491,7 @@ function useAct(smellRabbitUse, hearRabbitUse, seeRabbitUse, moveRabbitUse, slee
 		if(!(/^([0-9])*$/.test(sleepWolfUse))){
 			alert('Consumo por acción - Dormir - Lobos - Formato incorrecto');
 		}
-		if(!(/^([0-9])*$/.test(reproduceWolfUse))){
+		if(!(/^([0-9])*$/.test(breedWolfUse))){
 			alert('Consumo por acción - Reproducirse - Lobos - Formato incorrecto');
 		}
 		return false;
