@@ -369,7 +369,7 @@ function drawChartDeadEat(){
     var options = {
         hAxis: {
             title: 'Días',
-            viewWindow: {min:0, max:10}
+            viewWindow: {min:0, max:100}
         },
         vAxis: {
             title: 'Cantidad'
@@ -399,15 +399,15 @@ function drawChartDeadEat(){
     }
 
     prevButton.onclick = function(){
-        options.hAxis.viewWindow.min -= 10;
-        options.hAxis.viewWindow.max -= 10;
+        options.hAxis.viewWindow.min -= 100;
+        options.hAxis.viewWindow.max -= 100;
 
         drawChart();
     }
 
     nextButton.onclick = function(){
-        options.hAxis.viewWindow.min += 10;
-        options.hAxis.viewWindow.max += 10;
+        options.hAxis.viewWindow.min += 100;
+        options.hAxis.viewWindow.max += 100;
 
         drawChart();
     }
@@ -416,7 +416,7 @@ function drawChartDeadEat(){
     changeZoomButton.onclick = function(){
         if(zoomed){
             options.hAxis.viewWindow.min = 0;
-            options.hAxis.viewWindow.max = 10;
+            options.hAxis.viewWindow.max = 100;
         }else{
             options.hAxis.viewWindow.min = 0;
             options.hAxis.viewWindow.max = deadEatRabbit.length - 1;
@@ -448,7 +448,7 @@ function drawChartDeadSleep(){
     var options = {
         hAxis: {
             title: 'Días',
-            viewWindow: {min:0, max:10}
+            viewWindow: {min:0, max:100}
         },
         vAxis: {
             title: 'Cantidad'
@@ -478,15 +478,15 @@ function drawChartDeadSleep(){
     }
 
     prevButton.onclick = function(){
-        options.hAxis.viewWindow.min -= 10;
-        options.hAxis.viewWindow.max -= 10;
+        options.hAxis.viewWindow.min -= 100;
+        options.hAxis.viewWindow.max -= 100;
 
         drawChart();
     }
 
     nextButton.onclick = function(){
-        options.hAxis.viewWindow.min += 10;
-        options.hAxis.viewWindow.max += 10;
+        options.hAxis.viewWindow.min += 100;
+        options.hAxis.viewWindow.max += 100;
 
         drawChart();
     }
@@ -495,7 +495,7 @@ function drawChartDeadSleep(){
     changeZoomButton.onclick = function(){
         if(zoomed){
             options.hAxis.viewWindow.min = 0;
-            options.hAxis.viewWindow.max = 10;
+            options.hAxis.viewWindow.max = 100;
         }else{
             options.hAxis.viewWindow.min = 0;
             options.hAxis.viewWindow.max = deadSleepRabbit.length - 1;
