@@ -1,7 +1,7 @@
-Dimensions: 5 x 5
+Dimensions: 50 x 50
 Turns: 100
-Length day: 10
-Length night: 2
+Length day: 100
+Length night: 20
 Status day: night
 Weather: sunny
 Change weather every 10 turns
@@ -29,1310 +29,1245 @@ Rabbits have 1 of hear range
 Wolfs have 1 of hear range
 0 carrots more each 50 turns
 0 wolfs more each 50 turns
-( 0 , 4 ) - Rabbit 0
-( 3 , 2 ) - Rabbit 1
+( 32 , 4 ) - Rabbit 0
+( 48 , 30 ) - Wolf 1
+( 40 , 33 ) - Carrot
+( 27 , 49 ) - Lair
+( 25 , 47 ) - Tree
 ----Turn 1
-Status day changed to day
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - left - ( 32 , 3 )
+Rabbit 0 - sleep - Denied
 Rabbit 0 - breed - Denied
-Rabbit 0 - move - left - ( 0 , 3 )
-Rabbit 1 - breed - Denied
-Rabbit 1 - move - left - ( 3 , 1 )
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 47 , 30 )
+Wolf 1 - sleep - Denied
 
 ----Turn 2
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - left - ( 32 , 2 )
+Rabbit 0 - sleep - Denied
 Rabbit 0 - breed - Denied
-Rabbit 0 - move - left - ( 0 , 2 )
-Rabbit 1 - breed - Denied
-Rabbit 1 - move - down - ( 4 , 1 )
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 47 , 29 )
+Wolf 1 - sleep - Denied
 
 ----Turn 3
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - up - ( 31 , 2 )
+Rabbit 0 - sleep - Denied
 Rabbit 0 - breed - Denied
-Rabbit 0 - move - up - Denied
-Rabbit 1 - breed - Denied
-Rabbit 1 - move - right - ( 4 , 2 )
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 47 , 28 )
+Wolf 1 - sleep - Denied
 
 ----Turn 4
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - right - ( 31 , 3 )
+Rabbit 0 - sleep - Denied
 Rabbit 0 - breed - Denied
-Rabbit 0 - move - up - Denied
-Rabbit 1 - breed - Denied
-Rabbit 1 - move - left - ( 4 , 1 )
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 48 , 28 )
+Wolf 1 - sleep - Denied
 
 ----Turn 5
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - up - ( 30 , 3 )
+Rabbit 0 - sleep - Denied
 Rabbit 0 - breed - Denied
-Rabbit 0 - move - down - ( 1 , 2 )
-Rabbit 1 - breed - Denied
-Rabbit 1 - move - left - ( 4 , 0 )
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 48 , 29 )
+Wolf 1 - sleep - Denied
 
 ----Turn 6
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - right - ( 30 , 4 )
+Rabbit 0 - sleep - Denied
 Rabbit 0 - breed - Denied
-Rabbit 0 - move - left - ( 1 , 1 )
-Rabbit 1 - breed - Denied
-Rabbit 1 - move - down - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 49 , 29 )
+Wolf 1 - sleep - Denied
 
 ----Turn 7
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - down - ( 31 , 4 )
+Rabbit 0 - sleep - Denied
 Rabbit 0 - breed - Denied
-Rabbit 0 - move - right - ( 1 , 2 )
-Rabbit 1 - breed - Denied
-Rabbit 1 - move - left - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
 
 ----Turn 8
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - down - ( 32 , 4 )
+Rabbit 0 - sleep - Denied
 Rabbit 0 - breed - Denied
-Rabbit 0 - move - down - ( 2 , 2 )
-Rabbit 1 - breed - Denied
-Rabbit 1 - move - right - ( 4 , 1 )
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
 
 ----Turn 9
-Status day changed to night
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - right - ( 32 , 5 )
+Rabbit 0 - sleep - Denied
 Rabbit 0 - breed - Denied
-Rabbit 0 - move - down - ( 3 , 2 )
-Rabbit 1 - breed - Denied
-Rabbit 1 - move - right - ( 4 , 2 )
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
 
 ----Turn 10
-Weather changed to foggy
-( 1 , 0 ) - Rabbit 2
-Rabbit 0 - breed
-Rabbit 0 - move - right - ( 3 , 3 )
-Rabbit 1 - breed - Denied
-Rabbit 1 - move - up - ( 3 , 2 )
+Status day changed to day
+Weather changed to sunny
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - down - ( 33 , 5 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 49 , 30 )
+Wolf 1 - sleep - Denied
 
 ----Turn 11
-Status day changed to day
-( 2 , 0 ) - Rabbit 3
-Rabbit 0 - breed
-Rabbit 0 - move - up - ( 2 , 3 )
-Rabbit 1 - breed - Denied
-Rabbit 1 - move - up - ( 2 , 2 )
-( 2 , 1 ) - Rabbit 4
-Rabbit 2 - breed
-Rabbit 2 - move - down - Denied
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - right - ( 33 , 6 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 49 , 29 )
+Wolf 1 - sleep - Denied
 
 ----Turn 12
-( 0 , 4 ) - Rabbit 5
-Rabbit 0 - breed
-Rabbit 0 - move - down - ( 3 , 3 )
-( 3 , 1 ) - Rabbit 6
-Rabbit 1 - breed
-Rabbit 1 - move - up - ( 1 , 2 )
-( 0 , 2 ) - Rabbit 7
-Rabbit 2 - breed
-Rabbit 2 - move - up - ( 0 , 0 )
-( 1 , 4 ) - Rabbit 8
-Rabbit 3 - breed
-Rabbit 3 - move - left - Denied
-( 4 , 0 ) - Rabbit 9
-Rabbit 4 - breed
-Rabbit 4 - move - down - Denied
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - right - ( 33 , 7 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
 
 ----Turn 13
-Rabbit 0 hasn't more times to breed today
-Rabbit 0 - move - left - ( 3 , 2 )
-( 3 , 0 ) - Rabbit 10
-Rabbit 1 - breed
-Rabbit 1 - move - left - ( 1 , 1 )
-Rabbit 2 - breed - Denied
-Rabbit 2 - move - down - ( 1 , 0 )
-( 2 , 4 ) - Rabbit 11
-Rabbit 3 - breed
-Rabbit 3 - move - left - Denied
-( 1 , 2 ) - Rabbit 12
-Rabbit 4 - breed
-Rabbit 4 - move - down - Denied
-( 3 , 3 ) - Rabbit 13
-Rabbit 5 - breed
-Rabbit 5 - move - up - Denied
-( 1 , 3 ) - Rabbit 14
-Rabbit 6 - breed
-Rabbit 6 - move - left - Denied
-( 2 , 2 ) - Rabbit 15
-Rabbit 7 - breed
-Rabbit 7 - move - down - Denied
-( 2 , 3 ) - Rabbit 16
-Rabbit 8 - breed
-Rabbit 8 - move - right - Denied
-( 3 , 4 ) - Rabbit 17
-Rabbit 9 - breed
-Rabbit 9 - move - left - Denied
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - right - ( 33 , 8 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
 
 ----Turn 14
-Rabbit 0 hasn't more times to breed today
-Rabbit 0 - move - right - Denied
-( 4 , 2 ) - Rabbit 18
-Rabbit 1 - breed
-Rabbit 1 - move - down - Denied
-( 4 , 3 ) - Rabbit 19
-Rabbit 2 - breed
-Rabbit 2 - move - down - Denied
-( 0 , 1 ) - Rabbit 20
-Rabbit 3 - breed
-Rabbit 3 - move - right - Denied
-( 0 , 0 ) - Rabbit 21
-Rabbit 4 - breed
-Rabbit 4 - move - right - Denied
-( 4 , 4 ) - Rabbit 22
-Rabbit 5 - breed
-Rabbit 5 - move - left - ( 0 , 3 )
-( 0 , 4 ) - Rabbit 23
-Rabbit 6 - breed
-Rabbit 6 - move - down - ( 4 , 1 )
-( 3 , 1 ) - Rabbit 24
-Rabbit 7 - breed
-Rabbit 7 - move - up - Denied
-World is full! It can't put a rabbit
-Rabbit 8 - breed
-Rabbit 8 - move - up - Denied
-World is full! It can't put a rabbit
-Rabbit 9 - breed
-Rabbit 9 - move - left - Denied
-World is full! It can't put a rabbit
-Rabbit 10 - breed
-Rabbit 10 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 11 - breed
-Rabbit 11 - move - right - Denied
-World is full! It can't put a rabbit
-Rabbit 12 - breed
-Rabbit 12 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 13 - breed
-Rabbit 13 - move - up - Denied
-World is full! It can't put a rabbit
-Rabbit 14 - breed
-Rabbit 14 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 15 - breed
-Rabbit 15 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 16 - breed
-Rabbit 16 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 17 - breed
-Rabbit 17 - move - up - Denied
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - down - ( 34 , 8 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 48 , 29 )
+Wolf 1 - sleep - Denied
 
 ----Turn 15
-Rabbit 0 hasn't more times to breed today
-Rabbit 0 - move - right - Denied
-Rabbit 1 hasn't more times to breed today
-Rabbit 1 - move - right - Denied
-Rabbit 2 hasn't more times to breed today
-Rabbit 2 - move - down - Denied
-Rabbit 3 hasn't more times to breed today
-Rabbit 3 - move - left - Denied
-Rabbit 4 hasn't more times to breed today
-Rabbit 4 - move - right - Denied
-World is full! It can't put a rabbit
-Rabbit 5 - breed
-Rabbit 5 - move - left - Denied
-World is full! It can't put a rabbit
-Rabbit 6 - breed
-Rabbit 6 - move - up - Denied
-World is full! It can't put a rabbit
-Rabbit 7 - breed
-Rabbit 7 - move - up - Denied
-World is full! It can't put a rabbit
-Rabbit 8 - breed
-Rabbit 8 - move - left - Denied
-World is full! It can't put a rabbit
-Rabbit 9 - breed
-Rabbit 9 - move - up - Denied
-World is full! It can't put a rabbit
-Rabbit 10 - breed
-Rabbit 10 - move - right - Denied
-World is full! It can't put a rabbit
-Rabbit 11 - breed
-Rabbit 11 - move - up - Denied
-World is full! It can't put a rabbit
-Rabbit 12 - breed
-Rabbit 12 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 13 - breed
-Rabbit 13 - move - left - Denied
-World is full! It can't put a rabbit
-Rabbit 14 - breed
-Rabbit 14 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 15 - breed
-Rabbit 15 - move - up - Denied
-World is full! It can't put a rabbit
-Rabbit 16 - breed
-Rabbit 16 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 17 - breed
-Rabbit 17 - move - left - Denied
-World is full! It can't put a rabbit
-Rabbit 18 - breed
-Rabbit 18 - move - left - Denied
-World is full! It can't put a rabbit
-Rabbit 19 - breed
-Rabbit 19 - move - up - Denied
-World is full! It can't put a rabbit
-Rabbit 20 - breed
-Rabbit 20 - move - left - Denied
-World is full! It can't put a rabbit
-Rabbit 21 - breed
-Rabbit 21 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 22 - breed
-Rabbit 22 - move - left - Denied
-World is full! It can't put a rabbit
-Rabbit 23 - breed
-Rabbit 23 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 24 - breed
-Rabbit 24 - move - right - Denied
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - down - ( 35 , 8 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 48 , 30 )
+Wolf 1 - sleep - Denied
 
 ----Turn 16
-Rabbit 0 hasn't more times to breed today
-Rabbit 0 - move - right - Denied
-Rabbit 1 hasn't more times to breed today
-Rabbit 1 - move - down - Denied
-Rabbit 2 hasn't more times to breed today
-Rabbit 2 - move - left - Denied
-Rabbit 3 hasn't more times to breed today
-Rabbit 3 - move - right - Denied
-Rabbit 4 hasn't more times to breed today
-Rabbit 4 - move - up - Denied
-Rabbit 5 hasn't more times to breed today
-Rabbit 5 - move - left - Denied
-Rabbit 6 hasn't more times to breed today
-Rabbit 6 - move - up - Denied
-Rabbit 7 hasn't more times to breed today
-Rabbit 7 - move - right - Denied
-Rabbit 8 hasn't more times to breed today
-Rabbit 8 - move - up - Denied
-Rabbit 9 hasn't more times to breed today
-Rabbit 9 - move - left - Denied
-World is full! It can't put a rabbit
-Rabbit 10 - breed
-Rabbit 10 - move - right - Denied
-World is full! It can't put a rabbit
-Rabbit 11 - breed
-Rabbit 11 - move - up - Denied
-World is full! It can't put a rabbit
-Rabbit 12 - breed
-Rabbit 12 - move - up - Denied
-World is full! It can't put a rabbit
-Rabbit 13 - breed
-Rabbit 13 - move - up - Denied
-World is full! It can't put a rabbit
-Rabbit 14 - breed
-Rabbit 14 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 15 - breed
-Rabbit 15 - move - up - Denied
-World is full! It can't put a rabbit
-Rabbit 16 - breed
-Rabbit 16 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 17 - breed
-Rabbit 17 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 18 - breed
-Rabbit 18 - move - up - Denied
-World is full! It can't put a rabbit
-Rabbit 19 - breed
-Rabbit 19 - move - left - Denied
-World is full! It can't put a rabbit
-Rabbit 20 - breed
-Rabbit 20 - move - left - Denied
-World is full! It can't put a rabbit
-Rabbit 21 - breed
-Rabbit 21 - move - right - Denied
-World is full! It can't put a rabbit
-Rabbit 22 - breed
-Rabbit 22 - move - right - Denied
-World is full! It can't put a rabbit
-Rabbit 23 - breed
-Rabbit 23 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 24 - breed
-Rabbit 24 - move - up - Denied
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - down - ( 36 , 8 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 49 , 30 )
+Wolf 1 - sleep - Denied
 
 ----Turn 17
-Rabbit 0 hasn't more times to breed today
-Rabbit 0 - move - down - Denied
-Rabbit 1 hasn't more times to breed today
-Rabbit 1 - move - up - Denied
-Rabbit 2 hasn't more times to breed today
-Rabbit 2 - move - up - Denied
-Rabbit 3 hasn't more times to breed today
-Rabbit 3 - move - right - Denied
-Rabbit 4 hasn't more times to breed today
-Rabbit 4 - move - right - Denied
-Rabbit 5 hasn't more times to breed today
-Rabbit 5 - move - down - Denied
-Rabbit 6 hasn't more times to breed today
-Rabbit 6 - move - down - Denied
-Rabbit 7 hasn't more times to breed today
-Rabbit 7 - move - left - Denied
-Rabbit 8 hasn't more times to breed today
-Rabbit 8 - move - up - Denied
-Rabbit 9 hasn't more times to breed today
-Rabbit 9 - move - down - Denied
-Rabbit 10 hasn't more times to breed today
-Rabbit 10 - move - up - Denied
-Rabbit 11 hasn't more times to breed today
-Rabbit 11 - move - down - Denied
-Rabbit 12 hasn't more times to breed today
-Rabbit 12 - move - left - Denied
-Rabbit 13 hasn't more times to breed today
-Rabbit 13 - move - down - Denied
-Rabbit 14 hasn't more times to breed today
-Rabbit 14 - move - left - Denied
-Rabbit 15 hasn't more times to breed today
-Rabbit 15 - move - left - Denied
-Rabbit 16 hasn't more times to breed today
-Rabbit 16 - move - left - Denied
-Rabbit 17 hasn't more times to breed today
-Rabbit 17 - move - left - Denied
-World is full! It can't put a rabbit
-Rabbit 18 - breed
-Rabbit 18 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 19 - breed
-Rabbit 19 - move - right - Denied
-World is full! It can't put a rabbit
-Rabbit 20 - breed
-Rabbit 20 - move - right - Denied
-World is full! It can't put a rabbit
-Rabbit 21 - breed
-Rabbit 21 - move - up - Denied
-World is full! It can't put a rabbit
-Rabbit 22 - breed
-Rabbit 22 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 23 - breed
-Rabbit 23 - move - up - Denied
-World is full! It can't put a rabbit
-Rabbit 24 - breed
-Rabbit 24 - move - left - Denied
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - right - ( 36 , 9 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 49 , 31 )
+Wolf 1 - sleep - Denied
 
 ----Turn 18
-Rabbit 0 hasn't more times to breed today
-Rabbit 0 - move - left - Denied
-Rabbit 1 hasn't more times to breed today
-Rabbit 1 - move - right - Denied
-Rabbit 2 hasn't more times to breed today
-Rabbit 2 - move - up - Denied
-Rabbit 3 hasn't more times to breed today
-Rabbit 3 - move - left - Denied
-Rabbit 4 hasn't more times to breed today
-Rabbit 4 - move - right - Denied
-Rabbit 5 hasn't more times to breed today
-Rabbit 5 - move - up - Denied
-Rabbit 6 hasn't more times to breed today
-Rabbit 6 - move - right - Denied
-Rabbit 7 hasn't more times to breed today
-Rabbit 7 - move - right - Denied
-Rabbit 8 hasn't more times to breed today
-Rabbit 8 - move - down - Denied
-Rabbit 9 hasn't more times to breed today
-Rabbit 9 - move - up - Denied
-Rabbit 10 hasn't more times to breed today
-Rabbit 10 - move - right - Denied
-Rabbit 11 hasn't more times to breed today
-Rabbit 11 - move - up - Denied
-Rabbit 12 hasn't more times to breed today
-Rabbit 12 - move - left - Denied
-Rabbit 13 hasn't more times to breed today
-Rabbit 13 - move - left - Denied
-Rabbit 14 hasn't more times to breed today
-Rabbit 14 - move - down - Denied
-Rabbit 15 hasn't more times to breed today
-Rabbit 15 - move - right - Denied
-Rabbit 16 hasn't more times to breed today
-Rabbit 16 - move - down - Denied
-Rabbit 17 hasn't more times to breed today
-Rabbit 17 - move - up - Denied
-Rabbit 18 hasn't more times to breed today
-Rabbit 18 - move - right - Denied
-Rabbit 19 hasn't more times to breed today
-Rabbit 19 - move - left - Denied
-Rabbit 20 hasn't more times to breed today
-Rabbit 20 - move - up - Denied
-Rabbit 21 hasn't more times to breed today
-Rabbit 21 - move - left - Denied
-Rabbit 22 hasn't more times to breed today
-Rabbit 22 - move - left - Denied
-Rabbit 23 hasn't more times to breed today
-Rabbit 23 - move - left - Denied
-Rabbit 24 hasn't more times to breed today
-Rabbit 24 - move - left - Denied
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - down - ( 37 , 9 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 49 , 30 )
+Wolf 1 - sleep - Denied
 
 ----Turn 19
-Status day changed to night
-Rabbit 0 hasn't more times to breed today
-Rabbit 0 - move - left - Denied
-Rabbit 1 hasn't more times to breed today
-Rabbit 1 - move - up - Denied
-Rabbit 2 hasn't more times to breed today
-Rabbit 2 - move - left - Denied
-Rabbit 3 hasn't more times to breed today
-Rabbit 3 - move - up - Denied
-Rabbit 4 hasn't more times to breed today
-Rabbit 4 - move - left - Denied
-Rabbit 5 hasn't more times to breed today
-Rabbit 5 - move - down - Denied
-Rabbit 6 hasn't more times to breed today
-Rabbit 6 - move - right - Denied
-Rabbit 7 hasn't more times to breed today
-Rabbit 7 - move - left - Denied
-Rabbit 8 hasn't more times to breed today
-Rabbit 8 - move - right - Denied
-Rabbit 9 hasn't more times to breed today
-Rabbit 9 - move - right - Denied
-Rabbit 10 hasn't more times to breed today
-Rabbit 10 - move - right - Denied
-Rabbit 11 hasn't more times to breed today
-Rabbit 11 - move - up - Denied
-Rabbit 12 hasn't more times to breed today
-Rabbit 12 - move - right - Denied
-Rabbit 13 hasn't more times to breed today
-Rabbit 13 - move - up - Denied
-Rabbit 14 hasn't more times to breed today
-Rabbit 14 - move - up - Denied
-Rabbit 15 hasn't more times to breed today
-Rabbit 15 - move - up - Denied
-Rabbit 16 hasn't more times to breed today
-Rabbit 16 - move - down - Denied
-Rabbit 17 hasn't more times to breed today
-Rabbit 17 - move - down - Denied
-Rabbit 18 hasn't more times to breed today
-Rabbit 18 - move - down - Denied
-Rabbit 19 hasn't more times to breed today
-Rabbit 19 - move - down - Denied
-Rabbit 20 hasn't more times to breed today
-Rabbit 20 - move - left - Denied
-Rabbit 21 hasn't more times to breed today
-Rabbit 21 - move - left - Denied
-Rabbit 22 hasn't more times to breed today
-Rabbit 22 - move - left - Denied
-Rabbit 23 hasn't more times to breed today
-Rabbit 23 - move - right - Denied
-Rabbit 24 hasn't more times to breed today
-Rabbit 24 - move - up - Denied
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - left - ( 37 , 8 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 49 , 29 )
+Wolf 1 - sleep - Denied
 
 ----Turn 20
-Weather changed to windy
-Rabbit 0 has dead because he has not eaten enough
-Rabbit 1 has dead because he has not eaten enough
-( 1 , 1 ) - Rabbit 25
-Rabbit 2 - breed
-Rabbit 2 - move - left - Denied
-( 3 , 2 ) - Rabbit 26
-Rabbit 3 - breed
-Rabbit 3 - move - right - Denied
-World is full! It can't put a rabbit
-Rabbit 4 - breed
-Rabbit 4 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 5 - breed
-Rabbit 5 - move - right - Denied
-World is full! It can't put a rabbit
-Rabbit 6 - breed
-Rabbit 6 - move - left - Denied
-World is full! It can't put a rabbit
-Rabbit 7 - breed
-Rabbit 7 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 8 - breed
-Rabbit 8 - move - up - Denied
-World is full! It can't put a rabbit
-Rabbit 9 - breed
-Rabbit 9 - move - right - Denied
-World is full! It can't put a rabbit
-Rabbit 10 - breed
-Rabbit 10 - move - left - Denied
-World is full! It can't put a rabbit
-Rabbit 11 - breed
-Rabbit 11 - move - left - Denied
-World is full! It can't put a rabbit
-Rabbit 12 - breed
-Rabbit 12 - move - left - Denied
-World is full! It can't put a rabbit
-Rabbit 13 - breed
-Rabbit 13 - move - up - Denied
-World is full! It can't put a rabbit
-Rabbit 14 - breed
-Rabbit 14 - move - up - Denied
-World is full! It can't put a rabbit
-Rabbit 15 - breed
-Rabbit 15 - move - up - Denied
-World is full! It can't put a rabbit
-Rabbit 16 - breed
-Rabbit 16 - move - right - Denied
-World is full! It can't put a rabbit
-Rabbit 17 - breed
-Rabbit 17 - move - left - Denied
-World is full! It can't put a rabbit
-Rabbit 18 - breed
-Rabbit 18 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 19 - breed
-Rabbit 19 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 20 - breed
-Rabbit 20 - move - up - Denied
-World is full! It can't put a rabbit
-Rabbit 21 - breed
-Rabbit 21 - move - right - Denied
-World is full! It can't put a rabbit
-Rabbit 22 - breed
-Rabbit 22 - move - right - Denied
-World is full! It can't put a rabbit
-Rabbit 23 - breed
-Rabbit 23 - move - right - Denied
-World is full! It can't put a rabbit
-Rabbit 24 - breed
-Rabbit 24 - move - down - Denied
+Weather changed to sunny
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - up - ( 36 , 8 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 49 , 30 )
+Wolf 1 - sleep - Denied
 
 ----Turn 21
-Status day changed to day
-World is full! It can't put a rabbit
-Rabbit 2 - breed
-Rabbit 2 - move - up - Denied
-World is full! It can't put a rabbit
-Rabbit 3 - breed
-Rabbit 3 - move - right - Denied
-World is full! It can't put a rabbit
-Rabbit 4 - breed
-Rabbit 4 - move - right - Denied
-World is full! It can't put a rabbit
-Rabbit 5 - breed
-Rabbit 5 - move - right - Denied
-World is full! It can't put a rabbit
-Rabbit 6 - breed
-Rabbit 6 - move - up - Denied
-World is full! It can't put a rabbit
-Rabbit 7 - breed
-Rabbit 7 - move - right - Denied
-World is full! It can't put a rabbit
-Rabbit 8 - breed
-Rabbit 8 - move - up - Denied
-World is full! It can't put a rabbit
-Rabbit 9 - breed
-Rabbit 9 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 10 - breed
-Rabbit 10 - move - left - Denied
-World is full! It can't put a rabbit
-Rabbit 11 - breed
-Rabbit 11 - move - right - Denied
-World is full! It can't put a rabbit
-Rabbit 12 - breed
-Rabbit 12 - move - left - Denied
-World is full! It can't put a rabbit
-Rabbit 13 - breed
-Rabbit 13 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 14 - breed
-Rabbit 14 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 15 - breed
-Rabbit 15 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 16 - breed
-Rabbit 16 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 17 - breed
-Rabbit 17 - move - left - Denied
-World is full! It can't put a rabbit
-Rabbit 18 - breed
-Rabbit 18 - move - up - Denied
-World is full! It can't put a rabbit
-Rabbit 19 - breed
-Rabbit 19 - move - right - Denied
-World is full! It can't put a rabbit
-Rabbit 20 - breed
-Rabbit 20 - move - left - Denied
-World is full! It can't put a rabbit
-Rabbit 21 - breed
-Rabbit 21 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 22 - breed
-Rabbit 22 - move - left - Denied
-World is full! It can't put a rabbit
-Rabbit 23 - breed
-Rabbit 23 - move - left - Denied
-World is full! It can't put a rabbit
-Rabbit 24 - breed
-Rabbit 24 - move - up - Denied
-World is full! It can't put a rabbit
-Rabbit 25 - breed
-Rabbit 25 - move - right - Denied
-World is full! It can't put a rabbit
-Rabbit 26 - breed
-Rabbit 26 - move - down - Denied
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - left - ( 36 , 7 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - Denied
+Wolf 1 - sleep - Denied
 
 ----Turn 22
-World is full! It can't put a rabbit
-Rabbit 2 - breed
-Rabbit 2 - move - right - Denied
-World is full! It can't put a rabbit
-Rabbit 3 - breed
-Rabbit 3 - move - left - Denied
-World is full! It can't put a rabbit
-Rabbit 4 - breed
-Rabbit 4 - move - right - Denied
-World is full! It can't put a rabbit
-Rabbit 5 - breed
-Rabbit 5 - move - left - Denied
-World is full! It can't put a rabbit
-Rabbit 6 - breed
-Rabbit 6 - move - up - Denied
-World is full! It can't put a rabbit
-Rabbit 7 - breed
-Rabbit 7 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 8 - breed
-Rabbit 8 - move - left - Denied
-World is full! It can't put a rabbit
-Rabbit 9 - breed
-Rabbit 9 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 10 - breed
-Rabbit 10 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 11 - breed
-Rabbit 11 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 12 - breed
-Rabbit 12 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 13 - breed
-Rabbit 13 - move - left - Denied
-World is full! It can't put a rabbit
-Rabbit 14 - breed
-Rabbit 14 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 15 - breed
-Rabbit 15 - move - up - Denied
-World is full! It can't put a rabbit
-Rabbit 16 - breed
-Rabbit 16 - move - right - Denied
-World is full! It can't put a rabbit
-Rabbit 17 - breed
-Rabbit 17 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 18 - breed
-Rabbit 18 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 19 - breed
-Rabbit 19 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 20 - breed
-Rabbit 20 - move - left - Denied
-World is full! It can't put a rabbit
-Rabbit 21 - breed
-Rabbit 21 - move - up - Denied
-World is full! It can't put a rabbit
-Rabbit 22 - breed
-Rabbit 22 - move - left - Denied
-World is full! It can't put a rabbit
-Rabbit 23 - breed
-Rabbit 23 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 24 - breed
-Rabbit 24 - move - left - Denied
-World is full! It can't put a rabbit
-Rabbit 25 - breed
-Rabbit 25 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 26 - breed
-Rabbit 26 - move - left - Denied
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - left - ( 36 , 6 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 48 , 30 )
+Wolf 1 - sleep - Denied
 
 ----Turn 23
-Rabbit 2 hasn't more times to breed today
-Rabbit 2 - move - left - Denied
-Rabbit 3 hasn't more times to breed today
-Rabbit 3 - move - left - Denied
-Rabbit 4 hasn't more times to breed today
-Rabbit 4 - move - up - Denied
-Rabbit 5 hasn't more times to breed today
-Rabbit 5 - move - down - Denied
-Rabbit 6 hasn't more times to breed today
-Rabbit 6 - move - left - Denied
-Rabbit 7 hasn't more times to breed today
-Rabbit 7 - move - up - Denied
-Rabbit 8 hasn't more times to breed today
-Rabbit 8 - move - up - Denied
-Rabbit 9 hasn't more times to breed today
-Rabbit 9 - move - left - Denied
-Rabbit 10 hasn't more times to breed today
-Rabbit 10 - move - right - Denied
-Rabbit 11 hasn't more times to breed today
-Rabbit 11 - move - right - Denied
-Rabbit 12 hasn't more times to breed today
-Rabbit 12 - move - up - Denied
-Rabbit 13 hasn't more times to breed today
-Rabbit 13 - move - down - Denied
-Rabbit 14 hasn't more times to breed today
-Rabbit 14 - move - left - Denied
-Rabbit 15 hasn't more times to breed today
-Rabbit 15 - move - up - Denied
-Rabbit 16 hasn't more times to breed today
-Rabbit 16 - move - down - Denied
-Rabbit 17 hasn't more times to breed today
-Rabbit 17 - move - up - Denied
-Rabbit 18 hasn't more times to breed today
-Rabbit 18 - move - left - Denied
-Rabbit 19 hasn't more times to breed today
-Rabbit 19 - move - up - Denied
-Rabbit 20 hasn't more times to breed today
-Rabbit 20 - move - up - Denied
-Rabbit 21 hasn't more times to breed today
-Rabbit 21 - move - left - Denied
-Rabbit 22 hasn't more times to breed today
-Rabbit 22 - move - down - Denied
-Rabbit 23 hasn't more times to breed today
-Rabbit 23 - move - right - Denied
-Rabbit 24 hasn't more times to breed today
-Rabbit 24 - move - right - Denied
-World is full! It can't put a rabbit
-Rabbit 25 - breed
-Rabbit 25 - move - down - Denied
-World is full! It can't put a rabbit
-Rabbit 26 - breed
-Rabbit 26 - move - right - Denied
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - left - ( 36 , 5 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 47 , 30 )
+Wolf 1 - sleep - Denied
 
 ----Turn 24
-Rabbit 2 hasn't more times to breed today
-Rabbit 2 - move - down - Denied
-Rabbit 3 hasn't more times to breed today
-Rabbit 3 - move - left - Denied
-Rabbit 4 hasn't more times to breed today
-Rabbit 4 - move - down - Denied
-Rabbit 5 hasn't more times to breed today
-Rabbit 5 - move - up - Denied
-Rabbit 6 hasn't more times to breed today
-Rabbit 6 - move - right - Denied
-Rabbit 7 hasn't more times to breed today
-Rabbit 7 - move - down - Denied
-Rabbit 8 hasn't more times to breed today
-Rabbit 8 - move - left - Denied
-Rabbit 9 hasn't more times to breed today
-Rabbit 9 - move - down - Denied
-Rabbit 10 hasn't more times to breed today
-Rabbit 10 - move - up - Denied
-Rabbit 11 hasn't more times to breed today
-Rabbit 11 - move - left - Denied
-Rabbit 12 hasn't more times to breed today
-Rabbit 12 - move - left - Denied
-Rabbit 13 hasn't more times to breed today
-Rabbit 13 - move - up - Denied
-Rabbit 14 hasn't more times to breed today
-Rabbit 14 - move - left - Denied
-Rabbit 15 hasn't more times to breed today
-Rabbit 15 - move - left - Denied
-Rabbit 16 hasn't more times to breed today
-Rabbit 16 - move - left - Denied
-Rabbit 17 hasn't more times to breed today
-Rabbit 17 - move - right - Denied
-Rabbit 18 hasn't more times to breed today
-Rabbit 18 - move - up - Denied
-Rabbit 19 hasn't more times to breed today
-Rabbit 19 - move - down - Denied
-Rabbit 20 hasn't more times to breed today
-Rabbit 20 - move - down - Denied
-Rabbit 21 hasn't more times to breed today
-Rabbit 21 - move - right - Denied
-Rabbit 22 hasn't more times to breed today
-Rabbit 22 - move - up - Denied
-Rabbit 23 hasn't more times to breed today
-Rabbit 23 - move - down - Denied
-Rabbit 24 hasn't more times to breed today
-Rabbit 24 - move - down - Denied
-Rabbit 25 hasn't more times to breed today
-Rabbit 25 - move - right - Denied
-Rabbit 26 hasn't more times to breed today
-Rabbit 26 - move - down - Denied
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - up - ( 35 , 5 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 47 , 31 )
+Wolf 1 - sleep - Denied
 
 ----Turn 25
-Rabbit 2 hasn't more times to breed today
-Rabbit 2 - move - left - Denied
-Rabbit 3 hasn't more times to breed today
-Rabbit 3 - move - right - Denied
-Rabbit 4 hasn't more times to breed today
-Rabbit 4 - move - up - Denied
-Rabbit 5 hasn't more times to breed today
-Rabbit 5 - move - up - Denied
-Rabbit 6 hasn't more times to breed today
-Rabbit 6 - move - down - Denied
-Rabbit 7 hasn't more times to breed today
-Rabbit 7 - move - left - Denied
-Rabbit 8 hasn't more times to breed today
-Rabbit 8 - move - down - Denied
-Rabbit 9 hasn't more times to breed today
-Rabbit 9 - move - down - Denied
-Rabbit 10 hasn't more times to breed today
-Rabbit 10 - move - right - Denied
-Rabbit 11 hasn't more times to breed today
-Rabbit 11 - move - down - Denied
-Rabbit 12 hasn't more times to breed today
-Rabbit 12 - move - right - Denied
-Rabbit 13 hasn't more times to breed today
-Rabbit 13 - move - down - Denied
-Rabbit 14 hasn't more times to breed today
-Rabbit 14 - move - down - Denied
-Rabbit 15 hasn't more times to breed today
-Rabbit 15 - move - up - Denied
-Rabbit 16 hasn't more times to breed today
-Rabbit 16 - move - up - Denied
-Rabbit 17 hasn't more times to breed today
-Rabbit 17 - move - right - Denied
-Rabbit 18 hasn't more times to breed today
-Rabbit 18 - move - right - Denied
-Rabbit 19 hasn't more times to breed today
-Rabbit 19 - move - down - Denied
-Rabbit 20 hasn't more times to breed today
-Rabbit 20 - move - left - Denied
-Rabbit 21 hasn't more times to breed today
-Rabbit 21 - move - left - Denied
-Rabbit 22 hasn't more times to breed today
-Rabbit 22 - move - up - Denied
-Rabbit 23 hasn't more times to breed today
-Rabbit 23 - move - up - Denied
-Rabbit 24 hasn't more times to breed today
-Rabbit 24 - move - left - Denied
-Rabbit 25 hasn't more times to breed today
-Rabbit 25 - move - right - Denied
-Rabbit 26 hasn't more times to breed today
-Rabbit 26 - move - left - Denied
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - left - ( 35 , 4 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 47 , 30 )
+Wolf 1 - sleep - Denied
 
 ----Turn 26
-Rabbit 2 hasn't more times to breed today
-Rabbit 2 - move - down - Denied
-Rabbit 3 hasn't more times to breed today
-Rabbit 3 - move - up - Denied
-Rabbit 4 hasn't more times to breed today
-Rabbit 4 - move - down - Denied
-Rabbit 5 hasn't more times to breed today
-Rabbit 5 - move - down - Denied
-Rabbit 6 hasn't more times to breed today
-Rabbit 6 - move - up - Denied
-Rabbit 7 hasn't more times to breed today
-Rabbit 7 - move - right - Denied
-Rabbit 8 hasn't more times to breed today
-Rabbit 8 - move - right - Denied
-Rabbit 9 hasn't more times to breed today
-Rabbit 9 - move - right - Denied
-Rabbit 10 hasn't more times to breed today
-Rabbit 10 - move - left - Denied
-Rabbit 11 hasn't more times to breed today
-Rabbit 11 - move - up - Denied
-Rabbit 12 hasn't more times to breed today
-Rabbit 12 - move - right - Denied
-Rabbit 13 hasn't more times to breed today
-Rabbit 13 - move - left - Denied
-Rabbit 14 hasn't more times to breed today
-Rabbit 14 - move - down - Denied
-Rabbit 15 hasn't more times to breed today
-Rabbit 15 - move - left - Denied
-Rabbit 16 hasn't more times to breed today
-Rabbit 16 - move - right - Denied
-Rabbit 17 hasn't more times to breed today
-Rabbit 17 - move - up - Denied
-Rabbit 18 hasn't more times to breed today
-Rabbit 18 - move - left - Denied
-Rabbit 19 hasn't more times to breed today
-Rabbit 19 - move - down - Denied
-Rabbit 20 hasn't more times to breed today
-Rabbit 20 - move - down - Denied
-Rabbit 21 hasn't more times to breed today
-Rabbit 21 - move - up - Denied
-Rabbit 22 hasn't more times to breed today
-Rabbit 22 - move - right - Denied
-Rabbit 23 hasn't more times to breed today
-Rabbit 23 - move - left - Denied
-Rabbit 24 hasn't more times to breed today
-Rabbit 24 - move - down - Denied
-Rabbit 25 hasn't more times to breed today
-Rabbit 25 - move - up - Denied
-Rabbit 26 hasn't more times to breed today
-Rabbit 26 - move - down - Denied
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - right - ( 35 , 5 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 48 , 30 )
+Wolf 1 - sleep - Denied
 
 ----Turn 27
-Rabbit 2 hasn't more times to breed today
-Rabbit 2 - move - right - Denied
-Rabbit 3 hasn't more times to breed today
-Rabbit 3 - move - right - Denied
-Rabbit 4 hasn't more times to breed today
-Rabbit 4 - move - down - Denied
-Rabbit 5 hasn't more times to breed today
-Rabbit 5 - move - up - Denied
-Rabbit 6 hasn't more times to breed today
-Rabbit 6 - move - down - Denied
-Rabbit 7 hasn't more times to breed today
-Rabbit 7 - move - up - Denied
-Rabbit 8 hasn't more times to breed today
-Rabbit 8 - move - right - Denied
-Rabbit 9 hasn't more times to breed today
-Rabbit 9 - move - up - Denied
-Rabbit 10 hasn't more times to breed today
-Rabbit 10 - move - up - Denied
-Rabbit 11 hasn't more times to breed today
-Rabbit 11 - move - up - Denied
-Rabbit 12 hasn't more times to breed today
-Rabbit 12 - move - up - Denied
-Rabbit 13 hasn't more times to breed today
-Rabbit 13 - move - up - Denied
-Rabbit 14 hasn't more times to breed today
-Rabbit 14 - move - right - Denied
-Rabbit 15 hasn't more times to breed today
-Rabbit 15 - move - right - Denied
-Rabbit 16 hasn't more times to breed today
-Rabbit 16 - move - right - Denied
-Rabbit 17 hasn't more times to breed today
-Rabbit 17 - move - right - Denied
-Rabbit 18 hasn't more times to breed today
-Rabbit 18 - move - right - Denied
-Rabbit 19 hasn't more times to breed today
-Rabbit 19 - move - right - Denied
-Rabbit 20 hasn't more times to breed today
-Rabbit 20 - move - right - Denied
-Rabbit 21 hasn't more times to breed today
-Rabbit 21 - move - down - Denied
-Rabbit 22 hasn't more times to breed today
-Rabbit 22 - move - right - Denied
-Rabbit 23 hasn't more times to breed today
-Rabbit 23 - move - left - Denied
-Rabbit 24 hasn't more times to breed today
-Rabbit 24 - move - up - Denied
-Rabbit 25 hasn't more times to breed today
-Rabbit 25 - move - down - Denied
-Rabbit 26 hasn't more times to breed today
-Rabbit 26 - move - right - Denied
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - left - ( 35 , 4 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 48 , 29 )
+Wolf 1 - sleep - Denied
 
 ----Turn 28
-Rabbit 2 hasn't more times to breed today
-Rabbit 2 - move - right - Denied
-Rabbit 3 hasn't more times to breed today
-Rabbit 3 - move - right - Denied
-Rabbit 4 hasn't more times to breed today
-Rabbit 4 - move - right - Denied
-Rabbit 5 hasn't more times to breed today
-Rabbit 5 - move - right - Denied
-Rabbit 6 hasn't more times to breed today
-Rabbit 6 - move - right - Denied
-Rabbit 7 hasn't more times to breed today
-Rabbit 7 - move - up - Denied
-Rabbit 8 hasn't more times to breed today
-Rabbit 8 - move - left - Denied
-Rabbit 9 hasn't more times to breed today
-Rabbit 9 - move - right - Denied
-Rabbit 10 hasn't more times to breed today
-Rabbit 10 - move - left - Denied
-Rabbit 11 hasn't more times to breed today
-Rabbit 11 - move - left - Denied
-Rabbit 12 hasn't more times to breed today
-Rabbit 12 - move - down - Denied
-Rabbit 13 hasn't more times to breed today
-Rabbit 13 - move - up - Denied
-Rabbit 14 hasn't more times to breed today
-Rabbit 14 - move - left - Denied
-Rabbit 15 hasn't more times to breed today
-Rabbit 15 - move - right - Denied
-Rabbit 16 hasn't more times to breed today
-Rabbit 16 - move - up - Denied
-Rabbit 17 hasn't more times to breed today
-Rabbit 17 - move - right - Denied
-Rabbit 18 hasn't more times to breed today
-Rabbit 18 - move - up - Denied
-Rabbit 19 hasn't more times to breed today
-Rabbit 19 - move - left - Denied
-Rabbit 20 hasn't more times to breed today
-Rabbit 20 - move - down - Denied
-Rabbit 21 hasn't more times to breed today
-Rabbit 21 - move - left - Denied
-Rabbit 22 hasn't more times to breed today
-Rabbit 22 - move - down - Denied
-Rabbit 23 hasn't more times to breed today
-Rabbit 23 - move - right - Denied
-Rabbit 24 hasn't more times to breed today
-Rabbit 24 - move - down - Denied
-Rabbit 25 hasn't more times to breed today
-Rabbit 25 - move - down - Denied
-Rabbit 26 hasn't more times to breed today
-Rabbit 26 - move - down - Denied
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - up - ( 34 , 4 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 47 , 29 )
+Wolf 1 - sleep - Denied
 
 ----Turn 29
-Status day changed to night
-Rabbit 2 hasn't more times to breed today
-Rabbit 2 - move - up - Denied
-Rabbit 3 hasn't more times to breed today
-Rabbit 3 - move - right - Denied
-Rabbit 4 hasn't more times to breed today
-Rabbit 4 - move - right - Denied
-Rabbit 5 hasn't more times to breed today
-Rabbit 5 - move - right - Denied
-Rabbit 6 hasn't more times to breed today
-Rabbit 6 - move - up - Denied
-Rabbit 7 hasn't more times to breed today
-Rabbit 7 - move - left - Denied
-Rabbit 8 hasn't more times to breed today
-Rabbit 8 - move - up - Denied
-Rabbit 9 hasn't more times to breed today
-Rabbit 9 - move - left - Denied
-Rabbit 10 hasn't more times to breed today
-Rabbit 10 - move - down - Denied
-Rabbit 11 hasn't more times to breed today
-Rabbit 11 - move - left - Denied
-Rabbit 12 hasn't more times to breed today
-Rabbit 12 - move - up - Denied
-Rabbit 13 hasn't more times to breed today
-Rabbit 13 - move - up - Denied
-Rabbit 14 hasn't more times to breed today
-Rabbit 14 - move - up - Denied
-Rabbit 15 hasn't more times to breed today
-Rabbit 15 - move - down - Denied
-Rabbit 16 hasn't more times to breed today
-Rabbit 16 - move - right - Denied
-Rabbit 17 hasn't more times to breed today
-Rabbit 17 - move - left - Denied
-Rabbit 18 hasn't more times to breed today
-Rabbit 18 - move - left - Denied
-Rabbit 19 hasn't more times to breed today
-Rabbit 19 - move - up - Denied
-Rabbit 20 hasn't more times to breed today
-Rabbit 20 - move - left - Denied
-Rabbit 21 hasn't more times to breed today
-Rabbit 21 - move - left - Denied
-Rabbit 22 hasn't more times to breed today
-Rabbit 22 - move - right - Denied
-Rabbit 23 hasn't more times to breed today
-Rabbit 23 - move - down - Denied
-Rabbit 24 hasn't more times to breed today
-Rabbit 24 - move - left - Denied
-Rabbit 25 hasn't more times to breed today
-Rabbit 25 - move - left - Denied
-Rabbit 26 hasn't more times to breed today
-Rabbit 26 - move - up - Denied
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - right - ( 34 , 5 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 47 , 28 )
+Wolf 1 - sleep - Denied
 
 ----Turn 30
-Weather changed to rainy
-Rabbit 2 has dead because he has not eaten enough
-Rabbit 3 has dead because he has not eaten enough
-Rabbit 4 has dead because he has not eaten enough
-Rabbit 5 has dead because he has not eaten enough
-Rabbit 6 has dead because he has not eaten enough
-Rabbit 7 has dead because he has not eaten enough
-Rabbit 8 has dead because he has not eaten enough
-Rabbit 9 has dead because he has not eaten enough
-Rabbit 10 has dead because he has not eaten enough
-Rabbit 11 has dead because he has not eaten enough
-Rabbit 12 has dead because he has not eaten enough
-Rabbit 13 has dead because he has not eaten enough
-Rabbit 14 has dead because he has not eaten enough
-Rabbit 15 has dead because he has not eaten enough
-Rabbit 16 has dead because he has not eaten enough
-Rabbit 17 has dead because he has not eaten enough
-Rabbit 18 has dead because he has not eaten enough
-Rabbit 19 has dead because he has not eaten enough
-Rabbit 20 has dead because he has not eaten enough
-Rabbit 21 has dead because he has not eaten enough
-Rabbit 22 has dead because he has not eaten enough
-Rabbit 23 has dead because he has not eaten enough
-Rabbit 24 has dead because he has not eaten enough
-Rabbit 25 - breed - Denied
-Rabbit 25 - move - up - ( 0 , 1 )
-Rabbit 26 - breed - Denied
-Rabbit 26 - move - down - ( 4 , 2 )
+Weather changed to windy
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - up - ( 33 , 5 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 46 , 28 )
+Wolf 1 - sleep - Denied
 
 ----Turn 31
-Status day changed to day
-Rabbit 25 - breed - Denied
-Rabbit 25 - move - up - Denied
-Rabbit 26 - breed - Denied
-Rabbit 26 - move - right - ( 4 , 3 )
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - right - ( 33 , 6 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 45 , 28 )
+Wolf 1 - sleep - Denied
 
 ----Turn 32
-Rabbit 25 - breed - Denied
-Rabbit 25 - move - down - ( 1 , 1 )
-Rabbit 26 - breed - Denied
-Rabbit 26 - move - right - ( 4 , 4 )
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - right - ( 33 , 7 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 44 , 28 )
+Wolf 1 - sleep - Denied
 
 ----Turn 33
-Rabbit 25 - breed - Denied
-Rabbit 25 - move - up - ( 0 , 1 )
-Rabbit 26 - breed - Denied
-Rabbit 26 - move - up - ( 3 , 4 )
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - up - ( 32 , 7 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 44 , 29 )
+Wolf 1 - sleep - Denied
 
 ----Turn 34
-Rabbit 25 - breed - Denied
-Rabbit 25 - move - right - ( 0 , 2 )
-Rabbit 26 - breed - Denied
-Rabbit 26 - move - right - Denied
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - right - ( 32 , 8 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 43 , 29 )
+Wolf 1 - sleep - Denied
 
 ----Turn 35
-Rabbit 25 - breed - Denied
-Rabbit 25 - move - down - ( 1 , 2 )
-Rabbit 26 - breed - Denied
-Rabbit 26 - move - right - Denied
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - up - ( 31 , 8 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 44 , 29 )
+Wolf 1 - sleep - Denied
 
 ----Turn 36
-Rabbit 25 - breed - Denied
-Rabbit 25 - move - up - ( 0 , 2 )
-Rabbit 26 - breed - Denied
-Rabbit 26 - move - down - ( 4 , 4 )
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - up - ( 30 , 8 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 44 , 30 )
+Wolf 1 - sleep - Denied
 
 ----Turn 37
-Rabbit 25 - breed - Denied
-Rabbit 25 - move - left - ( 0 , 1 )
-Rabbit 26 - breed - Denied
-Rabbit 26 - move - right - Denied
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - right - ( 30 , 9 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 43 , 30 )
+Wolf 1 - sleep - Denied
 
 ----Turn 38
-Rabbit 25 - breed - Denied
-Rabbit 25 - move - down - ( 1 , 1 )
-Rabbit 26 - breed - Denied
-Rabbit 26 - move - down - Denied
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - up - ( 29 , 9 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 42 , 30 )
+Wolf 1 - sleep - Denied
 
 ----Turn 39
-Status day changed to night
-Rabbit 25 - breed - Denied
-Rabbit 25 - move - down - ( 2 , 1 )
-Rabbit 26 - breed - Denied
-Rabbit 26 - move - right - Denied
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - left - ( 29 , 8 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 42 , 31 )
+Wolf 1 - sleep - Denied
 
 ----Turn 40
-Weather changed to foggy
-Rabbit 25 has dead because he has not eaten enough
-Rabbit 26 has dead because he has not eaten enough
+Weather changed to sunny
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - left - ( 29 , 7 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 42 , 32 )
+Wolf 1 - sleep - Denied
 
 ----Turn 41
-Status day changed to day
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - up - ( 28 , 7 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 43 , 32 )
+Wolf 1 - sleep - Denied
 
 ----Turn 42
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - down - ( 29 , 7 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 43 , 33 )
+Wolf 1 - sleep - Denied
 
 ----Turn 43
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - left - ( 29 , 6 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 43 , 34 )
+Wolf 1 - sleep - Denied
 
 ----Turn 44
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - up - ( 28 , 6 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 42 , 34 )
+Wolf 1 - sleep - Denied
 
 ----Turn 45
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - left - ( 28 , 5 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 41 , 34 )
+Wolf 1 - sleep - Denied
 
 ----Turn 46
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - down - ( 29 , 5 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - Carrot ( 40 , 33 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - ( 40 , 34 )
+Wolf 1 - sleep - Denied
 
 ----Turn 47
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - down - ( 30 , 5 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - Carrot ( 40 , 33 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - left - Denied
+Wolf 1 - sleep - Denied
 
 ----Turn 48
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - down - ( 31 , 5 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - Carrot ( 40 , 33 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - down - ( 41 , 34 )
+Wolf 1 - sleep - Denied
 
 ----Turn 49
-Status day changed to night
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - up - ( 30 , 5 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - Carrot ( 40 , 33 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - up - ( 40 , 34 )
+Wolf 1 - sleep - Denied
 
 ----Turn 50
-Weather changed to foggy
+Weather changed to windy
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - down - ( 31 , 5 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - Carrot ( 40 , 33 ) 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 1
+Wolf 1 - move - right - ( 40 , 35 )
+Wolf 1 - sleep - Denied
 
 ----Turn 51
-Status day changed to day
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - up - ( 30 , 5 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 39 , 35 )
+Wolf 1 - sleep - Denied
 
 ----Turn 52
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - up - ( 29 , 5 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 38 , 35 )
+Wolf 1 - sleep - Denied
 
 ----Turn 53
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - up - ( 28 , 5 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 39 , 35 )
+Wolf 1 - sleep - Denied
 
 ----Turn 54
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - down - ( 29 , 5 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 40 , 35 )
+Wolf 1 - sleep - Denied
 
 ----Turn 55
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - left - ( 29 , 4 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 39 , 35 )
+Wolf 1 - sleep - Denied
 
 ----Turn 56
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - up - ( 28 , 4 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 38 , 35 )
+Wolf 1 - sleep - Denied
 
 ----Turn 57
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - left - ( 28 , 3 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 39 , 35 )
+Wolf 1 - sleep - Denied
 
 ----Turn 58
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - left - ( 28 , 2 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 39 , 36 )
+Wolf 1 - sleep - Denied
 
 ----Turn 59
-Status day changed to night
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - up - ( 27 , 2 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 40 , 36 )
+Wolf 1 - sleep - Denied
 
 ----Turn 60
-Weather changed to sunny
+Weather changed to rainy
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - up - ( 26 , 2 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 40 , 35 )
+Wolf 1 - sleep - Denied
 
 ----Turn 61
-Status day changed to day
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - down - ( 27 , 2 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 39 , 35 )
+Wolf 1 - sleep - Denied
 
 ----Turn 62
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - right - ( 27 , 3 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 39 , 36 )
+Wolf 1 - sleep - Denied
 
 ----Turn 63
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - right - ( 27 , 4 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 39 , 35 )
+Wolf 1 - sleep - Denied
 
 ----Turn 64
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - right - ( 27 , 5 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 39 , 36 )
+Wolf 1 - sleep - Denied
 
 ----Turn 65
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - right - ( 27 , 6 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 38 , 36 )
+Wolf 1 - sleep - Denied
 
 ----Turn 66
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - left - ( 27 , 5 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 37 , 36 )
+Wolf 1 - sleep - Denied
 
 ----Turn 67
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - down - ( 28 , 5 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 37 , 35 )
+Wolf 1 - sleep - Denied
 
 ----Turn 68
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - up - ( 27 , 5 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 37 , 34 )
+Wolf 1 - sleep - Denied
 
 ----Turn 69
-Status day changed to night
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - up - ( 26 , 5 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 36 , 34 )
+Wolf 1 - sleep - Denied
 
 ----Turn 70
-Weather changed to foggy
+Weather changed to rainy
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - left - ( 26 , 4 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 37 , 34 )
+Wolf 1 - sleep - Denied
 
 ----Turn 71
-Status day changed to day
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - down - ( 27 , 4 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 37 , 35 )
+Wolf 1 - sleep - Denied
 
 ----Turn 72
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - left - ( 27 , 3 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 37 , 36 )
+Wolf 1 - sleep - Denied
 
 ----Turn 73
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - right - ( 27 , 4 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 37 , 37 )
+Wolf 1 - sleep - Denied
 
 ----Turn 74
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - right - ( 27 , 5 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 38 , 37 )
+Wolf 1 - sleep - Denied
 
 ----Turn 75
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - left - ( 27 , 4 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 39 , 37 )
+Wolf 1 - sleep - Denied
 
 ----Turn 76
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - up - ( 26 , 4 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 40 , 37 )
+Wolf 1 - sleep - Denied
 
 ----Turn 77
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - right - ( 26 , 5 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 41 , 37 )
+Wolf 1 - sleep - Denied
 
 ----Turn 78
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - right - ( 26 , 6 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 41 , 38 )
+Wolf 1 - sleep - Denied
 
 ----Turn 79
-Status day changed to night
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - up - ( 25 , 6 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 41 , 39 )
+Wolf 1 - sleep - Denied
 
 ----Turn 80
-Weather changed to sunny
+Weather changed to windy
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - up - ( 24 , 6 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 41 , 38 )
+Wolf 1 - sleep - Denied
 
 ----Turn 81
-Status day changed to day
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - left - ( 24 , 5 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 40 , 38 )
+Wolf 1 - sleep - Denied
 
 ----Turn 82
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - left - ( 24 , 4 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 40 , 37 )
+Wolf 1 - sleep - Denied
 
 ----Turn 83
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - down - ( 25 , 4 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 39 , 37 )
+Wolf 1 - sleep - Denied
 
 ----Turn 84
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - right - ( 25 , 5 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 39 , 36 )
+Wolf 1 - sleep - Denied
 
 ----Turn 85
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - up - ( 24 , 5 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 38 , 36 )
+Wolf 1 - sleep - Denied
 
 ----Turn 86
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - right - ( 24 , 6 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - down - ( 39 , 36 )
+Wolf 1 - sleep - Denied
 
 ----Turn 87
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - up - ( 23 , 6 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 39 , 37 )
+Wolf 1 - sleep - Denied
 
 ----Turn 88
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - right - ( 23 , 7 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 38 , 37 )
+Wolf 1 - sleep - Denied
 
 ----Turn 89
-Status day changed to night
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - up - ( 22 , 7 )
+Rabbit 0 - sleep - Denied
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 38 , 36 )
+Wolf 1 - sleep - Denied
 
 ----Turn 90
-Weather changed to sunny
+Status day changed to night
+Weather changed to foggy
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - right - ( 22 , 8 )
+Rabbit 0 - sleep
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - up - ( 37 , 36 )
 
 ----Turn 91
-Status day changed to day
+Rabbit 0 - sleeping
+Wolf 1 - sleeping
 
 ----Turn 92
+Rabbit 0 - sleeping
+Wolf 1 - sleeping
 
 ----Turn 93
+Rabbit 0 - sleeping
+Wolf 1 - sleeping
 
 ----Turn 94
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - up - ( 21 , 8 )
+Rabbit 0 - sleep
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - right - ( 37 , 37 )
 
 ----Turn 95
+Rabbit 0 - sleeping
+Wolf 1 - sleeping
 
 ----Turn 96
+Rabbit 0 - sleeping
+Wolf 1 - sleeping
 
 ----Turn 97
+Rabbit 0 - sleeping
+Wolf 1 - sleeping
 
 ----Turn 98
+Rabbit 0 - see - 
+Rabbit 0 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Rabbit 0 - move - left - ( 21 , 7 )
+Rabbit 0 - sleep
+Rabbit 0 - breed - Denied
+Wolf 1 - see - 
+Wolf 1 - smell - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - hear - Rabbit: 0, Wolf: 0, Carrot: 0
+Wolf 1 - move - left - ( 37 , 36 )
 
 ----Turn 99
-Status day changed to night
+Rabbit 0 - sleeping
+Wolf 1 - sleeping
 
 ----Turn 100
-Weather changed to sunny
+Weather changed to rainy
+Rabbit 0 - sleeping
+Wolf 1 - sleeping
 

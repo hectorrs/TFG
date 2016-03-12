@@ -150,7 +150,7 @@ function day(day, turn){
 		var turn = parseInt(turn);
 		var day = parseInt(day);
 
-		if(day >= turn){
+		if(day > turn){
 			alert('La duración del día tiene que ser menor a la duración total de la ejecución');
 			return false;
 		}else if(day <= 1){

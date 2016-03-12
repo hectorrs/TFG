@@ -32,7 +32,6 @@
 	$vars['static'] = array();
 	$vars['dynamic'] = array();
 	$vars['prize'] = array();
-	//$vars['moveTo'] = array('up', 'down', 'left', 'right');
 	$vars['turnEatRabbit'] = 0;
 	$vars['turnEatWolf'] = 0;
 	$vars['turnSleepRabbit'] = 0;
@@ -44,7 +43,30 @@
 	$vars['fileDebug'] = openFile('debug');
 
 	/* ** Estadísticas ** */
+	// Tiempo atmosférico por día
 	$vars['countWeather'] = array(0, 0, 0, 0);
+
+	// Población de elementos por día
+	$vars['amountRabbit'] = array();
+	$vars['amountWolf'] = array();
+	$vars['amountCarrot'] = array();
+
+	// Conejos cazados por día
+	$vars['huntedRabbit'] = array();
+
+	// Zanahorias comidas al día
+	$vars['eatenCarrot'] = array();
+
+	// Conejos y lobos muertos por no comer
+	$vars['deadEatRabbit'] = array();
+	$vars['deadEatWolf'] = array();
+
+	// Conejos y lobos muertos por no dormir
+	$vars['deadSleepRabbit'] = array();
+	$vars['deadSleepWolf'] = array();
+
+	// Reproducción de conejos
+	$vars['bornRabbit'] = array();
 
 	/* ------------------------------- Mundo ------------------------------- */
 	/**
@@ -834,6 +856,9 @@
 							delPrize(getWorld()[$row][$col]);
 							setWorld($element, $row, $col);
 
+							// Estadísticas - Zanahorias comidas
+							$GLOBALS['vars']['eatenCarrot'][getTime() - 1]++;
+
 							writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - move - ' . $movement . ' - ( ' . $row . ' , ' . $col . ' ) - Eating' . "\n");
 							break;
 						case 'Lair':
@@ -872,6 +897,9 @@
 							$element->setHasEaten(true);
 							delDynamic(getWorld()[$row][$col]);
 							setWorld($element, $row, $col);
+
+							// Estadísticas - Conejos cazados
+							$GLOBALS['vars']['huntedRabbit'][getTime() - 1]++;
 
 							writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - move - ' . $movement . ' - ( ' . $row . ' , ' . $col . ' ) - Eating' . "\n");
 							break;
@@ -1044,6 +1072,10 @@
 
 						$flag = true;
 						writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - breed' . "\n");
+
+						// Estadísticas - Reproducción de conejos
+						$GLOBALS['vars']['bornRabbit'][getTime() - 1]++;
+
 						break;
 					}
 				}
@@ -1116,6 +1148,22 @@
 			$GLOBALS['vars']['countWeather'][3]++;
 			break;
 	}
+
+	// Estadísticas - Población de elementos
+	$amountRabbit = 0;
+	$amountWolf = 0;
+
+	foreach(getDynamic() as $element){
+		if(get_class($element) == 'Rabbit'){
+			$amountRabbit++;
+		}else{
+			$amountWolf++;
+		}
+	}
+
+	array_push($GLOBALS['vars']['amountRabbit'], $amountRabbit);
+	array_push($GLOBALS['vars']['amountWolf'], $amountWolf);
+	array_push($GLOBALS['vars']['amountCarrot'], count(getPrize()));
 	
 	if(getLengthNight() % 2 == 0){
 		$x = 0;
@@ -1139,6 +1187,15 @@
 				setWeather();
 				$timeWeather++;
 			}
+
+			// Estadísticas - Conejos cazados
+			array_push($GLOBALS['vars']['huntedRabbit'], 0);
+
+			// Estadísticas - Zanahorias comidas
+			array_push($GLOBALS['vars']['eatenCarrot'], 0);
+
+			// Estadísticas - Reproducción de conejos
+			array_push($GLOBALS['vars']['bornRabbit'], 0);
 
 			foreach(getDynamic() as $element){
 				if($element->getEating() > 0){
@@ -1194,6 +1251,22 @@
 					break;
 			}
 
+			// Estadísticas - Población de elementos
+			$amountRabbit = 0;
+			$amountWolf = 0;
+
+			foreach(getDynamic() as $element){
+				if(get_class($element) == 'Rabbit'){
+					$amountRabbit++;
+				}else{
+					$amountWolf++;
+				}
+			}
+
+			array_push($GLOBALS['vars']['amountRabbit'], $amountRabbit);
+			array_push($GLOBALS['vars']['amountWolf'], $amountWolf);
+			array_push($GLOBALS['vars']['amountCarrot'], count(getPrize()));
+
 			writeFile('Log', "\n");
 		}
 
@@ -1210,13 +1283,46 @@
 			$timeWeather++;
 		}
 
+		// Estadísticas - Conejos cazados
+		array_push($GLOBALS['vars']['huntedRabbit'], 0);
+
+		// Estadísticas - Zanahorias comidas
+		array_push($GLOBALS['vars']['eatenCarrot'], 0);
+
+		// Estadísticas - Conejos y lobos muertos por comer
+		array_push($GLOBALS['vars']['deadEatRabbit'], 0);
+		array_push($GLOBALS['vars']['deadEatWolf'], 0);
+
+		// Estadísticas - Conejos y lobos muertos por dormir
+		array_push($GLOBALS['vars']['deadSleepRabbit'], 0);
+		array_push($GLOBALS['vars']['deadSleepWolf'], 0);
+
+		// Estadísticas - Reproducción de conejos
+		array_push($GLOBALS['vars']['bornRabbit'], 0);
+
 		foreach(getDynamic() as $element){
 			if((get_class($element) == 'Rabbit' && $element->getDaysWithoutEat() == $_POST['maxEatRabbit']) || (get_class($element) == 'Wolf' && $element->getDaysWithoutEat() == $_POST['maxEatWolf'])){
 				delDynamic($element);
+
+				// Estadísticas - Conejos y lobos muertos por comer
+				if(get_class($element) == 'Rabbit'){
+					$GLOBALS['vars']['deadEatRabbit'][getiTime() - 1]++;
+				}else{
+					$GLOBALS['vars']['deadEatWolf'][getiTime() - 1]++;
+				}
+
 				writeFile('Log', get_class($element) . ' ' . $element->getId() . ' has dead because he has not eaten enough' . "\n");
 			}else{
 				if((get_class($element) == 'Rabbit' && $element->getDaysWithoutSleep() == $_POST['maxSleepRabbit']) || (get_class($element) == 'Wolf' && $element->getDaysWithoutSleep() == $_POST['maxSleepWolf'])){
 					delDynamic($element);
+
+					// Estadísticas - Conejos y lobos muertos por comer
+					if(get_class($element) == 'Rabbit'){
+						$GLOBALS['vars']['deadSleepRabbit'][getiTime() - 1]++;
+					}else{
+						$GLOBALS['vars']['deadSleepWolf'][getiTime() - 1]++;
+					}
+
 					writeFile('Log', get_class($element) . ' ' . $element->getId() . ' has dead because he has not slept enough' . "\n");
 				}else{
 					if($element->getEating() > 0){
@@ -1292,6 +1398,22 @@
 				break;
 		}
 
+		// Estadísticas - Población de elementos
+		$amountRabbit = 0;
+		$amountWolf = 0;
+
+		foreach(getDynamic() as $element){
+			if(get_class($element) == 'Rabbit'){
+				$amountRabbit++;
+			}else{
+				$amountWolf++;
+			}
+		}
+
+		array_push($GLOBALS['vars']['amountRabbit'], $amountRabbit);
+		array_push($GLOBALS['vars']['amountWolf'], $amountWolf);
+		array_push($GLOBALS['vars']['amountCarrot'], count(getPrize()));
+
 		writeFile('Log', "\n");
 	}
 
@@ -1305,14 +1427,39 @@
 	session_start();
 
 	// Mundo
+	// Dimensiones
 	$_SESSION['row'] = getSizeWorld()['row'];
 	$_SESSION['col'] = getSizeWorld()['col'];
 
+	// Memoria y tiempo de ejecución
 	$_SESSION['memory'] = $memory / 1024 / 1024;
 	$_SESSION['time'] = bcsub($timeFinish, $timeStart, 2);
 
 	// Estadísticas
+	// Tiempo atmosférico
 	$_SESSION['weather'] = $GLOBALS['vars']['countWeather'];
+
+	// Población de elementos
+	$_SESSION['amountRabbit'] = $GLOBALS['vars']['amountRabbit'];
+	$_SESSION['amountWolf'] = $GLOBALS['vars']['amountWolf'];
+	$_SESSION['amountCarrot'] = $GLOBALS['vars']['amountCarrot'];
+
+	// Conejos cazados
+	$_SESSION['huntedRabbit'] = $GLOBALS['vars']['huntedRabbit'];
+
+	// Zanahorias comidas
+	$_SESSION['eatenCarrot'] = $GLOBALS['vars']['eatenCarrot'];
+
+	// Conejos y lobos muertos por no comer
+	$_SESSION['deadEatRabbit'] = $GLOBALS['vars']['deadEatRabbit'];
+	$_SESSION['deadEatWolf'] = $GLOBALS['vars']['deadEatWolf'];
+
+	// Conejos y lobos muertos por no dormir
+	$_SESSION['deadSleepRabbit'] = $GLOBALS['vars']['deadSleepRabbit'];
+	$_SESSION['deadSleepWolf'] = $GLOBALS['vars']['deadSleepWolf'];
+
+	// Reproducción de conejos
+	$_SESSION['bornRabbit'] = $GLOBALS['vars']['bornRabbit'];
 
 	session_write_close();
 

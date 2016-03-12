@@ -11,18 +11,13 @@
 		 * Realiza una acción del elemento
 		 */
 		public function act(){
-			/*$see = actionManager($this, 'see');
+			$see = actionManager($this, 'see');
 			$smell = actionManager($this, 'smell');
 			$hear = actionManager($this, 'hear');
 			$move = array('up', 'down', 'left', 'right');
 			actionManager($this, 'move', $move[rand(0, 3)]);
-			$rand = rand(0, 1);
-			if($rand == 1){
-				actionManager($this, 'sleep');
-			}*/
-			$move = array('up', 'down', 'left', 'right');
+			actionManager($this, 'sleep');
 			actionManager($this, 'breed');
-			actionManager($this, 'move', $move[rand(0, 3)]);
 		}
 	}
 
@@ -41,10 +36,7 @@
 			$hear = actionManager($this, 'hear');
 			$move = array('up', 'down', 'left', 'right');
 			actionManager($this, 'move', $move[rand(0, 3)]);
-			$rand = rand(0, 1);
-			if($rand == 1){
-				actionManager($this, 'sleep');
-			}
+			actionManager($this, 'sleep');
 		}
 	}
 
