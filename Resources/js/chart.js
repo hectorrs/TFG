@@ -51,7 +51,7 @@ function drawChartPopulation(){
 
     var options = {
         hAxis: {
-            title: 'Días',
+            title: 'Turnos',
             viewWindow: {min:0, max:100}
         },
         vAxis: {
@@ -125,7 +125,7 @@ function drawChartPopulationRabbit(){
 
     var options = {
         hAxis: {
-            title: 'Días'
+            title: 'Turnos'
         },
         vAxis: {
             title: 'Cantidad'
@@ -153,7 +153,7 @@ function drawChartPopulationWolf(){
 
     var options = {
         hAxis: {
-            title: 'Días'
+            title: 'Turnos'
         },
         vAxis: {
             title: 'Cantidad'
@@ -181,7 +181,7 @@ function drawChartPopulationCarrot(){
 
     var options = {
         hAxis: {
-            title: 'Días'
+            title: 'Turnos'
         },
         vAxis: {
             title: 'Cantidad'
@@ -211,7 +211,7 @@ function drawChartHuntedRabbit(){
 
     var options = {
         hAxis: {
-            title: 'Días',
+            title: 'Turnos',
             viewWindow: {min:0, max:100}
         },
         vAxis: {
@@ -289,7 +289,7 @@ function drawChartCarrotEaten(){
 
     var options = {
         hAxis: {
-            title: 'Días',
+            title: 'Turnos',
             viewWindow: {min:0, max:100}
         },
         vAxis: {
@@ -525,7 +525,7 @@ function drawChartBornRabbit(){
 
     var options = {
         hAxis: {
-            title: 'Días',
+            title: 'Turnos',
             viewWindow: {min:0, max:100}
         },
         vAxis: {

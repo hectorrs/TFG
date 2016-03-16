@@ -1055,7 +1055,7 @@
 	}
 
 	function breed($element){
-		if($element->getNumHasBred() <= $_POST['breedRabbit']){
+		if($element->getNumHasBred() < $_POST['breedRabbit']){
 			$position = $element->getPosition();
 
 			$flag = false;
@@ -1462,6 +1462,9 @@
 	$_SESSION['bornRabbit'] = $GLOBALS['vars']['bornRabbit'];
 
 	session_write_close();
+
+	echo bcsub($timeFinish, $timeStart, 2)  . '<br>';
+	echo $memory / 1024 / 1024;
 
 	header('Location: ../View/output.php', false);
 ?>
