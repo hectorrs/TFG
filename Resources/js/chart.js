@@ -1,3 +1,6 @@
+/**
+ * Load the charts used below
+ */
 google.charts.load('current', {'packages': ['corechart', 'line']});
 
 google.charts.setOnLoadCallback(drawChartWeather);
@@ -11,7 +14,9 @@ google.charts.setOnLoadCallback(drawChartDeadEat);
 google.charts.setOnLoadCallback(drawChartDeadSleep);
 google.charts.setOnLoadCallback(drawChartBornRabbit);
 
-/* Tiempo atmosférico */
+/**
+ * It draws the chart 'weather'
+ */
 function drawChartWeather(){
     var data = google.visualization.arrayToDataTable([
         ['Task', 'Hours per Day'],
@@ -34,7 +39,9 @@ function drawChartWeather(){
     chart.draw(data, options);
 }
 
-/* Población total */
+/**
+ * It draws the chart 'all population'
+ */
 function drawChartPopulation(){
     var chart = new google.visualization.LineChart(document.getElementById('chartPopulation'));
 
@@ -51,7 +58,7 @@ function drawChartPopulation(){
 
     var options = {
         hAxis: {
-            title: 'Turnos',
+            title: 'Ciclos',
             viewWindow: {min:0, max:100}
         },
         vAxis: {
@@ -112,7 +119,9 @@ function drawChartPopulation(){
     drawChart();
 }
 
-/* Población de conejos */
+/**
+ * It draws the chart 'population of rabbits'
+ */
 function drawChartPopulationRabbit(){
     var data = new google.visualization.DataTable();
 
@@ -125,7 +134,7 @@ function drawChartPopulationRabbit(){
 
     var options = {
         hAxis: {
-            title: 'Turnos'
+            title: 'Ciclos'
         },
         vAxis: {
             title: 'Cantidad'
@@ -140,7 +149,9 @@ function drawChartPopulationRabbit(){
     chart.draw(data, options);
 }
 
-/* Población de lobos */
+/**
+ * It draws the chart 'population of wolfs'
+ */
 function drawChartPopulationWolf(){
     var data = new google.visualization.DataTable();
 
@@ -153,7 +164,7 @@ function drawChartPopulationWolf(){
 
     var options = {
         hAxis: {
-            title: 'Turnos'
+            title: 'Ciclos'
         },
         vAxis: {
             title: 'Cantidad'
@@ -168,7 +179,9 @@ function drawChartPopulationWolf(){
     chart.draw(data, options);
 }
 
-/* Población de zanahorias */
+/**
+ * It draws the chart 'population of carrots'
+ */
 function drawChartPopulationCarrot(){
     var data = new google.visualization.DataTable();
 
@@ -181,7 +194,7 @@ function drawChartPopulationCarrot(){
 
     var options = {
         hAxis: {
-            title: 'Turnos'
+            title: 'Ciclos'
         },
         vAxis: {
             title: 'Cantidad'
@@ -196,7 +209,9 @@ function drawChartPopulationCarrot(){
     chart.draw(data, options);
 }
 
-// Conejos cazados
+/**
+ * It draws the chart 'hunted rabbits'
+ */
 function drawChartHuntedRabbit(){
     var chart = new google.visualization.LineChart(document.getElementById('chartHuntedRabbit'));
     
@@ -211,7 +226,7 @@ function drawChartHuntedRabbit(){
 
     var options = {
         hAxis: {
-            title: 'Turnos',
+            title: 'Ciclos',
             viewWindow: {min:0, max:100}
         },
         vAxis: {
@@ -274,7 +289,9 @@ function drawChartHuntedRabbit(){
     chart.draw(data, options);
 }
 
-// Zanahorias comidas
+/**
+ * It draws the chart 'eaten carrots'
+ */
 function drawChartCarrotEaten(){
     var chart = new google.visualization.LineChart(document.getElementById('chartCarrotEaten'));
     
@@ -289,7 +306,7 @@ function drawChartCarrotEaten(){
 
     var options = {
         hAxis: {
-            title: 'Turnos',
+            title: 'Ciclos',
             viewWindow: {min:0, max:100}
         },
         vAxis: {
@@ -352,7 +369,9 @@ function drawChartCarrotEaten(){
     chart.draw(data, options);
 }
 
-// Conejos y lobos muertos por no comer
+/**
+ * It draws the chart 'dead rabbits and wolves for not eating'
+ */
 function drawChartDeadEat(){
     var chart = new google.visualization.LineChart(document.getElementById('chartDeadEat'));
     
@@ -368,7 +387,7 @@ function drawChartDeadEat(){
 
     var options = {
         hAxis: {
-            title: 'Días',
+            title: 'Ciclos',
             viewWindow: {min:0, max:100}
         },
         vAxis: {
@@ -431,7 +450,9 @@ function drawChartDeadEat(){
     chart.draw(data, options);
 }
 
-// Conejos y lobos muertos por no comer
+/**
+ * It draws the chart 'dead rabbits and wolves for not sleeping'
+ */
 function drawChartDeadSleep(){
     var chart = new google.visualization.LineChart(document.getElementById('chartDeadSleep'));
     
@@ -447,7 +468,7 @@ function drawChartDeadSleep(){
 
     var options = {
         hAxis: {
-            title: 'Días',
+            title: 'Ciclos',
             viewWindow: {min:0, max:100}
         },
         vAxis: {
@@ -510,7 +531,9 @@ function drawChartDeadSleep(){
     chart.draw(data, options);
 }
 
-// Conejos y lobos muertos por no comer
+/**
+ * It draws the chart 'born rabbits'
+ */
 function drawChartBornRabbit(){
     var chart = new google.visualization.LineChart(document.getElementById('chartBornRabbit'));
     
@@ -525,7 +548,7 @@ function drawChartBornRabbit(){
 
     var options = {
         hAxis: {
-            title: 'Turnos',
+            title: 'Ciclos',
             viewWindow: {min:0, max:100}
         },
         vAxis: {

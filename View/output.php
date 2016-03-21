@@ -5,56 +5,62 @@
 
 	<title>Simulación</title>
 
-	<link rel="stylesheet" type="text/css" href="../Resources/css/bootstrap-theme.css">
-	<link rel="stylesheet" type="text/css" href="../Resources/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="../Resources/css/custom.css">
+	<link rel="shortcut icon" href="../resources/img/icon2.ico">
 
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" type="text/css" href="../Resources/css/bootstrap.min.css">
+
+	<!-- Add custom CSS here -->
+    <link href="../resources/css/custom.css" rel="stylesheet">
+
+	<!-- JavaScript -->
 	<script type="text/javascript" src="../Resources/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="../Resources/js/npm.js"></script>
+
+	<!-- Add custom JS here -->
 	<script type="text/javascript" src="../Resources/js/output.js"></script>
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 <body>
 <?php
-	// Archivo que genera el mundo
+	// File which generates the world
 	$file = file_get_contents("../Resources/log/world.txt");
 
 	$data = explode(".", $file);
 
 	session_start();
 
-	// Dimensiones
+	// Size
 	$row = $_SESSION['row'];
 	$col = $_SESSION['col'];
 
-	// Memoria y tiempo de ejecución
+	// Memory and execution time
 	$memory = $_SESSION['memory'];
 	$time = $_SESSION['time'];
 
-	// Estadísticas
-	// Tiempo atmosférico
+	// Statistics
+	// Weather
 	$weather = $_SESSION['weather'];
 
-	// Población de elementos
+	// Population of elements
 	$amountRabbit = $_SESSION['amountRabbit'];
 	$amountWolf = $_SESSION['amountWolf'];
 	$amountCarrot = $_SESSION['amountCarrot'];
 
-	// Conejos cazados
+	// Hunted rabbits
 	$huntedRabbit = $_SESSION['huntedRabbit'];
 
-	// Zanahorias comidas
+	// Eaten carrots
 	$eatenCarrot = $_SESSION['eatenCarrot'];
 
-	// Conejos y lobos muertos por no comer
+	// Dead rabbits and wolves for not eating
 	$deadEatRabbit = $_SESSION['deadEatRabbit'];
 	$deadEatWolf = $_SESSION['deadEatWolf'];
 
-	// Conejos y lobos muertos por no dormir
+	// Dead rabbits and wolves for not sleeping
 	$deadSleepRabbit = $_SESSION['deadSleepRabbit'];
 	$deadSleepWolf = $_SESSION['deadSleepWolf'];
 
-	// Reproducción de conejos
+	// Breed of rabbits
 	$bornRabbit = $_SESSION['bornRabbit'];
 
 	session_write_close();
@@ -64,36 +70,36 @@
 ?>
 
 <script type="text/javascript">
-	// Mundo
+	// World
 	var data = <?php echo json_encode($data); ?>;
 
-	// Dimensiones
+	// Size
 	var row = <?php echo json_encode($row); ?>;
 	var col = <?php echo json_encode($col); ?>;
 
-	// Tiempo atmosférico
+	// TWeather
 	var weather = <?php echo json_encode($weather); ?>;
 
-	// Población de elementos
+	// Population of elements
 	var amountRabbit = <?php echo json_encode($amountRabbit); ?>;
 	var amountWolf = <?php echo json_encode($amountWolf); ?>;
 	var amountCarrot = <?php echo json_encode($amountCarrot); ?>;
 
-	// Conejos cazados
+	// Hunted rabbits
 	var huntedRabbit = <?php echo json_encode($huntedRabbit); ?>;
 
-	// Zanahorias comidas
+	// Eaten carrots
 	var eatenCarrot = <?php echo json_encode($eatenCarrot); ?>;
 
-	// Conejos y lobos muertos por no comer
+	// Dead rabbits and wolves for not eating
 	var deadEatRabbit = <?php echo json_encode($deadEatRabbit); ?>;
 	var deadEatWolf = <?php echo json_encode($deadEatWolf); ?>;
 
-	// Conejos y lobos muertos por no dormir
+	// Dead rabbits and wolves for not sleeping
 	var deadSleepRabbit = <?php echo json_encode($deadSleepRabbit); ?>;
 	var deadSleepWolf = <?php echo json_encode($deadSleepWolf); ?>;
 
-	// Reproducción de conejos
+	// Breed of rabbits
 	var bornRabbit = <?php echo json_encode($bornRabbit); ?>;
 </script>
 

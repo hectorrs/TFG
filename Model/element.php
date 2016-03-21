@@ -1,6 +1,6 @@
 <?php
 	/**
-	 * @global int Número autoincremental que da lugar al id del elemento
+	 * @global int ID of the element
 	 */
 	global $stock;
 	$stock = 0;
@@ -8,16 +8,16 @@
 	/**
 	 * Class Element
 	 *
-	 * Representa un elemento en el mundo
+	 * It represents an element in the world
 	 */
 	class Element{
 		/**
-		 * @var int Id del elemento
+		 * @var int Id of the element
 		 */
 		private $id;
 
 		/**
-		 * @var int[] Posición del elemento en el mundo
+		 * @var int[] Position of the element in the world
 		 */
 		private $position;
 
@@ -30,27 +30,27 @@
 		}
 
 		/**
-		 * Devuelve el id del elemento
+		 * It returns the ID of the element
 		 *
-		 * @return int Id del elemento
+		 * @return int ID of the element
 		 */
 		public function getId(){
 			return $this->id;
 		}
 
 		/**
-		 * Devuelve la posición del elemento en el mundo
+		 * It returns the position of the element in the world, both coordinates
 		 *
-		 * @return int[] Posición
+		 * @return int[] Position
 		 */
 		public function getPosition(){
 			return $this->position;
 		}
 
 		/**
-		 * Modifica la posición del elemento
+		 * It updates the position of the element
 		 *
-		 * @param int[] Nueva posición
+		 * @param int[] New position
 		 */
 		public function setPosition($position){
 			$this->position = $position;
@@ -60,48 +60,45 @@
 	/**
 	 * Class Dynamic
 	 *
-	 * Representa un elemento dinámico de tipo elemento
+	 * It represents an dynamic element of type Element
 	 */
 	class Dynamic extends Element{
 		/**
-		 * @var int Acciones por turno que puede realizar un elemento
+		 * @var int Actions per turn that an element can do
 		 */
 		private $actPerTurn;
 
 		/**
-		 * @var int Estado 'comiendo' del elemento. 0, si no está comiendo; > 0, en caso contrario | Turnos que le quedan al elemento para terminar de comer
+		 * @var int Status 'eating' of the element. It is 0 if the element is not eating and more than 0 if it is eating |
+		 * Turns that the rabbit has for finishing his meal
 		 */
 		private $eating;
 
 		/**
-		 * @var int Estado 'durmiendo' del elemento. 0, si no está durmiendo; > 0, en caso contrario | Turnos que le quedan al elemento para terminar de dormir
+		 * @var int Status 'eating' of the element. It is 0 if the element is not sleeping and more than 0 if it is sleeping |
+		 * Turns that the rabbit has for stopping his sleep
 		 */
 		private $sleeping;
 
 		/**
-		 * @var bool|null Estado 'escondido' del elemento
+		 * @var bool|null Status 'hidden' of the element
 		 */
 		private $hidden;
 
 		/**
-		 * @var int Días sin comer
+		 * @var int Period since last time the element ate
 		 */
-		private $daysWithoutEat;
+		private $ateAgo;
 
 		/**
-		 * @var int Días sin dormir
+		 * @var int Period since last time the element slept
 		 */
-		private $daysWithoutSleep;
+		private $sleptAgo;
 
 		/**
-		 * @var bool Estado 'ha comido durante el día' del elemento
+		 * @var int Period since last ime the element bred
 		 */
-		private $hasEaten;
-
-		/**
-		 * @var int Cantidad de veces al día que se reproduce el elemento
-		 */
-		private $numHasBred;
+		private $bredAgo;
 
 		/*
 		 * Constructor
@@ -112,86 +109,78 @@
 			$this->eating = 0;
 			$this->sleeping = 0;
 			$this->hidden = null;
-			$this->daysWithoutEat = 0;
-			$this->daysWithoutSleep = 0;
-			$this->hasEaten = false;
-			$this->numHasBred = null;
+			$this->ateAgo = 0;
+			$this->sleptAgo = 0;
+			$this->bredAgo = 0;
 		}
 
 		/**
-		 * Devuelve el número de acciones por turno permitidas para el elemento
+		 * It returns the number of actions per turn allowed for the element
 		 *
-		 * @return int Acciones
+		 * @return int Actions
 		 */
 		public function getActPerTurn(){
 			return $this->actPerTurn;
 		}
 
 		/**
-		 * Devuelve el estado 'comiendo' del elemento. 0, si no está comiendo; > 0, en caso contrario | Turnos que le quedan al elemento para terminar de comer
+		 * It returns the status 'eating' of the element. It is 0 if the element is not eating and more than 0 if it is eating |
+		 * Turns that the rabbit has for finishing his meal
 		 *
-		 * @return int Estado|Turnos
+		 * @return int Status|Period
 		 */
 		public function getEating(){
 			return $this->eating;
 		}
 
 		/**
-		 * Devuelve el estado 'durmiendo' del elemento. 0, si no está durmiendo; > 0, en caso contrario | Turnos que le quedan al elemento para terminar de dormir
+		 * It returns the status 'sleeping' of the element. 0, if it is not sleeping; more than 0, in the opposite case |
+		 * Period that he needs to finish sleeping
 		 *
-		 * @return int Estado|Turnos
+		 * @return int Status|Period
 		 */
 		public function getSleeping(){
 			return $this->sleeping;
 		}
 
 		/**
-		 * Devuelve el estado 'escondido' del elemento
+		 * It returns the status 'hidden' of the element
 		 *
-		 * @return bool Estado
+		 * @return bool Status
 		 */
 		public function getHidden(){
 			return $this->hidden;
 		}
 
 		/**
-		 * Devuelve el número de días que lleva sin comer el elemento
+		 * It returns the period since last time the element ate
 		 *
-		 * @return int Días
+		 * @return bool Period
 		 */
-		public function getDaysWithoutEat(){
-			return $this->daysWithoutEat;
+		public function getAteAgo(){
+			return $this->ateAgo;
 		}
 
 		/**
-		 * Devuelve el número de días que lleva sin dormir el elemento
+		 * It returns the period since last time the element slept
 		 *
-		 * @return int Días
+		 * @return bool Period
 		 */
-		public function getDaysWithoutSleep(){
-			return $this->daysWithoutSleep;
+		public function getSleptAgo(){
+			return $this->sleptAgo;
 		}
 
 		/**
-		 * Devuelve el estado 'ha comido durante el día' del elemento
+		 * It returns the period since last time the element breed
 		 *
-		 * @return bool Estado
+		 * @return int Period
 		 */
-		public function getHasEaten(){
-			return $this->hasEaten;
+		public function getBredAgo(){
+			return $this->bredAgo;
 		}
 
 		/**
-		 * Devuelve la cantidad de veces al día que se reproduce el elemento
-		 *
-		 * @return int Cantidad
-		 */
-		public function getNumHasBred(){
-			return $this->numHasBred;
-		}
-
-		/**
-		 * Modifica el número de acciones por turno del elemento
+		 * It updates the number of actions per turn allowed for the element
 		 *
 		 * @param int Acciones
 		 */
@@ -200,7 +189,7 @@
 		}
 
 		/**
-		 * Modifica el estado 'comiendo' del elemento
+		 * It updates the status 'eating' of the element
 		 *
 		 * @param int Estado
 		 */
@@ -209,7 +198,7 @@
 		}
 
 		/**
-		 * Modifica el estado 'durmiendo' del elemento
+		 * It updates the status 'sleeping' of the element
 		 *
 		 * @param int Estado
 		 */
@@ -218,7 +207,7 @@
 		}
 
 		/**
-		 * Modifica el estado 'escondido' del elemento
+		 * It updates the status 'hidden' of the element
 		 *
 		 * @param bool Estado
 		 */
@@ -227,39 +216,30 @@
 		}
 
 		/**
-		 * Modifica los días que lleva sin comer un elemento
+		 * It updates the period since last time the element ate
 		 *
-		 * @param int Días
+		 * @param int Period
 		 */
-		public function setDaysWithoutEat($daysWithoutEat){
-			$this->daysWithoutEat = $daysWithoutEat;
+		public function setAteAgo($ateAgo){
+			$this->ateAgo = $ateAgo;
 		}
 
 		/**
-		 * Modifica los días que lleva sin dormir un elemento
+		 * It updates the period since last time the element slept
 		 *
-		 * @param int Días
+		 * @param int Period
 		 */
-		public function setDaysWithoutSleep($daysWithoutSleep){
-			$this->daysWithoutSleep = $daysWithoutSleep;
+		public function setSleptAgo($sleptAgo){
+			$this->sleptAgo = $sleptAgo;
 		}
 
 		/**
-		 * Modifica el estado 'ha comido durante el día' del elemento
+		 * It updates the period since last time the element bred
 		 *
-		 * @param bool Estado
+		 * @param int Period
 		 */
-		public function setHasEaten($hasEaten){
-			$this->hasEaten = $hasEaten;
-		}
-
-		/**
-		 * Modifica la cantidad de veces al día que se reproduce el elemento
-		 *
-		 * @param int Cantidad
-		 */
-		public function setNumHasBred($numHasBred){
-			$this->numHasBred = $numHasBred;
+		public function setBredAgo($bredAgo){
+			$this->bredAgo = $bredAgo;
 		}
 	}
 ?>

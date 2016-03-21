@@ -4,11 +4,11 @@
 	/**
 	 * Class Rabbit
 	 *
-	 * Representa un elemento conejo en el mundo
+	 * It represents an element Rabbit in the world
 	 */
 	class Rabbit extends Dynamic{
 		/**
-		 * Realiza una acción del elemento
+		 * It lets Rabbit to do an action
 		 */
 		public function act(){
 			$see = actionManager($this, 'see');
@@ -24,11 +24,11 @@
 	/**
 	 * Class Wolf
 	 *
-	 * Representa un elemento lobo en el mundo
+	 * It represents an element Wolf in the world
 	 */
 	class Wolf extends Dynamic{
 		/**
-		 * Realiza una acción del elemento
+		 * It lets Wolf to do an action
 		 */
 		public function act(){
 			$see = actionManager($this, 'see');
@@ -37,13 +37,14 @@
 			$move = array('up', 'down', 'left', 'right');
 			actionManager($this, 'move', $move[rand(0, 3)]);
 			actionManager($this, 'sleep');
+			actionManager($this, 'breed');
 		}
 	}
 
 	/**
 	 * Class Carrot
 	 *
-	 * Representa un elemento zanahoria en el mundo
+	 * It represents an element Carrot in the world
 	 */
 	class Carrot extends Element{
 
@@ -52,7 +53,7 @@
 	/**
 	 * Class Tree
 	 *
-	 * Representa un elemento árbol en el mundo
+	 * It represents an element Tree in the world
 	 */
 	class Tree extends Element{
 
@@ -61,11 +62,11 @@
 	/**
 	 * Class Lair
 	 *
-	 * Representa un elemento madriguera en el mundo
+	 * It represents an element Lair in the world
 	 */
 	class Lair extends Element{
 		/**
-		 * @var Rabbit|null Elemento conejo
+		 * @var Rabbit|null Element Rabbit
 		 */
 		private $element;
 
@@ -78,25 +79,25 @@
 		}
 
 		/**
-		 * Devuelve el elemento conejo contenido en la madriguera
+		 * It returns an element Rabbit which is in the lair
 		 *
-		 * @return Rabbit|null Elemento conejo
+		 * @return Rabbit|null Element Rabbit
 		 */
 		public function getElement(){
 			return $this->element;
 		}
 
 		/**
-		 * Almacena un elemento conejo
+		 * It stores an element Rabbit
 		 *
-		 * @param Rabbit Elemento conejo
+		 * @param Rabbit Element Rabbit
 		 */
 		public function saveElement($element){
 			$this->element = $element;
 		}
 
 		/**
-		 * Elimina un elemento conejo
+		 * It deletes an element Rabbit
 		 */
 		public function leaveElement(){
 			$this->element = null;

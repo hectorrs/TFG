@@ -1,118 +1,71 @@
+/**
+ * Show the tab 'world' and hide the others
+ */
 function world(){
-	var world = document.getElementById('world');
-	var element = document.getElementById('element');
-
-	if(element.style.display == 'block')
-		element.style.display = 'none';
-
-	world.style.display = 'block';
+	document.getElementById('world').className = 'show';
+	document.getElementById('element').className = 'hide';
+	document.getElementById('restriction').className = 'hide';
+	document.getElementById('period').className = 'hide';
+	document.getElementById('action').className = 'hide';
+	document.getElementById('range').className = 'hide';
 }
 
+/**
+ * Show the tab 'element' and hide the others
+ */
 function element(){
-	var world = document.getElementById('world');
-	var element = document.getElementById('element');
-
-	if(world.style.display == 'block')
-		world.style.display = 'none';
-
-	element.style.display = 'block';
+	document.getElementById('world').className = 'hide';
+	document.getElementById('element').className = 'show';
+	document.getElementById('restriction').className = 'hide';
+	document.getElementById('period').className = 'hide';
+	document.getElementById('action').className = 'hide';
+	document.getElementById('range').className = 'hide';
 }
 
-function execution(){
-	var execution = document.getElementById('execution');
-	var weather = document.getElementById('weather');
-	var elements = document.getElementById('elements');
-	var restriction = document.getElementById('restriction');
-
-	if(weather.style.display == 'block' || elements.style.display == 'block' || restriction.style.display == 'block'){
-		weather.style.display = 'none';
-		elements.style.display = 'none';
-		restriction.style.display = 'none';
-	}
-
-	execution.style.display = 'block';
-}
-
-function weatherTime(){
-	var execution = document.getElementById('execution');
-	var weather = document.getElementById('weather');
-	var elements = document.getElementById('elements');
-	var restriction = document.getElementById('restriction');
-
-	if(execution.style.display == 'block' || elements.style.display == 'block' || restriction.style.display == 'block'){
-		execution.style.display = 'none';
-		elements.style.display = 'none';
-		restriction.style.display = 'none';
-	}
-
-	weather.style.display = 'block';
-}
-
-function amountElement(){
-	var execution = document.getElementById('execution');
-	var weather = document.getElementById('weather');
-	var elements = document.getElementById('elements');
-	var restriction = document.getElementById('restriction');
-
-	if(execution.style.display == 'block' || weather.style.display == 'block' || restriction.style.display == 'block'){
-		execution.style.display = 'none';
-		weather.style.display = 'none';
-		restriction.style.display = 'none';
-	}
-
-	elements.style.display = 'block';
-}
-
+/**
+ * Show the tab 'restriction' and hide the others
+ */
 function restriction(){
-	var execution = document.getElementById('execution');
-	var weather = document.getElementById('weather');
-	var elements = document.getElementById('elements');
-	var restriction = document.getElementById('restriction');
-
-	if(execution.style.display == 'block' || elements.style.display == 'block' || weather.style.display == 'block'){
-		execution.style.display = 'none';
-		elements.style.display = 'none';
-		weather.style.display = 'none';
-	}
-
-	restriction.style.display = 'block';
+	document.getElementById('world').className = 'hide';
+	document.getElementById('element').className = 'hide';
+	document.getElementById('restriction').className = 'show';
+	document.getElementById('period').className = 'hide';
+	document.getElementById('action').className = 'hide';
+	document.getElementById('range').className = 'hide';
 }
 
-function turns(){
-	var turn = document.getElementById('turn');
-	var action = document.getElementById('action');
-	var range = document.getElementById('range');
-
-	if(action.style.display == 'block' || action.style.display == 'block' || range.style.display == 'block'){
-		action.style.display = 'none';
-		range.style.display = 'none';
-	}
-
-	turn.style.display = 'block';
+/**
+ * Show the tab 'period' and hide the others
+ */
+function period(){
+	document.getElementById('world').className = 'hide';
+	document.getElementById('element').className = 'hide';
+	document.getElementById('restriction').className = 'hide';
+	document.getElementById('period').className = 'show';
+	document.getElementById('action').className = 'hide';
+	document.getElementById('range').className = 'hide';
 }
 
-function actions(){
-	var turn = document.getElementById('turn');
-	var action = document.getElementById('action');
-	var range = document.getElementById('range');
-
-	if(turn.style.display == 'block' || action.style.display == 'block' || range.style.display == 'block'){
-		turn.style.display = 'none';
-		range.style.display = 'none';
-	}
-
-	action.style.display = 'block';
+/**
+ * Show the tab 'action' and hide the others
+ */
+function action(){
+	document.getElementById('world').className = 'hide';
+	document.getElementById('element').className = 'hide';
+	document.getElementById('restriction').className = 'hide';
+	document.getElementById('period').className = 'hide';
+	document.getElementById('action').className = 'show';
+	document.getElementById('range').className = 'hide';
 }
 
-function ranges(){
-	var turn = document.getElementById('turn');
-	var action = document.getElementById('action');
-	var range = document.getElementById('range');
-
-	if(action.style.display == 'block' || action.style.display == 'block' || turn.style.display == 'block'){
-		action.style.display = 'none';
-		turn.style.display = 'none';
-	}
-
-	range.style.display = 'block';
+/**  
+ * Show the tab 'range' and hide the others
+ */
+function range(){
+	document.getElementById('world').className = 'hide';
+	document.getElementById('element').className = 'hide';
+	document.getElementById('restriction').className = 'hide';
+	document.getElementById('period').className = 'hide';
+	document.getElementById('action').className = 'hide';
+	document.getElementById('range').className = 'show';
 }

@@ -1,3 +1,1 @@
-<?php
-	header("Location: View/input.php");
-?>
+<?php header("Location: view/input.php"); ?>

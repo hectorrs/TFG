@@ -1,4 +1,13 @@
-/* Representación mundo */
+.dividing{
+	display: block;
+    height: 5px;
+    border: 0;
+    border-top: 1.6px solid #424242;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/* Table world */
 .containerWorld{
 	display: table;
     border: 2px solid #000;

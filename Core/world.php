@@ -5,11 +5,11 @@
 	$timeStart = microtime(true);
 
 	/**
-	 * @global array $vars Contiene las variables del mundo
+	 * @global array $vars It stores the variables of the world
 	 */
 	$vars = array();
 
-	/* ** Mundo ** */
+	/* ** World ** */
 	$vars['world'] = array();
 	$vars['size'] = array();
 	$vars['length'] = 0;
@@ -26,9 +26,7 @@
 	$vars['moreCarrot'] = 0;
 	$vars['moreWolf'] = 0;
 
-	$vars['auxSleep'] = intval(getLengthNight() * 25 / 100);
-
-	/* ** Elemento ** */
+	/* ** Element ** */
 	$vars['static'] = array();
 	$vars['dynamic'] = array();
 	$vars['prize'] = array();
@@ -37,53 +35,53 @@
 	$vars['turnSleepRabbit'] = 0;
 	$vars['turnSleepWolf'] = 0;
 
-	/* ** Fichero ** */
+	/* ** File ** */
 	$vars['fileWorld'] = openFile('world');
 	$vars['fileLog'] = openFile('log');
 	$vars['fileDebug'] = openFile('debug');
 
-	/* ** Estadísticas ** */
-	// Tiempo atmosférico por día
+	/* ** Statistics ** */
+	// Weather per day
 	$vars['countWeather'] = array(0, 0, 0, 0);
 
-	// Población de elementos por día
+	// Population of elements per day
 	$vars['amountRabbit'] = array();
 	$vars['amountWolf'] = array();
 	$vars['amountCarrot'] = array();
 
-	// Conejos cazados por día
+	// Hunted rabbits per day
 	$vars['huntedRabbit'] = array();
 
-	// Zanahorias comidas al día
+	// Eaten carrots per day
 	$vars['eatenCarrot'] = array();
 
-	// Conejos y lobos muertos por no comer
+	// Dead rabbits and wolves for not eating
 	$vars['deadEatRabbit'] = array();
 	$vars['deadEatWolf'] = array();
 
-	// Conejos y lobos muertos por no dormir
+	// Dead rabbits and wolves for not sleeping
 	$vars['deadSleepRabbit'] = array();
 	$vars['deadSleepWolf'] = array();
 
-	// Reproducción de conejos
+	// Breeding of rabbits
 	$vars['bornRabbit'] = array();
 
-	/* ------------------------------- Mundo ------------------------------- */
+	/* ------------------------------- World ------------------------------- */
 	/**
-	 * Recoge los datos de configuración inicial del mundo y los registra en el log
+	 * It gets the data of the first configuration of the world and log's files
 	 */
 	function conf(){
 		$GLOBALS['vars']['size']['row'] = $_POST['sizeX'];
 		$GLOBALS['vars']['size']['col'] = $_POST['sizeY'];
 		writeFile('Log', 'Dimensions: ' . getSizeWorld()['row'] . ' x ' . getSizeWorld()['col'] . "\n");
 
-		$GLOBALS['vars']['length'] = $_POST['turn'];
+		$GLOBALS['vars']['length'] = $_POST['totalPeriod'];
 		writeFile('Log', 'Turns: ' . getLength() . "\n");
 
-		$GLOBALS['vars']['day'] = $_POST['day'];
+		$GLOBALS['vars']['day'] = $_POST['dayPeriod'];
 		writeFile('Log', 'Length day: ' . getLengthDay() . "\n");
 
-		$GLOBALS['vars']['night'] = $_POST['night'];
+		$GLOBALS['vars']['night'] = $_POST['nightPeriod'];
 		writeFile('Log', 'Length night: ' . getLengthNight() . "\n");
 
 		$GLOBALS['vars']['daylight'] = false;
@@ -97,56 +95,57 @@
 
 		$GLOBALS['vars']['ground'] = new Ground();
 
-		$GLOBALS['vars']['turnEatRabbit'] = $_POST['eatRabbit'];
+		$GLOBALS['vars']['turnEatRabbit'] = $_POST['turnEatRabbit'];
 		writeFile('Log', 'Rabbit need ' . getTurnEatRabbit() . ' turns to eat' . "\n");
 		
-		$GLOBALS['vars']['turnEatWolf'] = $_POST['eatWolf'];
+		$GLOBALS['vars']['turnEatWolf'] = $_POST['turnEatWolf'];
 		writeFile('Log', 'Wolf need ' . getTurnEatWolf() . ' turns to eat' . "\n");
 
-		$GLOBALS['vars']['turnSleepRabbit'] = $_POST['sleepRabbit'];
+		$GLOBALS['vars']['turnSleepRabbit'] = $_POST['turnSleepRabbit'];
 		writeFile('Log', 'Rabbit need ' . getTurnSleepRabbit() . ' turns to sleep' . "\n");
 		
-		$GLOBALS['vars']['turnSleepWolf'] = $_POST['sleepWolf'];
+		$GLOBALS['vars']['turnSleepWolf'] = $_POST['turnSleepWolf'];
 		writeFile('Log', 'Wolf need ' . getTurnSleepWolf() . ' turns to sleep' . "\n");
 
+		writeFile('Log', 'Rabbit is sated for ' . $_POST['noNeedToEatRabbit'] . ' period' . "\n");
+		writeFile('Log', 'Wolf is sated for ' . $_POST['noNeedToEatWolf'] . ' period' . "\n");
+
 		writeFile('Log', 'Rabbits have ' . $_POST['maxUseRabbit'] . ' points to do actions' . "\n");
-		writeFile('Log', 'Wolfs have ' . $_POST['maxUseWolf'] . ' points to do actions' . "\n");
+		writeFile('Log', 'Wolves have ' . $_POST['maxUseWolf'] . ' points to do actions' . "\n");
 
 		writeFile('Log', 'See spend ' . $_POST['smellRabbitUse'] . ' points in Rabbits' . "\n");
-		writeFile('Log', 'See spend ' . $_POST['smellWolfUse'] . ' points in Wolfs' . "\n");
+		writeFile('Log', 'See spend ' . $_POST['smellWolfUse'] . ' points in Wolves' . "\n");
 		writeFile('Log', 'Move spend ' . $_POST['smellRabbitUse'] . ' points in Rabbits' . "\n");
-		writeFile('Log', 'Move spend ' . $_POST['smellWolfUse'] . ' points in Wolfs' . "\n");
+		writeFile('Log', 'Move spend ' . $_POST['smellWolfUse'] . ' points in Wolves' . "\n");
 		writeFile('Log', 'Sleep spend ' . $_POST['sleepRabbitUse'] . ' points in Rabbits' . "\n");
-		writeFile('Log', 'Sleep spend ' . $_POST['sleepWolfUse'] . ' points in Wolfs' . "\n");
+		writeFile('Log', 'Sleep spend ' . $_POST['sleepWolfUse'] . ' points in Wolves' . "\n");
 		writeFile('Log', 'Smell spend ' . $_POST['smellRabbitUse'] . ' points in Rabbits' . "\n");
-		writeFile('Log', 'Smell spend ' . $_POST['smellWolfUse'] . ' points in Wolfs' . "\n");
+		writeFile('Log', 'Smell spend ' . $_POST['smellWolfUse'] . ' points in Wolves' . "\n");
 		writeFile('Log', 'Hear spend ' . $_POST['hearRabbitUse'] . ' points in Rabbits' . "\n");
-		writeFile('Log', 'Hear spend ' . $_POST['hearWolfUse'] . ' points in Wolfs' . "\n");
+		writeFile('Log', 'Hear spend ' . $_POST['hearWolfUse'] . ' points in Wolves' . "\n");
 
 		writeFile('Log', 'Rabbits have ' . $_POST['seeRabbit'] . ' of view range' . "\n");
-		writeFile('Log', 'Wolfs have ' . $_POST['seeWolf'] . ' of view range' . "\n");
+		writeFile('Log', 'Wolves have ' . $_POST['seeWolf'] . ' of view range' . "\n");
 		writeFile('Log', 'Rabbits have ' . $_POST['smellRabbit'] . ' of smell range' . "\n");
-		writeFile('Log', 'Wolfs have ' . $_POST['smellWolf'] . ' of smell range' . "\n");
+		writeFile('Log', 'Wolves have ' . $_POST['smellWolf'] . ' of smell range' . "\n");
 		writeFile('Log', 'Rabbits have ' . $_POST['hearRabbit'] . ' of hear range' . "\n");
-		writeFile('Log', 'Wolfs have ' . $_POST['hearWolf'] . ' of hear range' . "\n");
+		writeFile('Log', 'Wolves have ' . $_POST['hearWolf'] . ' of hear range' . "\n");
 
-		$GLOBALS['vars']['moreCarrot'] = $_POST['timeMoreCarrot'];
+		$GLOBALS['vars']['moreCarrot'] = $_POST['timeMoreCarrot'] + 1;
 		writeFile('Log', $_POST['amountMoreCarrot'] . ' carrots more each ' . $GLOBALS['vars']['moreCarrot'] . ' turns' . "\n");
-		$GLOBALS['vars']['moreWolf'] = $_POST['timeMoreWolf'];
-		writeFile('Log', $_POST['amountMoreWolf'] . ' wolfs more each ' . $GLOBALS['vars']['moreWolf'] . ' turns' . "\n");
 	}
 
 	/**
-	 * Obtiene el tamaño del mundo
+	 * It gets the size of the world
 	 *
-	 * @return int[] Largo y ancho
+	 * @return int[] Width and height
 	 */
 	function getSizeWorld(){
 		return $GLOBALS['vars']['size'];
 	}
 
 	/**
-	 * Crea la matriz mundo, con cada posición a null
+	 * It creates the matrix world. There is 'Ground' in each position
 	 */
 	function createWorld(){
 		for($row = 0; $row < getSizeWorld()['row']; $row++){
@@ -157,7 +156,7 @@
 	}
 
 	/**
-	 * Obtiene la matriz mundo
+	 * It gets the matrix world
 	 *
 	 * @return int[][] Matriz mundo
 	 */
@@ -166,18 +165,18 @@
 	}
 
 	/**
-	 * Modifica el contenido de una posición del mundo
+	 * It changes the contents of a position of the world
 	 *
-	 * @param Element $element Objeto a colocar en el mundo
-	 * @param int $row Posición x del mundo
-	 * @param int $col Posición y del mundo
+	 * @param Element $element Object to put in the world
+	 * @param int $row Coordinate x of the world
+	 * @param int $col Coordinate y of the world
 	 */
 	function setWorld($element, $row, $col){
 		$GLOBALS['vars']['world'][$row][$col] = $element;
 	}
 
 	/**
-	 * Escribe en un fichero de texto el contenido del mundo
+	 * It writes in a text file the contents of the world
 	 */
 	function writeWorld(){
 		for($row = 0; $row < getSizeWorld()['row']; $row++){
@@ -191,18 +190,18 @@
 	}
 
 	/**
-	 * Retorna un objeto de tipo Ground
+	 * It returns a Ground object
 	 *
-	 * @return Ground Objeto de tipo Ground
+	 * @return Ground Ground object
 	 */
 	function getGround(){
 		return $GLOBALS['vars']['ground'];
 	}
 
 	/**
-	 * Comprueba si el mundo está lleno de elementos
+	 * It checks if the world is full
 	 *
-	 * @return bool True, en caso de que esté lleno; false, en caso contrario
+	 * @return bool True, if it is full; false, in the opposite case
 	 */
 	function isFull(){
 		if(count(getStatic()) + count(getDynamic()) + count(getPrize()) < getSizeWorld()['row'] * getSizeWorld()['col']){
@@ -213,16 +212,16 @@
 	}
 
 	/**
-	 * Retorna el estado del día (día o noche)
+	 * It returns the status of the day (daylight or night)
 	 *
-	 * @return bool True, si es de día; false, si es de noche
+	 * @return bool True, if it is daylight; false, in the opposite case
 	 */
 	function getStatusDay(){
 		return $GLOBALS['vars']['daylight'];
 	}
 
 	/**
-	 * Cambia el estado del mundo a día si es de noche o noche si es de día
+	 * It changes the status of the world to 'daylight' if it is 'night' or 'night' if it is 'daylight'
 	 */
 	function setStatusDay(){
 		if($GLOBALS['vars']['daylight']){
@@ -235,43 +234,43 @@
 	}
 
 	/**
-	 * Retorna los turnos de ejecución
+	 * It returns the period of execution
 	 *
-	 * @return int Turnos
+	 * @return int Period
 	 */
 	function getLength(){
 		return $GLOBALS['vars']['length'];
 	}
 
 	/**
-	 * Retorna la duración de un día
+	 * It returns the period of the daylight
 	 *
-	 * @return int Duración
+	 * @return int Period
 	 */
 	function getLengthDay(){
 		return $GLOBALS['vars']['day'];
 	}
 
 	/**
-	 * Retorna la duración de una noche
+	 * It returns the period of the daylight
 	 *
-	 * @return int Duración
+	 * @return int Period
 	 */
 	function getLengthNight(){
 		return $GLOBALS['vars']['night'];
 	}
 
 	/**
-	 * Retorna el tiempo atmosférico actual
+	 * It returns the current weather
 	 *
-	 * @return string Tiempo atmosférico
+	 * @return string Weather
 	 */
 	function getWeather(){
 		return $GLOBALS['vars']['currentWeather'];
 	}
 
 	/**
-	 * Modifica el tiempo atmosférico actual
+	 * It updates the current weather
 	 */
 	function setWeather(){
 		$GLOBALS['vars']['currentWeather'] = $GLOBALS['vars']['weather'][mt_rand(0, 3)];
@@ -279,16 +278,16 @@
 	}
 
 	/**
-	 * Retorna cada cuántos turnos cambia el tiempo atmosférico
+	 * It returns every period changes the weather
 	 *
-	 * @return int Turnos
+	 * @return int Period
 	 */
 	function getChangeWeather(){
 		return $GLOBALS['vars']['changeWeather'];
 	}
 
 	/**
-	 * Retorna el instante de tiempo actual
+	 * It returns the current period
 	 *
 	 * @return int Tiempo
 	 */
@@ -297,23 +296,23 @@
 	}
 
 	/**
-	 * Avanza el tiempo
+	 * It advance the time
 	 */
 	function setTime(){
 		$GLOBALS['vars']['time']++;
 	}
 
 	/**
-	 * Retorna el día actual
+	 * It returns the current day
 	 *
-	 * @return int Contador de días
+	 * @return int Counter of days
 	 */
 	function getiTime(){
 		return $GLOBALS['vars']['iTime'];
 	}
 
 	/**
-	 * Incrementa en 1 el contador de día actual
+	 * It increases the counter of the current day in 1
 	 */
 	function setiTime(){
 		$GLOBALS['vars']['iTime']++;
@@ -323,52 +322,52 @@
 
 	/* ----------------------------- Elementos ----------------------------- */
 	/**
-	 * Devuelve los turnos que necesita un elemento Conejo para comer
+	 * It returns the period which the Rabbit element needs to eat
 	 *
-	 * @return int Turnos
+	 * @return int Period
 	 */
 	function getTurnEatRabbit(){
 		return $GLOBALS['vars']['turnEatRabbit'];
 	}
 
 	/**
-	 * Devuelve los turnos que necesita un elemento Lobo para comer
+	 * It returns the period which the Wolf element needs to eat
 	 *
-	 * @return int Turnos
+	 * @return int Period
 	 */
 	function getTurnEatWolf(){
 		return $GLOBALS['vars']['turnEatWolf'];
 	}
 
 	/**
-	 * Devuelve los turnos que necesita un elemento Conejo para dormir
+	 * * It returns the period which the Rabbit element needs to sleep
 	 *
-	 * @return int Turnos
+	 * @return int Period
 	 */
 	function getTurnSleepRabbit(){
 		return $GLOBALS['vars']['turnSleepRabbit'];
 	}
 
 	/**
-	 * Devuelve los turnos que necesita un elemento Lobo para dormir
+	 * It returns the period which the Wolf element needs to sleep
 	 *
-	 * @return int Turnos
+	 * @return int Period
 	 */
 	function getTurnSleepWolf(){
 		return $GLOBALS['vars']['turnSleepWolf'];
 	}
 
 	/**
-	 * Devuelve el hashmap que contiene los elementos estáticos
+	 * It returns the hashmap which contains the static elements
 	 *
-	 * @return Element Elementos estáticos
+	 * @return Element Static elements
 	 */
 	function getStatic(){
 		return $GLOBALS['vars']['static'];
 	}
 
 	/**
-	 * Añade un elemento al hashmap de elementos estáticos
+	 * It adds an element into the hashmap of static elements
 	 *
 	 * @param Element Elemento
 	 */
@@ -378,18 +377,18 @@
 	}
 
 	/**
-	 * Devuelve el hashmap que contiene los elementos dinámicos
+	 * It returns the hashmap which contains dynamic elements
 	 *
-	 * @return Element Elementos dinámicos
+	 * @return Element Dynamic elements
 	 */
 	function getDynamic(){
 		return $GLOBALS['vars']['dynamic'];
 	}
 
 	/**
-	 * Añade un elemento al hashmap de elementos dinámicos
+	 * It adds an element into the hashmap of dynamic elements
 	 *
-	 * @param Element Elemento
+	 * @param Element Element
 	 */
 	function addDynamic($element){
 		setWorld($element, $element->getPosition()[0], $element->getPosition()[1]);
@@ -397,9 +396,9 @@
 	}
 
 	/**
-	 * Elimina un elemento del hashmap de elementos dinámicos y del array mundo
+	 * It removes an element of the hashmap of dynamic elements and of the world array
 	 *
-	 * @param Element Elemento
+	 * @param Element Element
 	 */
 	function delDynamic($element){
 		if(get_class(getWorld()[$element->getPosition()[0]][$element->getPosition()[1]]) != 'Lair'){
@@ -409,18 +408,18 @@
 	}
 
 	/**
-	 * Devuelve el hashmap que contiene los elementos premio
+	 * It returns the hashmap which contains prize elements
 	 *
-	 * @return Element Elementos premio
+	 * @return Element Prize element
 	 */
 	function getPrize(){
 		return $GLOBALS['vars']['prize'];
 	}
 
 	/**
-	 * Añade un elemento al hashmap de elementos premio
+	 * It adds an element into the hashmap of prize elements
 	 *
-	 * @param Element Elemento
+	 * @param Element Element
 	 */
 	function addPrize($element){
 		setWorld($element, $element->getPosition()[0], $element->getPosition()[1]);
@@ -428,9 +427,9 @@
 	}
 
 	/**
-	 * Elimina un elemento del hashmap de elementos premio y del array mundo
+	 * It removes an element of the hashmap of prize elements and of the world array
 	 *
-	 * @param Element Elemento
+	 * @param Element Element
 	 */
 	function delPrize($element){
 		setWorld(getGround(), $element->getPosition()[0], $element->getPosition()[1]);
@@ -438,13 +437,13 @@
 	}
 
 	/**
-	 * Comprueba si un elemento se puede colocar en el mundo
+	 * It checks if an element can be put into the world
 	 *
-	 * @param Element Elemento
-	 * @param int Fila
-	 * @param int Columna
+	 * @param Element Element
+	 * @param int Row
+	 * @param int Col
 	 *
-	 * @return bool True, en caso de que se coloque el elemento; false, en contrario
+	 * @return bool True, if the element is put; false, in the opposite case
 	 */
 	function putElement($element, $row, $col){
 		if($row < 0 || $row > (getSizeWorld()['row'] - 1) || $col < 0 || $col > (getSizeWorld()['col'] - 1)){
@@ -459,7 +458,9 @@
 	}
 
 	/**
-	 * Coloca un elemento Conejo en el mundo. Lo inserta en el hashmap de elementos dinámicos y en array Mundo
+	 * It puts a Rabbit element into the world. It adds it in the hashmap of dynamic elements and in the world array
+	 *
+	 * @return bool True, if the element is putted in the world; false, in the opposite case
 	 */
 	function addRabbit(){
 		if(!isFull()){
@@ -476,18 +477,24 @@
             $rabbit->setPosition(array($row, $col));
             $rabbit->setActPerTurn($_POST['maxUseRabbit']);
             $rabbit->setHidden(false);
-            $rabbit->setNumHasBred(0);
+            $rabbit->setAteAgo(0);
 
             addDynamic($rabbit);
 
             writeFile('Log', '( ' . $rabbit->getPosition()[0] . ' , ' . $rabbit->getPosition()[1] . ' ) - Rabbit ' . $rabbit->getId() . "\n");
+
+            return true;
 		}else{
 			writeFile('Log', 'World is full! It can\'t put a rabbit' . "\n");
+
+			return false;
 		}
 	}
 
 	/**
-	 * Coloca un elemento Lobo en el mundo. Lo inserta en el hashmap de elementos dinámicos y en el array Mundo
+	 * It puts a Wolf element into the world. It adds it in the hashmap of dynamic elements and in the world array
+	 *
+	 * @return bool True, if the element is putted in the world; false, in the opposite case
 	 */
 	function addWolf(){
 		if(!isFull()){
@@ -503,17 +510,22 @@
 
             $wolf->setPosition(array($row, $col));
             $wolf->setActPerTurn($_POST['maxUseWolf']);
+            $wolf->setAteAgo(0);
 
             addDynamic($wolf);
 
             writeFile('Log', '( ' . $wolf->getPosition()[0] . ' , ' . $wolf->getPosition()[1] . ' ) - Wolf ' . $wolf->getId() . "\n");
+
+            return true;
 		}else{
 			writeFile('Log', 'World is full! It can\'t put a wolf' . "\n");
+
+			return false;
 		}
 	}
 
 	/**
-	 * Coloca un elemento Zanahoria en el mundo. Lo inserta en el hashmap de elementos premio y en el array Mundo
+	 * It puts a Carrot element into the world. It adds it in the hashmap of prize elements and in the world array
 	 */
 	function addCarrot(){
 		if(!isFull()){
@@ -538,7 +550,7 @@
 	}
 
 	/**
-	 * Coloca un elemento Madriguera en el mundo. Lo inserta en el hashmap de elementos estáticos y en el array Mundo
+	 * It puts a Lair element into the world. It adds it in the hashmap of static elements and in the world array
 	 */
 	function addLair(){
 		if(!isFull()){
@@ -563,7 +575,7 @@
 	}
 
 	/**
-	 * Coloca un elemento Árbol en el mundo. Lo inserta en el hashmap de elementos estáticos y en el array Mundo
+	 * It puts a Tree element into the world. It adds it in the hashmap of static elements and in the world array
 	 */
 	function addTree(){
 		if(!isFull()){
@@ -588,9 +600,9 @@
 	}
 
 	/**
-	 * Maneja las acciones que puede realizar cada elemento
+	 * It manages the actions which an element can do
 	 *
-	 * @return array|void Varía según el tipo de acción a realizar
+	 * @return array|void It depends on the type of action to do
 	 */
 	function actionManager(...$args){
 		switch($args[1]){
@@ -649,9 +661,12 @@
 	}
 
 	/**
-	 * Comprueba si un elemento puede realizar una acción en base a los puntos que le queden de turno
+	 * It checks if an element can do an action. It depends on the points that the element has in each period
 	 *
-	 * @return bool True, si puede realizar la acción; false, si no puede
+	 * @param Element Element
+	 * @param string Action
+	 *
+	 * @return bool True, if it can do the action; false, in the opposite case
 	 */
 	function canAct($element, $action){
 		$remain = $element->getActPerTurn();
@@ -665,9 +680,12 @@
 	}
 
 	/**
-	 * Devuelve el consumo de una acción
+	 * It returns the use of an action
 	 *
-	 * @return int Consumo
+	 * @param Element Element
+	 * @param string Action
+	 *
+	 * @return int Use
 	 */
 	function usePerAction($element, $action){
 		switch($action){
@@ -717,10 +735,10 @@
 	}
 
 	/**
-	 * Decrementa los puntos por uno que tiene un elemento para realizar una acción en base a los puntos que consuma una acción
+	 * It decreases the points that an element has to do an action. It depends on the points that an action uses.
 	 *
-	 * @param Element Elemento
-	 * @param string Acción
+	 * @param Element Element
+	 * @param string Action
 	 */
 	function useAction($element, $action){
 		if($action == 'max'){
@@ -731,10 +749,12 @@
 	}
 
 	/**
-	 * Acción ver
-	 * Retorna las posiciones y los elementos que puede ver el elemento en el caso de que dichas posiciones contengan un elemento
+	 * Action see
+	 * It returns the positions and the elements that an element can see, if these positions have an element
 	 *
-	 * @return array Posiciones
+	 * @param Element Element
+	 *
+	 * @return array Positions and elements
 	 */
 	function see($element){
 		writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - see - ');
@@ -785,9 +805,12 @@
 	}
 
 	/**
-	 * Retorna si una posición se encuentra fuera de los límites del mundo
+	 * It returns if a position is out of range of the world
 	 *
-	 * @return bool True, en caso afirmativo; false, en caso contrario
+	 * @param int Row
+	 * @param int Col
+	 *
+	 * @return bool True, if es true; false, in the opposite case
 	 */
 	function isLocked($row, $col){
 		if($row < 0 || $row >= getSizeWorld()['row'] || $col < 0 || $col >= getSizeWorld()['col']){
@@ -798,8 +821,11 @@
 	}
 
 	/**
-	 * Acción mover
-	 * Realiza el movimiento de un elemento en caso de que sea posible
+	 * Action move
+	 * It does a movement of an element if it is possible
+	 *
+	 * @param Element Element
+	 * @param string Movement
 	 */
 	function move($element, $movement){
 		$position = $element->getPosition();
@@ -843,23 +869,29 @@
 							writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - move - ' . $movement . ' - ( ' . $row . ' , ' . $col . ' )' . "\n");
 							break;
 						case 'Carrot':
-							if($element->getHidden()){
-								$element->setHidden(false);
-								getWorld()[$position[0]][$position[1]]->leaveElement();
+							// Eat
+							if($element->getAteAgo() >= $_POST['noNeedToEatRabbit']){
+								if($element->getHidden()){
+									$element->setHidden(false);
+									getWorld()[$position[0]][$position[1]]->leaveElement();
+								}else{
+									setWorld(getGround(), $position[0], $position[1]);
+								}
+
+								$element->setEating(getTurnEatRabbit());
+								$element->setPosition(array($row, $col));
+								$element->setAteAgo(0);
+
+								delPrize(getWorld()[$row][$col]);
+								setWorld($element, $row, $col);
+
+								// Estadísticas - Zanahorias comidas
+								$GLOBALS['vars']['eatenCarrot'][getTime() - 1]++;
+
+								writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - move - ' . $movement . ' - ( ' . $row . ' , ' . $col . ' ) - Eating' . "\n");
 							}else{
-								setWorld(getGround(), $position[0], $position[1]);
+								writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - move - ' . $movement . ' - ( ' . $row . ' , ' . $col . ' ) - Denied - He is sated' . "\n");
 							}
-
-							$element->setEating(getTurnEatRabbit());
-							$element->setPosition(array($row, $col));
-							$element->setHasEaten(true);
-							delPrize(getWorld()[$row][$col]);
-							setWorld($element, $row, $col);
-
-							// Estadísticas - Zanahorias comidas
-							$GLOBALS['vars']['eatenCarrot'][getTime() - 1]++;
-
-							writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - move - ' . $movement . ' - ( ' . $row . ' , ' . $col . ' ) - Eating' . "\n");
 							break;
 						case 'Lair':
 							if(getWorld()[$row][$col]->getElement() == null){
@@ -869,7 +901,9 @@
 									$element->setHidden(true);
 									setWorld(getGround(), $position[0], $position[1]);
 								}
+
 								getWorld()[$row][$col]->saveElement($element);
+
 								$element->setPosition(array($row, $col));
 							}else{
 								writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - move - ' . $movement . ' - Denied - Lair busy' . "\n");
@@ -891,17 +925,24 @@
 							writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - move - ' . $movement . ' - ( ' . $row . ' , ' . $col . ' )' . "\n");
 							break;
 						case 'Rabbit':
-							setWorld(getGround(), $position[0], $position[1]);
-							$element->setPosition(array($row, $col));
-							$element->setEating(getTurnEatWolf());
-							$element->setHasEaten(true);
-							delDynamic(getWorld()[$row][$col]);
-							setWorld($element, $row, $col);
+							if($element->getAteAgo() >= $_POST['noNeedToEatWolf']){
+								setWorld(getGround(), $position[0], $position[1]);
 
-							// Estadísticas - Conejos cazados
-							$GLOBALS['vars']['huntedRabbit'][getTime() - 1]++;
+								$element->setPosition(array($row, $col));
+								$element->setEating(getTurnEatWolf());
+								$element->setAteAgo(0);
 
-							writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - move - ' . $movement . ' - ( ' . $row . ' , ' . $col . ' ) - Eating' . "\n");
+								delDynamic(getWorld()[$row][$col]);
+								setWorld($element, $row, $col);
+
+								// Statistics - Hunted rabbits
+								$GLOBALS['vars']['huntedRabbit'][getTime() - 1]++;
+
+								writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - move - ' . $movement . ' - ( ' . $row . ' , ' . $col . ' ) - Eating' . "\n");
+							}else{
+								writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - move - ' . $movement . ' - ( ' . $row . ' , ' . $col . ' ) - Denied - He is sated' . "\n");
+							}
+							
 							break;
 						default:
 							writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - move - ' . $movement . ' - Denied' . "\n");
@@ -912,21 +953,23 @@
 	}
 
 	/**
-	 * Acción dormir
-	 * Cambia el estado del elemento a 'durmiendo'
+	 * Action sleep
+	 * Change the status of the element to 'sleeping'
+	 *
+	 * @param Element Element
 	 */
 	function toSleep($element){
-		if(getTime() >= (getLengthDay() * getiTime() - getLengthNight() / 2 - $GLOBALS['vars']['auxSleep']) && getTime() < (getLengthDay() * getiTime())){ //+ getLengthNight() / 2 + $GLOBALS['vars']['auxSleep'])){
+		if(getTime() >= ((getLengthDay() + getLengthNight()) * getiTime() - getLengthNight() / 2 - (intval(getLengthNight() * 25 / 100))) && getTime() < ((getLengthDay() + getLengthNight()) * getiTime())){
 			switch(get_class($element)){
 				case 'Rabbit':
 					if($_POST['placeToSleepRabbit'] == 'ground'){
 						$element->setSleeping(getTurnSleepRabbit());
-						$element->setDaysWithoutSleep(0);
+						$element->setSleptAgo(0);
 						writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - sleep' . "\n");
 					}else{
 						if($element->getHidden()){
 							$element->setSleeping(getTurnSleepRabbit());
-							$element->setDaysWithoutSleep(0);
+							$element->setSleptAgo(0);
 							writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - sleep' . "\n");
 						}else{
 							writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - sleep - Denied' . "\n");
@@ -935,7 +978,7 @@
 					break;
 				case 'Wolf':
 					$element->setSleeping(getTurnSleepRabbit());
-					$element->setDaysWithoutSleep(0);
+					$element->setSleptAgo(0);
 					break;
 			}
 		}else{
@@ -944,10 +987,12 @@
 	}
 
 	/**
-	 * Acción olfatear
-	 * Retorna las posiciones y los elementos que puede olfatear el elemento en el caso de que dichas posiciones contengan un elemento
+	 * Action smell
+	 * It returns the positions that an element can smell, if these positions have an element
 	 *
-	 * @return array Posiciones
+	 * @param Element Element
+	 *
+	 * @return array Positions
 	 */
 	function smell($element){
 		$position = $element->getPosition();
@@ -1004,6 +1049,14 @@
         return array('Rabbit' => $numRabbit, 'Wolf' => $numWolf, 'Carrot' => $numCarrot);
 	}
 
+	/**
+	 * Action hear
+	 * It returns the positions that an element can smell, if these positions have an element
+	 *
+	 * @param Element Element
+	 *
+	 * @return array Positions
+	 */
 	function hear($element){
 		$position = $element->getPosition();
 		
@@ -1054,47 +1107,133 @@
         return array('Rabbit' => $numRabbit, 'Wolf' => $numWolf, 'Carrot' => $numCarrot);
 	}
 
+	/**
+	 * Action breed
+	 *
+	 * @param Element Element 
+	 */
 	function breed($element){
-		if($element->getNumHasBred() < $_POST['breedRabbit']){
-			$position = $element->getPosition();
+		if(isInComfort($element) && $element->getEating() == 0 && $element->getSleeping() == 0){
+			switch(get_class($element)){
+				case 'Rabbit':
+					if($element->getBredAgo() > $_POST['breedRabbitEach']){
+						$probability = rand(1, 100) / 100;
+						if($probability > 0.5){
+							$position = $element->getPosition();
 
-			$flag = false;
-			foreach(getDynamic() as $elem){
-				if(get_class($elem) == 'Rabbit'){
-					$positionCouple = $elem->getPosition();
+							foreach(getDynamic() as $elem){
+								if(get_class($elem) == 'Rabbit'){
+									$positionCouple = $elem->getPosition();
 
-					if(($positionCouple[0] == $position[0] - 1 && $positionCouple[1] == $position[1]) ||
-						($positionCouple[0] == $position[0] + 1 && $positionCouple[1] == $position[1]) ||
-						($positionCouple[0] == $position[0] && $positionCouple[1] == $position[1] - 1) ||
-						($positionCouple[0] == $position[0] && $positionCouple[1] == $position[1] + 1)){
-						addRabbit();
-						$element->setNumHasBred($element->getNumHasBred() + 1);
+									if(($positionCouple[0] == $position[0] - 1 && $positionCouple[1] == $position[1]) ||
+										($positionCouple[0] == $position[0] + 1 && $positionCouple[1] == $position[1]) ||
+										($positionCouple[0] == $position[0] && $positionCouple[1] == $position[1] - 1) ||
+										($positionCouple[0] == $position[0] && $positionCouple[1] == $position[1] + 1)){
+										$children = rand(1, $_POST['breedRabbitAmount']);
+										$numChildren = 0;
+										for($i = 0; $i < $children; $i++){
+											if(addRabbit()){
+												$numChildren++;
+											}
+										}
 
-						$flag = true;
-						writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - breed' . "\n");
+										$element->setBredAgo(0);
 
-						// Estadísticas - Reproducción de conejos
-						$GLOBALS['vars']['bornRabbit'][getTime() - 1]++;
+										// Estadísticas - Reproducción de conejos
+										$GLOBALS['vars']['bornRabbit'][getTime() - 1] += $numChildren;
 
-						break;
+										writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - breed' . "\n");
+
+										break;
+									}
+								}
+							}
+						}else{
+							writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - breed - Denied - Children lost' . "\n");
+						}
+					}else{
+						writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - breed - Denied' . "\n");
 					}
-				}
-			}
-			if(!$flag){
-				writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - breed - Denied' . "\n");
+					break;
+				case 'Wolf':
+					if($element->getBredAgo() > $_POST['breedWolfEach']){
+						$probability = rand(1, 100) / 100;
+						if($probability > 0.75){
+							$position = $element->getPosition();
+
+							foreach(getDynamic() as $elem){
+								if(get_class($elem) == 'Wolf'){
+									$positionCouple = $elem->getPosition();
+
+									if(($positionCouple[0] == $position[0] - 1 && $positionCouple[1] == $position[1]) ||
+										($positionCouple[0] == $position[0] + 1 && $positionCouple[1] == $position[1]) ||
+										($positionCouple[0] == $position[0] && $positionCouple[1] == $position[1] - 1) ||
+										($positionCouple[0] == $position[0] && $positionCouple[1] == $position[1] + 1)){
+										$children = rand(1, $_POST['breedWolfAmount']);
+										$numChildren = 0;
+										for($i = 0; $i < $children; $i++){
+											if(addWolf()){
+												$numChildren++;
+											}
+										}
+
+										$element->setBredAgo(0);
+
+										// Estadísticas - Reproducción de lobos
+										//$GLOBALS['vars']['bornRabbit'][getTime() - 1] += $numChildren;
+
+										writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - breed' . "\n");
+
+										break;
+									}
+								}
+							}
+						}else{
+							writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - breed - Denied - Children lost' . "\n");
+						}
+					}else{
+						writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - breed - Denied' . "\n");
+					}
+					break;
 			}
 		}else{
-			writeFile('Log', 'Rabbit ' . $element->getId() . ' hasn\'t more times to breed today' . "\n");
+			writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - breed - Denied' . "\n");
+		}
+	}
+
+	/**
+	 * It checks if an element is in the comfort zone
+	 *
+	 * @param Element
+	 *
+	 * @return bool True, if the element is in the comfort zone; false, in the opposite case
+	 */
+	function isInComfort($element){
+		switch(get_class($element)){
+			case 'Rabbit':
+				if($element->getAteAgo() > $_POST['eatComfortRabbit'] || $element->getSleptAgo() > $_POST['sleepComfortRabbit']){
+					return false;
+				}else{
+					return true;
+				}
+				break;
+			case 'Wolf':
+				if($element->getAteAgo() > $_POST['eatComfortWolf'] || $element->getSleptAgo() > $_POST['sleepComfortWolf']){
+					return false;
+				}else{
+					return true;
+				}
+				break;
 		}
 	}
 
 	/* --------------------------------------------------------------------- */
 
-	/* ------------------------------ Archivos ----------------------------- */
+	/* ------------------------------ Files ----------------------------- */
 	/**
-	 * Abre la conexión a un archivo
+	 * It opens the connection to a file
 	 *
-	 * @param string Fichero
+	 * @param string File
 	 */
 	function openFile($file){
 		$file = fopen('../Resources/log/' . $file . '.txt', 'w');
@@ -1102,19 +1241,19 @@
 	}
 
 	/**
-	 * Escribe en el fichero
+	 * It writes in a file
 	 *
-	 * @param string Fichero
-	 * @param string Texto a escribir en el fichero
+	 * @param string File
+	 * @param string Text to write in a file
 	 */
 	function writeFile($file, $text){
 		fputs($GLOBALS['vars']['file' . $file], $text);
 	}
 
 	/**
-	 * Cierra la conexión a un archivo
+	 * It closes the connection to a file
 	 *
-	 * @param object Fichero al cual se va a cerrar la conexión
+	 * @param object File which connection is going to be closed
 	 */
 	function closeFile($file){
 		fclose($GLOBALS['vars']['file' . $file]);
@@ -1133,7 +1272,7 @@
 
 	writeWorld();
 
-	// Estadísticas - Tiempo atmosférico
+	// Statistics - Weather
 	switch(getWeather()){
 		case 'sunny':
 			$GLOBALS['vars']['countWeather'][0]++;
@@ -1149,7 +1288,7 @@
 			break;
 	}
 
-	// Estadísticas - Población de elementos
+	// Statistics - Population of elements
 	$amountRabbit = 0;
 	$amountWolf = 0;
 
@@ -1174,190 +1313,80 @@
 	$timeWeather = 1;
 
 	while(getTime() <= getLength()){
-		while(getTime() < getLengthDay() * getiTime() && getTime() <= getLength()){
-			writeFile('Log', '----Turn ' . getTime() . "\n");
-
-			// Cambiar estado día (Día / Noche)
-			if(getTime() == getLengthDay() * getiTime() - intval(getLengthNight() / 2) || getTime() ==  getLengthDay() * (getiTime() - 1) + intval(getLengthNight() / 2) + $x){
-				setStatusDay();
-			}
-
-			// Cambiar tiempo atmosférico
-			if(getTime() == getChangeWeather() * $timeWeather){
-				setWeather();
-				$timeWeather++;
-			}
-
-			// Estadísticas - Conejos cazados
-			array_push($GLOBALS['vars']['huntedRabbit'], 0);
-
-			// Estadísticas - Zanahorias comidas
-			array_push($GLOBALS['vars']['eatenCarrot'], 0);
-
-			// Estadísticas - Reproducción de conejos
-			array_push($GLOBALS['vars']['bornRabbit'], 0);
-
-			foreach(getDynamic() as $element){
-				if($element->getEating() > 0){
-					$element->setEating($element->getEating() - 1);
-					writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - eating' . "\n");
-				}else{
-					if($element->getSleeping() > 0){
-						$element->setSleeping($element->getSleeping() - 1);
-						writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - sleeping' . "\n");
-					}else{
-						$element->act();
-						useAction($element, 'max');
-					}
-				}
-			}
-
-			// Generación de zanahorias
-            if($GLOBALS['vars']['moreCarrot'] > 0){
-                $GLOBALS['vars']['moreCarrot']--;
-            }else{
-                for($i = 0; $i < $_POST['amountMoreCarrot']; $i++){
-                    addCarrot();
-                }
-                $GLOBALS['vars']['moreCarrot'] = $_POST['timeMoreCarrot'];
-            }
-
-            // Generación de lobos
-            if($GLOBALS['vars']['moreWolf'] > 0){
-                $GLOBALS['vars']['moreWolf']--;
-            }else{
-                for($i = 0; $i < $_POST['amountMoreWolf']; $i++){
-                    addWolf();
-                }
-                $GLOBALS['vars']['moreWolf'] = $_POST['timeMoreWolf'];
-            }
-
-			setTime();
-			writeWorld();
-
-			// Estadísticas - Tiempo atmosférico
-			switch(getWeather()){
-				case 'sunny':
-					$GLOBALS['vars']['countWeather'][0]++;
-					break;
-				case 'rainy':
-					$GLOBALS['vars']['countWeather'][1]++;
-					break;
-				case 'windy':
-					$GLOBALS['vars']['countWeather'][2]++;
-					break;
-				case 'foggy':
-					$GLOBALS['vars']['countWeather'][3]++;
-					break;
-			}
-
-			// Estadísticas - Población de elementos
-			$amountRabbit = 0;
-			$amountWolf = 0;
-
-			foreach(getDynamic() as $element){
-				if(get_class($element) == 'Rabbit'){
-					$amountRabbit++;
-				}else{
-					$amountWolf++;
-				}
-			}
-
-			array_push($GLOBALS['vars']['amountRabbit'], $amountRabbit);
-			array_push($GLOBALS['vars']['amountWolf'], $amountWolf);
-			array_push($GLOBALS['vars']['amountCarrot'], count(getPrize()));
-
-			writeFile('Log', "\n");
-		}
-
 		writeFile('Log', '----Turn ' . getTime() . "\n");
 
-		// Cambiar estado día (Día / Noche)
-		if(getTime() == getLengthDay() * getiTime() - intval(getLengthNight() / 2) || getTime() == getLengthDay() * (getiTime() - 1) + intval(getLengthNight() / 2) + $x){
+		// Change day status (daylight / night)
+		if(getTime() == (getLengthDay() + getLengthNight()) * getiTime() - intval(getLengthNight() / 2) || getTime() == (getLengthDay() + getLengthNight()) * (getiTime() - 1) + intval(getLengthNight() / 2) + $x){
 			setStatusDay();
 		}
 
-		// Cambiar tiempo atmosférico
+		// Change the weather
 		if(getTime() == getChangeWeather() * $timeWeather){
 			setWeather();
 			$timeWeather++;
 		}
 
-		// Estadísticas - Conejos cazados
+		// Statistics - Hunted rabbits
 		array_push($GLOBALS['vars']['huntedRabbit'], 0);
 
-		// Estadísticas - Zanahorias comidas
+		// Statistics - Eaten carrots
 		array_push($GLOBALS['vars']['eatenCarrot'], 0);
 
-		// Estadísticas - Conejos y lobos muertos por comer
+		// Statistics - Dead rabbits and wolves for not eating
 		array_push($GLOBALS['vars']['deadEatRabbit'], 0);
 		array_push($GLOBALS['vars']['deadEatWolf'], 0);
 
-		// Estadísticas - Conejos y lobos muertos por dormir
+		// Statistics - Dead rabbits and wolves for not sleeping
 		array_push($GLOBALS['vars']['deadSleepRabbit'], 0);
 		array_push($GLOBALS['vars']['deadSleepWolf'], 0);
 
-		// Estadísticas - Reproducción de conejos
+		// Statistics - Breed of rabbits
 		array_push($GLOBALS['vars']['bornRabbit'], 0);
 
 		foreach(getDynamic() as $element){
-			if((get_class($element) == 'Rabbit' && $element->getDaysWithoutEat() == $_POST['maxEatRabbit']) || (get_class($element) == 'Wolf' && $element->getDaysWithoutEat() == $_POST['maxEatWolf'])){
+			if((get_class($element) == 'Rabbit' && $element->getAteAgo() == $_POST['maxEatRabbit']) || (get_class($element) == 'Wolf' && $element->getAteAgo() == $_POST['maxEatWolf'])){
 				delDynamic($element);
 
-				// Estadísticas - Conejos y lobos muertos por comer
+				// Statistics - Dead rabbits and wolves for not eating
 				if(get_class($element) == 'Rabbit'){
-					$GLOBALS['vars']['deadEatRabbit'][getiTime() - 1]++;
+					$GLOBALS['vars']['deadEatRabbit'][getTime() - 1]++;
 				}else{
-					$GLOBALS['vars']['deadEatWolf'][getiTime() - 1]++;
+					$GLOBALS['vars']['deadEatWolf'][getTime() - 1]++;
 				}
 
 				writeFile('Log', get_class($element) . ' ' . $element->getId() . ' has dead because he has not eaten enough' . "\n");
-			}else{
-				if((get_class($element) == 'Rabbit' && $element->getDaysWithoutSleep() == $_POST['maxSleepRabbit']) || (get_class($element) == 'Wolf' && $element->getDaysWithoutSleep() == $_POST['maxSleepWolf'])){
-					delDynamic($element);
+			}else if((get_class($element) == 'Rabbit' && $element->getSleptAgo() == $_POST['maxSleepRabbit']) || (get_class($element) == 'Wolf' && $element->getSleptAgo() == $_POST['maxSleepWolf'])){
+				delDynamic($element);
 
-					// Estadísticas - Conejos y lobos muertos por comer
-					if(get_class($element) == 'Rabbit'){
-						$GLOBALS['vars']['deadSleepRabbit'][getiTime() - 1]++;
-					}else{
-						$GLOBALS['vars']['deadSleepWolf'][getiTime() - 1]++;
-					}
-
-					writeFile('Log', get_class($element) . ' ' . $element->getId() . ' has dead because he has not slept enough' . "\n");
+				// Statistics - Dead rabbits and wolves for not sleeping
+				if(get_class($element) == 'Rabbit'){
+					$GLOBALS['vars']['deadSleepRabbit'][getiTime() - 1]++;
 				}else{
-					if($element->getEating() > 0){
-						$element->setEating($element->getEating() - 1);
-						writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - eating' . "\n");
-					}else{
-						if($element->getSleeping() > 0){
-							$element->setSleeping($element->getSleeping() - 1);
-							if(!$element->getHasEaten()){
-								$element->setDaysWithoutEat($element->getDaysWithoutEat() + 1);
-							}else{
-								$element->setHasEaten(false);
-								$element->setDaysWithoutEat(0);
-							}
-							writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - sleeping' . "\n");
-						}else{
-							$element->setDaysWithoutSleep($element->getDaysWithoutSleep() + 1);
-							if(!$element->getHasEaten()){
-								$element->setDaysWithoutEat($element->getDaysWithoutEat() + 1);
-							}else{
-								$element->setHasEaten(false);
-								$element->setDaysWithoutEat(0);
-							}
-							if($element->getNumHasBred() != null){
-								$element->setNumHasBred(0);
-							}
-							$element->act();
-							useAction($element, 'max');
-						}
-					}
+					$GLOBALS['vars']['deadSleepWolf'][getiTime() - 1]++;
 				}
+
+				writeFile('Log', get_class($element) . ' ' . $element->getId() . ' has dead because he has not slept enough' . "\n");
+			}else if($element->getEating() > 0){
+				$element->setEating($element->getEating() - 1);
+
+				writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - eating' . "\n");
+			}else if($element->getSleeping() > 0){
+				$element->setSleeping($element->getSleeping() - 1);
+
+				writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - sleeping' . "\n");
+			}else{
+				$element->setAteAgo($element->getAteAgo() + 1);
+				$element->setSleptAgo($element->getSleptAgo() + 1);
+
+				$element->act();
+
+				useAction($element, 'max');
+
+				$element->setBredAgo($element->getBredAgo() + 1);
 			}
 		}
 
-		// Generación de zanahorias
+		// Regeneration of carrots
         if($GLOBALS['vars']['moreCarrot'] > 0){
             $GLOBALS['vars']['moreCarrot']--;
         }else{
@@ -1367,22 +1396,14 @@
             $GLOBALS['vars']['moreCarrot'] = $_POST['timeMoreCarrot'];
         }
 
-        // Generación de lobos
-        if($GLOBALS['vars']['moreWolf'] > 0){
-            $GLOBALS['vars']['moreWolf']--;
-        }else{
-            for($i = 0; $i < $_POST['amountMoreWolf']; $i++){
-                addWolf();
-            }
-            $GLOBALS['vars']['moreWolf'] = $_POST['timeMoreWolf'];
-        }
-
 		setTime();
 		writeWorld();
-		
-		setiTime();
 
-		// Estadísticas - Tiempo atmosférico
+		if(getTime() == getiTime() * (getLengthDay() + getLengthNight())){
+			setiTime();
+		}
+
+		// Statistics - Weather
 		switch(getWeather()){
 			case 'sunny':
 				$GLOBALS['vars']['countWeather'][0]++;
@@ -1398,7 +1419,7 @@
 				break;
 		}
 
-		// Estadísticas - Población de elementos
+		// Statistics - Population of elements
 		$amountRabbit = 0;
 		$amountWolf = 0;
 
@@ -1426,45 +1447,42 @@
 	
 	session_start();
 
-	// Mundo
-	// Dimensiones
+	// World
+	// Size
 	$_SESSION['row'] = getSizeWorld()['row'];
 	$_SESSION['col'] = getSizeWorld()['col'];
 
-	// Memoria y tiempo de ejecución
+	// Memory and execution time
 	$_SESSION['memory'] = $memory / 1024 / 1024;
 	$_SESSION['time'] = bcsub($timeFinish, $timeStart, 2);
 
-	// Estadísticas
-	// Tiempo atmosférico
+	// Statistics
+	// Weather
 	$_SESSION['weather'] = $GLOBALS['vars']['countWeather'];
 
-	// Población de elementos
+	// Population of elements
 	$_SESSION['amountRabbit'] = $GLOBALS['vars']['amountRabbit'];
 	$_SESSION['amountWolf'] = $GLOBALS['vars']['amountWolf'];
 	$_SESSION['amountCarrot'] = $GLOBALS['vars']['amountCarrot'];
 
-	// Conejos cazados
+	// Hunted rabbits
 	$_SESSION['huntedRabbit'] = $GLOBALS['vars']['huntedRabbit'];
 
-	// Zanahorias comidas
+	// Eaten carrots
 	$_SESSION['eatenCarrot'] = $GLOBALS['vars']['eatenCarrot'];
 
-	// Conejos y lobos muertos por no comer
+	// Statistics - Dead rabbits and wolves for not eating
 	$_SESSION['deadEatRabbit'] = $GLOBALS['vars']['deadEatRabbit'];
 	$_SESSION['deadEatWolf'] = $GLOBALS['vars']['deadEatWolf'];
 
-	// Conejos y lobos muertos por no dormir
+	// Statistics - Dead rabbits and wolves for not sleeping
 	$_SESSION['deadSleepRabbit'] = $GLOBALS['vars']['deadSleepRabbit'];
 	$_SESSION['deadSleepWolf'] = $GLOBALS['vars']['deadSleepWolf'];
 
-	// Reproducción de conejos
+	// Breed of rabbits
 	$_SESSION['bornRabbit'] = $GLOBALS['vars']['bornRabbit'];
 
 	session_write_close();
-
-	echo bcsub($timeFinish, $timeStart, 2)  . '<br>';
-	echo $memory / 1024 / 1024;
 
 	header('Location: ../View/output.php', false);
 ?>
