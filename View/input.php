@@ -460,7 +460,8 @@
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
                             <div class="alert alert-info">
                                 <label style="text-align: justify;">No necesariamente se van a reproducir con estos parámetros. Necesitan encontrarse dos conejos o lobos, estar saciados y haber dormido lo suficiente.
-                                La cantidad máxima indica el número de hijos que pueden tener, que variará desde a 1 a dicha cantidad. Esta característica es a nivel de individuo</label>
+                                La cantidad máxima indica el número de hijos que pueden tener, que variará desde a 1 a dicha cantidad. Esta característica es a nivel de individuo. Además existe la posibilidad de que
+                                sus hijos no vivan al nacer</label>
                             </div>
                         </div>
                     </div>
