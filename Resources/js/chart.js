@@ -13,6 +13,7 @@ google.charts.setOnLoadCallback(drawChartCarrotEaten);
 google.charts.setOnLoadCallback(drawChartDeadEat);
 google.charts.setOnLoadCallback(drawChartDeadSleep);
 google.charts.setOnLoadCallback(drawChartBornRabbit);
+google.charts.setOnLoadCallback(drawChartBornWolf);
 
 /**
  * It draws the chart 'weather'
@@ -600,6 +601,86 @@ function drawChartBornRabbit(){
         }else{
             options.hAxis.viewWindow.min = 0;
             options.hAxis.viewWindow.max = bornRabbit.length - 1;
+        }
+        zoomed = !zoomed;
+
+        drawChart();
+    }
+
+    drawChart();
+
+    chart.draw(data, options);
+}
+
+/**
+ * It draws the chart 'born wolves'
+ */
+function drawChartBornWolf(){
+    var chart = new google.visualization.LineChart(document.getElementById('chartBornWolf'));
+    
+    var data = new google.visualization.DataTable();
+
+    data.addColumn('number', 'X');
+    data.addColumn('number', 'Lobos');
+
+    for(i = 0; i < bornWolf.length; i++){
+        data.addRows([[i, bornWolf[i]]]);
+    }
+
+    var options = {
+        hAxis: {
+            title: 'Ciclos',
+            viewWindow: {min:0, max:100}
+        },
+        vAxis: {
+            title: 'Cantidad'
+        },
+        legend: {position: 'top'},
+        backgroundColor: '#f1f8e9',
+        colors: ['#F2B50F']
+    };
+
+    var prevButton = document.getElementById('prevBornWolf');
+    var nextButton = document.getElementById('nextBornWolf');
+    var changeZoomButton = document.getElementById('zoomBornWolf');
+
+    function drawChart(){
+        // Disabling the button while the chart is drawing.
+        prevButton.disabled = true;
+        nextButton.disabled = true;
+        changeZoomButton.disabled = true;
+
+        google.visualization.events.addListener(chart, 'ready', function(){
+            prevButton.disabled = options.hAxis.viewWindow.min <= 0;
+            nextButton.disabled = options.hAxis.viewWindow.max >= bornWolf.length - 1;
+            changeZoomButton.disabled = false;
+        });
+
+        chart.draw(data, options);
+    }
+
+    prevButton.onclick = function(){
+        options.hAxis.viewWindow.min -= 100;
+        options.hAxis.viewWindow.max -= 100;
+
+        drawChart();
+    }
+
+    nextButton.onclick = function(){
+        options.hAxis.viewWindow.min += 100;
+        options.hAxis.viewWindow.max += 100;
+
+        drawChart();
+    }
+
+    var zoomed = false;
+    changeZoomButton.onclick = function(){
+        if(zoomed){
+            options.hAxis.viewWindow.min = 0;
+            options.hAxis.viewWindow.max = 100;
+        }else{
+            options.hAxis.viewWindow.min = 0;
+            options.hAxis.viewWindow.max = bornWolf.length - 1;
         }
         zoomed = !zoomed;
 

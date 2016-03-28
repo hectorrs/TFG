@@ -1,97 +1,98 @@
----- ** World ** ----
----- World ----
--- Life cycle --
--- Total period
-100 cycles
+********************** Archivo de configuración inicial ***********************
+*********************************** World *************************************
+******** -------------------------- World ---------------------------- ********
+**** ---------------------------- Life cycle ----------------------------- ****
+**** Total period
+10000 cycles
 
--- Daylight period
-8 cycles
+**** Daylight period
+80 cycles
 
--- Night period
-2 cycles
+**** Night period
+20 cycles
 
--- Size --
-Width: 5
-Height: 5
+**** ------------------------------ Size --------------------------------- ****
+Width: 50
+Height: 50
 
--- Weather --
--- Status day
+**** ----------------------------- Weather ------------------------------- ****
+**** Status day
 night
 
--- First weather
+**** First weather
 sunny
 
--- Change weather each
+**** Change weather each
 10 cycles
 
----- Elements ----
--- First amount of elements --
-2 carrots
-2 trees
-2 lairs
-2 rabbits
-2 wolfs
+******** ------------------------- Elements --------------------------- *******
+**** --------------------- First amount of elements ---------------------- ****
+500 carrots
+200 trees
+500 lairs
+400 rabbits
+10 wolfs
 
--- Regeneration of carrots --
--- Each
+**** ---------------------- Regeneration of carrots ---------------------- ****
+**** Each
 50 cycles
 
--- Amount
+**** Amount
 0 carrots
 
----- Restrictions ----
--- Eat --
--- Rabbit
-Can be 100 cycles without eat
+******** ----------------------- Restrictions ------------------------ ********
+**** ------------------------------- Eat --------------------------------- ****
+**** Rabbit
+Can be 400 cycles without eat
 
--- Wolf
-Can be 100 cycles without eat
+**** Wolf
+Can be 400 cycles without eat
 
--- Sleep --
--- Rabbit
-Can be 100 cycles without sleep
+**** ------------------------------ Sleep -------------------------------- ****
+**** Rabbit
+Can be 500 cycles without sleep
 Place to sleep: ground
 
--- Wolf
-Can be 100 cycles without sleep
+**** Wolf
+Can be 500 cycles without sleep
 
--- Breed --
--- Rabbit
-Each 50 cycles
-4 new rabbits
+**** ------------------------------ Breed -------------------------------- ****
+**** Rabbit
+Each 100 cycles
+3 new rabbits
 
--- Wolf
-Each 50 cycles
-4 new wolves
+**** Wolf
+Each 200 cycles
+2 new wolves
 
----- ** Elements ** ----
----- World ----
--- Eat --
--- Rabbit
-Need 2 cycles to eat
-Are sated until 2 after eat
+********************************** Elements ***********************************
+******** -------------------------- Cycles --------------------------- ********
+**** ------------------------------- Eat --------------------------------- ****
+**** Rabbit
+Need 3 cycles to eat
+Are sated until 30 after eat
 
--- Wolf
-Need 2 cycles to eat
-Are sated until 2 after eat
+**** Wolf
+Need 3 cycles to eat
+Are sated until 30 after eat
 
--- Sleep --
--- Rabbit
-Need 2 cycles to sleep
+**** ------------------------------ Sleep -------------------------------- ****
+**** Rabbit
+Need 20 cycles to sleep
 
--- Wolf
-Need 2 cycles to sleep
+**** Wolf
+Need 20 cycles to sleep
 
----- Actions ----
--- Points per cycle to do actions --
--- Rabbit
+******** ------------------------- Actions --------------------------- ********
+**** ----------------- Points per cycle to do actions -------------------- ****
+**** Rabbit
 6 points
 
--- Wolf
+**** Wolf
 6 points
 
--- Use per action --
--- Rabbit
+**** ------------------------- Use per action ---------------------------- ****
+**** Rabbit
 Smell: 1 points
 Hear: 1 points
 See: 1 points
@@ -99,7 +100,7 @@ Move: 1 points
 Sleep: 1 points
 Breed: 1 points
 
--- Wolf
+**** Wolf
 Smell: 1 points
 Hear: 1 points
 See: 1 points
@@ -107,23 +108,23 @@ Move: 1 points
 Sleep: 1 points
 Breed: 1 points
 
----- Ranges ----
--- Ranges --
--- Rabbit
+******** -------------------------- Ranges --------------------------- ********
+**** ------------------------------ Ranges ------------------------------- ****
+**** Rabbit
 See: 1
 Smell: 1
 Hear: 1
 
+**** Wolf
 See: 1
 Smell: 1
 Hear: 1
 
--- Comfort zone --
--- Rabbit
-Until 2 cycles after eat
-Until 2 cycles after sleep
+**** --------------------------- Comfort zone ---------------------------- ****
+**** Rabbit
+Until 30 cycles after eat
+Until 50 cycles after sleep
 
--- Wolf
--- Wolf
-Until 2 cycles after eat
-Until 2 cycles after sleep
+**** Wolf
+Until 30 cycles after eat
+Until 50 cycles after sleep

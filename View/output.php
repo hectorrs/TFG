@@ -24,8 +24,10 @@
 <?php
 	// File which generates the world
 	$file = file_get_contents("../Resources/log/world.txt");
+	//$file = file_get_contents('../resources/log/world.csv');
 
 	$data = explode(".", $file);
+	//$data = explode("\n\n", $file);
 
 	session_start();
 
@@ -62,6 +64,9 @@
 
 	// Breed of rabbits
 	$bornRabbit = $_SESSION['bornRabbit'];
+
+	// Breed of wolves
+	$bornWolf = $_SESSION['bornWolf'];
 
 	session_write_close();
 
@@ -101,11 +106,15 @@
 
 	// Breed of rabbits
 	var bornRabbit = <?php echo json_encode($bornRabbit); ?>;
+
+	// Breed of wolves
+	var bornWolf = <?php echo json_encode($bornWolf); ?>;
 </script>
 
 <script type="text/javascript" src="../Resources/js/chart.js"></script>
 
 <div class="container">
+	<a href="input.php">Volver a inicio</a>
 	<h1>Mundo</h1>
 	<div class="row">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -231,6 +240,16 @@
 			<button id="prevBornRabbit">Anterior</button>
 			<button id="nextBornRabbit">Siguiente</button>
 			<button id="zoomBornRabbit">Zoom</button>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<h4>Reproducción de lobos</h4>
+			<div id="chartBornWolf"></div>
+			<button id="prevBornWolf">Anterior</button>
+			<button id="nextBornWolf">Siguiente</button>
+			<button id="zoomBornWolf">Zoom</button>
 		</div>
 	</div>
 	<br>

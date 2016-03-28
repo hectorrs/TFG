@@ -16,6 +16,7 @@ function update(option){
 		case 'begin':
 			time = 0;
 			var current = data[time].split(';');
+			//var current = data[time].split('\n');
 			current.pop();
 			printWorld(current);
 			main.innerHTML = '<div>Tiempo: ' + time + '</div>';
@@ -24,6 +25,7 @@ function update(option){
 			if(time > 0){
 				time--;
 				var current = data[time].split(';');
+				//var current = data[time].split('\n');
 				current.pop();
 				printWorld(current);
 				main.innerHTML = '<div>Tiempo: ' + time + '</div>';
@@ -33,6 +35,7 @@ function update(option){
 			if(time < data.length - 2){
 				time++;
 				var current = data[time].split(';');
+				//var current = data[time].split('\n');
 				current.pop();
 				printWorld(current);
 				main.innerHTML = '<div>Tiempo: ' + time + '</div>';
@@ -41,6 +44,7 @@ function update(option){
 		case 'end':
 			time = data.length - 2;
 			var current = data[time].split(';');
+			//var current = data[time].split('\n');
 			current.pop();
 			printWorld(current);
 			main.innerHTML = '<div>Tiempo: ' + time + '</div>';
@@ -60,6 +64,7 @@ function printWorld(current){
 			cell.style.backgroundColor = 'green';
 		}
 	}
+
 	for(x = 0; x < current.length; x++){
 		position = current[x].split(':');
 		cell = document.getElementById('row' + position[0].toString() + 'col' + position[1].toString());
