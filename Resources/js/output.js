@@ -4,6 +4,7 @@
 onload = function(){
 	main = document.getElementById('time');
 	update('begin');
+	transition = null;
 }
 
 /**
@@ -19,7 +20,7 @@ function update(option){
 			//var current = data[time].split('\n');
 			current.pop();
 			printWorld(current);
-			main.innerHTML = '<div>Tiempo: ' + time + '</div>';
+			main.innerHTML = '<h4><strong>Ciclo actual: ' + time + '</strong></h4>';
 			break;
 		case 'previous':
 			if(time > 0){
@@ -28,7 +29,7 @@ function update(option){
 				//var current = data[time].split('\n');
 				current.pop();
 				printWorld(current);
-				main.innerHTML = '<div>Tiempo: ' + time + '</div>';
+				main.innerHTML = '<h4><strong>Ciclo actual: ' + time + '</strong></h4>';
 			}
 			break;
 		case 'next':
@@ -38,7 +39,7 @@ function update(option){
 				//var current = data[time].split('\n');
 				current.pop();
 				printWorld(current);
-				main.innerHTML = '<div>Tiempo: ' + time + '</div>';
+				main.innerHTML = '<h4><strong>Ciclo actual: ' + time + '</strong></h4>';
 			}
 			break;
 		case 'end':
@@ -47,7 +48,21 @@ function update(option){
 			//var current = data[time].split('\n');
 			current.pop();
 			printWorld(current);
-			main.innerHTML = '<div>Tiempo: ' + time + '</div>';
+			main.innerHTML = '<h4><strong>Ciclo actual: ' + time + '</strong></h4>';
+			break;
+		case 'goTo':
+			var goTo = document.getElementById('goTo').value;
+			document.getElementById('goTo').value = '';
+			if((/^([0-9])*$/.test(goTo)) && goTo != ''){
+				if(goTo < data.length - 1){
+					time = goTo;
+					var current = data[time].split(';');
+					//var current = data[time].split('\n');
+					current.pop();
+					printWorld(current);
+					main.innerHTML = '<h4><strong>Ciclo actual: ' + time + '</strong></h4>';
+				}
+			}
 			break;
 	}
 }
@@ -95,9 +110,10 @@ function printWorld(current){
 function play(){
 	if(time < data.length - 1){
 		var current = data[time].split(";");
+		//var current = data[time].split('\n');
 		current.pop();
 		printWorld(current);
-		main.innerHTML = '<div>Tiempo: ' + time + '</div>';
+		main.innerHTML = '<h4><strong>Ciclo actual: ' + time + '</strong></h4>';
 		time++;
 	}else{
 		pause();
@@ -108,17 +124,22 @@ function play(){
  * It pauses the display and keep the current step
  */
 function pause(){
-	clearInterval(transition);
+	if(transition != null){
+		clearInterval(transition);
+	}
 }
 
 /**
  * It stops the display and returns to the first step
  */
 function stop(){
-	clearInterval(transition);
+	if(transition != null){
+		clearInterval(transition);
+	}
 	time = 0;
 	var current = data[time].split(";");
+	//var current = data[time].split('\n');
 	current.pop();
 	printWorld(current);
-	main.innerHTML = '<div>Tiempo: ' + time + '</div>';
+	main.innerHTML = '<h4><strong>Ciclo actual: ' + time + '</strong></h4>';
 }

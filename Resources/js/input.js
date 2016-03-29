@@ -8,6 +8,13 @@ function world(){
 	document.getElementById('period').className = 'hide';
 	document.getElementById('action').className = 'hide';
 	document.getElementById('range').className = 'hide';
+
+	document.getElementById('worldBtn').value = '> Mundo <';
+	document.getElementById('elementBtn').value = 'Elementos';
+	document.getElementById('restrictionBtn').value = 'Restricciones';
+	document.getElementById('periodBtn').value = 'Ciclos';
+	document.getElementById('actionBtn').value = 'Acciones';
+	document.getElementById('rangeBtn').value = 'Rangos';
 }
 
 /**
@@ -20,6 +27,13 @@ function element(){
 	document.getElementById('period').className = 'hide';
 	document.getElementById('action').className = 'hide';
 	document.getElementById('range').className = 'hide';
+
+	document.getElementById('worldBtn').value = 'Mundo';
+	document.getElementById('elementBtn').value = '> Elementos <';
+	document.getElementById('restrictionBtn').value = 'Restricciones';
+	document.getElementById('periodBtn').value = 'Ciclos';
+	document.getElementById('actionBtn').value = 'Acciones';
+	document.getElementById('rangeBtn').value = 'Rangos';
 }
 
 /**
@@ -32,6 +46,13 @@ function restriction(){
 	document.getElementById('period').className = 'hide';
 	document.getElementById('action').className = 'hide';
 	document.getElementById('range').className = 'hide';
+
+	document.getElementById('worldBtn').value = 'Mundo';
+	document.getElementById('elementBtn').value = 'Elementos';
+	document.getElementById('restrictionBtn').value = '> Restricciones <';
+	document.getElementById('periodBtn').value = 'Ciclos';
+	document.getElementById('actionBtn').value = 'Acciones';
+	document.getElementById('rangeBtn').value = 'Rangos';
 }
 
 /**
@@ -44,6 +65,13 @@ function period(){
 	document.getElementById('period').className = 'show';
 	document.getElementById('action').className = 'hide';
 	document.getElementById('range').className = 'hide';
+
+	document.getElementById('worldBtn').value = 'Mundo';
+	document.getElementById('elementBtn').value = 'Elementos';
+	document.getElementById('restrictionBtn').value = 'Restricciones';
+	document.getElementById('periodBtn').value = '> Ciclos <';
+	document.getElementById('actionBtn').value = 'Acciones';
+	document.getElementById('rangeBtn').value = 'Rangos';
 }
 
 /**
@@ -56,6 +84,13 @@ function action(){
 	document.getElementById('period').className = 'hide';
 	document.getElementById('action').className = 'show';
 	document.getElementById('range').className = 'hide';
+
+	document.getElementById('worldBtn').value = 'Mundo';
+	document.getElementById('elementBtn').value = 'Elementos';
+	document.getElementById('restrictionBtn').value = 'Restricciones';
+	document.getElementById('periodBtn').value = 'Ciclos';
+	document.getElementById('actionBtn').value = '> Acciones <';
+	document.getElementById('rangeBtn').value = 'Rangos';
 }
 
 /**  
@@ -68,4 +103,11 @@ function range(){
 	document.getElementById('period').className = 'hide';
 	document.getElementById('action').className = 'hide';
 	document.getElementById('range').className = 'show';
+
+	document.getElementById('worldBtn').value = 'Mundo';
+	document.getElementById('elementBtn').value = 'Elementos';
+	document.getElementById('restrictionBtn').value = 'Restricciones';
+	document.getElementById('periodBtn').value = 'Ciclos';
+	document.getElementById('actionBtn').value = 'Acciones';
+	document.getElementById('rangeBtn').value = '> Rangos <';
 }

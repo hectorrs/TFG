@@ -7,6 +7,12 @@
     padding: 0;
 }
 
+.dividingBtn{
+    height: 5px;
+    border: 0;
+    padding: 0;
+}
+
 /* Table world */
 .containerWorld{
 	display: table;

@@ -3,17 +3,17 @@
 ******** -------------------------- World ---------------------------- ********
 **** ---------------------------- Life cycle ----------------------------- ****
 **** Total period
-10000 cycles
+100 cycles
 
 **** Daylight period
-80 cycles
+8 cycles
 
 **** Night period
-20 cycles
+2 cycles
 
 **** ------------------------------ Size --------------------------------- ****
-Width: 50
-Height: 50
+Width: 5
+Height: 5
 
 **** ----------------------------- Weather ------------------------------- ****
 **** Status day
@@ -27,11 +27,11 @@ sunny
 
 ******** ------------------------- Elements --------------------------- *******
 **** --------------------- First amount of elements ---------------------- ****
-500 carrots
-200 trees
-500 lairs
-400 rabbits
-10 wolfs
+2 carrots
+2 trees
+2 lairs
+2 rabbits
+2 wolfs
 
 **** ---------------------- Regeneration of carrots ---------------------- ****
 **** Each
@@ -43,45 +43,45 @@ sunny
 ******** ----------------------- Restrictions ------------------------ ********
 **** ------------------------------- Eat --------------------------------- ****
 **** Rabbit
-Can be 400 cycles without eat
+Can be 100 cycles without eat
 
 **** Wolf
-Can be 400 cycles without eat
+Can be 100 cycles without eat
 
 **** ------------------------------ Sleep -------------------------------- ****
 **** Rabbit
-Can be 500 cycles without sleep
+Can be 100 cycles without sleep
 Place to sleep: ground
 
 **** Wolf
-Can be 500 cycles without sleep
+Can be 100 cycles without sleep
 
 **** ------------------------------ Breed -------------------------------- ****
 **** Rabbit
-Each 100 cycles
-3 new rabbits
+Each 50 cycles
+4 new rabbits
 
 **** Wolf
-Each 200 cycles
-2 new wolves
+Each 50 cycles
+4 new wolves
 
 ********************************** Elements ***********************************
 ******** -------------------------- Cycles --------------------------- ********
 **** ------------------------------- Eat --------------------------------- ****
 **** Rabbit
-Need 3 cycles to eat
-Are sated until 30 after eat
+Need 2 cycles to eat
+Are sated until 2 after eat
 
 **** Wolf
-Need 3 cycles to eat
-Are sated until 30 after eat
+Need 2 cycles to eat
+Are sated until 2 after eat
 
 **** ------------------------------ Sleep -------------------------------- ****
 **** Rabbit
-Need 20 cycles to sleep
+Need 2 cycles to sleep
 
 **** Wolf
-Need 20 cycles to sleep
+Need 2 cycles to sleep
 
 ******** ------------------------- Actions --------------------------- ********
 **** ----------------- Points per cycle to do actions -------------------- ****
@@ -122,9 +122,9 @@ Hear: 1
 
 **** --------------------------- Comfort zone ---------------------------- ****
 **** Rabbit
-Until 30 cycles after eat
-Until 50 cycles after sleep
+Until 2 cycles after eat
+Until 2 cycles after sleep
 
 **** Wolf
-Until 30 cycles after eat
-Until 50 cycles after sleep
+Until 2 cycles after eat
+Until 2 cycles after sleep

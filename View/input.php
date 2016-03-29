@@ -15,44 +15,52 @@
     <link href="../resources/css/simple-sidebar.css" rel="stylesheet">
     <link href="../resources/css/custom.css" rel="stylesheet">
 </head>
-<body style="background-color: #F0F0F0;">
+<body style="background-color: #E8E8E8;">
     <div id="wrapper" style="overflow: hidden;">
         <!-- Sidebar -->
         <div id="sidebar-wrapper" style="background-color: #424242;">
             <ul class="sidebar-nav" style="overflow: hidden;">
                 <div class="row" style="margin-right: 0px; margin-top: 5px;">
                     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+
                     <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
                         <h1 class="text-center" style="color: #F0F0F0">Menú</h1>
                     </div>
+
                     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
                 </div>
+
                 <hr style="margin-bottom: 30px; margin-top: 17px">
+
                 <div class="row" style="margin-left: 7px; margin-right: 10px">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <h2 class="text-center" style="margin-top: 0px; color: #F0F0F0">Mundo</h2>
                         <hr>
-                        <button type="button" class="btn btn-primary btn-block" onclick="world()">Mundo</button>
+                        <input type="button" class="btn btn-primary btn-block" id="worldBtn" onclick="world()" value="> Mundo <" />
                         <div style="margin-bottom: 10px"></div>
-                        <button type="button" class="btn btn-primary btn-block" onclick="element()">Elementos</button>
+                        <input type="button" class="btn btn-primary btn-block" id="elementBtn" onclick="element()" value="Elementos" />
                         <div style="margin-bottom: 10px"></div>
-                        <button type="button" class="btn btn-primary btn-block" onclick="restriction()">Restricciones</button>
+                        <input type="button" class="btn btn-primary btn-block" id="restrictionBtn" onclick="restriction()" value="Restricciones" />
                     </div>
                 </div>
+
                 <div style="margin-bottom: 30px"></div>
+
                 <div class="row" style="margin-left: 7px; margin-right: 10px">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <h2 class="text-center" style="margin-top: 0px; color: #F0F0F0">Elementos</h2>
                         <hr>
                         <div style="margin-bottom: 10px"></div>
-                        <button type="button" class="btn btn-primary btn-block" onclick="period()">Ciclos</button>
+                        <input type="button" class="btn btn-primary btn-block" id="periodBtn" onclick="period()" value="Ciclos" />
                         <div style="margin-bottom: 10px"></div>
-                        <button type="button" class="btn btn-primary btn-block" onclick="action()">Acciones</button>
+                        <input type="button" class="btn btn-primary btn-block" id="actionBtn" onclick="action()" value="Acciones" />
                         <div style="margin-bottom: 10px"></div>
-                        <button type="button" class="btn btn-primary btn-block" onclick="range()">Rangos</button>
+                        <input type="button" class="btn btn-primary btn-block" id="rangeBtn" onclick="range()" value="Rangos" />
                     </div>
                 </div>
+
                 <hr style="margin-bottom: 30px; margin-top: 30px">
+
                 <div class="row" style="margin-left: 7px; margin-right: 10px">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="btn-group btn-group-lg btn-block">
@@ -73,10 +81,13 @@
                             <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
                         </a>
                     </div>
+
                     <div class="col-md-2 col-lg-2"></div>
+
                     <div class="col-xs-11 col-sm-11 col-md-11 col-lg-5 text-center">
                         <h1 style="color: #F0F0F0;">Panel de control</h1>
                     </div>
+
                     <div class="col-md-3 col-lg-3"></div>
                 </div>
             </div>
