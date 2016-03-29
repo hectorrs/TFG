@@ -1,7 +1,7 @@
 /**
  * Load the charts used below
  */
-google.charts.load('current', {'packages': ['corechart', 'line']});
+google.charts.load('current', {'packages': ['corechart', 'line', 'bar']});
 
 google.charts.setOnLoadCallback(drawChartWeather);
 google.charts.setOnLoadCallback(drawChartPopulation);
@@ -20,7 +20,7 @@ google.charts.setOnLoadCallback(drawChartBornWolf);
  */
 function drawChartWeather(){
     var data = google.visualization.arrayToDataTable([
-        ['Task', 'Hours per Day'],
+        ['Tiempo atmosférico', 'Ciclos'],
         ['Soleado', weather[0]],
         ['Lluvioso', weather[1]],
         ['Con viento', weather[2]],
@@ -28,16 +28,15 @@ function drawChartWeather(){
     ]);
 
     var options = {
-        title: 'Tiempo atmosférico',
-        backgroundColor: '#f1f8e9',
-        is3D: true,
-        pieSliceText: 'value',
-        legend: 'left'
+        legend: {
+            position: 'none'
+        },
+        backgroundColor: '#f1f8e9'
     };
 
-    var chart = new google.visualization.PieChart(document.getElementById('chartWeather'));
+    var chart = new google.charts.Bar(document.getElementById('chartWeather'));
 
-    chart.draw(data, options);
+    chart.draw(data, google.charts.Bar.convertOptions(options));
 }
 
 /**

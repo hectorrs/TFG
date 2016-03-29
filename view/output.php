@@ -118,7 +118,7 @@
 
 	<!-- Content -->
 	<div class='row' style='padding-top: 35px; padding-bottom: 35px; padding-left: 35px; padding-right: 35px; margin-left: 0px; margin-right: 0px;'>
-		<div class='row'>
+		<div class='row well'>
 			<div class='col-xs-12 col-sm-10 col-md-10 col-lg-10'>
 				<div class='containerWorld'>
 				<?php for($i = 0; $i < $row; $i++){ ?>
@@ -174,7 +174,7 @@
 				<div class="dividing"></div>
 
 				<div class="row">
-					<div class="col-xs-3 col-sm-12 col-md-12 col-lg-12">
+					<div class="col-xs-6 col-sm-12 col-md-12 col-lg-12">
 						<div class="input-group">
 							<input type="text" class="form-control" id="goTo" />
 							<span class="input-group-btn">
@@ -221,10 +221,6 @@
 		</div>
 
 		<div class="dividing"></div>
-
-		<div class="row">
-			
-		</div>
 
 		<div class="row">
 			<div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">

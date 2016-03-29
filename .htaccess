@@ -1,0 +1,10 @@
+# Reescritura de url
+RewriteEngine on
+
+# Impedir el acceso a cualquier directorio
+Options All -Indexes
+
+# Impedir el acceso a los archivos y directorios ocultos
+RewriteCond %{SCRIPT_FILENAME} -d [OR]
+RewriteCond %{SCRIPT_FILENAME} -f
+RewriteRule "(^|/)\." - [F]
