@@ -15,16 +15,17 @@
     <link href='../resources/css/custom.css' rel='stylesheet'>
 
     <!-- JavaScript -->
-    <script src='../resources/js/bootstrap.js'></script>
+    <script type='text/javascript' src='../resources/js/bootstrap.js'></script>
     <script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
 
     <!-- Add custom JS here -->
-    <script type='text/javascript' src='../Resources/js/output.js'></script>
+    <script type='text/javascript' src='../resources/js/output.js'></script>
 </head>
 <body style='background-color: #E8E8E8; overflow-x: hidden;'>
 	<?php
 		// File which generates the world
-		$file = file_get_contents('../Resources/log/world.txt');
+		$file = file_get_contents('../resources/log/world.txt');
 		//$file = file_get_contents('../resources/log/world.csv');
 
 		$data = explode('.', $file);
@@ -223,62 +224,66 @@
 		<div class="dividing"></div>
 
 		<div class="row">
-			<div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<h4>Población total</h4>
-				<div id="chartPopulation"></div>
+				<div class="chart" id="chartPopulation"></div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+				<input type="button" class="btn btn-default btn-info" id="prevPopulation" style="width: 100%" value="Anterior" />
 			</div>
 
-			<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-				<br><br>
-				<input type="button" class="btn btn-default btn-info" id="prevPopulation" style="width: 100%" value="Anterior" />
-				<div class="dividingBtn"></div>
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 				<input type="button" class="btn btn-default btn-info" id="nextPopulation" style="width: 100%" value="Siguiente" />
-				<div class="dividingBtn"></div>
+			</div>
+
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 				<input type="button" class="btn btn-default btn-info" id="zoomPopulation" style="width: 100%" value="Zoom" />
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<h4>Población de conejos</h4>
 				<div id="chartPopulationRabbit"></div>
 			</div>
-
-			<div class="col-sm-2 col-md-2 col-lg-2"></div>
 		</div>
 
 		<div class="row">
-			<div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<h4>Población de lobos</h4>
 				<div id="chartPopulationWolf"></div>
 			</div>
-
-			<div class="col-sm-2 col-md-2 col-lg-2"></div>
 		</div>
 
 		<div class="row">
-			<div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<h4>Población de zanahorias</h4>
 				<div id="chartPopulationCarrot"></div>
 			</div>
-
-			<div class="col-sm-2 col-md-2 col-lg-2"></div>
 		</div>
 
 		<div class="dividing"></div>
 
 		<div class="row">
-			<div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<h4>Conejos cazados</h4>
 				<div id="chartHuntedRabbit"></div>
 			</div>
+		</div>
 
-			<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-				<br><br>
+		<div class="row">
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 				<input type="button" class="btn btn-default btn-info" id="prevHuntedRabbit" style="width: 100%" value="Anterior" />
-				<div class="dividingBtn"></div>
+			</div>
+
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 				<input type="button" class="btn btn-default btn-info" id="nextHuntedRabbit" style="width: 100%" value="Siguiente" />
-				<div class="dividingBtn"></div>
+			</div>
+
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 				<input type="button" class="btn btn-default btn-info" id="zoomHuntedRabbit" style="width: 100%" value="Zoom" />
 			</div>
 		</div>
@@ -288,13 +293,18 @@
 				<h4>Zanahorias comidas</h4>
 				<div id="chartCarrotEaten"></div>
 			</div>
+		</div>
 
-			<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-				<br><br>
+		<div class="row">
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 				<input type="button" class="btn btn-default btn-info" id="prevEatenCarrot" style="width: 100%" value="Anterior" />
-				<div class="dividingBtn"></div>
+			</div>
+
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 				<input type="button" class="btn btn-default btn-info" id="nextEatenCarrot" style="width: 100%" value="Siguiente" />
-				<div class="dividingBtn"></div>
+			</div>
+			
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 				<input type="button" class="btn btn-default btn-info" id="zoomEatenCarrot" style="width: 100%" value="Zoom" />
 			</div>
 		</div>
@@ -306,13 +316,18 @@
 				<h4>Conejos y lobos muertos por no comer</h4>
 				<div id="chartDeadEat"></div>
 			</div>
+		</div>
 
-			<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-				<br><br>
+		<div class="row">
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 				<input type="button" class="btn btn-default btn-info" id="prevDeadEat" style="width: 100%" value="Anterior" />
-				<div class="dividingBtn"></div>
+			</div>
+
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 				<input type="button" class="btn btn-default btn-info" id="nextDeadEat" style="width: 100%" value="Siguiente" />
-				<div class="dividingBtn"></div>
+			</div>
+			
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 				<input type="button" class="btn btn-default btn-info" id="zoomDeadEat" style="width: 100%" value="Zoom" />
 			</div>
 		</div>
@@ -322,13 +337,18 @@
 				<h4>Conejos y lobos muertos por no dormir</h4>
 				<div id="chartDeadSleep"></div>
 			</div>
+		</div>
 
-			<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-				<br><br>
+		<div class="row">
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 				<input type="button" class="btn btn-default btn-info" id="prevDeadSleep" style="width: 100%" value="Anterior" />
-				<div class="dividingBtn"></div>
+			</div>
+
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 				<input type="button" class="btn btn-default btn-info" id="nextDeadSleep" style="width: 100%" value="Siguiente" />
-				<div class="dividingBtn"></div>
+			</div>
+			
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 				<input type="button" class="btn btn-default btn-info" id="zoomDeadSleep" style="width: 100%" value="Zoom" />
 			</div>
 		</div>
@@ -340,13 +360,18 @@
 				<h4>Reproducción de conejos</h4>
 				<div id="chartBornRabbit"></div>
 			</div>
+		</div>
 
-			<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-				<br><br>
+		<div class="row">
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 				<input type="button" class="btn btn-default btn-info" id="prevBornRabbit" style="width: 100%" value="Anterior" />
-				<div class="dividingBtn"></div>
+			</div>
+			
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 				<input type="button" class="btn btn-default btn-info" id="nextBornRabbit" style="width: 100%" value="Siguiente" />
-				<div class="dividingBtn"></div>
+			</div>
+			
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 				<input type="button" class="btn btn-default btn-info" id="zoomBornRabbit" style="width: 100%" value="Zoom" />
 			</div>
 		</div>
@@ -356,13 +381,18 @@
 				<h4>Reproducción de lobos</h4>
 				<div id="chartBornWolf"></div>
 			</div>
+		</div>
 
-			<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-				<br><br>
+		<div class="row">
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 				<input type="button" class="btn btn-default btn-info" id="prevBornWolf" style="width: 100%" value="Anterior" />
-				<div class="dividingBtn"></div>
+			</div>
+
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 				<input type="button" class="btn btn-default btn-info" id="nextBornWolf" style="width: 100%" value="Siguiente" />
-				<div class="dividingBtn"></div>
+			</div>
+			
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 				<input type="button" class="btn btn-default btn-info" id="zoomBornWolf" style="width: 100%" value="Zoom" />
 			</div>
 		</div>

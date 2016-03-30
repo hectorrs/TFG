@@ -11,13 +11,19 @@
 		 * It lets Rabbit to do an action
 		 */
 		public function act(){
-			$see = actionManager($this, 'see');
-			$smell = actionManager($this, 'smell');
-			$hear = actionManager($this, 'hear');
-			$move = array('up', 'down', 'left', 'right');
-			actionManager($this, 'move', $move[rand(0, 3)]);
-			actionManager($this, 'sleep');
-			actionManager($this, 'breed');
+			if(isset($_POST['codeRabbit'])){
+				if($_POST['codeRabbit'] != ''){
+
+				}
+			}else{
+				$see = actionManager($this, 'see');
+				$smell = actionManager($this, 'smell');
+				$hear = actionManager($this, 'hear');
+				$move = array('up', 'down', 'left', 'right');
+				actionManager($this, 'move', $move[rand(0, 3)]);
+				actionManager($this, 'sleep');
+				actionManager($this, 'breed');
+			}
 		}
 	}
 
@@ -31,13 +37,19 @@
 		 * It lets Wolf to do an action
 		 */
 		public function act(){
-			$see = actionManager($this, 'see');
-			$smell = actionManager($this, 'smell');
-			$hear = actionManager($this, 'hear');
-			$move = array('up', 'down', 'left', 'right');
-			actionManager($this, 'move', $move[rand(0, 3)]);
-			actionManager($this, 'sleep');
-			actionManager($this, 'breed');
+			if(isset($_POST['codeWolf'])){
+				if($_POST['codeWolf'] != ''){
+
+				}
+			}else{
+				$see = actionManager($this, 'see');
+				$smell = actionManager($this, 'smell');
+				$hear = actionManager($this, 'hear');
+				$move = array('up', 'down', 'left', 'right');
+				actionManager($this, 'move', $move[rand(0, 3)]);
+				actionManager($this, 'sleep');
+				actionManager($this, 'breed');
+			}
 		}
 	}
 

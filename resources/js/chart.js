@@ -66,7 +66,7 @@ function drawChartPopulation(){
         },
         legend: {position: 'top'},
         backgroundColor: '#f1f8e9',
-        colors: ['#0266C8', '#F90101', '#F2B50F']
+        colors: ['#0266C8', '#F90101', '#F2B50F'],
     };
 
     var prevButton = document.getElementById('prevPopulation');
@@ -690,3 +690,17 @@ function drawChartBornWolf(){
 
     chart.draw(data, options);
 }
+
+$(window).resize(function(){
+    drawChartWeather();
+    drawChartPopulation();
+    drawChartPopulationRabbit();
+    drawChartPopulationWolf();
+    drawChartPopulationCarrot();
+    drawChartHuntedRabbit();
+    drawChartCarrotEaten();
+    drawChartDeadEat();
+    drawChartDeadSleep();
+    drawChartBornRabbit();
+    drawChartBornWolf();
+});

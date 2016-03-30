@@ -29,14 +29,14 @@
 	            	<div class="col-sm-10 col-sm-offset-1">
 	            		<div class="row">
 		                	<div class="col-sm-4 layout-box">
-			                	<a href="input.php">
+			                	<a href="inputS1.php">
 			                		<img src="../resources/img/s1.png" alt="">
 			                	</a>
 			                	<p>Sistema biológico 1</p>
 		                    </div>
 
 		                    <div class="col-sm-4 layout-box">
-		                    	<a href="">
+		                    	<a href="inputS2.php">
 				                	<img src="../resources/img/s1.png" alt="">
 			                    </a>
 			                    <p>Sistema biológico 2</p>
