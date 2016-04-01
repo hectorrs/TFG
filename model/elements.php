@@ -13,7 +13,7 @@
 		public function act(){
 			if(isset($_POST['codeRabbit'])){
 				if($_POST['codeRabbit'] != ''){
-
+					
 				}
 			}else{
 				$see = actionManager($this, 'see');

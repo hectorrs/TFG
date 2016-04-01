@@ -1,4 +1,9 @@
 /**
+ * var Language
+ */
+var language = location.search.substring(6);
+
+/**
  * Show the tab 'world' and hide the others
  */
 function world(){
@@ -9,12 +14,12 @@ function world(){
 	document.getElementById('action').className = 'hide';
 	document.getElementById('range').className = 'hide';
 
-	document.getElementById('worldBtn').value = '> Mundo <';
-	document.getElementById('elementBtn').value = 'Elementos';
-	document.getElementById('restrictionBtn').value = 'Restricciones';
-	document.getElementById('periodBtn').value = 'Ciclos';
-	document.getElementById('actionBtn').value = 'Acciones';
-	document.getElementById('rangeBtn').value = 'Rangos';
+	document.getElementById('worldBtn').value = '> ' + translate('World', language) + ' <';
+	document.getElementById('elementBtn').value = translate('Elements', language);
+	document.getElementById('restrictionBtn').value = translate('Restrictions', language);
+	document.getElementById('periodBtn').value = translate('Period', language);
+	document.getElementById('actionBtn').value = translate('Actions', language);
+	document.getElementById('rangeBtn').value = translate('Ranges', language);
 }
 
 /**
@@ -28,12 +33,12 @@ function element(){
 	document.getElementById('action').className = 'hide';
 	document.getElementById('range').className = 'hide';
 
-	document.getElementById('worldBtn').value = 'Mundo';
-	document.getElementById('elementBtn').value = '> Elementos <';
-	document.getElementById('restrictionBtn').value = 'Restricciones';
-	document.getElementById('periodBtn').value = 'Ciclos';
-	document.getElementById('actionBtn').value = 'Acciones';
-	document.getElementById('rangeBtn').value = 'Rangos';
+	document.getElementById('worldBtn').value = translate('World', language);
+	document.getElementById('elementBtn').value = '> ' + translate('Elements', language) + ' <';
+	document.getElementById('restrictionBtn').value = translate('Restrictions', language);
+	document.getElementById('periodBtn').value = translate('Period', language);
+	document.getElementById('actionBtn').value = translate('Actions', language);
+	document.getElementById('rangeBtn').value = translate('Ranges', language);
 }
 
 /**
@@ -47,12 +52,12 @@ function restriction(){
 	document.getElementById('action').className = 'hide';
 	document.getElementById('range').className = 'hide';
 
-	document.getElementById('worldBtn').value = 'Mundo';
-	document.getElementById('elementBtn').value = 'Elementos';
-	document.getElementById('restrictionBtn').value = '> Restricciones <';
-	document.getElementById('periodBtn').value = 'Ciclos';
-	document.getElementById('actionBtn').value = 'Acciones';
-	document.getElementById('rangeBtn').value = 'Rangos';
+	document.getElementById('worldBtn').value = translate('World', language);
+	document.getElementById('elementBtn').value = translate('Elements', language);
+	document.getElementById('restrictionBtn').value = '> ' + translate('Restrictions', language) + ' <';
+	document.getElementById('periodBtn').value = translate('Period', language);
+	document.getElementById('actionBtn').value = translate('Actions', language);
+	document.getElementById('rangeBtn').value = translate('Ranges', language);
 }
 
 /**
@@ -66,12 +71,12 @@ function period(){
 	document.getElementById('action').className = 'hide';
 	document.getElementById('range').className = 'hide';
 
-	document.getElementById('worldBtn').value = 'Mundo';
-	document.getElementById('elementBtn').value = 'Elementos';
-	document.getElementById('restrictionBtn').value = 'Restricciones';
-	document.getElementById('periodBtn').value = '> Ciclos <';
-	document.getElementById('actionBtn').value = 'Acciones';
-	document.getElementById('rangeBtn').value = 'Rangos';
+	document.getElementById('worldBtn').value = translate('World', language);
+	document.getElementById('elementBtn').value = translate('Elements', language);
+	document.getElementById('restrictionBtn').value = translate('Restrictions', language);
+	document.getElementById('periodBtn').value = '> ' + translate('Period', language) + ' <';
+	document.getElementById('actionBtn').value = translate('Actions', language);
+	document.getElementById('rangeBtn').value = translate('Ranges', language);
 }
 
 /**
@@ -85,12 +90,12 @@ function action(){
 	document.getElementById('action').className = 'show';
 	document.getElementById('range').className = 'hide';
 
-	document.getElementById('worldBtn').value = 'Mundo';
-	document.getElementById('elementBtn').value = 'Elementos';
-	document.getElementById('restrictionBtn').value = 'Restricciones';
-	document.getElementById('periodBtn').value = 'Ciclos';
-	document.getElementById('actionBtn').value = '> Acciones <';
-	document.getElementById('rangeBtn').value = 'Rangos';
+	document.getElementById('worldBtn').value = translate('World', language);
+	document.getElementById('elementBtn').value = translate('Elements', language);
+	document.getElementById('restrictionBtn').value = translate('Restrictions', language);
+	document.getElementById('periodBtn').value = translate('Period', language);
+	document.getElementById('actionBtn').value = '> ' + translate('Actions', language) + ' <';
+	document.getElementById('rangeBtn').value = translate('Ranges', language);
 }
 
 /**  
@@ -104,10 +109,10 @@ function range(){
 	document.getElementById('action').className = 'hide';
 	document.getElementById('range').className = 'show';
 
-	document.getElementById('worldBtn').value = 'Mundo';
-	document.getElementById('elementBtn').value = 'Elementos';
-	document.getElementById('restrictionBtn').value = 'Restricciones';
-	document.getElementById('periodBtn').value = 'Ciclos';
-	document.getElementById('actionBtn').value = 'Acciones';
-	document.getElementById('rangeBtn').value = '> Rangos <';
+	document.getElementById('worldBtn').value = translate('World', language);
+	document.getElementById('elementBtn').value = translate('Elements', language);
+	document.getElementById('restrictionBtn').value = translate('Restrictions', language);
+	document.getElementById('periodBtn').value = translate('Period', language);
+	document.getElementById('actionBtn').value = translate('Actions', language);
+	document.getElementById('rangeBtn').value = '> ' + translate('Ranges', language) + ' <';
 }

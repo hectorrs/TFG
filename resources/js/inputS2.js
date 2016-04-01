@@ -10,13 +10,13 @@ function world(){
 	document.getElementById('range').className = 'hide';
 	document.getElementById('behaviour').className = 'hide';
 
-	document.getElementById('worldBtn').value = '> Mundo <';
-	document.getElementById('elementBtn').value = 'Elementos';
-	document.getElementById('restrictionBtn').value = 'Restricciones';
-	document.getElementById('periodBtn').value = 'Ciclos';
-	document.getElementById('actionBtn').value = 'Acciones';
-	document.getElementById('rangeBtn').value = 'Rangos';
-	document.getElementById('behaviourBtn').value = 'Comportamiento';
+	document.getElementById('worldBtn').value = '> ' + translate('World', language) + ' <';
+	document.getElementById('elementBtn').value = translate('Elements', language);
+	document.getElementById('restrictionBtn').value = translate('Restrictions', language);
+	document.getElementById('periodBtn').value = translate('Period', language);
+	document.getElementById('actionBtn').value = translate('Actions', language);
+	document.getElementById('rangeBtn').value = translate('Ranges', language);
+	document.getElementById('behaviourBtn').value = translate('Behaviour', language);
 }
 
 /**
@@ -31,13 +31,13 @@ function element(){
 	document.getElementById('range').className = 'hide';
 	document.getElementById('behaviour').className = 'hide';
 
-	document.getElementById('worldBtn').value = 'Mundo';
-	document.getElementById('elementBtn').value = '> Elementos <';
-	document.getElementById('restrictionBtn').value = 'Restricciones';
-	document.getElementById('periodBtn').value = 'Ciclos';
-	document.getElementById('actionBtn').value = 'Acciones';
-	document.getElementById('rangeBtn').value = 'Rangos';
-	document.getElementById('behaviourBtn').value = 'Comportamiento';
+	document.getElementById('worldBtn').value = translate('World', language);
+	document.getElementById('elementBtn').value = '> ' + translate('Elements', language) + ' <';
+	document.getElementById('restrictionBtn').value = translate('Restrictions', language);
+	document.getElementById('periodBtn').value = translate('Period', language);
+	document.getElementById('actionBtn').value = translate('Actions', language);
+	document.getElementById('rangeBtn').value = translate('Ranges', language);
+	document.getElementById('behaviourBtn').value = translate('Behaviour', language);
 }
 
 /**
@@ -52,13 +52,13 @@ function restriction(){
 	document.getElementById('range').className = 'hide';
 	document.getElementById('behaviour').className = 'hide';
 
-	document.getElementById('worldBtn').value = 'Mundo';
-	document.getElementById('elementBtn').value = 'Elementos';
-	document.getElementById('restrictionBtn').value = '> Restricciones <';
-	document.getElementById('periodBtn').value = 'Ciclos';
-	document.getElementById('actionBtn').value = 'Acciones';
-	document.getElementById('rangeBtn').value = 'Rangos';
-	document.getElementById('behaviourBtn').value = 'Comportamiento';
+	document.getElementById('worldBtn').value = translate('World', language);
+	document.getElementById('elementBtn').value = translate('Elements', language);
+	document.getElementById('restrictionBtn').value = '> ' + translate('Restrictions', language) + ' <';
+	document.getElementById('periodBtn').value = translate('Period', language);
+	document.getElementById('actionBtn').value = translate('Actions', language);
+	document.getElementById('rangeBtn').value = translate('Ranges', language);
+	document.getElementById('behaviourBtn').value = translate('Behaviour', language);
 }
 
 /**
@@ -73,13 +73,13 @@ function period(){
 	document.getElementById('range').className = 'hide';
 	document.getElementById('behaviour').className = 'hide';
 
-	document.getElementById('worldBtn').value = 'Mundo';
-	document.getElementById('elementBtn').value = 'Elementos';
-	document.getElementById('restrictionBtn').value = 'Restricciones';
-	document.getElementById('periodBtn').value = '> Ciclos <';
-	document.getElementById('actionBtn').value = 'Acciones';
-	document.getElementById('rangeBtn').value = 'Rangos';
-	document.getElementById('behaviourBtn').value = 'Comportamiento';
+	document.getElementById('worldBtn').value = translate('World', language);
+	document.getElementById('elementBtn').value = translate('Elements', language);
+	document.getElementById('restrictionBtn').value = translate('Restrictions', language);
+	document.getElementById('periodBtn').value = '> ' + translate('Period', language) + ' <';
+	document.getElementById('actionBtn').value = translate('Actions', language);
+	document.getElementById('rangeBtn').value = translate('Ranges', language);
+	document.getElementById('behaviourBtn').value = translate('Behaviour', language);
 }
 
 /**
@@ -94,13 +94,13 @@ function action(){
 	document.getElementById('range').className = 'hide';
 	document.getElementById('behaviour').className = 'hide';
 
-	document.getElementById('worldBtn').value = 'Mundo';
-	document.getElementById('elementBtn').value = 'Elementos';
-	document.getElementById('restrictionBtn').value = 'Restricciones';
-	document.getElementById('periodBtn').value = 'Ciclos';
-	document.getElementById('actionBtn').value = '> Acciones <';
-	document.getElementById('rangeBtn').value = 'Rangos';
-	document.getElementById('behaviourBtn').value = 'Comportamiento';
+	document.getElementById('worldBtn').value = translate('World', language);
+	document.getElementById('elementBtn').value = translate('Elements', language);
+	document.getElementById('restrictionBtn').value = translate('Restrictions', language);
+	document.getElementById('periodBtn').value = translate('Period', language);
+	document.getElementById('actionBtn').value = '> ' + translate('Actions', language) + ' <';
+	document.getElementById('rangeBtn').value = translate('Ranges', language);
+	document.getElementById('behaviourBtn').value = translate('Behaviour', language);
 }
 
 /**  
@@ -115,13 +115,13 @@ function range(){
 	document.getElementById('range').className = 'show';
 	document.getElementById('behaviour').className = 'hide';
 
-	document.getElementById('worldBtn').value = 'Mundo';
-	document.getElementById('elementBtn').value = 'Elementos';
-	document.getElementById('restrictionBtn').value = 'Restricciones';
-	document.getElementById('periodBtn').value = 'Ciclos';
-	document.getElementById('actionBtn').value = 'Acciones';
-	document.getElementById('rangeBtn').value = '> Rangos <';
-	document.getElementById('behaviourBtn').value = 'Comportamiento';
+	document.getElementById('worldBtn').value = translate('World', language);
+	document.getElementById('elementBtn').value = translate('Elements', language);
+	document.getElementById('restrictionBtn').value = translate('Restrictions', language);
+	document.getElementById('periodBtn').value = translate('Period', language);
+	document.getElementById('actionBtn').value = translate('Actions', language);
+	document.getElementById('rangeBtn').value = '> ' + translate('Ranges', language) + ' <';
+	document.getElementById('behaviourBtn').value = translate('Behaviour', language);
 }
 
 /**
@@ -142,5 +142,5 @@ function behaviour(){
 	document.getElementById('periodBtn').value = 'Ciclos';
 	document.getElementById('actionBtn').value = 'Acciones';
 	document.getElementById('rangeBtn').value = 'Rangos';
-	document.getElementById('behaviourBtn').value = '> Comportamiento <';
+	document.getElementById('behaviourBtn').value = '> ' + translate('Behaviour', language) + ' <';
 }

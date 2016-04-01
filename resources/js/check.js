@@ -1,4 +1,9 @@
 /**
+ * var Language
+ */
+var language = location.search.substring(6);
+
+/**
  * It checks if all inputs are correct
  *
  * @return {Boolean}
@@ -200,7 +205,7 @@ function totalPeriod(totalPeriod){
 		document.getElementById('totalPeriod').style.borderColor = '#a94442';
 		document.getElementById('totalPeriod').style.borderWidth = '2px';
 		document.getElementById('alert1').className = 'alert alert-danger show';
-		document.getElementById('error1').innerHTML = 'Duración total - Formato incorrecto';
+		document.getElementById('error1').innerHTML = translate('Total period - Wrong format', language);
 
 		return false;
 	}else{
@@ -210,7 +215,7 @@ function totalPeriod(totalPeriod){
 			document.getElementById('totalPeriod').style.borderColor = '#a94442';
 			document.getElementById('totalPeriod').style.borderWidth = '2px';
 			document.getElementById('alert1').className = 'alert alert-danger show';
-			document.getElementById('error1').innerHTML = 'Duración total - Tiene que ser igual o mayor que 2';
+			document.getElementById('error1').innerHTML = translate('Total period - It must be equal or more than 2', language);
 
 			return false;
 		}else{
@@ -236,7 +241,7 @@ function dayPeriod(dayPeriod){
 		document.getElementById('dayPeriod').style.borderColor = '#a94442';
 		document.getElementById('dayPeriod').style.borderWidth = '2px';
 		document.getElementById('alert2').className = 'alert alert-danger show';
-		document.getElementById('error2').innerHTML = 'Duración del día - Formato incorrecto';
+		document.getElementById('error2').innerHTML = translate('Daylight period - Wrong format', language);
 
 		return false;
 	}else{
@@ -246,7 +251,7 @@ function dayPeriod(dayPeriod){
 			document.getElementById('dayPeriod').style.borderColor = '#a94442';
 			document.getElementById('dayPeriod').style.borderWidth = '2px';
 			document.getElementById('alert2').className = 'alert alert-danger show';
-			document.getElementById('error2').innerHTML = 'Duración del día - Tiene que ser mayor o igual que 1';
+			document.getElementById('error2').innerHTML = translate('Daylight period - It must be equal or more than 1');
 
 			return false;
 		}else{
@@ -272,7 +277,7 @@ function nightPeriod(nightPeriod){
 		document.getElementById('nightPeriod').style.borderColor = '#a94442';
 		document.getElementById('nightPeriod').style.borderWidth = '2px';
 		document.getElementById('alert3').className = 'alert alert-danger show';
-		document.getElementById('error3').innerHTML = 'Duración de la noche - Formato incorrecto';
+		document.getElementById('error3').innerHTML = translate('Night period - Wrong format', language);
 
 		return false;
 	}else{
@@ -282,7 +287,7 @@ function nightPeriod(nightPeriod){
 			document.getElementById('nightPeriod').style.borderColor = '#a94442';
 			document.getElementById('nightPeriod').style.borderWidth = '2px';
 			document.getElementById('alert3').className = 'alert alert-danger show';
-			document.getElementById('error3').innerHTML = 'Duración de la noche - Tiene que ser mayor o igual que 1';
+			document.getElementById('error3').innerHTML = translate('Night period - It must be equal or more than 1', language);
 			
 			return false;
 		}else{
@@ -310,7 +315,7 @@ function dimensions(sizeX, sizeY){
 			document.getElementById('sizeX').style.borderColor = '#a94442';
 			document.getElementById('sizeX').style.borderWidth = '2px';
 			document.getElementById('alert4').className = 'alert alert-danger show';
-			document.getElementById('error4').innerHTML = 'Dimensión (largo) del mundo - Formato incorrecto';
+			document.getElementById('error4').innerHTML = translate('Size (height) of the world - Wrong format', language);
 		}else{
 			sizeX = parseInt(sizeX);
 
@@ -318,7 +323,7 @@ function dimensions(sizeX, sizeY){
 				document.getElementById('sizeX').style.borderColor = '#a94442';
 				document.getElementById('sizeX').style.borderWidth = '2px';
 				document.getElementById('alert4').className = 'alert alert-danger show';
-				document.getElementById('error4').innerHTML = 'Dimensión (largo) del mundo - Tiene que ser mayor que 1';
+				document.getElementById('error4').innerHTML = translate('Size (height) of the world - It must be equal or more than 1' , language);
 			}else{
 				document.getElementById('sizeX').style.borderColor = '#3c763d';
 				document.getElementById('sizeX').style.borderWidth = '2px';
@@ -330,7 +335,7 @@ function dimensions(sizeX, sizeY){
 			document.getElementById('sizeY').style.borderColor = '#a94442';
 			document.getElementById('sizeY').style.borderWidth = '2px';
 			document.getElementById('alert5').className = 'alert alert-danger show';
-			document.getElementById('error5').innerHTML = 'Dimensión (ancho) del mundo - Formato incorrecto';
+			document.getElementById('error5').innerHTML = translate('Size (width) of the world - Wrong format', language);
 		}else{
 			sizeY = parseInt(sizeY);
 
@@ -338,7 +343,7 @@ function dimensions(sizeX, sizeY){
 				document.getElementById('sizeY').style.borderColor = '#a94442';
 				document.getElementById('sizeY').style.borderWidth = '2px';
 				document.getElementById('alert5').className = 'alert alert-danger show';
-				document.getElementById('error5').innerHTML = 'Dimensión (ancho) del mundo - Tiene que ser mayor que 1';
+				document.getElementById('error5').innerHTML = translate('Size (width) of the world - It must be equal or more than 1', language);
 			}else{
 				document.getElementById('sizeY').style.borderColor = '#3c763d';
 				document.getElementById('sizeY').style.borderWidth = '2px';
@@ -356,7 +361,7 @@ function dimensions(sizeX, sizeY){
 				document.getElementById('sizeX').style.borderColor = '#a94442';
 				document.getElementById('sizeX').style.borderWidth = '2px';
 				document.getElementById('alert4').className = 'alert alert-danger show';
-				document.getElementById('error4').innerHTML = 'Dimensión (largo) del mundo - Tiene que ser mayor que 1';
+				document.getElementById('error4').innerHTML = translate('Size (height) of the world - It must be equal or more than 1' , language);
 			}else{
 				document.getElementById('sizeX').style.borderColor = '#3c763d';
 				document.getElementById('sizeX').style.borderWidth = '2px';
@@ -367,7 +372,7 @@ function dimensions(sizeX, sizeY){
 				document.getElementById('sizeY').style.borderColor = '#a94442';
 				document.getElementById('sizeY').style.borderWidth = '2px';
 				document.getElementById('alert5').className = 'alert alert-danger show';
-				document.getElementById('error5').innerHTML = 'Dimensión (ancho) del mundo - Tiene que ser mayor que 1';
+				document.getElementById('error5').innerHTML = translate('Size (width) of the world - It must be equal or more than 1', language);
 			}else{
 				document.getElementById('sizeY').style.borderColor = '#3c763d';
 				document.getElementById('sizeY').style.borderWidth = '2px';
@@ -405,7 +410,7 @@ function changeWeather(change, totalPeriod){
 		document.getElementById('changeWeather').style.borderColor = '#a94442';
 		document.getElementById('changeWeather').style.borderWidth = '2px';
 		document.getElementById('alert6').className = 'alert alert-danger show';
-		document.getElementById('error6').innerHTML = 'Cambiar tiempo cada (ciclos) - Formato incorrecto';
+		document.getElementById('error6').innerHTML = translate('Change weather each (cycles) - Wrong format', language);
 
 		return false;
 	}else{
@@ -416,7 +421,7 @@ function changeWeather(change, totalPeriod){
 			document.getElementById('changeWeather').style.borderColor = '#a94442';
 			document.getElementById('changeWeather').style.borderWidth = '2px';
 			document.getElementById('alert6').className = 'alert alert-danger show';
-			document.getElementById('error6').innerHTML = 'Cambiar tiempo cada (ciclos) - Tiene que ser menor o igual al número de ciclos de ejecución';
+			document.getElementById('error6').innerHTML = translate('Change weather each (cycles) - It must be equal or less than total period', language);
 
 			return false;
 		}else{
@@ -479,7 +484,7 @@ function amountElements(carrot, tree, lair, rabbit, wolf, sizeX, sizeY){
 			document.getElementById('carrot').style.borderColor = '#a94442';
 			document.getElementById('carrot').style.borderWidth = '2px';
 			document.getElementById('alert7').className = 'alert alert-danger show';
-			document.getElementById('error7').innerHTML = 'Cantidad de zanahorias - Formato incorrecto';
+			document.getElementById('error7').innerHTML = translate('Amount of carrots - Wrong format', language);
 			document.getElementById('alert12').className = 'alert alert-danger hide';
 		}else{
 			document.getElementById('carrot').style.borderColor = '#3c763d';
@@ -491,7 +496,7 @@ function amountElements(carrot, tree, lair, rabbit, wolf, sizeX, sizeY){
 			document.getElementById('tree').style.borderColor = '#a94442';
 			document.getElementById('tree').style.borderWidth = '2px';
 			document.getElementById('alert8').className = 'alert alert-danger show';
-			document.getElementById('error8').innerHTML = 'Cantidad de árboles - Formato incorrecto';
+			document.getElementById('error8').innerHTML = translate('Amount of trees - Wrong format', language);
 			document.getElementById('alert12').className = 'alert alert-danger hide';
 		}else{
 			document.getElementById('tree').style.borderColor = '#3c763d';
@@ -503,7 +508,7 @@ function amountElements(carrot, tree, lair, rabbit, wolf, sizeX, sizeY){
 			document.getElementById('lair').style.borderColor = '#a94442';
 			document.getElementById('lair').style.borderWidth = '2px';
 			document.getElementById('alert9').className = 'alert alert-danger show';
-			document.getElementById('error9').innerHTML = 'Cantidad de madrigueras - Formato incorrecto';
+			document.getElementById('error9').innerHTML = translate('Amount of lair - Wrong format', language);
 			document.getElementById('alert12').className = 'alert alert-danger hide';
 		}else{
 			document.getElementById('lair').style.borderColor = '#3c763d';
@@ -515,7 +520,7 @@ function amountElements(carrot, tree, lair, rabbit, wolf, sizeX, sizeY){
 			document.getElementById('rabbit').style.borderColor = '#a94442';
 			document.getElementById('rabbit').style.borderWidth = '2px';
 			document.getElementById('alert10').className = 'alert alert-danger show';
-			document.getElementById('error10').innerHTML = 'Cantidad de conejos - Formato incorrecto';
+			document.getElementById('error10').innerHTML = translate('Amount of rabbits - Wrong format', language);
 			document.getElementById('alert12').className = 'alert alert-danger hide';
 		}else{
 			document.getElementById('rabbit').style.borderColor = '#3c763d';
@@ -527,7 +532,7 @@ function amountElements(carrot, tree, lair, rabbit, wolf, sizeX, sizeY){
 			document.getElementById('wolf').style.borderColor = '#a94442';
 			document.getElementById('wolf').style.borderWidth = '2px';
 			document.getElementById('alert11').className = 'alert alert-danger show';
-			document.getElementById('error11').innerHTML = 'Cantidad de lobos - Formato incorrecto';
+			document.getElementById('error11').innerHTML = translate('Amount of wolves - Wrong format', language);
 			document.getElementById('alert12').className = 'alert alert-danger hide';
 		}else{
 			document.getElementById('wolf').style.borderColor = '#3c763d';
@@ -598,7 +603,7 @@ function moreCarrot(each, amount, totalPeriod){
 			document.getElementById('timeMoreCarrot').style.borderColor = '#a94442';
 			document.getElementById('timeMoreCarrot').style.borderWidth = '2px';
 			document.getElementById('alert13').className = 'alert alert-danger show';
-			document.getElementById('error13').innerHTML = 'Regenara zanahorias cada - Formato incorrecto';
+			document.getElementById('error13').innerHTML = translate('Regeneration of carrots each - Wrong format', language);
 		}else{
 			each = parseInt(each);
 
@@ -606,12 +611,12 @@ function moreCarrot(each, amount, totalPeriod){
 				document.getElementById('timeMoreCarrot').style.borderColor = '#a94442';
 				document.getElementById('timeMoreCarrot').style.borderWidth = '2px';
 				document.getElementById('alert13').className = 'alert alert-danger show';
-				document.getElementById('error13').innerHTML = 'Regenara zanahorias cada - El número de ciclos no puede ser mayor que el número de ciclos de ejecución';
+				document.getElementById('error13').innerHTML = translate('Regeneration of carrots each - The number of cycles mustn\'t be more than total period', language);
 			}else if(each < 1){
 				document.getElementById('timeMoreCarrot').style.borderColor = '#a94442';
 				document.getElementById('timeMoreCarrot').style.borderWidth = '2px';
 				document.getElementById('alert13').className = 'alert alert-danger show';
-				document.getElementById('error13').innerHTML = 'Regenara zanahorias cada - El número de ciclos tiene que ser mayor que 0';
+				document.getElementById('error13').innerHTML = translate('Regeneration of carrots each - The number of cycles must be more than 0', language);
 			}else{
 				document.getElementById('timeMoreCarrot').style.borderColor = '#3c763d';
 				document.getElementById('timeMoreCarrot').style.borderWidth = '2px';
@@ -623,7 +628,7 @@ function moreCarrot(each, amount, totalPeriod){
 			document.getElementById('amountMoreCarrot').style.borderColor = '#a94442';
 			document.getElementById('amountMoreCarrot').style.borderWidth = '2px';
 			document.getElementById('alert14').className = 'alert alert-danger show';
-			document.getElementById('error14').innerHTML = 'Regenara zanahorias (cantidad) - Formato incorrecto';
+			document.getElementById('error14').innerHTML = translate('Regeneration of carrots (amount) - Wrong format', language);
 		}else{
 			document.getElementById('amountMoreCarrot').style.borderColor = '#3c763d';
 			document.getElementById('amountMoreCarrot').style.borderWidth = '2px';
@@ -638,7 +643,7 @@ function moreCarrot(each, amount, totalPeriod){
 			document.getElementById('timeMoreCarrot').style.borderColor = '#a94442';
 			document.getElementById('timeMoreCarrot').style.borderWidth = '2px';
 			document.getElementById('alert13').className = 'alert alert-danger show';
-			document.getElementById('error13').innerHTML = 'Regenara zanahorias cada - El número de ciclos no puede ser mayor que el número de ciclos de ejecución';
+			document.getElementById('error13').innerHTML = translate('Regeneration of carrots each - The number of cycles mustn\'t be more than total period', language);
 			document.getElementById('amountMoreCarrot').style.borderColor = '#3c763d';
 			document.getElementById('amountMoreCarrot').style.borderWidth = '2px';
 			document.getElementById('alert14').className = 'alert alert-danger hide';
@@ -648,7 +653,7 @@ function moreCarrot(each, amount, totalPeriod){
 			document.getElementById('timeMoreCarrot').style.borderColor = '#a94442';
 			document.getElementById('timeMoreCarrot').style.borderWidth = '2px';
 			document.getElementById('alert13').className = 'alert alert-danger show';
-			document.getElementById('error13').innerHTML = 'Regenara zanahorias cada - El número de ciclos tiene que ser mayor que 0';
+			document.getElementById('error13').innerHTML = translate('Regeneration of carrots each - The number of cycles must be more than 0', language);
 			document.getElementById('amountMoreCarrot').style.borderColor = '#3c763d';
 			document.getElementById('amountMoreCarrot').style.borderWidth = '2px';
 			document.getElementById('alert14').className = 'alert alert-danger hide';
@@ -682,7 +687,7 @@ function maxEat(eatRabbit, eatWolf){
 			document.getElementById('maxEatRabbit').style.borderColor = '#a94442';
 			document.getElementById('maxEatRabbit').style.borderWidth = '2px';
 			document.getElementById('alert15').className = 'alert alert-danger show';
-			document.getElementById('error15').innerHTML = 'Ciclos sin comer (conejos) - Formato incorrecto';
+			document.getElementById('error15').innerHTML = translate('Cycles without eat (rabbits) - Wrong format', language);
 		}else{
 			document.getElementById('maxEatRabbit').style.borderColor = '#3c763d';
 			document.getElementById('maxEatRabbit').style.borderWidth = '2px';
@@ -693,7 +698,7 @@ function maxEat(eatRabbit, eatWolf){
 			document.getElementById('maxEatWolf').style.borderColor = '#a94442';
 			document.getElementById('maxEatWolf').style.borderWidth = '2px';
 			document.getElementById('alert16').className = 'alert alert-danger show';
-			document.getElementById('error16').innerHTML = 'Ciclos sin comer (lobos) - Formato incorrecto';
+			document.getElementById('error16').innerHTML = translate('Cycles without eat (wolves) - Wrong format', language);
 		}else{
 			document.getElementById('maxEatWolf').style.borderColor = '#3c763d';
 			document.getElementById('maxEatWolf').style.borderWidth = '2px';
@@ -728,7 +733,7 @@ function maxSleep(sleepRabbit, sleepWolf){
 			document.getElementById('maxSleepRabbit').style.borderColor = '#a94442';
 			document.getElementById('maxSleepRabbit').style.borderWidth = '2px';
 			document.getElementById('alert17').className = 'alert alert-danger show';
-			document.getElementById('error17').innerHTML = 'Ciclos sin dormir (conejos) - Formato incorrecto';
+			document.getElementById('error17').innerHTML = translate('Cycles without sleep (rabbits) - Wrong format', language);
 		}else{
 			document.getElementById('maxSleepRabbit').style.borderColor = '#3c763d';
 			document.getElementById('maxSleepRabbit').style.borderWidth = '2px';
@@ -739,7 +744,7 @@ function maxSleep(sleepRabbit, sleepWolf){
 			document.getElementById('maxSleepWolf').style.borderColor = '#a94442';
 			document.getElementById('maxSleepWolf').style.borderWidth = '2px';
 			document.getElementById('alert18').className = 'alert alert-danger show';
-			document.getElementById('error18').innerHTML = 'Ciclos sin dormir (lobos) - Formato incorrecto';
+			document.getElementById('error18').innerHTML = translate('Cycles without sleep (wolves) - Wrong format', language);
 		}else{
 			document.getElementById('maxSleepWolf').style.borderColor = '#3c763d';
 			document.getElementById('maxSleepWolf').style.borderWidth = '2px';
@@ -789,7 +794,7 @@ function breed(breedRabbitEach, breedRabbitAmount, breedWolfEach, breedWolfAmoun
 			document.getElementById('breedRabbitEach').style.borderColor = '#a94442';
 			document.getElementById('breedRabbitEach').style.borderWidth = '2px';
 			document.getElementById('alert19').className = 'alert alert-danger show';
-			document.getElementById('error19').innerHTML = 'Conejos - Límite cada (ciclos) - Formato incorrecto';
+			document.getElementById('error19').innerHTML = translate('Rabbits - Limit each (cycles) - Wrong format', language);
 		}else{
 			document.getElementById('breedRabbitEach').style.borderColor = '#3c763d';
 			document.getElementById('breedRabbitEach').style.borderWidth = '2px';
@@ -800,7 +805,7 @@ function breed(breedRabbitEach, breedRabbitAmount, breedWolfEach, breedWolfAmoun
 			document.getElementById('breedRabbitAmount').style.borderColor = '#a94442';
 			document.getElementById('breedRabbitAmount').style.borderWidth = '2px';
 			document.getElementById('alert20').className = 'alert alert-danger show';
-			document.getElementById('error20').innerHTML = 'Conejos - Cantidad máxima - Formato incorrecto';
+			document.getElementById('error20').innerHTML = translate('Rabbits - Maximum amount - Wrong format', language);
 		}else{
 			document.getElementById('breedRabbitAmount').style.borderColor = '#3c763d';
 			document.getElementById('breedRabbitAmount').style.borderWidth = '2px';
@@ -811,7 +816,7 @@ function breed(breedRabbitEach, breedRabbitAmount, breedWolfEach, breedWolfAmoun
 			document.getElementById('breedWolfEach').style.borderColor = '#a94442';
 			document.getElementById('breedWolfEach').style.borderWidth = '2px';
 			document.getElementById('alert21').className = 'alert alert-danger show';
-			document.getElementById('error21').innerHTML = 'Lobos - Límite cada (ciclos) - Formato incorrecto';
+			document.getElementById('error21').innerHTML = translate('Wolves - Limit each (cycles) - Wrong format', language);
 		}else{
 			document.getElementById('breedWolfEach').style.borderColor = '#3c763d';
 			document.getElementById('breedWolfEach').style.borderWidth = '2px';
@@ -822,7 +827,7 @@ function breed(breedRabbitEach, breedRabbitAmount, breedWolfEach, breedWolfAmoun
 			document.getElementById('breedWolfAmount').style.borderColor = '#a94442';
 			document.getElementById('breedWolfAmount').style.borderWidth = '2px';
 			document.getElementById('alert22').className = 'alert alert-danger show';
-			document.getElementById('error22').innerHTML = 'Lobos - Cantidad máxima - Formato incorrecto';
+			document.getElementById('error22').innerHTML = translate('Wolves - Maximum amount - Wrong format', language);
 		}else{
 			document.getElementById('breedWolfAmount').style.borderColor = '#3c763d';
 			document.getElementById('breedWolfAmount').style.borderWidth = '2px';
@@ -866,12 +871,12 @@ function turnEat(turnEatRabbit, turnEatWolf, dayPeriod){
 			document.getElementById('turnEatRabbit').style.borderColor = '#a94442';
 			document.getElementById('turnEatRabbit').style.borderWidth = '2px';
 			document.getElementById('alert23').className = 'alert alert-danger show';
-			document.getElementById('error23').innerHTML = 'Conejos - Necesitan (ciclos) - Formato incorrecto';
+			document.getElementById('error23').innerHTML = translate('Rabbits - Need (cycles) - Wrong format', language);
 		}else if(turnEatRabbit > dayPeriod){
 			document.getElementById('turnEatRabbit').style.borderColor = '#a94442';
 			document.getElementById('turnEatRabbit').style.borderWidth = '2px';
 			document.getElementById('alert23').className = 'alert alert-danger show';
-			document.getElementById('error23').innerHTML = 'Conejos - Necesitan (ciclos) - No se puede tardar más de la duración del día en comer';
+			document.getElementById('error23').innerHTML = translate('Rabbits - Need (cycles) - Can\'t need more than daylight duration to eat', language);
 		}else{
 			document.getElementById('turnEatRabbit').style.borderColor = '#3c763d';
 			document.getElementById('turnEatRabbit').style.borderWidth = '2px';
@@ -882,12 +887,12 @@ function turnEat(turnEatRabbit, turnEatWolf, dayPeriod){
 			document.getElementById('turnEatWolf').style.borderColor = '#a94442';
 			document.getElementById('turnEatWolf').style.borderWidth = '2px';
 			document.getElementById('alert24').className = 'alert alert-danger show';
-			document.getElementById('error24').innerHTML = 'Conejos - Necesitan (ciclos) - Formato incorrecto';
+			document.getElementById('error24').innerHTML = translate('Wolves - Need (cycles) - Wrong format', language);
 		}else if(turnEatWolf > dayPeriod){
 			document.getElementById('turnEatWolf').style.borderColor = '#a94442';
 			document.getElementById('turnEatWolf').style.borderWidth = '2px';
 			document.getElementById('alert24').className = 'alert alert-danger show';
-			document.getElementById('error24').innerHTML = 'Conejos - Necesitan (ciclos) - No se puede tardar más de la duración del día en comer';
+			document.getElementById('error24').innerHTML = translate('Wolves - Need (cycles) - Can\'t need more than daylight duration to eat', language);
 		}else{
 			document.getElementById('turnEatWolf').style.borderColor = '#3c763d';
 			document.getElementById('turnEatWolf').style.borderWidth = '2px';
@@ -904,14 +909,14 @@ function turnEat(turnEatRabbit, turnEatWolf, dayPeriod){
 				document.getElementById('turnEatRabbit').style.borderColor = '#a94442';
 				document.getElementById('turnEatRabbit').style.borderWidth = '2px';
 				document.getElementById('alert23').className = 'alert alert-danger show';
-				document.getElementById('error23').innerHTML = 'Conejos - Necesitan (ciclos) - No se puede tardar más de la duración del día en comer';
+				document.getElementById('error23').innerHTML = translate('Rabbits - Need (cycles) - Can\'t need more than daylight duration to eat', language);
 			}
 
 			if(turnEatWolf > dayPeriod){
 				document.getElementById('turnEatWolf').style.borderColor = '#a94442';
 				document.getElementById('turnEatWolf').style.borderWidth = '2px';
 				document.getElementById('alert24').className = 'alert alert-danger show';
-				document.getElementById('error24').innerHTML = 'Conejos - Necesitan (ciclos) - No se puede tardar más de la duración del día en comer';
+				document.getElementById('error24').innerHTML = translate('Wolves - Need (cycles) - Can\'t need more than daylight duration to eat', language);
 			}
 
 			return false;
@@ -948,12 +953,12 @@ function noNeedToEat(noNeedToEatRabbit, noNeedToEatWolf, maxEatRabbit, maxEatWol
 			document.getElementById('noNeedToEatRabbit').style.borderColor = '#a94442';
 			document.getElementById('noNeedToEatRabbit').style.borderWidth = '2px';
 			document.getElementById('alert47').className = 'alert alert-danger show';
-			document.getElementById('error47').innerHTML = 'Conejos - Están saciados durante (ciclos) - Formato incorrecto';
+			document.getElementById('error47').innerHTML = translate('Rabbits - Are sated for (cycles) - Wrong format', language);
 		}else if(noNeedToEatRabbit >= maxEatRabbit){
 			document.getElementById('noNeedToEatRabbit').style.borderColor = '#a94442';
 			document.getElementById('noNeedToEatRabbit').style.borderWidth = '2px';
 			document.getElementById('alert47').className = 'alert alert-danger show';
-			document.getElementById('error47').innerHTML = 'Conejos - Están saciados durante (ciclos) - El número de ciclos tiene que ser menor que el tiempo que pueden pasar sin comer';
+			document.getElementById('error47').innerHTML = translate('Rabbits - Are sated for (cycles) - The number of cycles must be less than the time without eat', language);
 		}else{
 			document.getElementById('noNeedToEatRabbit').style.borderColor = '#3c763d';
 			document.getElementById('noNeedToEatRabbit').style.borderWidth = '2px';
@@ -964,12 +969,12 @@ function noNeedToEat(noNeedToEatRabbit, noNeedToEatWolf, maxEatRabbit, maxEatWol
 			document.getElementById('noNeedToEatWolf').style.borderColor = '#a94442';
 			document.getElementById('noNeedToEatWolf').style.borderWidth = '2px';
 			document.getElementById('alert48').className = 'alert alert-danger show';
-			document.getElementById('error48').innerHTML = 'Lobos - Están saciados durante (ciclos) - Formato incorrecto';
+			document.getElementById('error48').innerHTML = translate('Wolves - Are sated for (cycles) - Wrong format', language);
 		}else if(noNeedToEatWolf >= maxEatWolf){
 			document.getElementById('noNeedToEatWolf').style.borderColor = '#a94442';
 			document.getElementById('noNeedToEatWolf').style.borderWidth = '2px';
 			document.getElementById('alert48').className = 'alert alert-danger show';
-			document.getElementById('error48').innerHTML = 'Lobos - Están saciados durante (ciclos) - El número de ciclos tiene que ser menor que el tiempo que pueden pasar sin comer';
+			document.getElementById('error48').innerHTML = translate('Wolves - Are sated for (cycles) - The number of cycles must be less than the time without eat', language);
 		}else{
 			document.getElementById('noNeedToEatWolf').style.borderColor = '#3c763d';
 			document.getElementById('noNeedToEatWolf').style.borderWidth = '2px';
@@ -986,14 +991,14 @@ function noNeedToEat(noNeedToEatRabbit, noNeedToEatWolf, maxEatRabbit, maxEatWol
 				document.getElementById('noNeedToEatRabbit').style.borderColor = '#a94442';
 				document.getElementById('noNeedToEatRabbit').style.borderWidth = '2px';
 				document.getElementById('alert47').className = 'alert alert-danger show';
-				document.getElementById('error47').innerHTML = 'Conejos - Están saciados durante (ciclos) - El número de ciclos tiene que ser menor que el tiempo que pueden pasar sin comer';
+				document.getElementById('error47').innerHTML = translate('Rabbits - Are sated for (cycles) - The number of cycles must be less than the time without eat', language);
 			}
 
 			if(noNeedToEatWolf >= maxEatWolf){
 				document.getElementById('noNeedToEatWolf').style.borderColor = '#a94442';
 				document.getElementById('noNeedToEatWolf').style.borderWidth = '2px';
 				document.getElementById('alert48').className = 'alert alert-danger show';
-				document.getElementById('error48').innerHTML = 'Lobos - Están saciados durante (ciclos) - El número de ciclos tiene que ser menor que el tiempo que pueden pasar sin comer';
+				document.getElementById('error48').innerHTML = translate('Wolves - Are sated for (cycles) - The number of cycles must be less than the time without eat', language);
 			}
 
 			return false;
@@ -1028,12 +1033,12 @@ function turnSleep(turnSleepRabbit, turnSleepWolf, nightPeriod){
 			document.getElementById('turnSleepRabbit').style.borderColor = '#a94442';
 			document.getElementById('turnSleepRabbit').style.borderWidth = '2px';
 			document.getElementById('alert25').className = 'alert alert-danger show';
-			document.getElementById('error25').innerHTML = 'Conejos - Necesitan (ciclos) - Formato incorrecto';
+			document.getElementById('error25').innerHTML = translate('Rabbits - Need (cycles) - Wrong format', language);
 		}else if(turnSleepRabbit > nightPeriod + parseInt(nightPeriod * 25 / 100)){
 			document.getElementById('turnSleepRabbit').style.borderColor = '#a94442';
 			document.getElementById('turnSleepRabbit').style.borderWidth = '2px';
 			document.getElementById('alert25').className = 'alert alert-danger show';
-			document.getElementById('error25').innerHTML = 'Conejos - Necesitan (ciclos) - Duración para incorrecta, no puede ser mayor que +25% de la duración de la noche';
+			document.getElementById('error25').innerHTML = translate('Rabbits - Need (cycles) - Wrong period, it mustn\'t be more than 25% of night period', language);
 		}else{
 			document.getElementById('turnSleepRabbit').style.borderColor = '#3c763d';
 			document.getElementById('turnSleepRabbit').style.borderWidth = '2px';
@@ -1044,12 +1049,12 @@ function turnSleep(turnSleepRabbit, turnSleepWolf, nightPeriod){
 			document.getElementById('turnSleepWolf').style.borderColor = '#a94442';
 			document.getElementById('turnSleepWolf').style.borderWidth = '2px';
 			document.getElementById('alert26').className = 'alert alert-danger show';
-			document.getElementById('error26').innerHTML = 'Conejos - Necesitan (ciclos) - Formato incorrecto';
+			document.getElementById('error26').innerHTML = translate('Wolves - Need (cycles) - Wrong format', language);
 		}else if(turnSleepWolf > nightPeriod + parseInt(nightPeriod * 25 / 100)){
 			document.getElementById('turnSleepWolf').style.borderColor = '#a94442';
 			document.getElementById('turnSleepWolf').style.borderWidth = '2px';
 			document.getElementById('alert26').className = 'alert alert-danger show';
-			document.getElementById('error26').innerHTML = 'Conejos - Necesitan (ciclos) - Duración para incorrecta, no puede ser mayor que +25% de la duración de la noche';
+			document.getElementById('error26').innerHTML = translate('Wolves - Need (cycles) - Wrong period, it mustn\'t be more than 25% of night period', language);
 		}else{
 			document.getElementById('turnSleepWolf').style.borderColor = '#3c763d';
 			document.getElementById('turnSleepWolf').style.borderWidth = '2px';
@@ -1066,14 +1071,14 @@ function turnSleep(turnSleepRabbit, turnSleepWolf, nightPeriod){
 				document.getElementById('turnSleepRabbit').style.borderColor = '#a94442';
 				document.getElementById('turnSleepRabbit').style.borderWidth = '2px';
 				document.getElementById('alert25').className = 'alert alert-danger show';
-				document.getElementById('error25').innerHTML = 'Conejos - Necesitan (ciclos) - Duración para incorrecta, no puede ser mayor que +25% de la duración de la noche';
+				document.getElementById('error25').innerHTML = translate('Rabbits - Need (cycles) - Wrong period, it mustn\'t be more than 25% of night period', language);
 			}
 
 			if(turnSleepWolf > nightPeriod){
 				document.getElementById('turnSleepWolf').style.borderColor = '#a94442';
 				document.getElementById('turnSleepWolf').style.borderWidth = '2px';
 				document.getElementById('alert26').className = 'alert alert-danger show';
-				document.getElementById('error26').innerHTML = 'Conejos - Necesitan (ciclos) - Duración para incorrecta, no puede ser mayor que +25% de la duración de la noche';
+				document.getElementById('error26').innerHTML = translate('Wolves - Need (cycles) - Wrong period, it mustn\'t be more than 25% of night period', language);
 			}
 
 			return false;
@@ -1105,7 +1110,7 @@ function maxUse(maxUseRabbit, maxUseWolf){
 			document.getElementById('maxUseRabbit').style.borderColor = '#a94442';
 			document.getElementById('maxUseRabbit').style.borderWidth = '2px';
 			document.getElementById('alert27').className = 'alert alert-danger show';
-			document.getElementById('error27').innerHTML = 'Puntos por acciones - Conejos - Formato incorrecto';
+			document.getElementById('error27').innerHTML = translate('Points per actions - Rabbits - Wrong format', language);
 		}else{
 			document.getElementById('maxUseRabbit').style.borderColor = '#3c763d';
 			document.getElementById('maxUseRabbit').style.borderWidth = '2px';
@@ -1116,7 +1121,7 @@ function maxUse(maxUseRabbit, maxUseWolf){
 			document.getElementById('maxUseWolf').style.borderColor = '#a94442';
 			document.getElementById('maxUseWolf').style.borderWidth = '2px';
 			document.getElementById('alert28').className = 'alert alert-danger show';
-			document.getElementById('error28').innerHTML = 'Puntos por acciones - Lobos - Formato incorrecto';
+			document.getElementById('error28').innerHTML = translate('Points per actions - Wolves - Wrong format', language);
 		}else{
 			document.getElementById('maxUseWolf').style.borderColor = '#3c763d';
 			document.getElementById('maxUseWolf').style.borderWidth = '2px';
@@ -1164,7 +1169,7 @@ function useAct(smellRabbitUse, smellWolfUse, hearRabbitUse, hearWolfUse, seeRab
 			document.getElementById('smellRabbitUse').style.borderColor = '#a94442';
 			document.getElementById('smellRabbitUse').style.borderWidth = '2px';
 			document.getElementById('alert29').className = 'alert alert-danger show';
-			document.getElementById('error29').innerHTML = 'Consumo por acción - Olfatear - Conejos - Formato incorrecto';
+			document.getElementById('error29').innerHTML = translate('Use per action - Smell - Rabbits - Wrong format', language);
 		}else{
 			document.getElementById('smellRabbitUse').style.borderColor = '#3c763d';
 			document.getElementById('smellRabbitUse').style.borderWidth = '2px';
@@ -1175,7 +1180,7 @@ function useAct(smellRabbitUse, smellWolfUse, hearRabbitUse, hearWolfUse, seeRab
 			document.getElementById('smellWolfUse').style.borderColor = '#a94442';
 			document.getElementById('smellWolfUse').style.borderWidth = '2px';
 			document.getElementById('alert30').className = 'alert alert-danger show';
-			document.getElementById('error30').innerHTML = 'Consumo por acción - Olfatear - Lobos - Formato incorrecto';
+			document.getElementById('error30').innerHTML = translate('Use per action - Smell - Wolves - Wrong format', language);
 		}else{
 			document.getElementById('smellWolfUse').style.borderColor = '#3c763d';
 			document.getElementById('smellWolfUse').style.borderWidth = '2px';
@@ -1186,7 +1191,7 @@ function useAct(smellRabbitUse, smellWolfUse, hearRabbitUse, hearWolfUse, seeRab
 			document.getElementById('hearRabbitUse').style.borderColor = '#a94442';
 			document.getElementById('hearRabbitUse').style.borderWidth = '2px';
 			document.getElementById('alert31').className = 'alert alert-danger show';
-			document.getElementById('error31').innerHTML = 'Consumo por acción - Oir - Conejos - Formato incorrecto';
+			document.getElementById('error31').innerHTML = translate('Use per action - Hear - Rabbits - Wrong format', language);
 		}else{
 			document.getElementById('hearRabbitUse').style.borderColor = '#3c763d';
 			document.getElementById('hearRabbitUse').style.borderWidth = '2px';
@@ -1197,7 +1202,7 @@ function useAct(smellRabbitUse, smellWolfUse, hearRabbitUse, hearWolfUse, seeRab
 			document.getElementById('hearWolfUse').style.borderColor = '#a94442';
 			document.getElementById('hearWolfUse').style.borderWidth = '2px';
 			document.getElementById('alert32').className = 'alert alert-danger show';
-			document.getElementById('error32').innerHTML = 'Consumo por acción - Oir - Lobos - Formato incorrecto';
+			document.getElementById('error32').innerHTML = translate('Use per action - Hear - Wolves - Wrong format', language);
 		}else{
 			document.getElementById('hearWolfUse').style.borderColor = '#3c763d';
 			document.getElementById('hearWolfUse').style.borderWidth = '2px';
@@ -1208,7 +1213,7 @@ function useAct(smellRabbitUse, smellWolfUse, hearRabbitUse, hearWolfUse, seeRab
 			document.getElementById('seeRabbitUse').style.borderColor = '#a94442';
 			document.getElementById('seeRabbitUse').style.borderWidth = '2px';
 			document.getElementById('alert33').className = 'alert alert-danger show';
-			document.getElementById('error33').innerHTML = 'Consumo por acción - Ver - Conejos - Formato incorrecto';
+			document.getElementById('error33').innerHTML = translate('Use per action - See - Rabbits - Wrong format', language);
 		}else{
 			document.getElementById('seeRabbitUse').style.borderColor = '#3c763d';
 			document.getElementById('seeRabbitUse').style.borderWidth = '2px';
@@ -1219,7 +1224,7 @@ function useAct(smellRabbitUse, smellWolfUse, hearRabbitUse, hearWolfUse, seeRab
 			document.getElementById('seeWolfUse').style.borderColor = '#a94442';
 			document.getElementById('seeWolfUse').style.borderWidth = '2px';
 			document.getElementById('alert34').className = 'alert alert-danger show';
-			document.getElementById('error34').innerHTML = 'Consumo por acción - Ver - Lobos - Formato incorrecto';
+			document.getElementById('error34').innerHTML = translate('Use per action - See - Wolves - Wrong format', language);
 		}else{
 			document.getElementById('seeWolfUse').style.borderColor = '#3c763d';
 			document.getElementById('seeWolfUse').style.borderWidth = '2px';
@@ -1230,7 +1235,7 @@ function useAct(smellRabbitUse, smellWolfUse, hearRabbitUse, hearWolfUse, seeRab
 			document.getElementById('moveRabbitUse').style.borderColor = '#a94442';
 			document.getElementById('moveRabbitUse').style.borderWidth = '2px';
 			document.getElementById('alert35').className = 'alert alert-danger show';
-			document.getElementById('error35').innerHTML = 'Consumo por acción - Mover - Conejos - Formato incorrecto';
+			document.getElementById('error35').innerHTML = translate('Use per action - Move - Rabbits - Wrong format', language);
 		}else{
 			document.getElementById('moveRabbitUse').style.borderColor = '#3c763d';
 			document.getElementById('moveRabbitUse').style.borderWidth = '2px';
@@ -1241,7 +1246,7 @@ function useAct(smellRabbitUse, smellWolfUse, hearRabbitUse, hearWolfUse, seeRab
 			document.getElementById('moveWolfUse').style.borderColor = '#a94442';
 			document.getElementById('moveWolfUse').style.borderWidth = '2px';
 			document.getElementById('alert36').className = 'alert alert-danger show';
-			document.getElementById('error36').innerHTML = 'Consumo por acción - Mover - Lobos - Formato incorrecto';
+			document.getElementById('error36').innerHTML = 'Use per action - Move - Wolves - Wrong format';
 		}else{
 			document.getElementById('moveWolfUse').style.borderColor = '#3c763d';
 			document.getElementById('moveWolfUse').style.borderWidth = '2px';
@@ -1252,7 +1257,7 @@ function useAct(smellRabbitUse, smellWolfUse, hearRabbitUse, hearWolfUse, seeRab
 			document.getElementById('sleepRabbitUse').style.borderColor = '#a94442';
 			document.getElementById('sleepRabbitUse').style.borderWidth = '2px';
 			document.getElementById('alert37').className = 'alert alert-danger show';
-			document.getElementById('error37').innerHTML = 'Consumo por acción - Dormir - Conejos - Formato incorrecto';
+			document.getElementById('error37').innerHTML = translate('Use per action - Sleep - Rabbits - Wrong format', language);
 		}else{
 			document.getElementById('sleepRabbitUse').style.borderColor = '#3c763d';
 			document.getElementById('sleepRabbitUse').style.borderWidth = '2px';
@@ -1263,7 +1268,7 @@ function useAct(smellRabbitUse, smellWolfUse, hearRabbitUse, hearWolfUse, seeRab
 			document.getElementById('sleepWolfUse').style.borderColor = '#a94442';
 			document.getElementById('sleepWolfUse').style.borderWidth = '2px';
 			document.getElementById('alert38').className = 'alert alert-danger show';
-			document.getElementById('error38').innerHTML = 'Consumo por acción - Dormir - Lobos - Formato incorrecto';
+			document.getElementById('error38').innerHTML = translate('Use per action - Sleep - Wolves - Wrong format', language);
 		}else{
 			document.getElementById('sleepWolfUse').style.borderColor = '#3c763d';
 			document.getElementById('sleepWolfUse').style.borderWidth = '2px';
@@ -1274,7 +1279,7 @@ function useAct(smellRabbitUse, smellWolfUse, hearRabbitUse, hearWolfUse, seeRab
 			document.getElementById('breedRabbitUse').style.borderColor = '#a94442';
 			document.getElementById('breedRabbitUse').style.borderWidth = '2px';
 			document.getElementById('alert39').className = 'alert alert-danger show';
-			document.getElementById('error39').innerHTML = 'Consumo por acción - Reproducirse - Conejos - Formato incorrecto';
+			document.getElementById('error39').innerHTML = translate('Use per action - Breed - Rabbits - Wrong format');
 		}else{
 			document.getElementById('breedRabbitUse').style.borderColor = '#3c763d';
 			document.getElementById('breedRabbitUse').style.borderWidth = '2px';
@@ -1285,7 +1290,7 @@ function useAct(smellRabbitUse, smellWolfUse, hearRabbitUse, hearWolfUse, seeRab
 			document.getElementById('breedWolfUse').style.borderColor = '#a94442';
 			document.getElementById('breedWolfUse').style.borderWidth = '2px';
 			document.getElementById('alert40').className = 'alert alert-danger show';
-			document.getElementById('error40').innerHTML = 'Consumo por acción - Reproducirse - Lobos - Formato incorrecto';
+			document.getElementById('error40').innerHTML = translate('Use per action - Breed - Wolves - Wrong format');
 		}else{
 			document.getElementById('breedWolfUse').style.borderColor = '#3c763d';
 			document.getElementById('breedWolfUse').style.borderWidth = '2px';
@@ -1355,7 +1360,7 @@ function rangeAct(seeRabbit, seeWolf, smellRabbit, smellWolf, hearRabbit, hearWo
 			document.getElementById('seeRabbit').style.borderColor = '#a94442';
 			document.getElementById('seeRabbit').style.borderWidth = '2px';
 			document.getElementById('alert41').className = 'alert alert-danger show';
-			document.getElementById('error41').innerHTML = 'Rango por acción - Ver - Conejos - Formato incorrecto';
+			document.getElementById('error41').innerHTML = translate('Range per action - See - Rabbits - Wrong format', language);
 		}else{
 			document.getElementById('seeRabbit').style.borderColor = '#3c763d';
 			document.getElementById('seeRabbit').style.borderWidth = '2px';
@@ -1366,7 +1371,7 @@ function rangeAct(seeRabbit, seeWolf, smellRabbit, smellWolf, hearRabbit, hearWo
 			document.getElementById('seeWolf').style.borderColor = '#a94442';
 			document.getElementById('seeWolf').style.borderWidth = '2px';
 			document.getElementById('alert42').className = 'alert alert-danger show';
-			document.getElementById('error42').innerHTML = 'Rango por acción - Ver - Lobos - Formato incorrecto';
+			document.getElementById('error42').innerHTML = translate('Range per action - See - Wolves - Wrong format', language);
 		}else{
 			document.getElementById('seeWolf').style.borderColor = '#3c763d';
 			document.getElementById('seeWolf').style.borderWidth = '2px';
@@ -1377,7 +1382,7 @@ function rangeAct(seeRabbit, seeWolf, smellRabbit, smellWolf, hearRabbit, hearWo
 			document.getElementById('smellRabbit').style.borderColor = '#a94442';
 			document.getElementById('smellRabbit').style.borderWidth = '2px';
 			document.getElementById('alert43').className = 'alert alert-danger show';
-			document.getElementById('error43').innerHTML = 'Rango por acción - Olfatear- Conejos - Formato incorrecto';
+			document.getElementById('error43').innerHTML = translate('Range per action - Smell - Rabbits - Wrong format', language);
 		}else{
 			document.getElementById('smellRabbit').style.borderColor = '#3c763d';
 			document.getElementById('smellRabbit').style.borderWidth = '2px';
@@ -1388,7 +1393,7 @@ function rangeAct(seeRabbit, seeWolf, smellRabbit, smellWolf, hearRabbit, hearWo
 			document.getElementById('smellWolf').style.borderColor = '#a94442';
 			document.getElementById('smellWolf').style.borderWidth = '2px';
 			document.getElementById('alert44').className = 'alert alert-danger show';
-			document.getElementById('error44').innerHTML = 'Rango por acción - Olfatear - Lobos - Formato incorrecto';
+			document.getElementById('error44').innerHTML = translate('Range per action - Smell - Rabbits - Wrong format', language);
 		}else{
 			document.getElementById('smellWolf').style.borderColor = '#3c763d';
 			document.getElementById('smellWolf').style.borderWidth = '2px';
@@ -1399,7 +1404,7 @@ function rangeAct(seeRabbit, seeWolf, smellRabbit, smellWolf, hearRabbit, hearWo
 			document.getElementById('hearRabbit').style.borderColor = '#a94442';
 			document.getElementById('hearRabbit').style.borderWidth = '2px';
 			document.getElementById('alert45').className = 'alert alert-danger show';
-			document.getElementById('error45').innerHTML = 'Rango por acción - Oir - Conejos - Formato incorrecto';
+			document.getElementById('error45').innerHTML = translate('Range per action - See - Rabbits - Wrong format', language);
 		}else{
 			document.getElementById('hearRabbit').style.borderColor = '#3c763d';
 			document.getElementById('hearRabbit').style.borderWidth = '2px';
@@ -1410,7 +1415,7 @@ function rangeAct(seeRabbit, seeWolf, smellRabbit, smellWolf, hearRabbit, hearWo
 			document.getElementById('hearWolf').style.borderColor = '#a94442';
 			document.getElementById('hearWolf').style.borderWidth = '2px';
 			document.getElementById('alert46').className = 'alert alert-danger show';
-			document.getElementById('error46').innerHTML = 'Rango por acción - Oir - Lobos - Formato incorrecto';
+			document.getElementById('error46').innerHTML = translate('Range per action - See - Wolves - Wrong format');
 		}else{
 			document.getElementById('hearWolf').style.borderColor = '#3c763d';
 			document.getElementById('hearWolf').style.borderWidth = '2px';
@@ -1459,7 +1464,7 @@ function comfort(eatComfortRabbit, eatComfortWolf, sleepComfortRabbit, sleepComf
 			document.getElementById('eatComfortRabbit').style.borderColor = '#a94442';
 			document.getElementById('eatComfortRabbit').style.borderWidth = '2px';
 			document.getElementById('alert49').className = 'alert alert-danger show';
-			document.getElementById('error49').innerHTML = 'Hasta (ciclos) después de comer - Conejos - Formato incorrecto';
+			document.getElementById('error49').innerHTML = translate('Until (cycles) after eating - Rabbits - Wrong format', language);
 		}else{
 			document.getElementById('eatComfortRabbit').style.borderColor = '#3c763d';
 			document.getElementById('eatComfortRabbit').style.borderWidth = '2px';
@@ -1470,7 +1475,7 @@ function comfort(eatComfortRabbit, eatComfortWolf, sleepComfortRabbit, sleepComf
 			document.getElementById('eatComfortWolf').style.borderColor = '#a94442';
 			document.getElementById('eatComfortWolf').style.borderWidth = '2px';
 			document.getElementById('alert50').className = 'alert alert-danger show';
-			document.getElementById('error50').innerHTML = 'Hasta (ciclos) después de comer - Lobos - Formato incorrecto';
+			document.getElementById('error50').innerHTML = translate('Until (cycles) after eating - Wolves - Wrong format', language);
 		}else{
 			document.getElementById('eatComfortWolf').style.borderColor = '#3c763d';
 			document.getElementById('eatComfortWolf').style.borderWidth = '2px';
@@ -1481,7 +1486,7 @@ function comfort(eatComfortRabbit, eatComfortWolf, sleepComfortRabbit, sleepComf
 			document.getElementById('sleepComfortRabbit').style.borderColor = '#a94442';
 			document.getElementById('sleepComfortRabbit').style.borderWidth = '2px';
 			document.getElementById('alert51').className = 'alert alert-danger show';
-			document.getElementById('error51').innerHTML = 'Hasta (ciclos) después de dormir - Conejos - Formato incorrecto';
+			document.getElementById('error51').innerHTML = translate('Until (cycles) after sleeping - Rabbits - Wrong format', language);
 		}else{
 			document.getElementById('sleepComfortRabbit').style.borderColor = '#3c763d';
 			document.getElementById('sleepComfortRabbit').style.borderWidth = '2px';
@@ -1492,7 +1497,7 @@ function comfort(eatComfortRabbit, eatComfortWolf, sleepComfortRabbit, sleepComf
 			document.getElementById('sleepComfortWolf').style.borderColor = '#a94442';
 			document.getElementById('sleepComfortWolf').style.borderWidth = '2px';
 			document.getElementById('alert52').className = 'alert alert-danger show';
-			document.getElementById('error52').innerHTML = 'Hasta (ciclos) después de dormir - Lobos - Formato incorrecto';
+			document.getElementById('error52').innerHTML = translate('Until (cycles) after sleeping - Wolves - Wrong format');
 		}else{
 			document.getElementById('sleepComfortWolf').style.borderColor = '#3c763d';
 			document.getElementById('sleepComfortWolf').style.borderWidth = '2px';
