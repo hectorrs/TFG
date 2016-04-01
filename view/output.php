@@ -21,6 +21,13 @@
 
     <!-- Add custom JS here -->
     <script type='text/javascript' src='../resources/js/output.js'></script>
+
+    <!-- Selected language -->
+    <?php
+        require_once('../core/language.php');
+        $lang = $_GET['lang'];
+    ?>
+    <script src="../resources/js/language.js"></script>
 </head>
 <body style='background-color: #E8E8E8; overflow-x: hidden;'>
 	<?php
@@ -135,17 +142,17 @@
 			<div class='col-sm-2 col-md-2 col-lg-2'>
 				<div class="row">
 					<div class="col-xs-4 col-sm-12 col-md-12 col-lg-12">
-						<input type="button" class="btn btn-default btn-success" style="width: 100%" onclick="transition = setInterval(function(){play()}, 750)" value="Play" />
+						<input type="button" class="btn btn-default btn-success" style="width: 100%" onclick="transition = setInterval(function(){play()}, 750)" value="<?php echo translate('Play', $lang); ?>" />
 						<div class="dividingBtn"></div>
 					</div>
 
 					<div class="col-xs-4 col-sm-12 col-md-12 col-lg-12">
-						<input type="button" class="btn btn-default btn-warning" style="width: 100%" onclick="pause()" value="Pause" />
+						<input type="button" class="btn btn-default btn-warning" style="width: 100%" onclick="pause()" value="<?php echo translate('Pause', $lang); ?>" />
 						<div class="dividingBtn"></div>
 					</div>
 
 					<div class="col-xs-4 col-sm-12 col-md-12 col-lg-12">
-						<input type="button" class="btn btn-default btn-danger" style="width: 100%" onclick="stop()" value="Stop" />
+						<input type="button" class="btn btn-default btn-danger" style="width: 100%" onclick="stop()" value="<?php echo translate('Stop', $lang); ?>" />
 					</div>
 				</div>
 
@@ -153,22 +160,22 @@
 
 				<div class="row">
 					<div class="col-xs-3 col-sm-12 col-md-12 col-lg-12">
-						<input type="button" class="btn btn-default btn-primary" style="width: 100%" onclick="update('begin')" value="Inicio" />
+						<input type="button" class="btn btn-default btn-primary" style="width: 100%" onclick="update('begin')" value="<?php echo translate('Begin', $lang); ?>" />
 						<div class="dividingBtn"></div>
 					</div>
 
 					<div class="col-xs-3 col-sm-12 col-md-12 col-lg-12">
-						<input type="button" class="btn btn-default btn-primary" style="width: 100%" onclick="update('previous')" value="Anterior" />
+						<input type="button" class="btn btn-default btn-primary" style="width: 100%" onclick="update('previous')" value="<?php echo translate('Previous', $lang); ?>" />
 						<div class="dividingBtn"></div>
 					</div>
 
 					<div class="col-xs-3 col-sm-12 col-md-12 col-lg-12">
-						<input type="button" class="btn btn-default btn-primary" style="width: 100%" onclick="update('next')" value="Siguiente" />
+						<input type="button" class="btn btn-default btn-primary" style="width: 100%" onclick="update('next')" value="<?php echo translate('Next', $lang); ?>" />
 						<div class="dividingBtn"></div>
 					</div>
 
 					<div class="col-xs-3 col-sm-12 col-md-12 col-lg-12">
-						<input type="button" class="btn btn-default btn-primary" style="width: 100%" onclick="update('end')" value="Fin" />
+						<input type="button" class="btn btn-default btn-primary" style="width: 100%" onclick="update('end')" value="<?php echo translate('End', $lang); ?>" />
 					</div>
 				</div>
 
@@ -179,7 +186,7 @@
 						<div class="input-group">
 							<input type="text" class="form-control" id="goTo" />
 							<span class="input-group-btn">
-								<input type="button" class="btn btn-default btn-primary" value="Ir a" onclick="update('goTo')" />
+								<input type="button" class="btn btn-default btn-primary" value="<?php echo translate('Go to', $lang); ?>" onclick="update('goTo')" />
 							</span>
 						</div>
 					</div>
@@ -195,27 +202,27 @@
 			<div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
 				<div class="row">
 					<div class="col-xs-6 col-sm-4 col-md-2 col-lg-2">
-						<h5><img src='' width='20px' height='20px' style='background-color:blue'/> Conejo</h5>
+						<h5><img src='' width='20px' height='20px' style='background-color:blue'/> <?php echo translate('Rabbit', $lang); ?></h5>
 					</div>
 
 					<div class="col-xs-6 col-sm-4 col-md-2 col-lg-2">
-						<h5><img src='' width='20px' height='20px' style='background-color:red'/> Lobo</h5>
+						<h5><img src='' width='20px' height='20px' style='background-color:red'/> <?php echo translate('Wolf', $lang); ?></h5>
 					</div>
 
 					<div class="col-xs-6 col-sm-4 col-md-2 col-lg-2">
-						<h5><img src='' width='20px' height='20px' style='background-color:orange'/> Zanahoria</h5>
+						<h5><img src='' width='20px' height='20px' style='background-color:orange'/> <?php echo translate('Carrot', $lang); ?></h5>
 					</div>
 
 					<div class="col-xs-6 col-sm-4 col-md-2 col-lg-2">
-						<h5><img src='' width='20px' height='20px' style='background-color:grey'/> Madriguera</h5>
+						<h5><img src='' width='20px' height='20px' style='background-color:grey'/> <?php echo translate('Lair', $lang); ?></h5>
 					</div>
 
 					<div class="col-xs-6 col-sm-4 col-md-2 col-lg-2">
-						<h5><img src='' width='20px' height='20px' style='background-color:purple'/> Árbol</h5>
+						<h5><img src='' width='20px' height='20px' style='background-color:purple'/> <?php echo translate('Tree', $lang); ?></h5>
 					</div>
 
 					<div class="col-xs-6 col-sm-4 col-md-2 col-lg-2">
-						<h5><img src='' width='20px' height='20px' style='background-color:green'/> Hierba</h5>
+						<h5><img src='' width='20px' height='20px' style='background-color:green'/> <?php echo translate('Ground', $lang); ?></h5>
 					</div>
 				</div>
 			</div>
@@ -225,42 +232,42 @@
 
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<h4>Población total</h4>
+				<h4><?php echo translate('Total population', $lang); ?></h4>
 				<div class="chart" id="chartPopulation"></div>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-				<input type="button" class="btn btn-default btn-info" id="prevPopulation" style="width: 100%" value="Anterior" />
+				<input type="button" class="btn btn-default btn-info" id="prevPopulation" style="width: 100%" value="<?php echo translate('Previous', $lang); ?>" />
 			</div>
 
 			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-				<input type="button" class="btn btn-default btn-info" id="nextPopulation" style="width: 100%" value="Siguiente" />
+				<input type="button" class="btn btn-default btn-info" id="nextPopulation" style="width: 100%" value="<?php echo translate('Next', $lang); ?>" />
 			</div>
 
 			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-				<input type="button" class="btn btn-default btn-info" id="zoomPopulation" style="width: 100%" value="Zoom" />
+				<input type="button" class="btn btn-default btn-info" id="zoomPopulation" style="width: 100%" value="<?php echo translate('Zoom', $lang); ?>" />
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<h4>Población de conejos</h4>
+				<h4><?php echo translate('Rabbits population', $lang); ?></h4>
 				<div id="chartPopulationRabbit"></div>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<h4>Población de lobos</h4>
+				<h4><?php echo translate('Wolves population', $lang); ?></h4>
 				<div id="chartPopulationWolf"></div>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<h4>Población de zanahorias</h4>
+				<h4><?php echo translate('Carrots population', $lang); ?></h4>
 				<div id="chartPopulationCarrot"></div>
 			</div>
 		</div>
@@ -269,43 +276,43 @@
 
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<h4>Conejos cazados</h4>
+				<h4><?php echo translate('Hunted rabbits', $lang); ?></h4>
 				<div id="chartHuntedRabbit"></div>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-				<input type="button" class="btn btn-default btn-info" id="prevHuntedRabbit" style="width: 100%" value="Anterior" />
+				<input type="button" class="btn btn-default btn-info" id="prevHuntedRabbit" style="width: 100%" value="<?php echo translate('Previous', $lang); ?>" />
 			</div>
 
 			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-				<input type="button" class="btn btn-default btn-info" id="nextHuntedRabbit" style="width: 100%" value="Siguiente" />
+				<input type="button" class="btn btn-default btn-info" id="nextHuntedRabbit" style="width: 100%" value="<?php echo translate('Next', $lang); ?>" />
 			</div>
 
 			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-				<input type="button" class="btn btn-default btn-info" id="zoomHuntedRabbit" style="width: 100%" value="Zoom" />
+				<input type="button" class="btn btn-default btn-info" id="zoomHuntedRabbit" style="width: 100%" value="<?php echo translate('Zoom', $lang); ?>" />
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
-				<h4>Zanahorias comidas</h4>
+				<h4><?php echo translate('Eaten carrots', $lang); ?></h4>
 				<div id="chartCarrotEaten"></div>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-				<input type="button" class="btn btn-default btn-info" id="prevEatenCarrot" style="width: 100%" value="Anterior" />
+				<input type="button" class="btn btn-default btn-info" id="prevEatenCarrot" style="width: 100%" value="<?php echo translate('Previous', $lang); ?>" />
 			</div>
 
 			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-				<input type="button" class="btn btn-default btn-info" id="nextEatenCarrot" style="width: 100%" value="Siguiente" />
+				<input type="button" class="btn btn-default btn-info" id="nextEatenCarrot" style="width: 100%" value="<?php echo translate('Next', $lang); ?>" />
 			</div>
 			
 			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-				<input type="button" class="btn btn-default btn-info" id="zoomEatenCarrot" style="width: 100%" value="Zoom" />
+				<input type="button" class="btn btn-default btn-info" id="zoomEatenCarrot" style="width: 100%" value="<?php echo translate('Zoom', $lang); ?>" />
 			</div>
 		</div>
 
@@ -313,43 +320,43 @@
 
 		<div class="row">
 			<div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
-				<h4>Conejos y lobos muertos por no comer</h4>
+				<h4><?php echo translate('Rabbits and wolves dead for not eating', $lang); ?></h4>
 				<div id="chartDeadEat"></div>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-				<input type="button" class="btn btn-default btn-info" id="prevDeadEat" style="width: 100%" value="Anterior" />
+				<input type="button" class="btn btn-default btn-info" id="prevDeadEat" style="width: 100%" value="<?php echo translate('Previous', $lang); ?>" />
 			</div>
 
 			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-				<input type="button" class="btn btn-default btn-info" id="nextDeadEat" style="width: 100%" value="Siguiente" />
+				<input type="button" class="btn btn-default btn-info" id="nextDeadEat" style="width: 100%" value="<?php echo translate('Next', $lang); ?>" />
 			</div>
 			
 			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-				<input type="button" class="btn btn-default btn-info" id="zoomDeadEat" style="width: 100%" value="Zoom" />
+				<input type="button" class="btn btn-default btn-info" id="zoomDeadEat" style="width: 100%" value="<?php echo translate('Zoom', $lang); ?>" />
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
-				<h4>Conejos y lobos muertos por no dormir</h4>
+				<h4><?php echo translate('Rabbits and wolves dead for not sleeping', $lang); ?></h4>
 				<div id="chartDeadSleep"></div>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-				<input type="button" class="btn btn-default btn-info" id="prevDeadSleep" style="width: 100%" value="Anterior" />
+				<input type="button" class="btn btn-default btn-info" id="prevDeadSleep" style="width: 100%" value="<?php echo translate('Previous', $lang); ?>" />
 			</div>
 
 			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-				<input type="button" class="btn btn-default btn-info" id="nextDeadSleep" style="width: 100%" value="Siguiente" />
+				<input type="button" class="btn btn-default btn-info" id="nextDeadSleep" style="width: 100%" value="<?php echo translate('Next', $lang); ?>" />
 			</div>
 			
 			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-				<input type="button" class="btn btn-default btn-info" id="zoomDeadSleep" style="width: 100%" value="Zoom" />
+				<input type="button" class="btn btn-default btn-info" id="zoomDeadSleep" style="width: 100%" value="<?php echo translate('Zoom', $lang); ?>" />
 			</div>
 		</div>
 
@@ -357,43 +364,43 @@
 
 		<div class="row">
 			<div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
-				<h4>Reproducción de conejos</h4>
+				<h4><?php echo translate('Breed of rabbits', $lang); ?></h4>
 				<div id="chartBornRabbit"></div>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-				<input type="button" class="btn btn-default btn-info" id="prevBornRabbit" style="width: 100%" value="Anterior" />
+				<input type="button" class="btn btn-default btn-info" id="prevBornRabbit" style="width: 100%" value="<?php echo translate('Previous', $lang); ?>" />
 			</div>
 			
 			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-				<input type="button" class="btn btn-default btn-info" id="nextBornRabbit" style="width: 100%" value="Siguiente" />
+				<input type="button" class="btn btn-default btn-info" id="nextBornRabbit" style="width: 100%" value="<?php echo translate('Next', $lang); ?>" />
 			</div>
 			
 			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-				<input type="button" class="btn btn-default btn-info" id="zoomBornRabbit" style="width: 100%" value="Zoom" />
+				<input type="button" class="btn btn-default btn-info" id="zoomBornRabbit" style="width: 100%" value="<?php echo translate('Zoom', $lang); ?>" />
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
-				<h4>Reproducción de lobos</h4>
+				<h4><?php echo translate('Breed of wolves', $lang); ?></h4>
 				<div id="chartBornWolf"></div>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-				<input type="button" class="btn btn-default btn-info" id="prevBornWolf" style="width: 100%" value="Anterior" />
+				<input type="button" class="btn btn-default btn-info" id="prevBornWolf" style="width: 100%" value="<?php echo translate('Previous', $lang); ?>" />
 			</div>
 
 			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-				<input type="button" class="btn btn-default btn-info" id="nextBornWolf" style="width: 100%" value="Siguiente" />
+				<input type="button" class="btn btn-default btn-info" id="nextBornWolf" style="width: 100%" value="<?php echo translate('Next', $lang); ?>" />
 			</div>
 			
 			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-				<input type="button" class="btn btn-default btn-info" id="zoomBornWolf" style="width: 100%" value="Zoom" />
+				<input type="button" class="btn btn-default btn-info" id="zoomBornWolf" style="width: 100%" value="<?php echo translate('Zoom', $lang); ?>" />
 			</div>
 		</div>
 
@@ -401,7 +408,7 @@
 
 		<div class="row">
 			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-				<h4>Tiempo atmosférico</h4>
+				<h4><?php echo translate('Weather', $lang); ?></h4>
 				<div id="chartWeather"></div>
 			</div>
 
@@ -412,10 +419,10 @@
 
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<h3><u>Descargas</u></h3>
-				<h4><a href="../resources/log/conf.txt">Configuración inicial</a></h4>
-				<h4><a href="../resources/log/log.csv">Registro de acciones</a></h4>
-				<h4><a href="../resources/log/world.txt">Mundo</a></h4>
+				<h3><u><?php echo translate('Downloads', $lang); ?></u></h3>
+				<h4><a href="../resources/log/conf.txt"><?php echo translate('Begining configuration', $lang); ?></a></h4>
+				<h4><a href="../resources/log/log.csv"><?php echo translate('Actions log', $lang); ?></a></h4>
+				<h4><a href="../resources/log/world.txt"><?php echo translate('World', $lang); ?></a></h4>
 			</div>
 		</div>
 
@@ -423,8 +430,8 @@
 
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<h4>Memoria consumida: <?php echo $memory; ?> mb</h4>
-				<h4>Tiempo de ejecución: <?php echo $time; ?> segundos</h4>
+				<h4><?php echo translate('Memory usage', $lang); ?>: <?php echo $memory; ?> mb</h4>
+				<h4><?php echo translate('Execution time', $lang); ?>: <?php echo $time; ?> <?php echo translate('seconds', $lang); ?></h4>
 			</div>
 		</div>
 	</div>

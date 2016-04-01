@@ -1,4 +1,9 @@
 /**
+ * var Language
+ */
+var language = location.search.substring(6);
+
+/**
  * Show the first step of the world when the web page is loaded
  */
 onload = function(){
@@ -20,7 +25,7 @@ function update(option){
 			//var current = data[time].split('\n');
 			current.pop();
 			printWorld(current);
-			main.innerHTML = '<h4><strong>Ciclo actual: ' + time + '</strong></h4>';
+			main.innerHTML = '<h4><strong>' + translate('Current cycle', language) + ': ' + time + '</strong></h4>';
 			break;
 		case 'previous':
 			if(time > 0){
@@ -29,7 +34,7 @@ function update(option){
 				//var current = data[time].split('\n');
 				current.pop();
 				printWorld(current);
-				main.innerHTML = '<h4><strong>Ciclo actual: ' + time + '</strong></h4>';
+				main.innerHTML = '<h4><strong>' + translate('Current cycle', language) + ': ' + time + '</strong></h4>';
 			}
 			break;
 		case 'next':
@@ -39,7 +44,7 @@ function update(option){
 				//var current = data[time].split('\n');
 				current.pop();
 				printWorld(current);
-				main.innerHTML = '<h4><strong>Ciclo actual: ' + time + '</strong></h4>';
+				main.innerHTML = '<h4><strong>' + translate('Current cycle', language) + ': ' + time + '</strong></h4>';
 			}
 			break;
 		case 'end':
@@ -48,7 +53,7 @@ function update(option){
 			//var current = data[time].split('\n');
 			current.pop();
 			printWorld(current);
-			main.innerHTML = '<h4><strong>Ciclo actual: ' + time + '</strong></h4>';
+			main.innerHTML = '<h4><strong>' + translate('Current cycle', language) + ': ' + time + '</strong></h4>';
 			break;
 		case 'goTo':
 			var goTo = document.getElementById('goTo').value;
@@ -60,7 +65,7 @@ function update(option){
 					//var current = data[time].split('\n');
 					current.pop();
 					printWorld(current);
-					main.innerHTML = '<h4><strong>Ciclo actual: ' + time + '</strong></h4>';
+					main.innerHTML = '<h4><strong>' + translate('Current cycle', language) + ': ' + time + '</strong></h4>';
 				}
 			}
 			break;
@@ -113,7 +118,7 @@ function play(){
 		//var current = data[time].split('\n');
 		current.pop();
 		printWorld(current);
-		main.innerHTML = '<h4><strong>Ciclo actual: ' + time + '</strong></h4>';
+		main.innerHTML = '<h4><strong>' + translate('Current cycle', language) + ': ' + time + '</strong></h4>';
 		time++;
 	}else{
 		pause();
@@ -141,5 +146,5 @@ function stop(){
 	//var current = data[time].split('\n');
 	current.pop();
 	printWorld(current);
-	main.innerHTML = '<h4><strong>Ciclo actual: ' + time + '</strong></h4>';
+	main.innerHTML = '<h4><strong>' + translate('Current cycle', language) + ': ' + time + '</strong></h4>';
 }

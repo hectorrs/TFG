@@ -90,6 +90,17 @@ var es = {
 	'Until (cycles) after eating - Wolves - Wrong format' : 'Hasta (ciclos) después de comer - Lobos - Formato incorrecto',
 	'Until (cycles) after sleeping - Rabbits - Wrong format' : 'Hasta (ciclos) después de dormir - Conejos - Formato incorrecto',
 	'Until (cycles) after sleeping - Wolves - Wrong format' : 'Hasta (ciclos) después de dormir - Lobos - Formato incorrecto',
+	'Weather' : 'Tiempo atmosférico',
+	'Cycles' : 'Ciclos',
+	'Sunny' : 'Soleado',
+	'Rainy' : 'Lluvioso',
+	'Windy' : 'Con viento',
+	'Foggy' : 'Con niebla',
+	'Rabbits' : 'Conejos',
+	'Wolves' : 'Lobos',
+	'Carrots' : 'Zanahorias',
+	'Amount' : 'Cantidad',
+	'Current cycle' : 'Ciclo actual'
 };
 
 /**
@@ -167,6 +178,17 @@ var ga = {
 	'Until (cycles) after eating - Wolves - Wrong format' : 'Ata (ciclos) despois de comer - Lobos - Formato incorrecto',
 	'Until (cycles) after sleeping - Rabbits - Wrong format' : 'Ata (ciclos) despois de dormir - Coellos - Formato incorrecto',
 	'Until (cycles) after sleeping - Wolves - Wrong format' : 'Ata (ciclos) despois de dormir - Lobos - Formato incorrecto',
+	'Weather' : 'Tempo atmosférico',
+	'Cycles' : 'Ciclos',
+	'Sunny' : 'Soleado',
+	'Rainy' : 'Chuvioso',
+	'Windy' : 'Con vento',
+	'Foggy' : 'Con néboa',
+	'Rabbits' : 'Coellos',
+	'Wolves' : 'Lobos',
+	'Carrots' : 'Cenorias',
+	'Amount' : 'Cantidade',
+	'Current cycle' : 'Ciclo actual'
 };
 
 /**
@@ -244,4 +266,15 @@ var en = {
 	'Until (cycles) after eating - Wolves - Wrong format' : 'Until (cycles) after eating - Wolves - Wrong format',
 	'Until (cycles) after sleeping - Rabbits - Wrong format' : 'Until (cycles) after sleeping - Rabbits - Wrong format',
 	'Until (cycles) after sleeping - Wolves - Wrong format' : 'Until (cycles) after sleeping - Wolves - Wrong format',
+	'Weather' : 'Tiempo atmosférico',
+	'Cycles' : 'Cycles',
+	'Sunny' : 'Sunny',
+	'Rainy' : 'Rainy',
+	'Windy' : 'Windy',
+	'Foggy' : 'Foggy',
+	'Rabbits' : 'Rabbits',
+	'Wolves' : 'Wolves',
+	'Carrots' : 'Carrots',
+	'Amount' : 'Amount',
+	'Current cycle' : 'Current cycle'
 };

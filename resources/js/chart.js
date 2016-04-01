@@ -1,4 +1,9 @@
 /**
+ * var Language
+ */
+var language = location.search.substring(6);
+
+/**
  * Load the charts used below
  */
 google.charts.load('current', {'packages': ['corechart', 'line', 'bar']});
@@ -20,11 +25,11 @@ google.charts.setOnLoadCallback(drawChartBornWolf);
  */
 function drawChartWeather(){
     var data = google.visualization.arrayToDataTable([
-        ['Tiempo atmosférico', 'Ciclos'],
-        ['Soleado', weather[0]],
-        ['Lluvioso', weather[1]],
-        ['Con viento', weather[2]],
-        ['Con niebla', weather[3]]
+        [translate('Weather', language), 'Ciclos'],
+        [translate('Sunny', language), weather[0]],
+        [translate('Rainy', language), weather[1]],
+        [translate('Windy', language), weather[2]],
+        [translate('Foggy', language), weather[3]]
     ]);
 
     var options = {
@@ -48,9 +53,9 @@ function drawChartPopulation(){
     var data = new google.visualization.DataTable();
 
     data.addColumn('number', 'X');
-    data.addColumn('number', 'Conejos');
-    data.addColumn('number', 'Lobos');
-    data.addColumn('number', 'Zanahorias');
+    data.addColumn('number', translate('Rabbits', language));
+    data.addColumn('number', translate('Wolves', language));
+    data.addColumn('number', translate('Carrots', language));
 
     for(i = 0; i < amountCarrot.length; i++){
         data.addRows([[i, amountRabbit[i], amountWolf[i], amountCarrot[i]]]);
@@ -58,11 +63,11 @@ function drawChartPopulation(){
 
     var options = {
         hAxis: {
-            title: 'Ciclos',
+            title: translate('Cycles', language),
             viewWindow: {min:0, max:100}
         },
         vAxis: {
-            title: 'Cantidad'
+            title: translate('Amount', language)
         },
         legend: {position: 'top'},
         backgroundColor: '#f1f8e9',
@@ -126,7 +131,7 @@ function drawChartPopulationRabbit(){
     var data = new google.visualization.DataTable();
 
     data.addColumn('number', 'X');
-    data.addColumn('number', 'Conejos');
+    data.addColumn('number', translate('Rabbits', language));
 
     for(i = 0; i < amountRabbit.length; i++){
         data.addRows([[i, amountRabbit[i]]]);
@@ -134,10 +139,10 @@ function drawChartPopulationRabbit(){
 
     var options = {
         hAxis: {
-            title: 'Ciclos'
+            title: translate('Cycles', language)
         },
         vAxis: {
-            title: 'Cantidad'
+            title: translate('Amount', language)
         },
         legend: {position: 'top'},
         backgroundColor: '#f1f8e9',
@@ -156,7 +161,7 @@ function drawChartPopulationWolf(){
     var data = new google.visualization.DataTable();
 
     data.addColumn('number', 'X');
-    data.addColumn('number', 'Lobos');
+    data.addColumn('number', translate('Wolves', language));
 
     for(i = 0; i < amountWolf.length; i++){
         data.addRows([[i, amountWolf[i]]]);
@@ -164,10 +169,10 @@ function drawChartPopulationWolf(){
 
     var options = {
         hAxis: {
-            title: 'Ciclos'
+            title: translate('Cycles', language)
         },
         vAxis: {
-            title: 'Cantidad'
+            title: translate('Amount', language)
         },
         backgroundColor: '#f1f8e9',
         legend: {position: 'top'},
@@ -186,7 +191,7 @@ function drawChartPopulationCarrot(){
     var data = new google.visualization.DataTable();
 
     data.addColumn('number', 'X');
-    data.addColumn('number', 'Zanahorias');
+    data.addColumn('number', translate('Carrots', language));
 
     for(i = 0; i < amountCarrot.length; i++){
         data.addRows([[i, amountCarrot[i]]]);
@@ -194,10 +199,10 @@ function drawChartPopulationCarrot(){
 
     var options = {
         hAxis: {
-            title: 'Ciclos'
+            title: translate('Cycles', language)
         },
         vAxis: {
-            title: 'Cantidad'
+            title: translate('Amount', language)
         },
         legend: {position: 'top'},
         backgroundColor: '#f1f8e9',
@@ -218,7 +223,7 @@ function drawChartHuntedRabbit(){
     var data = new google.visualization.DataTable();
 
     data.addColumn('number', 'X');
-    data.addColumn('number', 'Conejos');
+    data.addColumn('number', translate('Rabbits', language));
 
     for(i = 0; i < huntedRabbit.length; i++){
         data.addRows([[i + 1, huntedRabbit[i]]]);
@@ -226,11 +231,11 @@ function drawChartHuntedRabbit(){
 
     var options = {
         hAxis: {
-            title: 'Ciclos',
+            title: translate('Cycles', language),
             viewWindow: {min:0, max:100}
         },
         vAxis: {
-            title: 'Cantidad'
+            title: translate('Amount', language)
         },
         legend: {position: 'top'},
         backgroundColor: '#f1f8e9',
@@ -298,7 +303,7 @@ function drawChartCarrotEaten(){
     var data = new google.visualization.DataTable();
 
     data.addColumn('number', 'X');
-    data.addColumn('number', 'Zanahorias');
+    data.addColumn('number', translate('Carrots', language));
 
     for(i = 0; i < eatenCarrot.length; i++){
         data.addRows([[i, eatenCarrot[i]]]);
@@ -306,11 +311,11 @@ function drawChartCarrotEaten(){
 
     var options = {
         hAxis: {
-            title: 'Ciclos',
+            title: translate('Cycles', language),
             viewWindow: {min:0, max:100}
         },
         vAxis: {
-            title: 'Cantidad'
+            title: translate('Amount', language)
         },
         legend: {position: 'top'},
         backgroundColor: '#f1f8e9',
@@ -378,8 +383,8 @@ function drawChartDeadEat(){
     var data = new google.visualization.DataTable();
 
     data.addColumn('number', 'X');
-    data.addColumn('number', 'Conejos');
-    data.addColumn('number', 'Lobos');
+    data.addColumn('number', translate('Rabbits', language));
+    data.addColumn('number', translate('Wolves', language));
 
     for(i = 0; i < deadEatRabbit.length; i++){
         data.addRows([[i, deadEatRabbit[i], deadEatWolf[i]]]);
@@ -387,11 +392,11 @@ function drawChartDeadEat(){
 
     var options = {
         hAxis: {
-            title: 'Ciclos',
+            title: translate('Cycles', language),
             viewWindow: {min:0, max:100}
         },
         vAxis: {
-            title: 'Cantidad'
+            title: translate('Amount', language)
         },
         legend: {position: 'top'},
         backgroundColor: '#f1f8e9',
@@ -459,8 +464,8 @@ function drawChartDeadSleep(){
     var data = new google.visualization.DataTable();
 
     data.addColumn('number', 'X');
-    data.addColumn('number', 'Conejos');
-    data.addColumn('number', 'Lobos');
+    data.addColumn('number', translate('Rabbits', language));
+    data.addColumn('number', translate('Wolves', language));
 
     for(i = 0; i < deadSleepRabbit.length; i++){
         data.addRows([[i, deadSleepRabbit[i], deadSleepWolf[i]]]);
@@ -468,11 +473,11 @@ function drawChartDeadSleep(){
 
     var options = {
         hAxis: {
-            title: 'Ciclos',
+            title: translate('Cycles', language),
             viewWindow: {min:0, max:100}
         },
         vAxis: {
-            title: 'Cantidad'
+            title: translate('Amount', language)
         },
         legend: {position: 'top'},
         backgroundColor: '#f1f8e9',
@@ -540,7 +545,7 @@ function drawChartBornRabbit(){
     var data = new google.visualization.DataTable();
 
     data.addColumn('number', 'X');
-    data.addColumn('number', 'Conejos');
+    data.addColumn('number', translate('Rabbits', language));
 
     for(i = 0; i < bornRabbit.length; i++){
         data.addRows([[i, bornRabbit[i]]]);
@@ -548,11 +553,11 @@ function drawChartBornRabbit(){
 
     var options = {
         hAxis: {
-            title: 'Ciclos',
+            title: translate('Cycles', language),
             viewWindow: {min:0, max:100}
         },
         vAxis: {
-            title: 'Cantidad'
+            title: translate('Amount', language)
         },
         legend: {position: 'top'},
         backgroundColor: '#f1f8e9',
@@ -620,7 +625,7 @@ function drawChartBornWolf(){
     var data = new google.visualization.DataTable();
 
     data.addColumn('number', 'X');
-    data.addColumn('number', 'Lobos');
+    data.addColumn('number', translate('Wolves', language));
 
     for(i = 0; i < bornWolf.length; i++){
         data.addRows([[i, bornWolf[i]]]);
@@ -628,11 +633,11 @@ function drawChartBornWolf(){
 
     var options = {
         hAxis: {
-            title: 'Ciclos',
+            title: translate('Cycles', language),
             viewWindow: {min:0, max:100}
         },
         vAxis: {
-            title: 'Cantidad'
+            title: translate('Amount', language)
         },
         legend: {position: 'top'},
         backgroundColor: '#f1f8e9',

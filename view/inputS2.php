@@ -72,7 +72,7 @@
                 <div class="row" style="margin-left: 7px; margin-right: 10px">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="btn-group btn-group-lg btn-block">
-                            <form action="../core/world.php" method="post" onsubmit="return check()">
+                            <form action="../core/world.php?lang=<?php echo $lang; ?>" method="post" onsubmit="return check()">
                             <button type="submit" class="btn btn-danger btn-lg btn-block"><?php echo translate('Run', $lang); ?></button>
                         </div>
                     </div>

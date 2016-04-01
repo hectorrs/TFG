@@ -11,17 +11,23 @@
 
         <!-- Favicon and touch icons -->
         <link rel="shortcut icon" href="../resources/img/icon2.ico">
+
+        <!-- Selected language -->
+        <?php
+	        require_once('../core/language.php');
+	        $lang = $_GET['lang'];
+	    ?>
     </head>
     <body>
     	<div class="top">
-    		<h1>Herramienta de modelado de comportamiento en sistemas espaciales</h1>
+    		<h1><?php echo translate('Behaviour modeling tool in spatial systems', $lang); ?></h1>
     	</div>
     
     	<div class="section-container">
 	        <div class="container layouts">
 	            <div class="row">
 	                <div class="col-sm-12 section-description">
-	                    <h3>Escoge un sistema</h3>
+	                    <h3><?php echo translate('Choose a system', $lang); ?></h3>
 	                </div>
 	            </div>
 
@@ -32,21 +38,21 @@
 			                	<a href="#" id="s1" onclick="return language()">
 			                		<img src="../resources/img/s1.png" alt="">
 			                	</a>
-			                	<p>Sistema biológico 1</p>
+			                	<p><?php echo translate('Biological system 1', $lang); ?></p>
 		                    </div>
 
 		                    <div class="col-sm-4 layout-box">
 		                    	<a href="#" id="s2" onclick="return language()">
 				                	<img src="../resources/img/s1.png" alt="">
 			                    </a>
-			                    <p>Sistema biológico 2</p>
+			                    <p><?php echo translate('Biological system 2', $lang); ?></p>
 		                    </div>
 
 		                    <div class="col-sm-4 layout-box">
 			                	<a href="#" id="s3">
 			                		<img src="../resources/img/s1.png" alt="">
 			                	</a>
-			                	<p>Sistema no biológico</p>
+			                	<p><?php echo translate('Non biological system', $lang); ?></p>
 		                    </div>
 	                    </div>
                     </div>
@@ -58,10 +64,10 @@
 		        	<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
 		        		<div class="form-group">
 		        			<select class="form-control" id="language">
-		        				<option value="select">Idioma...</option>
-		        				<option value="es">Español</option>
-		        				<option value="ga">Gallego</option>
-		        				<option value="en">Inglés</option>
+		        				<option value="select"><?php echo translate('Language', $lang); ?>...</option>
+		        				<option value="es"><?php echo translate('Spanish', $lang); ?></option>
+		        				<option value="ga"><?php echo translate('Galician', $lang); ?></option>
+		        				<option value="en"><?php echo translate('English', $lang); ?></option>
 		        			</select>
 		        		</div>
 		        	</div>

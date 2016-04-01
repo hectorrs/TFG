@@ -1632,5 +1632,7 @@
 
 	session_write_close();
 
-	header('Location: ../View/output.php', false);
+	$lang = $_GET['lang'];
+
+	header('Location: ../View/output.php?lang=' . $lang, false);
 ?>
