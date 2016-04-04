@@ -44,6 +44,10 @@ function check(){
 		'range' : [
 			rangeAct(values['seeRabbit'], values['seeWolf'], values['smellRabbit'], values['smellWolf'], values['hearRabbit'], values['hearWolf']),
 			comfort(values['eatComfortRabbit'], values['eatComfortWolf'], values['sleepComfortRabbit'], values['sleepComfortWolf'])
+		],
+		'behaviour' : [
+			codeRabbit(values['codeRabbit']),
+			codeWolf(values['codeWolf'])
 		]
 	};
 
@@ -68,6 +72,9 @@ function check(){
 						break;
 					case 'range':
 						range();
+						break;
+					case 'behaviour':
+						behaviour();
 						break;
 				}
 
@@ -136,6 +143,8 @@ function getValues(){
 	var eatComfortWolf = document.getElementById('eatComfortWolf').value;
 	var sleepComfortRabbit = document.getElementById('sleepComfortRabbit').value;
 	var sleepComfortWolf = document.getElementById('sleepComfortWolf').value;
+	var codeRabbit = document.getElementById('codeRabbit').value;
+	var codeWolf = document.getElementById('codeWolf').value;
 
 	return {
 		'totalPeriod' : totalPeriod,
@@ -188,7 +197,9 @@ function getValues(){
 		'eatComfortRabbit' : eatComfortRabbit,
 		'eatComfortWolf' : eatComfortWolf,
 		'sleepComfortRabbit' : sleepComfortRabbit,
-		'sleepComfortWolf' : sleepComfortWolf
+		'sleepComfortWolf' : sleepComfortWolf,
+		'codeRabbit' : codeRabbit,
+		'codeWolf' : codeWolf
 	};
 }
 
@@ -1497,7 +1508,7 @@ function comfort(eatComfortRabbit, eatComfortWolf, sleepComfortRabbit, sleepComf
 			document.getElementById('sleepComfortWolf').style.borderColor = '#a94442';
 			document.getElementById('sleepComfortWolf').style.borderWidth = '2px';
 			document.getElementById('alert52').className = 'alert alert-danger show';
-			document.getElementById('error52').innerHTML = translate('Until (cycles) after sleeping - Wolves - Wrong format');
+			document.getElementById('error52').innerHTML = translate('Until (cycles) after sleeping - Wolves - Wrong format', language);
 		}else{
 			document.getElementById('sleepComfortWolf').style.borderColor = '#3c763d';
 			document.getElementById('sleepComfortWolf').style.borderWidth = '2px';
@@ -1518,6 +1529,56 @@ function comfort(eatComfortRabbit, eatComfortWolf, sleepComfortRabbit, sleepComf
 		document.getElementById('sleepComfortWolf').style.borderColor = '#3c763d';
 		document.getElementById('sleepComfortWolf').style.borderWidth = '2px';
 		document.getElementById('alert52').className = 'alert alert-danger hide';
+
+		return true;
+	}
+}
+
+/**
+ * It checks if the inputs 'codeRabbit' has the correct format and changes the colour of the input 
+ * (green if they are correct or red if not) and throw a new message if they have an error
+ *
+ * @param {String}
+ *
+ * @return {Boolean}
+ */
+function codeRabbit(codeRabbit){
+	if(codeRabbit == ''){
+		document.getElementById('codeRabbit').style.borderColor = '#a94442';
+		document.getElementById('codeRabbit').style.borderWidth = '2px';
+		document.getElementById('alert53').className = 'alert alert-danger show';
+		document.getElementById('error53').innerHTML = translate('Behaviour rabbits', language);
+
+		return false;
+	}else{
+		document.getElementById('codeRabbit').style.borderColor = '#3c763d';
+		document.getElementById('codeRabbit').style.borderWidth = '2px';
+		document.getElementById('alert53').className = 'alert alert-danger hide';
+
+		return true;
+	}
+}
+
+/**
+ * It checks if the inputs 'codeWolf' has the correct format and changes the colour of the input 
+ * (green if they are correct or red if not) and throw a new message if they have an error
+ *
+ * @param {String}
+ *
+ * @return {Boolean}
+ */
+function codeWolf(codeWolf){
+	if(codeWolf == ''){
+		document.getElementById('codeWolf').style.borderColor = '#a94442';
+		document.getElementById('codeWolf').style.borderWidth = '2px';
+		document.getElementById('alert54').className = 'alert alert-danger show';
+		document.getElementById('error54').innerHTML = translate('Behaviour wolves', language);
+
+		return false;
+	}else{
+		document.getElementById('codeWolf').style.borderColor = '#3c763d';
+		document.getElementById('codeWolf').style.borderWidth = '2px';
+		document.getElementById('alert54').className = 'alert alert-danger hide';
 
 		return true;
 	}

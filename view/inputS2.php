@@ -948,13 +948,23 @@
 
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <!-- Error - Code rabbits -->
+                            <div class="hide" id="alert53">
+                                <label id="error53"></label>
+                            </div>
+
                             <label><?php echo translate('Rabbits', $lang); ?></label>
-                            <textarea class="text-editor" name="codeRabbit"></textarea>
+                            <textarea class="text-editor" name="codeRabbit" id="codeRabbit"></textarea>
 
                             <br>
 
+                            <!-- Error - Code wolfs -->
+                            <div class="hide" id="alert54">
+                                <label id="error54"></label>
+                            </div>
+
                             <label><?php echo translate('Wolves', $lang); ?></label>
-                            <textarea class="text-editor" name="codeWolf"></textarea>
+                            <textarea class="text-editor" name="codeWolf" id="codeWolf"></textarea>
                         </div>
                     </div>
                 </div>

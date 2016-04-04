@@ -100,7 +100,9 @@ var es = {
 	'Wolves' : 'Lobos',
 	'Carrots' : 'Zanahorias',
 	'Amount' : 'Cantidad',
-	'Current cycle' : 'Ciclo actual'
+	'Current cycle' : 'Ciclo actual',
+	'Behaviour rabbits' : 'Comportamiento de los conejos - Formato incorrecto',
+	'Behaviour wolves' : 'Comportamiento de los lobos - Formato incorrecto'
 };
 
 /**
@@ -188,7 +190,9 @@ var ga = {
 	'Wolves' : 'Lobos',
 	'Carrots' : 'Cenorias',
 	'Amount' : 'Cantidade',
-	'Current cycle' : 'Ciclo actual'
+	'Current cycle' : 'Ciclo actual',
+	'Behaviour rabbits' : 'Comportamento dos coellos - Formato incorrecto',
+	'Behaviour wolves' : 'Comportamento dos lobos - Formato incorrecto'
 };
 
 /**
@@ -276,5 +280,7 @@ var en = {
 	'Wolves' : 'Wolves',
 	'Carrots' : 'Carrots',
 	'Amount' : 'Amount',
-	'Current cycle' : 'Current cycle'
+	'Current cycle' : 'Current cycle',
+	'Behaviour rabbits' : 'Behaviour rabbits',
+	'Behaviour wolves' : 'Behaviour wolves'
 };

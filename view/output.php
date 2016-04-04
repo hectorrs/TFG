@@ -296,7 +296,7 @@
 		</div>
 
 		<div class="row">
-			<div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<h4><?php echo translate('Eaten carrots', $lang); ?></h4>
 				<div id="chartCarrotEaten"></div>
 			</div>
@@ -319,7 +319,7 @@
 		<div class="dividing"></div>
 
 		<div class="row">
-			<div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<h4><?php echo translate('Rabbits and wolves dead for not eating', $lang); ?></h4>
 				<div id="chartDeadEat"></div>
 			</div>
@@ -340,7 +340,7 @@
 		</div>
 
 		<div class="row">
-			<div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<h4><?php echo translate('Rabbits and wolves dead for not sleeping', $lang); ?></h4>
 				<div id="chartDeadSleep"></div>
 			</div>
@@ -363,7 +363,7 @@
 		<div class="dividing"></div>
 
 		<div class="row">
-			<div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<h4><?php echo translate('Breed of rabbits', $lang); ?></h4>
 				<div id="chartBornRabbit"></div>
 			</div>
@@ -384,7 +384,7 @@
 		</div>
 
 		<div class="row">
-			<div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<h4><?php echo translate('Breed of wolves', $lang); ?></h4>
 				<div id="chartBornWolf"></div>
 			</div>

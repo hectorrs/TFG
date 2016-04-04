@@ -12,17 +12,9 @@
 		 */
 		public function act(){
 			if(isset($_POST['codeRabbit'])){
-				if($_POST['codeRabbit'] != ''){
-					
-				}
+				require('customRabbit.php');
 			}else{
-				$see = actionManager($this, 'see');
-				$smell = actionManager($this, 'smell');
-				$hear = actionManager($this, 'hear');
-				$move = array('up', 'down', 'left', 'right');
-				actionManager($this, 'move', $move[rand(0, 3)]);
-				actionManager($this, 'sleep');
-				actionManager($this, 'breed');
+				require('rabbit.php');
 			}
 		}
 	}
@@ -38,17 +30,9 @@
 		 */
 		public function act(){
 			if(isset($_POST['codeWolf'])){
-				if($_POST['codeWolf'] != ''){
-
-				}
+				require('customWolf.php');
 			}else{
-				$see = actionManager($this, 'see');
-				$smell = actionManager($this, 'smell');
-				$hear = actionManager($this, 'hear');
-				$move = array('up', 'down', 'left', 'right');
-				actionManager($this, 'move', $move[rand(0, 3)]);
-				actionManager($this, 'sleep');
-				actionManager($this, 'breed');
+				require('wolf.php');
 			}
 		}
 	}

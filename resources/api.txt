@@ -47,6 +47,7 @@ function getiTime();
  * @return array|void It depends on the type of action to do
  */
 function actionManager(...$args);
+...
 
 /**
  * It checks if an element is in the comfort zone

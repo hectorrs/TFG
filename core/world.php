@@ -224,6 +224,27 @@
 		$GLOBALS['vars']['ground'] = new Ground();
 
 		writeFileCSV('Log', array('Element', 'ID', 'Position', 'Status', 'Action', 'Effect'));
+
+		/* Rabbits and wolf customization */
+		if(isset($_POST['codeRabbit'])){
+			$codeRabbit = fopen('../model/customRabbit.php', 'w');
+
+			fputs($codeRabbit, '<?php' . "\n");
+			fputs($codeRabbit, strip_tags($_POST['codeRabbit']));
+			fputs($codeRabbit, "\n" . '?>');
+
+			fclose($codeRabbit);
+		}
+
+		if(isset($_POST['codeWolf'])){
+			$codeWolf = fopen('../model/customWolf.php', 'w');
+
+			fputs($codeWolf, '<?php' . "\n");
+			fputs($codeWolf, strip_tags($_POST['codeWolf']));
+			fputs($codeWolf, "\n" . '?>');
+
+			fclose($codeWolf);
+		}
 	}
 
 	/**
