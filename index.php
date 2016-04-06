@@ -1,3 +1,10 @@
+<?php
+	// Delete settings file
+	if(file_exists('resources/conf/settings.json')){
+		unlink('resources/conf/settings.json');
+	}
+?>
+
 <script type="text/javascript">
 	function getLanguage(){
 		language = navigator.language;
@@ -12,7 +19,7 @@
 				return 'en';
 				break;
 			default:
-				return 'en';
+				return 'es';
 				break;
 		}
 	}

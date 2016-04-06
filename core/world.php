@@ -1,4 +1,20 @@
 <?php
+	/*if(file_exists('../model/customRabbit.php') && file_exists('../model/customWolf.php')){
+		exec('php ../model/customRabbit.php', $customRabbit);
+		//exec('php ../model/customWolf.php', $customWolf);
+		if($customRabbit != null){
+			foreach($customRabbit as $line){
+				echo $line . '<br>';
+			}
+		}
+		echo '<br>';
+			if($customWolf != null){
+			var_dump($customWolf);
+		}
+		echo 'aquí';
+		exit();
+	}*/
+
 	require_once('../Model/element.php');
 	require_once('../Model/elements.php');
 
@@ -77,6 +93,9 @@
 	 * It gets the data of the first configuration of the world and log's files
 	 */
 	function conf(){
+		$fileConf = fopen('../resources/conf/settings.json', 'w');
+		$conf = array();
+
 		writeFile('Conf', '********************** Archivo de configuración inicial ***********************' . "\n");
 		writeFile('Conf', '*********************************** World *************************************' . "\n");
 		writeFile('Conf', '******** -------------------------- World ---------------------------- ********' . "\n");
@@ -84,20 +103,25 @@
 		$GLOBALS['vars']['length'] = $_POST['totalPeriod'];
 		writeFile('Conf', '**** Total period' . "\n");
 		writeFile('Conf', getLength() . ' cycles' . "\n\n");
+		$conf['totalPeriod'] = $_POST['totalPeriod'];
 		
 		$GLOBALS['vars']['day'] = $_POST['dayPeriod'];
 		writeFile('Conf', '**** Daylight period' . "\n");
 		writeFile('Conf', getLengthDay() . ' cycles' . "\n\n");
+		$conf['dayPeriod'] = $_POST['dayPeriod'];
 
 		$GLOBALS['vars']['night'] = $_POST['nightPeriod'];
 		writeFile('Conf', '**** Night period' . "\n");
 		writeFile('Conf', getLengthNight() . ' cycles' . "\n\n");
+		$conf['nightPeriod'] = $_POST['nightPeriod'];
 
 		writeFile('Conf', '**** ------------------------------ Size --------------------------------- ****' . "\n");
 		$GLOBALS['vars']['size']['row'] = $_POST['sizeX'];
 		$GLOBALS['vars']['size']['col'] = $_POST['sizeY'];
 		writeFile('Conf', 'Width: ' . getSizeWorld()['col'] . "\n");
 		writeFile('Conf', 'Height: ' . getSizeWorld()['row'] . "\n\n");
+		$conf['sizeX'] = $_POST['sizeX'];
+		$conf['sizeY'] = $_POST['sizeY'];
 
 		writeFile('Conf', '**** ----------------------------- Weather ------------------------------- ****' . "\n");
 		$GLOBALS['vars']['daylight'] = false;
@@ -107,10 +131,12 @@
 		$GLOBALS['vars']['currentWeather'] = $_POST['weather'];
 		writeFile('Conf', '**** First weather' . "\n");
 		writeFile('Conf', getWeather() . "\n\n");
+		$conf['weather'] = $_POST['weather'];
 
 		$GLOBALS['vars']['changeWeather'] = $_POST['changeWeather'];
 		writeFile('Conf', '**** Change weather each' . "\n");
 		writeFile('Conf', getChangeWeather() . ' cycles' . "\n\n");
+		$conf['changeWeather'] = $_POST['changeWeather'];
 
 		writeFile('Conf', '******** ------------------------- Elements --------------------------- *******' . "\n");
 
@@ -120,39 +146,55 @@
 		writeFile('Conf', $_POST['lair'] . ' lairs' . "\n");
 		writeFile('Conf', $_POST['rabbit'] . ' rabbits' . "\n");
 		writeFile('Conf', $_POST['wolf'] . ' wolfs' . "\n\n");
+		$conf['carrot'] = $_POST['carrot'];
+		$conf['tree'] = $_POST['tree'];
+		$conf['lair'] = $_POST['lair'];
+		$conf['rabbit'] = $_POST['rabbit'];
+		$conf['wolf'] = $_POST['wolf'];
 
 		writeFile('Conf', '**** ---------------------- Regeneration of carrots ---------------------- ****' . "\n");
 		writeFile('Conf', '**** Each' . "\n");
 		writeFile('Conf', $_POST['timeMoreCarrot'] . ' cycles' . "\n\n");
+		$conf['timeMoreCarrot'] = $_POST['timeMoreCarrot'];
 		
 		writeFile('Conf', '**** Amount' . "\n");
 		writeFile('Conf', $_POST['amountMoreCarrot'] . ' carrots' . "\n\n");
+		$conf['amountMoreCarrot'] = $_POST['amountMoreCarrot'];
 
 		writeFile('Conf', '******** ----------------------- Restrictions ------------------------ ********' . "\n");
 
 		writeFile('Conf', '**** ------------------------------- Eat --------------------------------- ****' . "\n");
 		writeFile('Conf', '**** Rabbit' . "\n");
 		writeFile('Conf', 'Can be ' . $_POST['maxEatRabbit'] . ' cycles without eat' . "\n\n");
+		$conf['maxEatRabbit'] = $_POST['maxEatRabbit'];
 
 		writeFile('Conf', '**** Wolf' . "\n");
 		writeFile('Conf', 'Can be ' . $_POST['maxEatWolf'] . ' cycles without eat' . "\n\n");
+		$conf['maxEatWolf'] = $_POST['maxEatWolf'];
 		
 		writeFile('Conf', '**** ------------------------------ Sleep -------------------------------- ****' . "\n");
 		writeFile('Conf', '**** Rabbit' . "\n");
 		writeFile('Conf', 'Can be ' . $_POST['maxSleepRabbit'] . ' cycles without sleep' . "\n");
 		writeFile('Conf', 'Place to sleep: ' . $_POST['placeToSleepRabbit'] . "\n\n");
+		$conf['maxSleepRabbit'] = $_POST['maxSleepRabbit'];
+		$conf['placeToSleepRabbit'] = $_POST['placeToSleepRabbit'];
 
 		writeFile('Conf', '**** Wolf' . "\n");
 		writeFile('Conf', 'Can be ' . $_POST['maxSleepWolf'] . ' cycles without sleep' . "\n\n");
+		$conf['maxSleepWolf'] = $_POST['maxSleepWolf'];
 
 		writeFile('Conf', '**** ------------------------------ Breed -------------------------------- ****' . "\n");
 		writeFile('Conf', '**** Rabbit' . "\n");
 		writeFile('Conf', 'Each ' . $_POST['breedRabbitEach'] . ' cycles' . "\n");
 		writeFile('Conf', $_POST['breedRabbitAmount'] . ' new rabbits' . "\n\n");
+		$conf['breedRabbitEach'] = $_POST['breedRabbitEach'];
+		$conf['breedRabbitAmount'] = $_POST['breedRabbitAmount'];
 		
 		writeFile('Conf', '**** Wolf' . "\n");
 		writeFile('Conf', 'Each ' . $_POST['breedWolfEach'] . ' cycles' . "\n");
 		writeFile('Conf', $_POST['breedWolfAmount'] . ' new wolves' . "\n\n");
+		$conf['breedWolfEach'] = $_POST['breedWolfEach'];
+		$conf['breedWolfAmount'] = $_POST['breedWolfAmount'];
 		
 		writeFile('Conf', '********************************** Elements ***********************************' . "\n");
 
@@ -162,26 +204,34 @@
 		writeFile('Conf', '**** Rabbit' . "\n");
 		writeFile('Conf', 'Need ' . $_POST['turnEatRabbit'] . ' cycles to eat' . "\n");
 		writeFile('Conf', 'Are sated until ' . $_POST['noNeedToEatRabbit'] . ' after eat' . "\n\n");
+		$conf['turnEatRabbit'] = $_POST['turnEatRabbit'];
+		$conf['noNeedToEatRabbit'] = $_POST['noNeedToEatRabbit'];
 		
 		writeFile('Conf', '**** Wolf' . "\n");
 		writeFile('Conf', 'Need ' . $_POST['turnEatWolf'] . ' cycles to eat' . "\n");
 		writeFile('Conf', 'Are sated until ' . $_POST['noNeedToEatWolf'] . ' after eat' . "\n\n");
+		$conf['turnEatWolf'] = $_POST['turnEatWolf'];
+		$conf['noNeedToEatWolf'] = $_POST['noNeedToEatWolf'];
 
 		writeFile('Conf', '**** ------------------------------ Sleep -------------------------------- ****' . "\n");
 		writeFile('Conf', '**** Rabbit' . "\n");
 		writeFile('Conf', 'Need ' . $_POST['turnSleepRabbit'] . ' cycles to sleep' . "\n\n");
+		$conf['turnSleepRabbit'] = $_POST['turnSleepRabbit'];
 
 		writeFile('Conf', '**** Wolf' . "\n");
 		writeFile('Conf', 'Need ' . $_POST['turnSleepWolf'] . ' cycles to sleep' . "\n\n");
+		$conf['turnSleepWolf'] = $_POST['turnSleepWolf'];
 
 		writeFile('Conf', '******** ------------------------- Actions --------------------------- ********' . "\n");
 
 		writeFile('Conf', '**** ----------------- Points per cycle to do actions -------------------- ****' . "\n");
 		writeFile('Conf', '**** Rabbit' . "\n");
 		writeFile('Conf', $_POST['maxUseRabbit'] . ' points' . "\n\n");
+		$conf['maxUseRabbit'] = $_POST['maxUseRabbit'];
 		
 		writeFile('Conf', '**** Wolf' . "\n");
 		writeFile('Conf', $_POST['maxUseWolf'] . ' points' . "\n\n");
+		$conf['maxUseWolf'] = $_POST['maxUseWolf'];
 
 		writeFile('Conf', '**** ------------------------- Use per action ---------------------------- ****' . "\n");
 		writeFile('Conf', '**** Rabbit' . "\n");
@@ -191,6 +241,12 @@
 		writeFile('Conf', 'Move: ' . $_POST['moveRabbitUse'] . ' points' . "\n");
 		writeFile('Conf', 'Sleep: ' . $_POST['sleepRabbitUse'] . ' points' . "\n");
 		writeFile('Conf', 'Breed: ' . $_POST['breedRabbitUse'] . ' points' . "\n\n");
+		$conf['smellRabbitUse'] = $_POST['smellRabbitUse'];
+		$conf['hearRabbitUse'] = $_POST['hearRabbitUse'];
+		$conf['seeRabbitUse'] = $_POST['seeRabbitUse'];
+		$conf['moveRabbitUse'] = $_POST['moveRabbitUse'];
+		$conf['sleepRabbitUse'] = $_POST['sleepRabbitUse'];
+		$conf['breedRabbitUse'] = $_POST['breedRabbitUse'];
 		
 		writeFile('Conf', '**** Wolf' . "\n");
 		writeFile('Conf', 'Smell: ' . $_POST['smellWolfUse'] . ' points' . "\n");
@@ -199,6 +255,12 @@
 		writeFile('Conf', 'Move: ' . $_POST['moveWolfUse'] . ' points' . "\n");
 		writeFile('Conf', 'Sleep: ' . $_POST['sleepWolfUse'] . ' points' . "\n");
 		writeFile('Conf', 'Breed: ' . $_POST['breedWolfUse'] . ' points' . "\n\n");
+		$conf['smellWolfUse'] = $_POST['smellWolfUse'];
+		$conf['hearWolfUse'] = $_POST['hearWolfUse'];
+		$conf['seeWolfUse'] = $_POST['seeWolfUse'];
+		$conf['moveWolfUse'] = $_POST['moveWolfUse'];
+		$conf['sleepWolfUse'] = $_POST['sleepWolfUse'];
+		$conf['breedWolfUse'] = $_POST['breedWolfUse'];
 
 		writeFile('Conf', '******** -------------------------- Ranges --------------------------- ********' . "\n");
 		writeFile('Conf', '**** ------------------------------ Ranges ------------------------------- ****' . "\n");
@@ -206,20 +268,30 @@
 		writeFile('Conf', 'See: ' . $_POST['seeRabbit'] . "\n");
 		writeFile('Conf', 'Smell: ' . $_POST['smellRabbit'] . "\n");
 		writeFile('Conf', 'Hear: ' . $_POST['hearRabbit'] . "\n\n");
+		$conf['seeRabbit'] = $_POST['seeRabbit'];
+		$conf['smellRabbit'] = $_POST['smellRabbit'];
+		$conf['hearRabbit'] = $_POST['hearRabbit'];
 		
 		writeFile('Conf', '**** Wolf' . "\n");
 		writeFile('Conf', 'See: ' . $_POST['seeWolf'] . "\n");
 		writeFile('Conf', 'Smell: ' . $_POST['smellWolf'] . "\n");
 		writeFile('Conf', 'Hear: ' . $_POST['hearWolf'] . "\n\n");
+		$conf['seeWolf'] = $_POST['seeWolf'];
+		$conf['smellWolf'] = $_POST['smellWolf'];
+		$conf['hearWolf'] = $_POST['hearWolf'];
 
 		writeFile('Conf', '**** --------------------------- Comfort zone ---------------------------- ****' . "\n");
 		writeFile('Conf', '**** Rabbit' . "\n");
 		writeFile('Conf', 'Until ' . $_POST['eatComfortRabbit'] . ' cycles after eat' . "\n");
 		writeFile('Conf', 'Until ' . $_POST['sleepComfortRabbit'] . ' cycles after sleep' . "\n\n");
+		$conf['eatComfortRabbit'] = $_POST['eatComfortRabbit'];
+		$conf['sleepComfortRabbit'] = $_POST['sleepComfortRabbit'];
 		
 		writeFile('Conf', '**** Wolf' . "\n");
 		writeFile('Conf', 'Until ' . $_POST['eatComfortWolf'] . ' cycles after eat' . "\n");
 		writeFile('Conf', 'Until ' . $_POST['sleepComfortWolf'] . ' cycles after sleep');
+		$conf['eatComfortWolf'] = $_POST['eatComfortWolf'];
+		$conf['sleepComfortWolf'] = $_POST['sleepComfortWolf'];
 
 		$GLOBALS['vars']['ground'] = new Ground();
 
@@ -230,21 +302,33 @@
 			$codeRabbit = fopen('../model/customRabbit.php', 'w');
 
 			fputs($codeRabbit, '<?php' . "\n");
-			fputs($codeRabbit, strip_tags($_POST['codeRabbit']));
+			$code = strip_tags($_POST['codeRabbit']);
+			fputs($codeRabbit, $code);
 			fputs($codeRabbit, "\n" . '?>');
 
 			fclose($codeRabbit);
+
+			$conf['codeRabbit'] = $code;
 		}
 
 		if(isset($_POST['codeWolf'])){
 			$codeWolf = fopen('../model/customWolf.php', 'w');
 
 			fputs($codeWolf, '<?php' . "\n");
-			fputs($codeWolf, strip_tags($_POST['codeWolf']));
+			$code = strip_tags($_POST['codeRabbit']);
+			fputs($codeWolf, strip_tags($code));
 			fputs($codeWolf, "\n" . '?>');
 
 			fclose($codeWolf);
+
+			$conf['codeWolf'] = $code;
 		}
+
+		fwrite($fileConf, json_encode($conf, JSON_PRETTY_PRINT));
+
+		fclose($fileConf);
+
+		
 	}
 
 	/**

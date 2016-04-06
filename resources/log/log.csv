@@ -1,1112 +1,214 @@
 Element:ID:Position:Status:Action:Effect
 "Turn 0"
-Rabbit:0:4.4
-Rabbit:1:2.2
-Wolf:2:0.2
-Wolf:3:0.1
-Carrot:4:3.3
-Carrot:5:0.0
-Lair:6:3.1
-Lair:7:4.3
-Tree:8:0.4
-Tree:9:1.1
+Rabbit:0:3.7
+Rabbit:1:3.8
+Wolf:2:19.13
+Wolf:3:7.19
+Carrot:4:18.19
+Carrot:5:18.1
+Lair:6:17.3
+Lair:7:9.7
+Tree:8:3.15
+Tree:9:1.3
 "Turn 1"
-Rabbit:0:4.4::see:3.3Carrot,4.3Lair,
-Rabbit:0:4.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Rabbit:0:4.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Rabbit:1:2.2::see:1.1Tree,3.1Lair,3.3Carrot,
-Rabbit:1:2.2::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Rabbit:1:2.2::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Rabbit:1:3.2::move:
-Wolf:2:0.2::see:0.1Wolf,1.1Tree,
-Wolf:2:0.2::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:0.2::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:1.2::move:
-Wolf:3:0.1::see:0.0Carrot,1.1Tree,1.2Wolf,
-Wolf:3:0.1::smell:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:0.1::hear:"Rabbit (0), Wolf (1), Carrot(1)"
+Rabbit:0:3.7::see:3.8Rabbit,
+Rabbit:0:3.7::smell:"Rabbit (1), Wolf (0), Carrot(0)"
+Rabbit:0:3.7::hear:"Rabbit (1), Wolf (0), Carrot(0)"
+Rabbit:0:3.6::move:
+Rabbit:1:3.8::see:
+Rabbit:1:3.8::smell:"Rabbit (0), Wolf (0), Carrot(0)"
+Rabbit:1:3.8::hear:"Rabbit (0), Wolf (0), Carrot(0)"
+Rabbit:1:3.9::move:
+Wolf:2:19.13::see:
+Wolf:2:19.13::smell:"Rabbit (0), Wolf (0), Carrot(0)"
+Wolf:2:19.13::hear:"Rabbit (0), Wolf (0), Carrot(0)"
+Wolf:3:7.19::see:
+Wolf:3:7.19::smell:"Rabbit (0), Wolf (0), Carrot(0)"
+Wolf:3:7.19::hear:"Rabbit (0), Wolf (0), Carrot(0)"
+Wolf:3:6.19::move:
+Carrot:10:12.12
+Carrot:11:7.8
 "Turn 2"
-Rabbit:0:4.4::see:3.3Carrot,4.3Lair,
-Rabbit:0:4.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Rabbit:0:4.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Rabbit:1:3.2::see:3.1Lair,3.3Carrot,4.3Lair,
-Rabbit:1:3.2::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Rabbit:1:3.2::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Rabbit:1:3.1::move:hide
-Wolf:2:1.2::see:0.1Wolf,1.1Tree,
-Wolf:2:1.2::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:1.2::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:1.3::move:
-Wolf:3:0.1::see:0.0Carrot,1.1Tree,
-Wolf:3:0.1::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:0.1::hear:"Rabbit (0), Wolf (0), Carrot(1)"
+Rabbit:0:3.6::see:
+Rabbit:0:3.6::smell:"Rabbit (0), Wolf (0), Carrot(0)"
+Rabbit:0:3.6::hear:"Rabbit (0), Wolf (0), Carrot(0)"
+Rabbit:0:3.7::move:
+Rabbit:1:3.9::see:
+Rabbit:1:3.9::smell:"Rabbit (0), Wolf (0), Carrot(0)"
+Rabbit:1:3.9::hear:"Rabbit (0), Wolf (0), Carrot(0)"
+Rabbit:1:4.9::move:
+Wolf:2:19.13::see:
+Wolf:2:19.13::smell:"Rabbit (0), Wolf (0), Carrot(0)"
+Wolf:2:19.13::hear:"Rabbit (0), Wolf (0), Carrot(0)"
+Wolf:2:19.12::move:
+Wolf:3:6.19::see:
+Wolf:3:6.19::smell:"Rabbit (0), Wolf (0), Carrot(0)"
+Wolf:3:6.19::hear:"Rabbit (0), Wolf (0), Carrot(0)"
 "Turn 3"
-Rabbit:0:4.4::see:3.3Carrot,4.3Lair,
-Rabbit:0:4.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Rabbit:0:4.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Rabbit:1:3.1::see:
-Rabbit:1:3.1::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:3.1::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:2.1::move:
-Wolf:2:1.3::see:0.4Tree,
-Wolf:2:1.3::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:1.3::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:1.4::move:
-Wolf:3:0.1::see:0.0Carrot,1.1Tree,
-Wolf:3:0.1::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:0.1::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:0.2::move:
+Rabbit:0:dead:"not eat enough"
+Rabbit:1:dead:"not eat enough"
+Wolf:2:dead:"not eat enough"
+Wolf:3:dead:"not eat enough"
 "Turn 4"
-Rabbit:0:4.4::see:3.3Carrot,4.3Lair,
-Rabbit:0:4.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Rabbit:0:4.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Rabbit:0:4.3::move:hide
-Rabbit:1:2.1::see:1.1Tree,3.1Lair,
-Rabbit:1:2.1::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:2.1::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:1.4::see:0.4Tree,
-Wolf:2:1.4::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:1.4::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:0.2::see:1.1Tree,
-Wolf:3:0.2::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:0.2::hear:"Rabbit (0), Wolf (0), Carrot(0)"
+Carrot:12:0.3
+Carrot:13:11.13
 "Turn 5"
-Rabbit:0:4.3::see:3.3Carrot,
-Rabbit:0:4.3::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Rabbit:0:4.3::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Rabbit:1:2.1::see:1.1Tree,3.1Lair,
-Rabbit:1:2.1::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:2.1::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:2.0::move:
-Wolf:2:1.4::see:0.4Tree,
-Wolf:2:1.4::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:1.4::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:0.2::see:1.1Tree,
-Wolf:3:0.2::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:0.2::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:0.3::move:
 "Turn 6"
-Rabbit:0:4.3::see:3.3Carrot,
-Rabbit:0:4.3::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Rabbit:0:4.3::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Rabbit:0:4.2::move:
-Rabbit:1:2.0::see:1.1Tree,3.1Lair,
-Rabbit:1:2.0::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:2.0::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:1.4::see:0.3Wolf,0.4Tree,
-Wolf:2:1.4::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:1.4::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:3:0.3::see:0.4Tree,1.4Wolf,
-Wolf:3:0.3::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:3:0.3::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:3:0.2::move:
 "Turn 7"
-Rabbit:0:4.2::see:3.1Lair,3.3Carrot,4.3Lair,
-Rabbit:0:4.2::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Rabbit:0:4.2::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Rabbit:0:3.2::move:
-Rabbit:1:2.0::see:1.1Tree,3.1Lair,
-Rabbit:1:2.0::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:2.0::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:1.0::move:
-Wolf:2:1.4::see:0.4Tree,
-Wolf:2:1.4::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:1.4::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:2.4::move:
-Wolf:3:0.2::see:1.1Tree,
-Wolf:3:0.2::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:0.2::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:1.2::move:
+Carrot:14:12.6
+Carrot:15:8.9
 "Turn 8"
-Rabbit:0:3.2::see:3.1Lair,3.3Carrot,4.3Lair,
-Rabbit:0:3.2::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Rabbit:0:3.2::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Rabbit:0:3.1::move:hide
-Rabbit:1:1.0::see:0.0Carrot,1.1Tree,
-Rabbit:1:1.0::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Rabbit:1:1.0::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:2.4::see:3.3Carrot,
-Wolf:2:2.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:2.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:3.4::move:
-Wolf:3:1.2::see:1.1Tree,
-Wolf:3:1.2::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:1.2::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:2.2::move:
 "Turn 9"
-Rabbit:0:3.1::see:
-Rabbit:0:3.1::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Rabbit:0:3.1::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Rabbit:0:2.1::move:
-Rabbit:0:2.1::sleep:
-Rabbit:1:1.0::see:
-Rabbit:1:1.0::smell:"Rabbit (1), Wolf (0), Carrot(1)"
-Rabbit:1:1.0::hear:"Rabbit (1), Wolf (0), Carrot(1)"
-Rabbit:1:1.0::sleep:
-Wolf:2:3.4::see:
-Wolf:2:3.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:3.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:2.4::move:
-Wolf:2:2.4::sleep:
-Wolf:3:2.2::see:
-Wolf:3:2.2::smell:"Rabbit (1), Wolf (0), Carrot(1)"
-Wolf:3:2.2::hear:"Rabbit (1), Wolf (0), Carrot(1)"
-Wolf:3:1.2::move:
-Wolf:3:1.2::sleep:
 "Turn 10"
-Rabbit:0:2.1::see:
-Rabbit:0:2.1::smell:"Rabbit (1), Wolf (1), Carrot(0)"
-Rabbit:0:2.1::hear:"Rabbit (1), Wolf (1), Carrot(0)"
-Rabbit:0:2.2::move:
-Rabbit:1:1.0::see:
-Rabbit:1:1.0::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Rabbit:1:1.0::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Rabbit:1:0.0::move:eat
-Wolf:2:2.4::see:
-Wolf:2:2.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:2.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:2.3::move:
-Wolf:3:1.2::see:
-Wolf:3:1.2::smell:"Rabbit (1), Wolf (1), Carrot(0)"
-Wolf:3:1.2::hear:"Rabbit (1), Wolf (1), Carrot(0)"
-Wolf:3:0.2::move:
+Carrot:16:2.4
+Carrot:17:8.10
 "Turn 11"
-Rabbit:0:2.2::see:1.1Tree,2.3Wolf,3.1Lair,3.3Carrot,
-Rabbit:0:2.2::smell:"Rabbit (0), Wolf (1), Carrot(1)"
-Rabbit:0:2.2::hear:"Rabbit (0), Wolf (1), Carrot(1)"
-Rabbit:0:1.2::move:
-Rabbit:1:0.0::see:1.1Tree,
-Rabbit:1:0.0::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:0.0::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:0.1::move:
-Wolf:2:2.3::see:1.2Rabbit,3.3Carrot,
-Wolf:2:2.3::smell:"Rabbit (1), Wolf (0), Carrot(1)"
-Wolf:2:2.3::hear:"Rabbit (1), Wolf (0), Carrot(1)"
-Wolf:2:2.2::move:
-Wolf:3:0.2::see:0.1Rabbit,1.1Tree,1.2Rabbit,
-Wolf:3:0.2::smell:"Rabbit (2), Wolf (0), Carrot(0)"
-Wolf:3:0.2::hear:"Rabbit (2), Wolf (0), Carrot(0)"
-Wolf:3:0.3::move:
 "Turn 12"
-Rabbit:0:1.2::see:0.1Rabbit,0.3Wolf,1.1Tree,2.2Wolf,
-Rabbit:0:1.2::smell:"Rabbit (1), Wolf (2), Carrot(0)"
-Rabbit:0:1.2::hear:"Rabbit (1), Wolf (2), Carrot(0)"
-Rabbit:1:0.1::see:1.1Tree,1.2Rabbit,
-Rabbit:1:0.1::smell:"Rabbit (1), Wolf (0), Carrot(0)"
-Rabbit:1:0.1::hear:"Rabbit (1), Wolf (0), Carrot(0)"
-Rabbit:1:0.0::move:
-Wolf:2:2.2::see:1.1Tree,1.2Rabbit,3.1Lair,3.3Carrot,
-Wolf:2:2.2::smell:"Rabbit (1), Wolf (0), Carrot(1)"
-Wolf:2:2.2::hear:"Rabbit (1), Wolf (0), Carrot(1)"
-Wolf:2:3.2::move:
-Wolf:3:0.3::see:0.4Tree,1.2Rabbit,
-Wolf:3:0.3::smell:"Rabbit (1), Wolf (0), Carrot(0)"
-Wolf:3:0.3::hear:"Rabbit (1), Wolf (0), Carrot(0)"
-Wolf:3:0.2::move:
 "Turn 13"
-Rabbit:0:1.2::see:0.2Wolf,1.1Tree,
-Rabbit:0:1.2::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Rabbit:0:1.2::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Rabbit:0:1.3::move:
-Rabbit:1:0.0::see:1.1Tree,
-Rabbit:1:0.0::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:0.0::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:3.2::see:3.1Lair,3.3Carrot,4.3Lair,
-Wolf:2:3.2::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:3.2::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:0.2::see:1.1Tree,1.3Rabbit,
-Wolf:3:0.2::smell:"Rabbit (1), Wolf (0), Carrot(0)"
-Wolf:3:0.2::hear:"Rabbit (1), Wolf (0), Carrot(0)"
+Carrot:18:7.15
+Carrot:19:2.11
 "Turn 14"
-Rabbit:0:1.3::see:0.2Wolf,0.4Tree,
-Rabbit:0:1.3::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Rabbit:0:1.3::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Rabbit:0:1.2::move:
-Rabbit:1:0.0::see:1.1Tree,
-Rabbit:1:0.0::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:0.0::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:3.2::see:3.1Lair,3.3Carrot,4.3Lair,
-Wolf:2:3.2::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:3.2::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:0.2::see:1.1Tree,1.2Rabbit,
-Wolf:3:0.2::smell:"Rabbit (1), Wolf (0), Carrot(0)"
-Wolf:3:0.2::hear:"Rabbit (1), Wolf (0), Carrot(0)"
-Wolf:3:0.1::move:
 "Turn 15"
-Rabbit:0:1.2::see:0.1Wolf,1.1Tree,
-Rabbit:0:1.2::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Rabbit:0:1.2::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Rabbit:0:0.2::move:
-Rabbit:1:0.0::see:0.1Wolf,1.1Tree,
-Rabbit:1:0.0::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Rabbit:1:0.0::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:3.2::see:3.1Lair,3.3Carrot,4.3Lair,
-Wolf:2:3.2::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:3.2::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:4.2::move:
-Wolf:3:0.1::see:0.0Rabbit,0.2Rabbit,1.1Tree,
-Wolf:3:0.1::smell:"Rabbit (2), Wolf (0), Carrot(0)"
-Wolf:3:0.1::hear:"Rabbit (2), Wolf (0), Carrot(0)"
 "Turn 16"
-Rabbit:0:0.2::see:0.1Wolf,1.1Tree,
-Rabbit:0:0.2::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Rabbit:0:0.2::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Rabbit:1:0.0::see:0.1Wolf,1.1Tree,
-Rabbit:1:0.0::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Rabbit:1:0.0::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:4.2::see:3.1Lair,3.3Carrot,4.3Lair,
-Wolf:2:4.2::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:4.2::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:3.2::move:
-Wolf:3:0.1::see:0.0Rabbit,0.2Rabbit,1.1Tree,
-Wolf:3:0.1::smell:"Rabbit (2), Wolf (0), Carrot(0)"
-Wolf:3:0.1::hear:"Rabbit (2), Wolf (0), Carrot(0)"
+Carrot:20:13.10
+Carrot:21:13.17
 "Turn 17"
-Rabbit:0:0.2::see:0.1Wolf,1.1Tree,
-Rabbit:0:0.2::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Rabbit:0:0.2::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Rabbit:0:1.2::move:
-Rabbit:1:0.0::see:0.1Wolf,1.1Tree,
-Rabbit:1:0.0::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Rabbit:1:0.0::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:3.2::see:3.1Lair,3.3Carrot,4.3Lair,
-Wolf:2:3.2::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:3.2::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:2.2::move:
-Wolf:3:0.1::see:0.0Rabbit,1.1Tree,1.2Rabbit,
-Wolf:3:0.1::smell:"Rabbit (2), Wolf (0), Carrot(0)"
-Wolf:3:0.1::hear:"Rabbit (2), Wolf (0), Carrot(0)"
-Wolf:3:0.2::move:
 "Turn 18"
-Rabbit:0:1.2::see:0.2Wolf,1.1Tree,2.2Wolf,
-Rabbit:0:1.2::smell:"Rabbit (0), Wolf (2), Carrot(0)"
-Rabbit:0:1.2::hear:"Rabbit (0), Wolf (2), Carrot(0)"
-Rabbit:1:0.0::see:1.1Tree,
-Rabbit:1:0.0::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:0.0::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:2.2::see:1.1Tree,1.2Rabbit,3.1Lair,3.3Carrot,
-Wolf:2:2.2::smell:"Rabbit (1), Wolf (0), Carrot(1)"
-Wolf:2:2.2::hear:"Rabbit (1), Wolf (0), Carrot(1)"
-Wolf:2:2.3::move:
-Wolf:3:0.2::see:1.1Tree,1.2Rabbit,
-Wolf:3:0.2::smell:"Rabbit (1), Wolf (0), Carrot(0)"
-Wolf:3:0.2::hear:"Rabbit (1), Wolf (0), Carrot(0)"
-Wolf:3:0.1::move:
 "Turn 19"
-Rabbit:0:1.2::see:
-Rabbit:0:1.2::smell:"Rabbit (0), Wolf (2), Carrot(0)"
-Rabbit:0:1.2::hear:"Rabbit (0), Wolf (2), Carrot(0)"
-Rabbit:0:1.3::move:
-Rabbit:0:1.3::sleep:
-Rabbit:1:0.0::see:
-Rabbit:1:0.0::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Rabbit:1:0.0::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Rabbit:1:1.0::move:
-Rabbit:1:1.0::sleep:
-Wolf:2:2.3::see:
-Wolf:2:2.3::smell:"Rabbit (1), Wolf (0), Carrot(1)"
-Wolf:2:2.3::hear:"Rabbit (1), Wolf (0), Carrot(1)"
-Wolf:2:2.4::move:
-Wolf:2:2.4::sleep:
-Wolf:3:0.1::see:
-Wolf:3:0.1::smell:"Rabbit (1), Wolf (0), Carrot(0)"
-Wolf:3:0.1::hear:"Rabbit (1), Wolf (0), Carrot(0)"
-Wolf:3:0.2::move:
-Wolf:3:0.2::sleep:
+Carrot:22:19.7
+Carrot:23:12.0
 "Turn 20"
-Rabbit:0:1.3::see:
-Rabbit:0:1.3::smell:"Rabbit (0), Wolf (2), Carrot(0)"
-Rabbit:0:1.3::hear:"Rabbit (0), Wolf (2), Carrot(0)"
-Rabbit:0:0.3::move:
-Rabbit:1:1.0::see:
-Rabbit:1:1.0::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:1.0::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:2.4::see:
-Wolf:2:2.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:2.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:1.4::move:
-Wolf:3:0.2::see:
-Wolf:3:0.2::smell:"Rabbit (1), Wolf (0), Carrot(0)"
-Wolf:3:0.2::hear:"Rabbit (1), Wolf (0), Carrot(0)"
-Wolf:3:0.3::move:eat
 "Turn 21"
-Rabbit:1:1.0::see:1.1Tree,
-Rabbit:1:1.0::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:1.0::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:1.4::see:0.3Wolf,0.4Tree,
-Wolf:2:1.4::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:1.4::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:1.3::move:
-Wolf:3:0.3::see:0.4Tree,1.3Wolf,
-Wolf:3:0.3::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:3:0.3::hear:"Rabbit (0), Wolf (1), Carrot(0)"
 "Turn 22"
-Rabbit:1:1.0::see:1.1Tree,
-Rabbit:1:1.0::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:1.0::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:2.0::move:
-Wolf:2:1.3::see:0.3Wolf,0.4Tree,
-Wolf:2:1.3::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:1.3::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:1.4::move:
-Wolf:3:0.3::see:0.4Tree,1.4Wolf,
-Wolf:3:0.3::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:3:0.3::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:3:0.2::move:
+Carrot:24:9.16
+Carrot:25:1.7
 "Turn 23"
-Rabbit:1:2.0::see:1.1Tree,3.1Lair,
-Rabbit:1:2.0::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:2.0::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:1.0::move:
-Wolf:2:1.4::see:0.4Tree,
-Wolf:2:1.4::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:1.4::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:1.3::move:
-Wolf:3:0.2::see:1.1Tree,1.3Wolf,
-Wolf:3:0.2::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:3:0.2::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:3:1.2::move:
 "Turn 24"
-Rabbit:1:1.0::see:1.1Tree,
-Rabbit:1:1.0::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:1.0::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:0.0::move:
-Wolf:2:1.3::see:0.4Tree,1.2Wolf,
-Wolf:2:1.3::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:1.3::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:3:1.2::see:1.1Tree,1.3Wolf,
-Wolf:3:1.2::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:3:1.2::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:3:2.2::move:
 "Turn 25"
-Rabbit:1:0.0::see:1.1Tree,
-Rabbit:1:0.0::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:0.0::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:1.0::move:
-Wolf:2:1.3::see:0.4Tree,2.2Wolf,
-Wolf:2:1.3::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:1.3::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:2.3::move:
-Wolf:3:2.2::see:1.1Tree,2.3Wolf,3.1Lair,3.3Carrot,
-Wolf:3:2.2::smell:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:2.2::hear:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:1.2::move:
+Carrot:26:2.16
+Carrot:27:12.10
 "Turn 26"
-Rabbit:1:1.0::see:1.1Tree,
-Rabbit:1:1.0::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:1.0::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:2.3::see:1.2Wolf,3.3Carrot,
-Wolf:2:2.3::smell:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:2:2.3::hear:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:2:1.3::move:
-Wolf:3:1.2::see:1.1Tree,1.3Wolf,
-Wolf:3:1.2::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:3:1.2::hear:"Rabbit (0), Wolf (1), Carrot(0)"
 "Turn 27"
-Rabbit:1:1.0::see:1.1Tree,
-Rabbit:1:1.0::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:1.0::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:1.3::see:0.4Tree,1.2Wolf,
-Wolf:2:1.3::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:1.3::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:3:1.2::see:1.1Tree,1.3Wolf,
-Wolf:3:1.2::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:3:1.2::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:3:2.2::move:
 "Turn 28"
-Rabbit:1:1.0::see:1.1Tree,
-Rabbit:1:1.0::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:1.0::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:1.3::see:0.4Tree,2.2Wolf,
-Wolf:2:1.3::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:1.3::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:1.2::move:
-Wolf:3:2.2::see:1.1Tree,1.2Wolf,3.1Lair,3.3Carrot,
-Wolf:3:2.2::smell:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:2.2::hear:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:2.3::move:
+Carrot:28:4.16
+Carrot:29:6.15
 "Turn 29"
-Rabbit:1:1.0::see:
-Rabbit:1:1.0::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:1.0::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:1.0::sleep:
-Wolf:2:1.2::see:
-Wolf:2:1.2::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:1.2::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:1.3::move:
-Wolf:2:1.3::sleep:
-Wolf:3:2.3::see:
-Wolf:3:2.3::smell:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:2.3::hear:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:2.3::sleep:
 "Turn 30"
-Rabbit:1:1.0::see:
-Rabbit:1:1.0::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:1.0::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:1.3::see:
-Wolf:2:1.3::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:1.3::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:1.4::move:
-Wolf:3:2.3::see:
-Wolf:3:2.3::smell:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:2.3::hear:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:1.3::move:
 "Turn 31"
-Rabbit:1:1.0::see:1.1Tree,
-Rabbit:1:1.0::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:1.0::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:2.0::move:
-Wolf:2:1.4::see:0.4Tree,1.3Wolf,
-Wolf:2:1.4::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:1.4::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:3:1.3::see:0.4Tree,1.4Wolf,
-Wolf:3:1.3::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:3:1.3::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:3:0.3::move:
+Carrot:30:12.17
+Carrot:31:17.16
 "Turn 32"
-Rabbit:1:2.0::see:1.1Tree,3.1Lair,
-Rabbit:1:2.0::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:2.0::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:1.4::see:0.3Wolf,0.4Tree,
-Wolf:2:1.4::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:1.4::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:1.3::move:
-Wolf:3:0.3::see:0.4Tree,1.3Wolf,
-Wolf:3:0.3::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:3:0.3::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:3:0.2::move:
 "Turn 33"
-Rabbit:1:2.0::see:1.1Tree,3.1Lair,
-Rabbit:1:2.0::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:2.0::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:3.0::move:
-Wolf:2:1.3::see:0.2Wolf,0.4Tree,
-Wolf:2:1.3::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:1.3::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:1.4::move:
-Wolf:3:0.2::see:1.1Tree,
-Wolf:3:0.2::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:0.2::hear:"Rabbit (0), Wolf (0), Carrot(0)"
 "Turn 34"
-Rabbit:1:3.0::see:3.1Lair,
-Rabbit:1:3.0::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:3.0::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:4.0::move:
-Wolf:2:1.4::see:0.4Tree,
-Wolf:2:1.4::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:1.4::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:0.2::see:1.1Tree,
-Wolf:3:0.2::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:0.2::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:1.2::move:
+Carrot:32:13.7
+Carrot:33:5.17
 "Turn 35"
-Rabbit:1:4.0::see:3.1Lair,
-Rabbit:1:4.0::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:4.0::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:1.4::see:0.4Tree,
-Wolf:2:1.4::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:1.4::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:1.2::see:1.1Tree,
-Wolf:3:1.2::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:1.2::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:1.3::move:
 "Turn 36"
-Rabbit:1:4.0::see:3.1Lair,
-Rabbit:1:4.0::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:4.0::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:1.4::see:0.4Tree,1.3Wolf,
-Wolf:2:1.4::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:1.4::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:3:1.3::see:0.4Tree,1.4Wolf,
-Wolf:3:1.3::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:3:1.3::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:3:2.3::move:
 "Turn 37"
-Rabbit:1:4.0::see:3.1Lair,
-Rabbit:1:4.0::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:4.0::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:3.0::move:
-Wolf:2:1.4::see:0.4Tree,2.3Wolf,
-Wolf:2:1.4::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:1.4::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:2.4::move:
-Wolf:3:2.3::see:2.4Wolf,3.3Carrot,
-Wolf:3:2.3::smell:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:2.3::hear:"Rabbit (0), Wolf (1), Carrot(1)"
+Carrot:34:4.5
+Carrot:35:3.13
 "Turn 38"
-Rabbit:1:3.0::see:3.1Lair,
-Rabbit:1:3.0::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:3.0::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:2.0::move:
-Wolf:2:2.4::see:2.3Wolf,3.3Carrot,
-Wolf:2:2.4::smell:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:2:2.4::hear:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:2.3::see:2.4Wolf,3.3Carrot,
-Wolf:3:2.3::smell:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:2.3::hear:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:1.3::move:
 "Turn 39"
-Rabbit:1:2.0::see:
-Rabbit:1:2.0::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:2.0::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:2.0::sleep:
-Wolf:2:2.4::see:
-Wolf:2:2.4::smell:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:2:2.4::hear:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:2:1.4::move:
-Wolf:2:1.4::sleep:
-Wolf:3:1.3::see:
-Wolf:3:1.3::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:3:1.3::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:3:0.3::move:
-Wolf:3:0.3::sleep:
 "Turn 40"
-Rabbit:1:2.0::see:
-Rabbit:1:2.0::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:2.0::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:1.0::move:
-Wolf:2:1.4::see:
-Wolf:2:1.4::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:1.4::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:3:0.3::see:
-Wolf:3:0.3::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:3:0.3::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:3:1.3::move:
+Carrot:36:12.2
+Carrot:37:12.8
 "Turn 41"
-Rabbit:1:1.0::see:1.1Tree,
-Rabbit:1:1.0::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:1.0::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:0.0::move:
-Wolf:2:1.4::see:0.4Tree,1.3Wolf,
-Wolf:2:1.4::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:1.4::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:2.4::move:
-Wolf:3:1.3::see:0.4Tree,2.4Wolf,
-Wolf:3:1.3::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:3:1.3::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:3:1.4::move:
 "Turn 42"
-Rabbit:1:0.0::see:1.1Tree,
-Rabbit:1:0.0::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:0.0::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:0.1::move:
-Wolf:2:2.4::see:1.4Wolf,3.3Carrot,
-Wolf:2:2.4::smell:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:2:2.4::hear:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:1.4::see:0.4Tree,2.4Wolf,
-Wolf:3:1.4::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:3:1.4::hear:"Rabbit (0), Wolf (1), Carrot(0)"
 "Turn 43"
-Rabbit:1:0.1::see:1.1Tree,
-Rabbit:1:0.1::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:0.1::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:0.0::move:
-Wolf:2:2.4::see:1.4Wolf,3.3Carrot,
-Wolf:2:2.4::smell:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:2:2.4::hear:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:2:2.3::move:
-Wolf:3:1.4::see:0.4Tree,2.3Wolf,
-Wolf:3:1.4::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:3:1.4::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:3:2.4::move:
+Carrot:38:13.16
+Carrot:39:14.17
 "Turn 44"
-Rabbit:1:0.0::see:1.1Tree,
-Rabbit:1:0.0::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:0.0::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:0.1::move:
-Wolf:2:2.3::see:2.4Wolf,3.3Carrot,
-Wolf:2:2.3::smell:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:2:2.3::hear:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:2:1.3::move:
-Wolf:3:2.4::see:1.3Wolf,3.3Carrot,
-Wolf:3:2.4::smell:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:2.4::hear:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:1.4::move:
 "Turn 45"
-Rabbit:1:0.1::see:1.1Tree,
-Rabbit:1:0.1::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:1:0.1::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:1.3::see:0.4Tree,1.4Wolf,
-Wolf:2:1.3::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:1.3::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:1.2::move:
-Wolf:3:1.4::see:0.4Tree,
-Wolf:3:1.4::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:1.4::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:1.3::move:
 "Turn 46"
-Rabbit:1:0.1::see:1.1Tree,1.2Wolf,
-Rabbit:1:0.1::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Rabbit:1:0.1::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Rabbit:1:0.2::move:
-Wolf:2:1.2::see:0.2Rabbit,1.1Tree,1.3Wolf,
-Wolf:2:1.2::smell:"Rabbit (1), Wolf (1), Carrot(0)"
-Wolf:2:1.2::hear:"Rabbit (1), Wolf (1), Carrot(0)"
-Wolf:3:1.3::see:0.2Rabbit,0.4Tree,1.2Wolf,
-Wolf:3:1.3::smell:"Rabbit (1), Wolf (1), Carrot(0)"
-Wolf:3:1.3::hear:"Rabbit (1), Wolf (1), Carrot(0)"
+Carrot:40:2.2
+Carrot:41:13.4
 "Turn 47"
-Rabbit:1:0.2::see:1.1Tree,1.2Wolf,1.3Wolf,
-Rabbit:1:0.2::smell:"Rabbit (0), Wolf (2), Carrot(0)"
-Rabbit:1:0.2::hear:"Rabbit (0), Wolf (2), Carrot(0)"
-Wolf:2:1.2::see:0.2Rabbit,1.1Tree,1.3Wolf,
-Wolf:2:1.2::smell:"Rabbit (1), Wolf (1), Carrot(0)"
-Wolf:2:1.2::hear:"Rabbit (1), Wolf (1), Carrot(0)"
-Wolf:3:1.3::see:0.2Rabbit,0.4Tree,1.2Wolf,
-Wolf:3:1.3::smell:"Rabbit (1), Wolf (1), Carrot(0)"
-Wolf:3:1.3::hear:"Rabbit (1), Wolf (1), Carrot(0)"
-Wolf:3:2.3::move:
 "Turn 48"
-Rabbit:1:0.2::see:1.1Tree,1.2Wolf,
-Rabbit:1:0.2::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Rabbit:1:0.2::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:1.2::see:0.2Rabbit,1.1Tree,2.3Wolf,
-Wolf:2:1.2::smell:"Rabbit (1), Wolf (1), Carrot(0)"
-Wolf:2:1.2::hear:"Rabbit (1), Wolf (1), Carrot(0)"
-Wolf:3:2.3::see:1.2Wolf,3.3Carrot,
-Wolf:3:2.3::smell:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:2.3::hear:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:2.2::move:
 "Turn 49"
-Rabbit:1:0.2::see:
-Rabbit:1:0.2::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Rabbit:1:0.2::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Rabbit:1:0.2::sleep:
-Wolf:2:1.2::see:
-Wolf:2:1.2::smell:"Rabbit (1), Wolf (1), Carrot(0)"
-Wolf:2:1.2::hear:"Rabbit (1), Wolf (1), Carrot(0)"
-Wolf:2:0.2::move:eat
-Wolf:2:0.2::sleep:
-Wolf:3:2.2::see:
-Wolf:3:2.2::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:2.2::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:2.3::move:
-Wolf:3:2.3::sleep:
+Carrot:42:16.0
+Carrot:43:16.7
 "Turn 50"
-Wolf:2:0.2::see:
-Wolf:2:0.2::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:0.2::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:1.2::move:
-Wolf:3:2.3::see:
-Wolf:3:2.3::smell:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:2.3::hear:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:2.4::move:
 "Turn 51"
-Wolf:2:1.2::see:1.1Tree,
-Wolf:2:1.2::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:1.2::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:2.2::move:
-Wolf:3:2.4::see:3.3Carrot,
-Wolf:3:2.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:2.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:3.4::move:
 "Turn 52"
-Wolf:2:2.2::see:1.1Tree,3.1Lair,3.3Carrot,
-Wolf:2:2.2::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:2.2::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:1.2::move:
-Wolf:3:3.4::see:3.3Carrot,4.3Lair,
-Wolf:3:3.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:3.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
+Carrot:44:9.15
+Carrot:45:0.5
 "Turn 53"
-Wolf:2:1.2::see:1.1Tree,
-Wolf:2:1.2::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:1.2::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:2.2::move:
-Wolf:3:3.4::see:3.3Carrot,4.3Lair,
-Wolf:3:3.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:3.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
 "Turn 54"
-Wolf:2:2.2::see:1.1Tree,3.1Lair,3.3Carrot,
-Wolf:2:2.2::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:2.2::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:2.1::move:
-Wolf:3:3.4::see:3.3Carrot,4.3Lair,
-Wolf:3:3.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:3.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
 "Turn 55"
-Wolf:2:2.1::see:1.1Tree,3.1Lair,
-Wolf:2:2.1::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:2.1::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:2.2::move:
-Wolf:3:3.4::see:3.3Carrot,4.3Lair,
-Wolf:3:3.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:3.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:2.4::move:
+Carrot:46:13.1
+Carrot:47:12.7
 "Turn 56"
-Wolf:2:2.2::see:1.1Tree,3.1Lair,3.3Carrot,
-Wolf:2:2.2::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:2.2::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:3.2::move:
-Wolf:3:2.4::see:3.3Carrot,
-Wolf:3:2.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:2.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:2.3::move:
 "Turn 57"
-Wolf:2:3.2::see:2.3Wolf,3.1Lair,3.3Carrot,4.3Lair,
-Wolf:2:3.2::smell:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:2:3.2::hear:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:2.3::see:3.2Wolf,3.3Carrot,
-Wolf:3:2.3::smell:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:2.3::hear:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:2.2::move:
 "Turn 58"
-Wolf:2:3.2::see:2.2Wolf,3.1Lair,3.3Carrot,4.3Lair,
-Wolf:2:3.2::smell:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:2:3.2::hear:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:2.2::see:1.1Tree,3.1Lair,3.2Wolf,3.3Carrot,
-Wolf:3:2.2::smell:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:2.2::hear:"Rabbit (0), Wolf (1), Carrot(1)"
+Carrot:48:10.1
+Carrot:49:9.13
 "Turn 59"
-Wolf:2:3.2::see:
-Wolf:2:3.2::smell:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:2:3.2::hear:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:2:3.2::sleep:
-Wolf:3:2.2::see:
-Wolf:3:2.2::smell:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:2.2::hear:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:2.3::move:
-Wolf:3:2.3::sleep:
 "Turn 60"
-Wolf:2:3.2::see:
-Wolf:2:3.2::smell:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:2:3.2::hear:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:2:2.2::move:
-Wolf:3:2.3::see:
-Wolf:3:2.3::smell:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:2.3::hear:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:2.4::move:
 "Turn 61"
-Wolf:2:2.2::see:
-Wolf:2:2.2::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:2.2::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:2.1::move:
-Wolf:3:2.4::see:
-Wolf:3:2.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:2.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:3.4::move:
+Carrot:50:11.12
+Carrot:51:17.11
 "Turn 62"
-Wolf:2:2.1::see:
-Wolf:2:2.1::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:2.1::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:2.2::move:
-Wolf:3:3.4::see:
-Wolf:3:3.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:3.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:2.4::move:
 "Turn 63"
-Wolf:2:2.2::see:
-Wolf:2:2.2::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:2.2::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:2.1::move:
-Wolf:3:2.4::see:
-Wolf:3:2.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:2.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:1.4::move:
 "Turn 64"
-Wolf:2:2.1::see:
-Wolf:2:2.1::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:2.1::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:2.2::move:
-Wolf:3:1.4::see:
-Wolf:3:1.4::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:1.4::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:2.4::move:
+Carrot:52:19.17
+Carrot:53:14.3
 "Turn 65"
-Wolf:2:2.2::see:
-Wolf:2:2.2::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:2.2::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:1.2::move:
-Wolf:3:2.4::see:
-Wolf:3:2.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:2.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:2.3::move:
 "Turn 66"
-Wolf:2:1.2::see:
-Wolf:2:1.2::smell:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:1.2::hear:"Rabbit (0), Wolf (1), Carrot(0)"
-Wolf:2:2.2::move:
-Wolf:3:2.3::see:
-Wolf:3:2.3::smell:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:2.3::hear:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:2.4::move:
 "Turn 67"
-Wolf:2:2.2::see:
-Wolf:2:2.2::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:2.2::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:3.2::move:
-Wolf:3:2.4::see:
-Wolf:3:2.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:2.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:1.4::move:
+Carrot:54:4.9
+Carrot:55:7.16
 "Turn 68"
-Wolf:2:3.2::see:
-Wolf:2:3.2::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:3.2::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:1.4::see:
-Wolf:3:1.4::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:1.4::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:2.4::move:
 "Turn 69"
-Wolf:2:3.2::see:
-Wolf:2:3.2::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:3.2::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:4.2::move:
-Wolf:2:4.2::sleep:
-Wolf:3:2.4::see:
-Wolf:3:2.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:2.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:1.4::move:
-Wolf:3:1.4::sleep:
 "Turn 70"
-Wolf:2:4.2::see:
-Wolf:2:4.2::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:4.2::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:1.4::see:
-Wolf:3:1.4::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:1.4::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:2.4::move:
+Carrot:56:10.15
+Carrot:57:8.8
 "Turn 71"
-Wolf:2:4.2::see:3.1Lair,3.3Carrot,4.3Lair,
-Wolf:2:4.2::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:4.2::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:2.4::see:3.3Carrot,
-Wolf:3:2.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:2.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
 "Turn 72"
-Wolf:2:4.2::see:3.1Lair,3.3Carrot,4.3Lair,
-Wolf:2:4.2::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:4.2::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:3.2::move:
-Wolf:3:2.4::see:3.3Carrot,
-Wolf:3:2.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:2.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:3.4::move:
 "Turn 73"
-Wolf:2:3.2::see:3.1Lair,3.3Carrot,4.3Lair,
-Wolf:2:3.2::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:3.2::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:3.4::see:3.3Carrot,4.3Lair,
-Wolf:3:3.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:3.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
+Carrot:58:15.15
+Carrot:59:0.12
 "Turn 74"
-Wolf:2:3.2::see:3.1Lair,3.3Carrot,4.3Lair,
-Wolf:2:3.2::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:3.2::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:2.2::move:
-Wolf:3:3.4::see:3.3Carrot,4.3Lair,
-Wolf:3:3.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:3.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:2.4::move:
 "Turn 75"
-Wolf:2:2.2::see:1.1Tree,3.1Lair,3.3Carrot,
-Wolf:2:2.2::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:2.2::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:2:2.3::move:
-Wolf:3:2.4::see:2.3Wolf,3.3Carrot,
-Wolf:3:2.4::smell:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:2.4::hear:"Rabbit (0), Wolf (1), Carrot(1)"
 "Turn 76"
-Wolf:2:2.3::see:2.4Wolf,3.3Carrot,
-Wolf:2:2.3::smell:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:2:2.3::hear:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:2.4::see:2.3Wolf,3.3Carrot,
-Wolf:3:2.4::smell:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:2.4::hear:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:3.4::move:
+Carrot:60:15.10
+Carrot:61:18.4
 "Turn 77"
-Wolf:2:2.3::see:3.3Carrot,3.4Wolf,
-Wolf:2:2.3::smell:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:2:2.3::hear:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:3.4::see:2.3Wolf,3.3Carrot,4.3Lair,
-Wolf:3:3.4::smell:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:3:3.4::hear:"Rabbit (0), Wolf (1), Carrot(1)"
 "Turn 78"
-Wolf:2:2.3::see:3.3Carrot,3.4Wolf,
-Wolf:2:2.3::smell:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:2:2.3::hear:"Rabbit (0), Wolf (1), Carrot(1)"
-Wolf:2:1.3::move:
-Wolf:3:3.4::see:3.3Carrot,4.3Lair,
-Wolf:3:3.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:3.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:4.4::move:
 "Turn 79"
-Wolf:2:1.3::see:
-Wolf:2:1.3::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:1.3::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:0.3::move:
-Wolf:2:0.3::sleep:
-Wolf:3:4.4::see:
-Wolf:3:4.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:4.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:3.4::move:
-Wolf:3:3.4::sleep:
+Carrot:62:2.3
+Carrot:63:1.17
 "Turn 80"
-Wolf:2:0.3::see:
-Wolf:2:0.3::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:0.3::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:3.4::see:
-Wolf:3:3.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:3.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
 "Turn 81"
-Wolf:2:0.3::see:
-Wolf:2:0.3::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:0.3::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:3.4::see:
-Wolf:3:3.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:3.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
 "Turn 82"
-Wolf:2:0.3::see:
-Wolf:2:0.3::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:0.3::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:3.4::see:
-Wolf:3:3.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:3.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:4.4::move:
+Carrot:64:7.9
+Carrot:65:10.18
 "Turn 83"
-Wolf:2:0.3::see:
-Wolf:2:0.3::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:0.3::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:4.4::see:
-Wolf:3:4.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:4.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:3.4::move:
 "Turn 84"
-Wolf:2:0.3::see:
-Wolf:2:0.3::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:0.3::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:3.4::see:
-Wolf:3:3.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:3.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
 "Turn 85"
-Wolf:2:0.3::see:
-Wolf:2:0.3::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:0.3::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:3.4::see:
-Wolf:3:3.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:3.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
+Carrot:66:13.3
+Carrot:67:3.7
 "Turn 86"
-Wolf:2:0.3::see:
-Wolf:2:0.3::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:0.3::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:3.4::see:
-Wolf:3:3.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:3.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:2.4::move:
 "Turn 87"
-Wolf:2:0.3::see:
-Wolf:2:0.3::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:0.3::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:2.4::see:
-Wolf:3:2.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:2.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
 "Turn 88"
-Wolf:2:0.3::see:
-Wolf:2:0.3::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:0.3::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:0.2::move:
-Wolf:3:2.4::see:
-Wolf:3:2.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:2.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:2.3::move:
+Carrot:68:7.12
+Carrot:69:7.6
 "Turn 89"
-Wolf:2:0.2::see:
-Wolf:2:0.2::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:0.2::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:0.1::move:
-Wolf:2:0.1::sleep:
-Wolf:3:2.3::see:
-Wolf:3:2.3::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:2.3::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:2.4::move:
-Wolf:3:2.4::sleep:
 "Turn 90"
-Wolf:2:0.1::see:
-Wolf:2:0.1::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:0.1::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:2.4::see:
-Wolf:3:2.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:2.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:3.4::move:
 "Turn 91"
-Wolf:2:0.1::see:
-Wolf:2:0.1::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:0.1::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:0.0::move:
-Wolf:3:3.4::see:
-Wolf:3:3.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:3.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:2.4::move:
+Carrot:70:17.14
+Carrot:71:8.13
 "Turn 92"
-Wolf:2:0.0::see:
-Wolf:2:0.0::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:0.0::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:0.1::move:
-Wolf:3:2.4::see:
-Wolf:3:2.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:2.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:3.4::move:
 "Turn 93"
-Wolf:2:0.1::see:
-Wolf:2:0.1::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:0.1::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:3.4::see:
-Wolf:3:3.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:3.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
 "Turn 94"
-Wolf:2:0.1::see:
-Wolf:2:0.1::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:0.1::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:3.4::see:
-Wolf:3:3.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:3.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
+Carrot:72:2.1
+Carrot:73:18.7
 "Turn 95"
-Wolf:2:0.1::see:
-Wolf:2:0.1::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:0.1::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:3.4::see:
-Wolf:3:3.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:3.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:4.4::move:
 "Turn 96"
-Wolf:2:0.1::see:
-Wolf:2:0.1::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:0.1::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:4.4::see:
-Wolf:3:4.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:4.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
 "Turn 97"
-Wolf:2:0.1::see:
-Wolf:2:0.1::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:0.1::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:0.0::move:
-Wolf:3:4.4::see:
-Wolf:3:4.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:4.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:3.4::move:
+Carrot:74:18.13
+Carrot:75:9.2
 "Turn 98"
-Wolf:2:0.0::see:
-Wolf:2:0.0::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:0.0::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:0.1::move:
-Wolf:3:3.4::see:
-Wolf:3:3.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:3.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:2.4::move:
 "Turn 99"
-Wolf:2:0.1::see:
-Wolf:2:0.1::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:0.1::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:0.1::sleep:
-Wolf:3:2.4::see:
-Wolf:3:2.4::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:2.4::hear:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:2.3::move:
-Wolf:3:2.3::sleep:
 "Turn 100"
-Wolf:2:0.1::see:
-Wolf:2:0.1::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:2:0.1::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Wolf:3:2.3::see:
-Wolf:3:2.3::smell:"Rabbit (0), Wolf (0), Carrot(1)"
-Wolf:3:2.3::hear:"Rabbit (0), Wolf (0), Carrot(1)"
+Carrot:76:1.0
+Carrot:77:10.3

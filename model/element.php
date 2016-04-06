@@ -4,7 +4,7 @@
 	 */
 	global $stock;
 	$stock = 0;
-	
+
 	/**
 	 * Class Element
 	 *

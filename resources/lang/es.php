@@ -1,5 +1,6 @@
 <?php
 	$dictionary = array(
+		'' => '',
 		'Menu' => 'Menú',
 		'World' => 'Mundo',
 		'Elements' => 'Elementos',
@@ -122,6 +123,10 @@
 		'Breed of rabbits' => 'Reproducción de conejos',
 		'Breed of wolves' => 'Reproducción de lobos',
 		'Weather' => 'Tiempo atmosférico',
-		'Zoom' => 'Zoom'
+		'Zoom' => 'Zoom',
+		'Choose between upload a settings file or make the settings manually' => 'Elige cargar un archivo de configuración o realizar la configuración manualmente',
+		'Load a configuration file' => 'Cargar un archivo de configuración',
+		'Settings manually' => 'Configuración manual',
+		'Select a file' => 'Selecciona un archivo'
 	);
 ?>

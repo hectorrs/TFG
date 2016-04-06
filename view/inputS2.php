@@ -128,7 +128,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Total period', $lang); ?></label>
                             <div class="form-group">
-                                <input class="form-control" name="totalPeriod" id="totalPeriod" value="100" required>
+                                <input class="form-control" name="totalPeriod" id="totalPeriod" value="" required>
                             </div>
                         </div>
                     </div>
@@ -137,14 +137,14 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Daylight period', $lang); ?></label>
                             <div class="form-group">
-                                <input class="form-control" name="dayPeriod" id="dayPeriod" value="8" required>
+                                <input class="form-control" name="dayPeriod" id="dayPeriod" value="" required>
                             </div>
                         </div>
 
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Night period', $lang); ?></label>
                             <div class="form-group">
-                                <input class="form-control" name="nightPeriod" id="nightPeriod" value="2" required>
+                                <input class="form-control" name="nightPeriod" id="nightPeriod" value="" required>
                             </div>
                         </div>
                     </div>
@@ -170,14 +170,14 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Height', $lang); ?></label>
                             <div class="form-group">
-                                <input class="form-control" name="sizeX" id="sizeX" value="5" required>
+                                <input class="form-control" name="sizeX" id="sizeX" value="" required>
                             </div>
                         </div>
 
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <div class="form-group">
                                 <label><?php echo translate('Width', $lang); ?></label>
-                                <input type="text" class="form-control" name="sizeY" id="sizeY" value="5" required>
+                                <input type="text" class="form-control" name="sizeY" id="sizeY" value="" required>
                             </div>
                         </div>
                     </div>
@@ -212,7 +212,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Change weather each (cycles)', $lang); ?></label>
                             <div class="form-group">
-                                <input class="form-control" name="changeWeather" id="changeWeather" value="10" required>
+                                <input class="form-control" name="changeWeather" id="changeWeather" value="" required>
                             </div>
 
                             <div class="alert alert-info">
@@ -264,21 +264,21 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <div class="form-group">
                                 <label><?php echo translate('Carrots', $lang); ?></label>
-                                <input type="text" class="form-control" name="carrot" id="carrot" value="2" required>
+                                <input type="text" class="form-control" name="carrot" id="carrot" value="" required>
                             </div>
                         </div>
 
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <div class="form-group">
                                 <label><?php echo translate('Trees', $lang); ?></label>
-                                <input type="text" class="form-control" name="tree" id="tree" value="2" required>
+                                <input type="text" class="form-control" name="tree" id="tree" value="" required>
                             </div>
                         </div>
 
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <div class="form-group">
                                 <label><?php echo translate('Lairs', $lang); ?></label>
-                                <input type="text" class="form-control" name="lair" id="lair" value="2" required>
+                                <input type="text" class="form-control" name="lair" id="lair" value="" required>
                             </div>
                         </div>
                     </div>
@@ -287,14 +287,14 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Rabbits', $lang); ?></label>
                             <div class="form-group">
-                                <input class="form-control" name="rabbit" id="rabbit" value="2" required>
+                                <input class="form-control" name="rabbit" id="rabbit" value="" required>
                             </div>
                         </div>
 
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Wolves', $lang); ?></label>
                             <div class="form-group">
-                                <input class="form-control" name="wolf" id="wolf" value="2" required>
+                                <input class="form-control" name="wolf" id="wolf" value="" required>
                             </div>
                         </div>
                     </div>
@@ -320,14 +320,14 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Each (cycles)', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="timeMoreCarrot" id="timeMoreCarrot" value="50" required>
+                                <input type="text" class="form-control" name="timeMoreCarrot" id="timeMoreCarrot" value="" required>
                             </div>
                         </div>
 
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Amount', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="amountMoreCarrot" id="amountMoreCarrot" value="0" required>
+                                <input type="text" class="form-control" name="amountMoreCarrot" id="amountMoreCarrot" value="" required>
                             </div>
                         </div>
                     </div>
@@ -355,14 +355,14 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Rabbits - Cycles without eat', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="maxEatRabbit" id="maxEatRabbit" value="100" required>
+                                <input type="text" class="form-control" name="maxEatRabbit" id="maxEatRabbit" value="" required>
                             </div>
                         </div>
 
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Wolves - Cycles without eat', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="maxEatWolf" id="maxEatWolf" value="100" required>
+                                <input type="text" class="form-control" name="maxEatWolf" id="maxEatWolf" value="" required>
                             </div>
                         </div>
                     </div>
@@ -388,14 +388,14 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Rabbits - Cycles without sleep', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="maxSleepRabbit" id="maxSleepRabbit" value="100" required>
+                                <input type="text" class="form-control" name="maxSleepRabbit" id="maxSleepRabbit" value="" required>
                             </div>
                         </div>
 
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Wolves - Cycles without sleep', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="maxSleepWolf" id="maxSleepWolf" value="100" required>
+                                <input type="text" class="form-control" name="maxSleepWolf" id="maxSleepWolf" value="" required>
                             </div>
                         </div>
                     </div>
@@ -443,14 +443,14 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Rabbits - Can breed each (cycles)', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="breedRabbitEach" id="breedRabbitEach" value="50" required>
+                                <input type="text" class="form-control" name="breedRabbitEach" id="breedRabbitEach" value="" required>
                             </div>
                         </div>
                         
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Rabbits - Maximum amount', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="breedRabbitAmount" id="breedRabbitAmount" value="4" required>
+                                <input type="text" class="form-control" name="breedRabbitAmount" id="breedRabbitAmount" value="" required>
                             </div>
                         </div>
                     </div>
@@ -459,7 +459,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Wolves - Can breed each (cycles)', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="breedWolfEach" id="breedWolfEach" value="50" required>
+                                <input type="text" class="form-control" name="breedWolfEach" id="breedWolfEach" value="" required>
                             </div>
 
                             <div class="alert alert-info">
@@ -470,7 +470,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label>Lobos - Cantidad máxima</label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="breedWolfAmount" id="breedWolfAmount" value="4" required>
+                                <input type="text" class="form-control" name="breedWolfAmount" id="breedWolfAmount" value="" required>
                             </div>
                         </div>
                     </div>
@@ -516,14 +516,14 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Rabbits - Need (cycles)', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="turnEatRabbit" id="turnEatRabbit" value="2" required>
+                                <input type="text" class="form-control" name="turnEatRabbit" id="turnEatRabbit" value="" required>
                             </div>
                         </div>
 
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Wolves - Need (cycles)', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="turnEatWolf" id="turnEatWolf" value="2" required>
+                                <input type="text" class="form-control" name="turnEatWolf" id="turnEatWolf" value="" required>
                             </div>
                         </div>
                     </div>
@@ -540,14 +540,14 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Rabbits - Are sated for (cycles)', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="noNeedToEatRabbit" id="noNeedToEatRabbit" value="2" required>
+                                <input type="text" class="form-control" name="noNeedToEatRabbit" id="noNeedToEatRabbit" value="" required>
                             </div>
                         </div>
 
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Wolves - Are sated for (cycles)', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="noNeedToEatWolf" id="noNeedToEatWolf" value="2" required>
+                                <input type="text" class="form-control" name="noNeedToEatWolf" id="noNeedToEatWolf" value="" required>
                             </div>
                         </div>
                     </div>
@@ -573,14 +573,14 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Rabbits - Need (cycles)', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="turnSleepRabbit" id="turnSleepRabbit" value="2" required>
+                                <input type="text" class="form-control" name="turnSleepRabbit" id="turnSleepRabbit" value="" required>
                             </div>
                         </div>
 
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Wolves - Need (cycles)', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="turnSleepWolf" id="turnSleepWolf" value="2" required>
+                                <input type="text" class="form-control" name="turnSleepWolf" id="turnSleepWolf" value="" required>
                             </div>
                         </div>
                     </div>
@@ -616,14 +616,14 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Rabbits', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="maxUseRabbit" id="maxUseRabbit" value="6" required>
+                                <input type="text" class="form-control" name="maxUseRabbit" id="maxUseRabbit" value="" required>
                             </div>
                         </div>
 
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Wolves', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="maxUseWolf" id="maxUseWolf" value="6" required>
+                                <input type="text" class="form-control" name="maxUseWolf" id="maxUseWolf" value="" required>
                             </div>
                         </div>
                     </div>
@@ -699,14 +699,14 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Smell - Rabbits', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="smellRabbitUse" id="smellRabbitUse" value="1" required>
+                                <input type="text" class="form-control" name="smellRabbitUse" id="smellRabbitUse" value="" required>
                             </div>
                         </div>
 
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Smell - Wolves', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="smellWolfUse" id="smellWolfUse" value="1" required>
+                                <input type="text" class="form-control" name="smellWolfUse" id="smellWolfUse" value="" required>
                             </div>
                         </div>
                     </div>
@@ -715,14 +715,14 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Hear - Rabbits', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="hearRabbitUse" id="hearRabbitUse" value="1" required>
+                                <input type="text" class="form-control" name="hearRabbitUse" id="hearRabbitUse" value="" required>
                             </div>
                         </div>
 
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Hear - Wolves', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="hearWolfUse" id="hearWolfUse" value="1" required>
+                                <input type="text" class="form-control" name="hearWolfUse" id="hearWolfUse" value="" required>
                             </div>
                         </div>
                     </div>
@@ -731,14 +731,14 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('See - Rabbits', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="seeRabbitUse" id="seeRabbitUse" value="1" required>
+                                <input type="text" class="form-control" name="seeRabbitUse" id="seeRabbitUse" value="" required>
                             </div>
                         </div>
 
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('See - Wolves', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="seeWolfUse" id="seeWolfUse" value="1" required>
+                                <input type="text" class="form-control" name="seeWolfUse" id="seeWolfUse" value="" required>
                             </div>
                         </div>
                     </div>
@@ -747,14 +747,14 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Move - Rabbits', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="moveRabbitUse" id="moveRabbitUse" value="1" required>
+                                <input type="text" class="form-control" name="moveRabbitUse" id="moveRabbitUse" value="" required>
                             </div>
                         </div>
 
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Move - Wolves', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="moveWolfUse" id="moveWolfUse" value="1" required>
+                                <input type="text" class="form-control" name="moveWolfUse" id="moveWolfUse" value="" required>
                             </div>
                         </div>
                     </div>
@@ -763,14 +763,14 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Sleep - Rabbits', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="sleepRabbitUse" id="sleepRabbitUse" value="1" required>
+                                <input type="text" class="form-control" name="sleepRabbitUse" id="sleepRabbitUse" value="" required>
                             </div>
                         </div>
 
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Sleep - Wolves', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="sleepWolfUse" id="sleepWolfUse" value="1" required>
+                                <input type="text" class="form-control" name="sleepWolfUse" id="sleepWolfUse" value="" required>
                             </div>
                         </div>
                     </div>
@@ -779,14 +779,14 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Breed - Rabbits', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="breedRabbitUse" id="breedRabbitUse" value="1" required>
+                                <input type="text" class="form-control" name="breedRabbitUse" id="breedRabbitUse" value="" required>
                             </div>
                         </div>
 
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Breed - Wolves', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="breedWolfUse" id="breedWolfUse" value="1" required>
+                                <input type="text" class="form-control" name="breedWolfUse" id="breedWolfUse" value="" required>
                             </div>
                         </div>
                     </div>
@@ -834,14 +834,14 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Sight - Rabbits', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="seeRabbit" id="seeRabbit" value="1" required>
+                                <input type="text" class="form-control" name="seeRabbit" id="seeRabbit" value="" required>
                             </div>
                         </div>
 
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Sight - Wolves', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="seeWolf" id="seeWolf" value="1" required>
+                                <input type="text" class="form-control" name="seeWolf" id="seeWolf" value="" required>
                             </div>
                         </div>
                     </div>
@@ -850,14 +850,14 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Smell - Rabbits', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="smellRabbit" id="smellRabbit" value="1" required>
+                                <input type="text" class="form-control" name="smellRabbit" id="smellRabbit" value="" required>
                             </div>
                         </div>
 
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Smell - Wolves', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="smellWolf" id="smellWolf" value="1" required>
+                                <input type="text" class="form-control" name="smellWolf" id="smellWolf" value="" required>
                             </div>
                         </div>
                     </div>
@@ -866,14 +866,14 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Hear - Rabbits', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="hearRabbit" id="hearRabbit" value="1" required>
+                                <input type="text" class="form-control" name="hearRabbit" id="hearRabbit" value="" required>
                             </div>
                         </div>
 
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Hear - Wolves', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="hearWolf" id="hearWolf" value="1" required>
+                                <input type="text" class="form-control" name="hearWolf" id="hearWolf" value="" required>
                             </div>
                         </div>
                     </div>
@@ -909,14 +909,14 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Rabbits - Until (cycles) after eat', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="eatComfortRabbit" id="eatComfortRabbit" value="2" required>
+                                <input type="text" class="form-control" name="eatComfortRabbit" id="eatComfortRabbit" value="" required>
                             </div>
                         </div>
 
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Wolves - Until (cycles) after eat', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="eatComfortWolf" id="eatComfortWolf" value="2" required>
+                                <input type="text" class="form-control" name="eatComfortWolf" id="eatComfortWolf" value="" required>
                             </div>
                         </div>
                     </div>
@@ -925,14 +925,14 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Rabbits - Until (cycles) after sleep', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="sleepComfortRabbit" id="sleepComfortRabbit" value="2" required>
+                                <input type="text" class="form-control" name="sleepComfortRabbit" id="sleepComfortRabbit" value="" required>
                             </div>
                         </div>
 
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Wolves - Until (cycles) after sleep', $lang); ?></label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="sleepComfortWolf" id="sleepComfortWolf" value="2" required>
+                                <input type="text" class="form-control" name="sleepComfortWolf" id="sleepComfortWolf" value="" required>
                             </div>
                         </div>
                     </div>
@@ -999,5 +999,17 @@
             $("#wrapper").toggleClass("active");
         });
     </script>
+
+    <?php
+        if(file_exists('../resources/conf/settings.json')){
+            $conf = file_get_contents('../resources/conf/settings.json');
+            ?>
+            <script type="text/javascript">
+                var conf = <?php echo json_encode($conf); ?>;
+                refill(conf);
+            </script>
+            <?php
+        }
+    ?>
 </body>
 </html>

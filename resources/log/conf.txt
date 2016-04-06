@@ -12,8 +12,8 @@
 2 cycles
 
 **** ------------------------------ Size --------------------------------- ****
-Width: 5
-Height: 5
+Width: 20
+Height: 20
 
 **** ----------------------------- Weather ------------------------------- ****
 **** Status day
@@ -23,7 +23,7 @@ night
 sunny
 
 **** Change weather each
-10 cycles
+2 cycles
 
 ******** ------------------------- Elements --------------------------- *******
 **** --------------------- First amount of elements ---------------------- ****
@@ -35,46 +35,46 @@ sunny
 
 **** ---------------------- Regeneration of carrots ---------------------- ****
 **** Each
-50 cycles
+2 cycles
 
 **** Amount
-0 carrots
+2 carrots
 
 ******** ----------------------- Restrictions ------------------------ ********
 **** ------------------------------- Eat --------------------------------- ****
 **** Rabbit
-Can be 100 cycles without eat
+Can be 2 cycles without eat
 
 **** Wolf
-Can be 100 cycles without eat
+Can be 2 cycles without eat
 
 **** ------------------------------ Sleep -------------------------------- ****
 **** Rabbit
-Can be 100 cycles without sleep
+Can be 2 cycles without sleep
 Place to sleep: ground
 
 **** Wolf
-Can be 100 cycles without sleep
+Can be 2 cycles without sleep
 
 **** ------------------------------ Breed -------------------------------- ****
 **** Rabbit
-Each 50 cycles
-4 new rabbits
+Each 2 cycles
+2 new rabbits
 
 **** Wolf
-Each 50 cycles
-4 new wolves
+Each 2 cycles
+2 new wolves
 
 ********************************** Elements ***********************************
 ******** -------------------------- Cycles --------------------------- ********
 **** ------------------------------- Eat --------------------------------- ****
 **** Rabbit
 Need 2 cycles to eat
-Are sated until 2 after eat
+Are sated until 1 after eat
 
 **** Wolf
 Need 2 cycles to eat
-Are sated until 2 after eat
+Are sated until 1 after eat
 
 **** ------------------------------ Sleep -------------------------------- ****
 **** Rabbit
@@ -122,9 +122,9 @@ Hear: 1
 
 **** --------------------------- Comfort zone ---------------------------- ****
 **** Rabbit
-Until 2 cycles after eat
-Until 2 cycles after sleep
+Until 1 cycles after eat
+Until 1 cycles after sleep
 
 **** Wolf
-Until 2 cycles after eat
-Until 2 cycles after sleep
+Until 1 cycles after eat
+Until 1 cycles after sleep

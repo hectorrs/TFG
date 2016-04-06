@@ -142,7 +142,7 @@
 			<div class='col-sm-2 col-md-2 col-lg-2'>
 				<div class="row">
 					<div class="col-xs-4 col-sm-12 col-md-12 col-lg-12">
-						<input type="button" class="btn btn-default btn-success" style="width: 100%" onclick="transition = setInterval(function(){play()}, 750)" value="<?php echo translate('Play', $lang); ?>" />
+						<input type="button" class="btn btn-default btn-success" style="width: 100%" onclick="transition = setInterval(function(){play()}, 350)" value="<?php echo translate('Play', $lang); ?>" />
 						<div class="dividingBtn"></div>
 					</div>
 
@@ -421,6 +421,7 @@
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<h3><u><?php echo translate('Downloads', $lang); ?></u></h3>
 				<h4><a href="../resources/log/conf.txt"><?php echo translate('Begining configuration', $lang); ?></a></h4>
+				<h4><a href="../resources/conf/settings.json" download><?php echo translate('Begining configuration', $lang); ?></a></h4>
 				<h4><a href="../resources/log/log.csv"><?php echo translate('Actions log', $lang); ?></a></h4>
 				<h4><a href="../resources/log/world.txt"><?php echo translate('World', $lang); ?></a></h4>
 			</div>

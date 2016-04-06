@@ -1,5 +1,6 @@
 <?php
 	$dictionary = array(
+		'' => '',
 		'Menu' => 'Menu',
 		'World' => 'World',
 		'Elements' => 'Elements',
@@ -122,6 +123,10 @@
 		'Breed of rabbits' => 'Breed of rabbits',
 		'Breed of wolves' => 'Breed of wolves',
 		'Weather' => 'Weather',
-		'Zoom' => 'Zoom'
+		'Zoom' => 'Zoom',
+		'Choose between upload a settings file or make the settings manually' => 'Choose between upload a settings file or make the settings manually',
+		'Load a configuration file' => 'Load a configuration file',
+		'Settings manually' => 'Settings manually',
+		'Select a file' => 'Select a file'
 	);
 ?>

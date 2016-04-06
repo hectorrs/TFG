@@ -12,6 +12,9 @@ function translate(text, language){
 		case 'en':
 			return en[text];
 			break;
+		default:
+			return en[text];
+			break;
 	}
 }
 
