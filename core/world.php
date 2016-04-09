@@ -332,7 +332,7 @@
 
 		$GLOBALS['vars']['ground'] = new Ground();
 
-		writeFileCSV('Log', array('Element', 'ID', 'Position', 'Status', 'Action', 'Effect'));
+		writeFileCSV('Log', array('Cycle', 'World (warning)', 'Element', 'ID', 'Position', 'Status', 'Action', 'Effect'));
 
 		/* Rabbits and wolf customization */
 		if(isset($_POST['codeRabbit'])){
@@ -461,10 +461,10 @@
 	function setStatusDay(){
 		if($GLOBALS['vars']['daylight']){
 			$GLOBALS['vars']['daylight'] = false;
-			//writeFile('Log', 'Status day changed to night' . "\n");
+			writeFileCSV('Log', array(getTime(), 'Status day changed to night', '', '', '', '', '', ''));
 		}else{
 			$GLOBALS['vars']['daylight'] = true;
-			//writeFile('Log', 'Status day changed to day' . "\n");
+			writeFileCSV('Log', array(getTime(), 'Status day changed to day', '', '', '', '', '', ''));
 		}
 	}
 
@@ -509,7 +509,7 @@
 	 */
 	function setWeather(){
 		$GLOBALS['vars']['currentWeather'] = $GLOBALS['vars']['weather'][mt_rand(0, 3)];
-		//writeFile('Log', 'Weather changed to ' . getWeather() . "\n");
+		writeFileCSV('Log', array(getTime(), 'Weather changed to ' . getWeather(), '', '', '', '', '', '', ));
 	}
 
 	/**
@@ -715,12 +715,11 @@
 
             addDynamic($rabbit);
 
-            //writeFile('Log', '( ' . $rabbit->getPosition()[0] . ' , ' . $rabbit->getPosition()[1] . ' ) - Rabbit ' . $rabbit->getId() . "\n");
-            writeFileCSV('Log', array(get_class($rabbit), $rabbit->getId(), $rabbit->getPosition()[0] . '.' . $rabbit->getPosition()[1]));
+            writeFileCSV('Log', array(getTime(), 'New element', get_class($rabbit), $rabbit->getId(), '[ ' . $rabbit->getPosition()[0] . ' - ' . $rabbit->getPosition()[1] . ' ]', '', '', ''));
 
             return true;
 		}else{
-			//writeFile('Log', 'World is full! It can\'t put a rabbit' . "\n");
+			writeFileCSV('Log', array(getTime(), 'World is full! It can\'t put a rabbit', '', '', '', '', '', ''));
 
 			return false;
 		}
@@ -748,12 +747,11 @@
 
             addDynamic($wolf);
 
-            //writeFile('Log', '( ' . $wolf->getPosition()[0] . ' , ' . $wolf->getPosition()[1] . ' ) - Wolf ' . $wolf->getId() . "\n");
-            writeFileCSV('Log', array(get_class($wolf), $wolf->getId(), $wolf->getPosition()[0] . '.' . $wolf->getPosition()[1]));
+            writeFileCSV('Log', array(getTime(), 'New element', get_class($wolf), $wolf->getId(), '[ ' . $wolf->getPosition()[0] . ' - ' . $wolf->getPosition()[1] . ' ]', '', '', ''));
 
             return true;
 		}else{
-			//writeFile('Log', 'World is full! It can\'t put a wolf' . "\n");
+			writeFileCSV('Log', array(getTime(), 'World is full! It can\'t put a wolf', '', '', '', '', '', ''));
 
 			return false;
 		}
@@ -779,10 +777,9 @@
 
             addPrize($carrot);
 
-            //writeFile('Log', '( ' . $carrot->getPosition()[0] . ' , ' . $carrot->getPosition()[1] . ' ) - Carrot' . "\n");
-            writeFileCSV('Log', array(get_class($carrot), $carrot->getId(), $carrot->getPosition()[0] . '.' . $carrot->getPosition()[1]));
+            writeFileCSV('Log', array(getTime(), 'New element', get_class($carrot), $carrot->getId(), '[ ' . $carrot->getPosition()[0] . ' - ' . $carrot->getPosition()[1] . ' ]', '', '', ''));
 		}else{
-			//writeFile('Log', 'World is full! It can\'t put a carrot' . "\n");
+			writeFileCSV('Log', array(getTime(), 'World is full! It can\'t put a carrot', '', '', '', '', '', ''));
 		}
 	}
 
@@ -805,10 +802,9 @@
 
             addStatic($lair);
 
-            //writeFile('Log', '( ' . $lair->getPosition()[0] . ' , ' . $lair->getPosition()[1] . ' ) - Lair' . "\n");
-            writeFileCSV('Log', array(get_class($lair), $lair->getId(), $lair->getPosition()[0] . '.' . $lair->getPosition()[1]));
+            writeFileCSV('Log', array(getTime(), 'New element', get_class($lair), $lair->getId(), $lair->getPosition()[0] . '.' . $lair->getPosition()[1]));
 		}else{
-			//writeFile('Log', 'World is full! It can\'t put a lair' . "\n");
+			writeFileCSV('Log', array(getTime(), 'World is full! It can\'t put a lair', '', '', '', '', '', ''));
 		}
 	}
 
@@ -831,10 +827,9 @@
 
             addStatic($tree);
 
-            //writeFile('Log', '( ' . $tree->getPosition()[0] . ' , ' . $tree->getPosition()[1] . ' ) - Tree' . "\n");
-            writeFileCSV('Log', array(get_class($tree), $tree->getId(), $tree->getPosition()[0] . '.' . $tree->getPosition()[1]));
+            writeFileCSV('Log', array(getTime(), 'New element', get_class($tree), $tree->getId(), '[ ' . $tree->getPosition()[0] . ' - ' . $tree->getPosition()[1] . ' ]', '', '', ''));
 		}else{
-			//writeFile('Log', 'World is full! It can\'t put a tree' . "\n");
+			writeFileCSV('Log', array(getTime(), 'World is full! It can\'t put a tree', '', '', '', '', '', ''));
 		}
 	}
 
@@ -851,7 +846,7 @@
 					useAction($args[0], 'see');
 					return $see;
 				}else{
-					//writeFile('Log', get_class($args[0]) . ' ' . $args[0]->getId() . ' can\'t see, hasn\'t enough uses' . "\n");
+					writeFileCSV('Log', array(getTime(), 'It can\'t see, it hasn\'t enough uses', get_class($args[0]), $args[0]->getId(), '[ ' . $args[0]->getPosition()[0] . ' - ' . $args[0]->getPosition()[0] . ' ]', '', 'see', ''));
 				}
 				break;
 			case 'move':
@@ -859,7 +854,7 @@
 					move($args[0], $args[2]);
 					useAction($args[0], 'move');
 				}else{
-					//writeFile('Log', get_class($args[0]) . ' ' . $args[0]->getId() . ' can\'t move, hasn\'t enough uses' . "\n");
+					writeFileCSV('Log', array(getTime(), 'It can\'t move, it hasn\'t enough uses', get_class($args[0]), $args[0]->getId(), '[ ' . $args[0]->getPosition()[0] . ' - ' . $args[0]->getPosition()[0] . ' ]', '', 'move', ''));
 				}
 				break;
 			case 'sleep':
@@ -867,7 +862,7 @@
 					toSleep($args[0]);
 					useAction($args[0], 'sleep');
 				}else{
-					//writeFile('Log', get_class($args[0]) . ' ' . $args[0]->getId() . ' can\'t sleep, hasn\'t enough uses' . "\n");
+					writeFileCSV('Log', array(getTime(), 'It can\'t sleep, it hasn\'t enough uses', get_class($args[0]), $args[0]->getId(), '[ ' . $args[0]->getPosition()[0] . ' - ' . $args[0]->getPosition()[0] . ' ]', '', 'sleep', ''));
 				}
 				break;
 			case 'smell':
@@ -876,7 +871,7 @@
 					useAction($args[0], 'smell');
 					return $smell;
 				}else{
-					//writeFile('Log', get_class($args[0]) . ' ' . $args[0]->getId() . ' can\'t smell, hasn\'t enough uses' . "\n");
+					writeFileCSV('Log', array(getTime(), 'It can\'t smell, it hasn\'t enough uses', get_class($args[0]), $args[0]->getId(), '[ ' . $args[0]->getPosition()[0] . ' - ' . $args[0]->getPosition()[0] . ' ]', '', 'smell', ''));
 				}
 				break;
 			case 'hear':
@@ -885,7 +880,7 @@
 					useAction($args[0], 'hear');
 					return $hear;
 				}else{
-					//writeFile('Log', get_class($args[0]) . ' ' . $args[0]->getId() . ' can\'t hear, hasn\'t enough uses' . "\n");
+					writeFileCSV('Log', array(getTime(), 'It can\'t hear, it hasn\'t enough uses', get_class($args[0]), $args[0]->getId(), '[ ' . $args[0]->getPosition()[0] . ' - ' . $args[0]->getPosition()[0] . ' ]', '', 'hear', ''));
 				}
 				break;
 			case 'breed':
@@ -893,7 +888,7 @@
 					breed($args[0]);
 					useAction($args[0], 'breed');
 				}else{
-					//writeFile('Log', get_class($args[0]) . ' ' . $args[0]->getId() . ' can\'t breed, hasn\'t enough uses' . "\n");
+					writeFileCSV('Log', array(getTime(), 'It can\'t breed, it hasn\'t enough uses', get_class($args[0]), $args[0]->getId(), '[ ' . $args[0]->getPosition()[0] . ' - ' . $args[0]->getPosition()[0] . ' ]', '', 'breed', ''));
 				}
 				break;
 		}
@@ -996,8 +991,6 @@
 	 * @return array Positions and elements
 	 */
 	function see($element){
-		//writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - see - ');
-
 		$see = array();
 		$seeWrite = '';
 
@@ -1030,7 +1023,6 @@
         		if(!isLocked($rowStart, $colStart)){
         			if(!($rowStart == $position[0] && $colStart == $position[1]) && get_class(getWorld()[$rowStart][$colStart]) != 'Ground'){
         				array_push($see, array(get_class(getWorld()[$rowStart][$colStart]), array($rowStart, $rowEnd)));
-        				//writeFile('Log', get_class(getWorld()[$rowStart][$colStart]) . ' ( ' . $rowStart . ' , ' . $colStart . ' ) ');
         				$seeWrite .= $rowStart . '.' . $colStart . get_class(getWorld()[$rowStart][$colStart]) . ',';
         			}
         		}
@@ -1040,8 +1032,7 @@
         	$rowStart++;
         }
 
-        //writeFile('Log', "\n");
-        writeFileCSV('Log', array(get_class($element), $element->getId(), $element->getPosition()[0] . '.' . $element->getPosition()[1], '', 'see', $seeWrite));
+        writeFileCSV('Log', array(getTime(), '', get_class($element), $element->getId(), '[ ' . $element->getPosition()[0] . ' - ' . $element->getPosition()[1] . ' ]', '', 'see', $seeWrite));
 
 		return $see;
 	}
@@ -1092,7 +1083,7 @@
 		}
 
 		if($row < 0 || $row >= getSizeWorld()['row'] || $col < 0 || $col >= getSizeWorld()['col']){
-			//writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - move - ' . $movement . ' - Denied' . "\n");
+			writeFileCSV('Log', array(getTime(), 'Denied', get_class($element), $element->getId(), '[ ' . $position[0] . ' - ' . $position[1] . ' ]', '', 'move', ''));
 		}else{
 			switch(get_class($element)){
 				case 'Rabbit':
@@ -1108,8 +1099,7 @@
 							$element->setPosition(array($row, $col));
 							setWorld($element, $row, $col);
 
-							//writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - move - ' . $movement . ' - ( ' . $row . ' , ' . $col . ' )' . "\n");
-							writeFileCSV('Log', array(get_class($element), $element->getId(), $row . '.' . $col, '', 'move', ''));
+							writeFileCSV('Log', array(getTime(), '', get_class($element), $element->getId(), '[ ' . $position[0] . ' - ' . $position[1] . ' ]', '', 'move', '[ ' . $element->getPosition()[0] . ' - ' . $element->getPosition()[1] . ' ]'));
 							break;
 						case 'Carrot':
 							// Eat
@@ -1131,10 +1121,9 @@
 								// Estadísticas - Zanahorias comidas
 								$GLOBALS['vars']['eatenCarrot'][getTime() - 1]++;
 
-								//writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - move - ' . $movement . ' - ( ' . $row . ' , ' . $col . ' ) - Eating' . "\n");
-								writeFileCSV('Log', array(get_class($element), $element->getId(), $row . '.' . $col, '', 'move', 'eat'));
+								writeFileCSV('Log', array(getTime(), '', get_class($element), $element->getId(), '[ ' . $position[0] . ' - ' . $position[1] . ' ]', 'eating', 'move', '[ ' . $element->getPosition()[0] . ' - ' . $element->getPosition()[1] . ' ]'));
 							}else{
-								//writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - move - ' . $movement . ' - ( ' . $row . ' , ' . $col . ' ) - Denied - He is sated' . "\n");
+								writeFileCSV('Log', array(getTime(), 'Denied - It is sated', get_class($element), $element->getId(), '[ ' . $position[0] . ' - ' . $position[1] . ' ]', '', 'move', ''));
 							}
 							break;
 						case 'Lair':
@@ -1149,14 +1138,14 @@
 								getWorld()[$row][$col]->saveElement($element);
 
 								$element->setPosition(array($row, $col));
-								//writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - move - ' . $movement . ' - ( ' . $row . ' , ' . $col . ' )' . "\n");
-								writeFileCSV('Log', array(get_class($element), $element->getId(), $row . '.' . $col, '', 'move', 'hide'));
+
+								writeFileCSV('Log', array(getTime(), '', get_class($element), $element->getId(), '[ ' . $position[0] . ' - ' . $position[1] . ' ]', 'hidden', 'move', '[ ' . $element->getPosition()[0] . ' - ' . $element->getPosition()[1] . ' ]'));
 							}else{
-								//writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - move - ' . $movement . ' - Denied - Lair busy' . "\n");
+								writeFileCSV('Log', array(getTime(), 'Denied - Lair is busy', get_class($element), $element->getId(), '[ ' . $position[0] . ' - ' . $position[1] . ' ]', '', 'move', ''));
 							}
 							break;
 						default:
-							//writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - move - ' . $movement . ' - Denied' . "\n");
+							writeFileCSV('Log', array(getTime(), 'Denied', get_class($element), $element->getId(), '[ ' . $position[0] . ' - ' . $position[1] . ' ]', '', 'move', ''));
 					}
 					break;
 				case 'Wolf':
@@ -1166,8 +1155,7 @@
 							$element->setPosition(array($row, $col));
 							setWorld($element, $row, $col);
 
-							//writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - move - ' . $movement . ' - ( ' . $row . ' , ' . $col . ' )' . "\n");
-							writeFileCSV('Log', array(get_class($element), $element->getId(), $row . '.' . $col, '', 'move', ''));
+							writeFileCSV('Log', array(getTime(), '', get_class($element), $element->getId(), '[ ' . $position[0] . ' - ' . $position[1] . ' ]', '', 'move', '[ ' . $element->getPosition()[0] . ' - ' . $element->getPosition()[1] . ' ]'));
 							break;
 						case 'Rabbit':
 							if($element->getAteAgo() >= $_POST['noNeedToEatWolf']){
@@ -1183,15 +1171,14 @@
 								// Statistics - Hunted rabbits
 								$GLOBALS['vars']['huntedRabbit'][getTime() - 1]++;
 
-								//writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - move - ' . $movement . ' - ( ' . $row . ' , ' . $col . ' ) - Eating' . "\n");
-								writeFileCSV('Log', array(get_class($element), $element->getId(), $row . '.' . $col, '', 'move', 'eat'));
+								writeFileCSV('Log', array(getTime(), '', get_class($element), $element->getId(), '[ ' . $position[0] . ' - ' . $position[1] . ' ]', 'eating', 'move', '[ ' . $element->getPosition()[0] . ' - ' . $element->getPosition()[1] . ' ]'));
 							}else{
-								//writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - move - ' . $movement . ' - ( ' . $row . ' , ' . $col . ' ) - Denied - He is sated' . "\n");
+								writeFileCSV('Log', array(getTime(), 'Denied - It is sated', get_class($element), $element->getId(), '[ ' . $position[0] . ' - ' . $position[1] . ' ]', '', 'move', ''));
 							}
 							
 							break;
 						default:
-							//writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - move - ' . $movement . ' - Denied' . "\n");
+							writeFileCSV('Log', array(getTime(), 'Denied', get_class($element), $element->getId(), '[ ' . $position[0] . ' - ' . $position[1] . ' ]', '', 'move', ''));
 					}
 					break;
 			}
@@ -1211,16 +1198,16 @@
 					if($_POST['placeToSleepRabbit'] == 'ground'){
 						$element->setSleeping(getTurnSleepRabbit());
 						$element->setSleptAgo(0);
-						//writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - sleep' . "\n");
-						writeFileCSV('Log', array(get_class($element), $element->getId(), $element->getPosition()[0] . '.' . $element->getPosition()[1], '', 'sleep', ''));
+
+						writeFileCSV('Log', array(getTime(), '', get_class($element), $element->getId(), '[ ' . $element->getPosition()[0] . ' - ' . $element->getPosition()[1] . ' ]', 'sleeping', 'sleep', ''));
 					}else{
 						if($element->getHidden()){
 							$element->setSleeping(getTurnSleepRabbit());
 							$element->setSleptAgo(0);
-							//writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - sleep' . "\n");
-							writeFileCSV('Log', array(get_class($element), $element->getId(), $element->getPosition()[0] . '.' . $element->getPosition()[1], '', 'sleep', ''));
+
+							writeFileCSV('Log', array(getTime(), '', get_class($element), $element->getId(), '[ ' . $element->getPosition()[0] . ' - ' . $element->getPosition()[1] . ' ]', 'hidden/sleeping', 'sleep', ''));
 						}else{
-							//writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - sleep - Denied' . "\n");
+							writeFileCSV('Log', array(getTime(), 'Denied', get_class($element), $element->getId(), '[ ' . $element->getPosition()[0] . ' - ' . $element->getPosition()[1] . ' ]', '', 'sleep', ''));
 						}
 					}
 				}else{
@@ -1230,7 +1217,8 @@
 			case 'Wolf':
 				$element->setSleeping(getTurnSleepRabbit());
 				$element->setSleptAgo(0);
-				writeFileCSV('Log', array(get_class($element), $element->getId(), $element->getPosition()[0] . '.' . $element->getPosition()[1], '', 'sleep', ''));
+
+				writeFileCSV('Log', array(getTime(), '', get_class($element), $element->getId(), '[ ' . $element->getPosition()[0] . ' - ' . $element->getPosition()[1] . ' ]', 'sleeping', 'sleep', ''));
 				break;
 		}
 	}
@@ -1293,8 +1281,7 @@
         	$rowStart++;
         }
 
-        //writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - smell - Rabbit: ' . $numRabbit . ', Wolf: ' . $numWolf . ', Carrot: ' . $numCarrot . "\n");
-        writeFileCSV('Log', array(get_class($element), $element->getId(), $position[0] . '.' . $position[1], '', 'smell', 'Rabbit (' . $numRabbit . '), Wolf (' . $numWolf . '), Carrot(' . $numCarrot . ')'));
+        writeFileCSV('Log', array(getTime(), '', get_class($element), $element->getId(), '[ ' . $position[0] . ' - ' . $position[1] . ' ]', '', 'smell', 'Rabbit (' . $numRabbit . '), Wolf (' . $numWolf . '), Carrot(' . $numCarrot . ')'));
 
         return array('Rabbit' => $numRabbit, 'Wolf' => $numWolf, 'Carrot' => $numCarrot);
 	}
@@ -1352,8 +1339,7 @@
         	$rowStart++;
         }
 
-        //writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - hear - Rabbit: ' . $numRabbit . ', Wolf: ' . $numWolf . ', Carrot: ' . $numCarrot . "\n");
-        writeFileCSV('Log', array(get_class($element), $element->getId(), $position[0] . '.' . $position[1], '', 'hear', 'Rabbit (' . $numRabbit . '), Wolf (' . $numWolf . '), Carrot(' . $numCarrot . ')'));
+        writeFileCSV('Log', array(getTime(), '', get_class($element), $element->getId(), '[ ' . $position[0] . ' - ' . $position[1] . ' ]', '', 'hear', 'Rabbit (' . $numRabbit . '), Wolf (' . $numWolf . '), Carrot(' . $numCarrot . ')'));
 
         return array('Rabbit' => $numRabbit, 'Wolf' => $numWolf, 'Carrot' => $numCarrot);
 	}
@@ -1393,18 +1379,17 @@
 										// Estadísticas - Reproducción de conejos
 										$GLOBALS['vars']['bornRabbit'][getTime() - 1] += $numChildren;
 
-										//writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - breed' . "\n");
-										writeFileCSV('Log', array(get_class($element), $element->getId(), $position[0] . '.' . $position[1], '', 'breed', 'Children (' . $numChildren . ')'));
+										writeFileCSV('Log', array(getTime(), '', get_class($element), $element->getId(), '[ ' . $position[0] . ' - ' . $position[1] . ' ]', '', 'breed', 'Children (' . $numChildren . ')'));
 
 										break;
 									}
 								}
 							}
 						}else{
-							//writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - breed - Denied - Children lost' . "\n");
+							writeFileCSV('Log', array(getTime(), '', get_class($element), $element->getId(), '[ ' . $element->getPosition()[0] . ' - ' . $element->getPosition()[1] . ' ]', '', 'breed', 'Children lost'));
 						}
 					}else{
-						//writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - breed - Denied' . "\n");
+						writeFileCSV('Log', array(getTime(), 'Denied', get_class($element), $element->getId(), '[ ' . $element->getPosition()[0] . ' - ' . $element->getPosition()[1] . ' ]', '', 'breed', ''));
 					}
 					break;
 				case 'Wolf':
@@ -1434,23 +1419,22 @@
 										// Estadísticas - Reproducción de lobos
 										$GLOBALS['vars']['bornWolf'][getTime() - 1] += $numChildren;
 
-										//writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - breed' . "\n");
-										writeFileCSV('Log', array(get_class($element), $element->getId(), $position[0] . '.' . $position[1], '', 'breed', 'Children (' . $numChildren . ')'));
+										writeFileCSV('Log', array(getTime(), '', get_class($element), $element->getId(), '[ ' . $position[0] . ' - ' . $position[1] . ' ]', '', 'breed', 'Children (' . $numChildren . ')'));
 
 										break;
 									}
 								}
 							}
 						}else{
-							//writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - breed - Denied - Children lost' . "\n");
+							writeFileCSV('Log', array(getTime(), '', get_class($element), $element->getId(), '[ ' . $element->getPosition()[0] . ' - ' . $element->getPosition()[1] . ' ]', '', 'breed', 'Children lost'));
 						}
 					}else{
-						//writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - breed - Denied' . "\n");
+						writeFileCSV('Log', array(getTime(), 'Denied', get_class($element), $element->getId(), '[ ' . $element->getPosition()[0] . ' - ' . $element->getPosition()[1] . ' ]', '', 'breed', ''));
 					}
 					break;
 			}
 		}else{
-			//writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - breed - Denied' . "\n");
+			writeFileCSV('Log', array(getTime(), 'Denied', get_class($element), $element->getId(), '[ ' . $element->getPosition()[0] . ' - ', $element->getPosition()[1] . ' ]', '', 'breed', ''));
 		}
 	}
 
@@ -1521,7 +1505,7 @@
 	 * @param string Text to write in a file
 	 */
 	function writeFileCSV($file, $text){
-		fputcsv($GLOBALS['vars']['file' . $file], $text, ':');
+		fputcsv($GLOBALS['vars']['file' . $file], $text, ';');
 	}
 
 	/**
@@ -1590,9 +1574,6 @@
 	$timeWeather = 1;
 
 	while(getTime() <= getLength()){
-		//writeFile('Log', '----Turn ' . getTime() . "\n");
-		writeFileCSV('Log', array('Turn ' . getTime()));
-
 		// Change day status (daylight / night)
 		if(getTime() == (getLengthDay() + getLengthNight()) * getiTime() - intval(getLengthNight() / 2) || getTime() == (getLengthDay() + getLengthNight()) * (getiTime() - 1) + intval(getLengthNight() / 2) + $x){
 			setStatusDay();
@@ -1635,8 +1616,7 @@
 					$GLOBALS['vars']['deadEatWolf'][getTime() - 1]++;
 				}
 
-				//writeFile('Log', get_class($element) . ' ' . $element->getId() . ' has dead because he has not eaten enough' . "\n");
-				writeFileCSV('Log', array(get_class($element), $element->getId(), 'dead', 'not eat enough'));
+				writeFileCSV('Log', array(getTime(), 'Dead - Not eat enough', get_class($element), $element->getId(), '[ ' . $element->getPosition()[0] . ' - ' . $element->getPosition()[1] .' ]', '', '', ''));
 			}else if((get_class($element) == 'Rabbit' && $element->getSleptAgo() == $_POST['maxSleepRabbit']) || (get_class($element) == 'Wolf' && $element->getSleptAgo() == $_POST['maxSleepWolf'])){
 				delDynamic($element);
 
@@ -1647,18 +1627,15 @@
 					$GLOBALS['vars']['deadSleepWolf'][getiTime() - 1]++;
 				}
 
-				//writeFile('Log', get_class($element) . ' ' . $element->getId() . ' has dead because he has not slept enough' . "\n");
-				writeFileCSV('Log', array(get_class($element), $element->getId(), 'dead', 'not sleep enough'));
+				writeFileCSV('Log', array(getTime(), 'Dead - Not sleep enough', get_class($element), $element->getId(), '[ ' . $element->getPosition()[0] . ' - ' . $element->getPosition()[1] .' ]', '', '', ''));
 			}else if($element->getEating() > 0){
 				$element->setEating($element->getEating() - 1);
 
-				//writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - eating' . "\n");
-				writeFileCSV('Log', array(get_class($element), $element->getId(), $element->getPosition()[0] . '.' . $element->getPosition()[1], 'eating', '', ''));
+				writeFileCSV('Log', array(getTime(), '', get_class($element), $element->getId(), '[' . $element->getPosition()[0] . ' - ' . $element->getPosition()[1] . ' ]', 'eating', '', ''));
 			}else if($element->getSleeping() > 0){
 				$element->setSleeping($element->getSleeping() - 1);
 
-				//writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - sleeping' . "\n");
-				writeFileCSV('Log', array(get_class($element), $element->getId(), $element->getPosition()[0] . '.' . $element->getPosition()[1], 'sleeping', '', ''));
+				writeFileCSV('Log', array(getTime(), '', get_class($element), $element->getId(), '[' . $element->getPosition()[0] . ' - ' . $element->getPosition()[1] . ' ]', 'eating', '', ''));
 			}else{
 				$element->setAteAgo($element->getAteAgo() + 1);
 				$element->setSleptAgo($element->getSleptAgo() + 1);
@@ -1728,8 +1705,6 @@
 		array_push($GLOBALS['vars']['amountRabbit'], $amountRabbit);
 		array_push($GLOBALS['vars']['amountWolf'], $amountWolf);
 		array_push($GLOBALS['vars']['amountCarrot'], count(getPrize()));
-
-		//writeFile('Log', "\n");
 	}
 
 	closeFile('Log');

@@ -1,210 +1,210 @@
-Element:ID:Position:Status:Action:Effect
+Cycle;"World (warning)";Element;ID;Position;Status;Action;Effect
 "Turn 0"
-Carrot:0:13.3
-Carrot:1:17.16
-Carrot:2:1.9
-Carrot:3:15.3
-"Turn 1"
-Carrot:4:0.13
-"Turn 2"
-"Turn 3"
-"Turn 4"
-"Turn 5"
-"Turn 6"
-"Turn 7"
-"Turn 8"
-"Turn 9"
-"Turn 10"
-"Turn 11"
-"Turn 12"
-"Turn 13"
-"Turn 14"
-"Turn 15"
-"Turn 16"
-"Turn 17"
-"Turn 18"
-"Turn 19"
-"Turn 20"
-"Turn 21"
-"Turn 22"
-"Turn 23"
-"Turn 24"
-"Turn 25"
-"Turn 26"
-"Turn 27"
-"Turn 28"
-"Turn 29"
-"Turn 30"
-"Turn 31"
-"Turn 32"
-"Turn 33"
-"Turn 34"
-"Turn 35"
-"Turn 36"
-"Turn 37"
-"Turn 38"
-"Turn 39"
-"Turn 40"
-"Turn 41"
-"Turn 42"
-"Turn 43"
-"Turn 44"
-"Turn 45"
-"Turn 46"
-"Turn 47"
-"Turn 48"
-"Turn 49"
-"Turn 50"
-"Turn 51"
-"Turn 52"
-Carrot:5:6.7
-"Turn 53"
-"Turn 54"
-"Turn 55"
-"Turn 56"
-"Turn 57"
-"Turn 58"
-"Turn 59"
-"Turn 60"
-"Turn 61"
-"Turn 62"
-"Turn 63"
-"Turn 64"
-"Turn 65"
-"Turn 66"
-"Turn 67"
-"Turn 68"
-"Turn 69"
-"Turn 70"
-"Turn 71"
-"Turn 72"
-"Turn 73"
-"Turn 74"
-"Turn 75"
-"Turn 76"
-"Turn 77"
-"Turn 78"
-"Turn 79"
-"Turn 80"
-"Turn 81"
-"Turn 82"
-"Turn 83"
-"Turn 84"
-"Turn 85"
-"Turn 86"
-"Turn 87"
-"Turn 88"
-"Turn 89"
-"Turn 90"
-"Turn 91"
-"Turn 92"
-"Turn 93"
-"Turn 94"
-"Turn 95"
-"Turn 96"
-"Turn 97"
-"Turn 98"
-"Turn 99"
-"Turn 100"
-"Turn 101"
-"Turn 102"
-"Turn 103"
-Carrot:6:2.12
-"Turn 104"
-"Turn 105"
-"Turn 106"
-"Turn 107"
-"Turn 108"
-"Turn 109"
-"Turn 110"
-"Turn 111"
-"Turn 112"
-"Turn 113"
-"Turn 114"
-"Turn 115"
-"Turn 116"
-"Turn 117"
-"Turn 118"
-"Turn 119"
-"Turn 120"
-"Turn 121"
-"Turn 122"
-"Turn 123"
-"Turn 124"
-"Turn 125"
-"Turn 126"
-"Turn 127"
-"Turn 128"
-"Turn 129"
-"Turn 130"
-"Turn 131"
-"Turn 132"
-"Turn 133"
-"Turn 134"
-"Turn 135"
-"Turn 136"
-"Turn 137"
-"Turn 138"
-"Turn 139"
-"Turn 140"
-"Turn 141"
-"Turn 142"
-"Turn 143"
-"Turn 144"
-"Turn 145"
-"Turn 146"
-"Turn 147"
-"Turn 148"
-"Turn 149"
-"Turn 150"
-"Turn 151"
-"Turn 152"
-"Turn 153"
-"Turn 154"
-Carrot:7:17.18
-"Turn 155"
-"Turn 156"
-"Turn 157"
-"Turn 158"
-"Turn 159"
-"Turn 160"
-"Turn 161"
-"Turn 162"
-"Turn 163"
-"Turn 164"
-"Turn 165"
-"Turn 166"
-"Turn 167"
-"Turn 168"
-"Turn 169"
-"Turn 170"
-"Turn 171"
-"Turn 172"
-"Turn 173"
-"Turn 174"
-"Turn 175"
-"Turn 176"
-"Turn 177"
-"Turn 178"
-"Turn 179"
-"Turn 180"
-"Turn 181"
-"Turn 182"
-"Turn 183"
-"Turn 184"
-"Turn 185"
-"Turn 186"
-"Turn 187"
-"Turn 188"
-"Turn 189"
-"Turn 190"
-"Turn 191"
-"Turn 192"
-"Turn 193"
-"Turn 194"
-"Turn 195"
-"Turn 196"
-"Turn 197"
-"Turn 198"
-"Turn 199"
-"Turn 200"
+1;"New element";Rabbit;0;"[ 8 - 7 ]";;;
+1;"New element";Rabbit;1;"[ 3 - 6 ]";;;
+1;"New element";Wolf;2;"[ 8 - 15 ]";;;
+1;"New element";Wolf;3;"[ 13 - 15 ]";;;
+1;"New element";Carrot;4;"[ 0 - 2 ]";;;
+1;"New element";Carrot;5;"[ 17 - 2 ]";;;
+1;"New element";Lair;6;14.3
+1;"New element";Lair;7;1.15
+1;"New element";Tree;8;"[ 14 - 2 ]";;;
+1;"New element";Tree;9;"[ 2 - 15 ]";;;
+1;"Status day changed to day";;;;;;
+1;;Rabbit;0;"[ 8 - 7 ]";;see;
+1;;Rabbit;0;"[ 8 - 7 ]";;smell;"Rabbit (0), Wolf (0), Carrot(0)"
+1;;Rabbit;0;"[ 8 - 7 ]";;hear;"Rabbit (0), Wolf (0), Carrot(0)"
+1;;Rabbit;0;"[ 8 - 7 ]";;move;"[ 8 - 6 ]"
+1;;Rabbit;0;"[ 8 - 6 ]";sleeping;sleep;
+1;Denied;Rabbit;0;"[ 8 - ";"6 ]";;breed;
+1;;Rabbit;1;"[ 3 - 6 ]";;see;
+1;;Rabbit;1;"[ 3 - 6 ]";;smell;"Rabbit (0), Wolf (0), Carrot(0)"
+1;;Rabbit;1;"[ 3 - 6 ]";;hear;"Rabbit (0), Wolf (0), Carrot(0)"
+1;;Rabbit;1;"[ 3 - 6 ]";;move;"[ 3 - 5 ]"
+1;;Rabbit;1;"[ 3 - 5 ]";sleeping;sleep;
+1;Denied;Rabbit;1;"[ 3 - ";"5 ]";;breed;
+1;;Wolf;2;"[ 8 - 15 ]";;see;
+1;;Wolf;2;"[ 8 - 15 ]";;smell;"Rabbit (0), Wolf (0), Carrot(0)"
+1;;Wolf;2;"[ 8 - 15 ]";;hear;"Rabbit (0), Wolf (0), Carrot(0)"
+1;;Wolf;2;"[ 8 - 15 ]";;move;"[ 9 - 15 ]"
+1;;Wolf;2;"[ 9 - 15 ]";sleeping;sleep;
+1;Denied;Wolf;2;"[ 9 - ";"15 ]";;breed;
+1;;Wolf;3;"[ 13 - 15 ]";;see;
+1;;Wolf;3;"[ 13 - 15 ]";;smell;"Rabbit (0), Wolf (0), Carrot(0)"
+1;;Wolf;3;"[ 13 - 15 ]";;hear;"Rabbit (0), Wolf (0), Carrot(0)"
+1;;Wolf;3;"[ 13 - 15 ]";;move;"[ 13 - 14 ]"
+1;;Wolf;3;"[ 13 - 14 ]";sleeping;sleep;
+1;Denied;Wolf;3;"[ 13 - ";"14 ]";;breed;
+1;"New element";Carrot;10;"[ 7 - 0 ]";;;
+1;"New element";Carrot;11;"[ 14 - 0 ]";;;
+2;"Weather changed to rainy";;;;;;
+2;;Rabbit;0;"[8 - 6 ]";eating;;
+2;;Rabbit;1;"[3 - 5 ]";eating;;
+2;;Wolf;2;"[9 - 15 ]";eating;;
+2;;Wolf;3;"[13 - 14 ]";eating;;
+3;;Rabbit;0;"[8 - 6 ]";eating;;
+3;;Rabbit;1;"[3 - 5 ]";eating;;
+3;;Wolf;2;"[9 - 15 ]";eating;;
+3;;Wolf;3;"[13 - 14 ]";eating;;
+4;"Weather changed to sunny";;;;;;
+4;;Rabbit;0;"[ 8 - 6 ]";;see;
+4;;Rabbit;0;"[ 8 - 6 ]";;smell;"Rabbit (0), Wolf (0), Carrot(0)"
+4;;Rabbit;0;"[ 8 - 6 ]";;hear;"Rabbit (0), Wolf (0), Carrot(0)"
+4;;Rabbit;0;"[ 8 - 6 ]";;move;"[ 8 - 5 ]"
+4;;Rabbit;0;"[ 8 - 5 ]";sleeping;sleep;
+4;Denied;Rabbit;0;"[ 8 - ";"5 ]";;breed;
+4;;Rabbit;1;"[ 3 - 5 ]";;see;
+4;;Rabbit;1;"[ 3 - 5 ]";;smell;"Rabbit (0), Wolf (0), Carrot(0)"
+4;;Rabbit;1;"[ 3 - 5 ]";;hear;"Rabbit (0), Wolf (0), Carrot(0)"
+4;;Rabbit;1;"[ 3 - 5 ]";;move;"[ 3 - 6 ]"
+4;;Rabbit;1;"[ 3 - 6 ]";sleeping;sleep;
+4;Denied;Rabbit;1;"[ 3 - ";"6 ]";;breed;
+4;;Wolf;2;"[ 9 - 15 ]";;see;
+4;;Wolf;2;"[ 9 - 15 ]";;smell;"Rabbit (0), Wolf (0), Carrot(0)"
+4;;Wolf;2;"[ 9 - 15 ]";;hear;"Rabbit (0), Wolf (0), Carrot(0)"
+4;;Wolf;2;"[ 9 - 15 ]";;move;"[ 10 - 15 ]"
+4;;Wolf;2;"[ 10 - 15 ]";sleeping;sleep;
+4;Denied;Wolf;2;"[ 10 - ";"15 ]";;breed;
+4;;Wolf;3;"[ 13 - 14 ]";;see;
+4;;Wolf;3;"[ 13 - 14 ]";;smell;"Rabbit (0), Wolf (0), Carrot(0)"
+4;;Wolf;3;"[ 13 - 14 ]";;hear;"Rabbit (0), Wolf (0), Carrot(0)"
+4;;Wolf;3;"[ 13 - 14 ]";;move;"[ 13 - 15 ]"
+4;;Wolf;3;"[ 13 - 15 ]";sleeping;sleep;
+4;Denied;Wolf;3;"[ 13 - ";"15 ]";;breed;
+4;"New element";Carrot;12;"[ 13 - 11 ]";;;
+4;"New element";Carrot;13;"[ 8 - 13 ]";;;
+5;"Dead - Not eat enough";Rabbit;0;"[ 8 - 5 ]";;;
+5;"Dead - Not eat enough";Rabbit;1;"[ 3 - 6 ]";;;
+5;"Dead - Not eat enough";Wolf;2;"[ 10 - 15 ]";;;
+5;"Dead - Not eat enough";Wolf;3;"[ 13 - 15 ]";;;
+6;"Weather changed to rainy";;;;;;
+7;"New element";Carrot;14;"[ 16 - 14 ]";;;
+7;"New element";Carrot;15;"[ 19 - 5 ]";;;
+8;"Weather changed to foggy";;;;;;
+9;"Status day changed to night";;;;;;
+10;"Weather changed to windy";;;;;;
+10;"New element";Carrot;16;"[ 6 - 11 ]";;;
+10;"New element";Carrot;17;"[ 18 - 8 ]";;;
+11;"Status day changed to day";;;;;;
+12;"Weather changed to foggy";;;;;;
+13;"New element";Carrot;18;"[ 15 - 17 ]";;;
+13;"New element";Carrot;19;"[ 13 - 14 ]";;;
+14;"Weather changed to sunny";;;;;;
+16;"Weather changed to rainy";;;;;;
+16;"New element";Carrot;20;"[ 3 - 15 ]";;;
+16;"New element";Carrot;21;"[ 0 - 1 ]";;;
+18;"Weather changed to windy";;;;;;
+19;"Status day changed to night";;;;;;
+19;"New element";Carrot;22;"[ 3 - 0 ]";;;
+19;"New element";Carrot;23;"[ 7 - 18 ]";;;
+20;"Weather changed to windy";;;;;;
+21;"Status day changed to day";;;;;;
+22;"Weather changed to windy";;;;;;
+22;"New element";Carrot;24;"[ 18 - 17 ]";;;
+22;"New element";Carrot;25;"[ 9 - 6 ]";;;
+24;"Weather changed to windy";;;;;;
+25;"New element";Carrot;26;"[ 18 - 0 ]";;;
+25;"New element";Carrot;27;"[ 15 - 13 ]";;;
+26;"Weather changed to sunny";;;;;;
+28;"Weather changed to rainy";;;;;;
+28;"New element";Carrot;28;"[ 5 - 13 ]";;;
+28;"New element";Carrot;29;"[ 0 - 18 ]";;;
+29;"Status day changed to night";;;;;;
+30;"Weather changed to sunny";;;;;;
+31;"Status day changed to day";;;;;;
+31;"New element";Carrot;30;"[ 12 - 11 ]";;;
+31;"New element";Carrot;31;"[ 12 - 12 ]";;;
+32;"Weather changed to foggy";;;;;;
+34;"Weather changed to sunny";;;;;;
+34;"New element";Carrot;32;"[ 1 - 17 ]";;;
+34;"New element";Carrot;33;"[ 7 - 13 ]";;;
+36;"Weather changed to windy";;;;;;
+37;"New element";Carrot;34;"[ 2 - 7 ]";;;
+37;"New element";Carrot;35;"[ 6 - 5 ]";;;
+38;"Weather changed to windy";;;;;;
+39;"Status day changed to night";;;;;;
+40;"Weather changed to sunny";;;;;;
+40;"New element";Carrot;36;"[ 3 - 5 ]";;;
+40;"New element";Carrot;37;"[ 14 - 4 ]";;;
+41;"Status day changed to day";;;;;;
+42;"Weather changed to sunny";;;;;;
+43;"New element";Carrot;38;"[ 16 - 12 ]";;;
+43;"New element";Carrot;39;"[ 12 - 9 ]";;;
+44;"Weather changed to rainy";;;;;;
+46;"Weather changed to windy";;;;;;
+46;"New element";Carrot;40;"[ 9 - 19 ]";;;
+46;"New element";Carrot;41;"[ 9 - 8 ]";;;
+48;"Weather changed to rainy";;;;;;
+49;"Status day changed to night";;;;;;
+49;"New element";Carrot;42;"[ 5 - 12 ]";;;
+49;"New element";Carrot;43;"[ 0 - 0 ]";;;
+50;"Weather changed to windy";;;;;;
+51;"Status day changed to day";;;;;;
+52;"Weather changed to rainy";;;;;;
+52;"New element";Carrot;44;"[ 16 - 5 ]";;;
+52;"New element";Carrot;45;"[ 13 - 16 ]";;;
+54;"Weather changed to rainy";;;;;;
+55;"New element";Carrot;46;"[ 2 - 1 ]";;;
+55;"New element";Carrot;47;"[ 4 - 14 ]";;;
+56;"Weather changed to rainy";;;;;;
+58;"Weather changed to windy";;;;;;
+58;"New element";Carrot;48;"[ 18 - 16 ]";;;
+58;"New element";Carrot;49;"[ 1 - 4 ]";;;
+59;"Status day changed to night";;;;;;
+60;"Weather changed to foggy";;;;;;
+61;"Status day changed to day";;;;;;
+61;"New element";Carrot;50;"[ 3 - 13 ]";;;
+61;"New element";Carrot;51;"[ 0 - 6 ]";;;
+62;"Weather changed to foggy";;;;;;
+64;"Weather changed to rainy";;;;;;
+64;"New element";Carrot;52;"[ 10 - 8 ]";;;
+64;"New element";Carrot;53;"[ 8 - 8 ]";;;
+66;"Weather changed to foggy";;;;;;
+67;"New element";Carrot;54;"[ 3 - 9 ]";;;
+67;"New element";Carrot;55;"[ 8 - 17 ]";;;
+68;"Weather changed to sunny";;;;;;
+69;"Status day changed to night";;;;;;
+70;"Weather changed to foggy";;;;;;
+70;"New element";Carrot;56;"[ 10 - 0 ]";;;
+70;"New element";Carrot;57;"[ 6 - 16 ]";;;
+71;"Status day changed to day";;;;;;
+72;"Weather changed to windy";;;;;;
+73;"New element";Carrot;58;"[ 1 - 18 ]";;;
+73;"New element";Carrot;59;"[ 12 - 2 ]";;;
+74;"Weather changed to rainy";;;;;;
+76;"Weather changed to windy";;;;;;
+76;"New element";Carrot;60;"[ 8 - 14 ]";;;
+76;"New element";Carrot;61;"[ 16 - 16 ]";;;
+78;"Weather changed to sunny";;;;;;
+79;"Status day changed to night";;;;;;
+79;"New element";Carrot;62;"[ 14 - 19 ]";;;
+79;"New element";Carrot;63;"[ 5 - 8 ]";;;
+80;"Weather changed to windy";;;;;;
+81;"Status day changed to day";;;;;;
+82;"Weather changed to foggy";;;;;;
+82;"New element";Carrot;64;"[ 14 - 14 ]";;;
+82;"New element";Carrot;65;"[ 0 - 7 ]";;;
+84;"Weather changed to foggy";;;;;;
+85;"New element";Carrot;66;"[ 14 - 11 ]";;;
+85;"New element";Carrot;67;"[ 19 - 11 ]";;;
+86;"Weather changed to sunny";;;;;;
+88;"Weather changed to foggy";;;;;;
+88;"New element";Carrot;68;"[ 7 - 3 ]";;;
+88;"New element";Carrot;69;"[ 2 - 18 ]";;;
+89;"Status day changed to night";;;;;;
+90;"Weather changed to rainy";;;;;;
+91;"Status day changed to day";;;;;;
+91;"New element";Carrot;70;"[ 5 - 5 ]";;;
+91;"New element";Carrot;71;"[ 16 - 18 ]";;;
+92;"Weather changed to foggy";;;;;;
+94;"Weather changed to windy";;;;;;
+94;"New element";Carrot;72;"[ 9 - 1 ]";;;
+94;"New element";Carrot;73;"[ 0 - 10 ]";;;
+96;"Weather changed to foggy";;;;;;
+97;"New element";Carrot;74;"[ 11 - 5 ]";;;
+97;"New element";Carrot;75;"[ 18 - 5 ]";;;
+98;"Weather changed to foggy";;;;;;
+99;"Status day changed to night";;;;;;
+100;"Weather changed to sunny";;;;;;
+100;"New element";Carrot;76;"[ 13 - 2 ]";;;
+100;"New element";Carrot;77;"[ 9 - 0 ]";;;
