@@ -43,7 +43,36 @@
 	 * It represents an element Carrot in the world
 	 */
 	class Carrot extends Element{
+		/**
+		 * @var int lifetime
+		 */
+		var $lifetime;
 
+		/**
+		 *
+		 */
+		function __construct(){
+			parent::__construct();
+			$this->lifetime = 0;
+		}
+
+		/**
+		 * It returns lifetime of the carrots
+		 *
+		 * @return int Lifetime
+		 */
+		public function getLifeTime(){
+			return $this->lifetime;
+		}
+
+		/**
+		 * It updates the lifetime of the carrots
+		 *
+		 * @param int Lifetime
+		 */
+		public function setLifeTime($lifetime){
+			$this->lifetime = $lifetime;
+		}
 	}
 
 	/**

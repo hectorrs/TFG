@@ -1,355 +1,210 @@
 Element:ID:Position:Status:Action:Effect
 "Turn 0"
-Rabbit:0:18.9
+Carrot:0:13.3
+Carrot:1:17.16
+Carrot:2:1.9
+Carrot:3:15.3
 "Turn 1"
-Rabbit:0:18.9::see:
-Rabbit:0:18.9::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:18.9::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.9::move:
+Carrot:4:0.13
 "Turn 2"
-Rabbit:0:19.9::see:
-Rabbit:0:19.9::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.9::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.8::move:
 "Turn 3"
-Rabbit:0:19.8::see:
-Rabbit:0:19.8::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.8::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.7::move:
 "Turn 4"
-Rabbit:0:19.7::see:
-Rabbit:0:19.7::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.7::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.6::move:
 "Turn 5"
-Rabbit:0:19.6::see:
-Rabbit:0:19.6::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.6::hear:"Rabbit (0), Wolf (0), Carrot(0)"
 "Turn 6"
-Rabbit:0:19.6::see:
-Rabbit:0:19.6::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.6::hear:"Rabbit (0), Wolf (0), Carrot(0)"
 "Turn 7"
-Rabbit:0:19.6::see:
-Rabbit:0:19.6::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.6::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.5::move:
 "Turn 8"
-Rabbit:0:19.5::see:
-Rabbit:0:19.5::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.5::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.6::move:
 "Turn 9"
-Rabbit:0:19.6::see:
-Rabbit:0:19.6::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.6::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.7::move:
 "Turn 10"
-Rabbit:0:19.7::see:
-Rabbit:0:19.7::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.7::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.6::move:
-Rabbit:0:19.6::sleep:
 "Turn 11"
-Rabbit:0:19.6:sleeping::
 "Turn 12"
-Rabbit:0:19.6:sleeping::
 "Turn 13"
-Rabbit:0:19.6:sleeping::
 "Turn 14"
-Rabbit:0:19.6:sleeping::
 "Turn 15"
-Rabbit:0:19.6:sleeping::
 "Turn 16"
-Rabbit:0:19.6:sleeping::
 "Turn 17"
-Rabbit:0:19.6:sleeping::
 "Turn 18"
-Rabbit:0:19.6:sleeping::
 "Turn 19"
-Rabbit:0:19.6:sleeping::
 "Turn 20"
-Rabbit:0:19.6:sleeping::
 "Turn 21"
-Rabbit:0:19.6::see:
-Rabbit:0:19.6::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.6::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:18.6::move:
 "Turn 22"
-Rabbit:0:18.6::see:
-Rabbit:0:18.6::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:18.6::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:17.6::move:
 "Turn 23"
-Rabbit:0:17.6::see:
-Rabbit:0:17.6::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:17.6::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:17.7::move:
 "Turn 24"
-Rabbit:0:17.7::see:
-Rabbit:0:17.7::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:17.7::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:17.6::move:
 "Turn 25"
-Rabbit:0:17.6::see:
-Rabbit:0:17.6::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:17.6::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:17.7::move:
 "Turn 26"
-Rabbit:0:17.7::see:
-Rabbit:0:17.7::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:17.7::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:18.7::move:
 "Turn 27"
-Rabbit:0:18.7::see:
-Rabbit:0:18.7::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:18.7::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:18.8::move:
 "Turn 28"
-Rabbit:0:18.8::see:
-Rabbit:0:18.8::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:18.8::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.8::move:
 "Turn 29"
-Rabbit:0:19.8::see:
-Rabbit:0:19.8::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.8::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.9::move:
 "Turn 30"
-Rabbit:0:19.9::see:
-Rabbit:0:19.9::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.9::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:18.9::move:
-Rabbit:0:18.9::sleep:
 "Turn 31"
-Rabbit:0:18.9:sleeping::
 "Turn 32"
-Rabbit:0:18.9:sleeping::
 "Turn 33"
-Rabbit:0:18.9:sleeping::
 "Turn 34"
-Rabbit:0:18.9:sleeping::
 "Turn 35"
-Rabbit:0:18.9:sleeping::
 "Turn 36"
-Rabbit:0:18.9:sleeping::
 "Turn 37"
-Rabbit:0:18.9:sleeping::
 "Turn 38"
-Rabbit:0:18.9:sleeping::
 "Turn 39"
-Rabbit:0:18.9:sleeping::
 "Turn 40"
-Rabbit:0:18.9:sleeping::
 "Turn 41"
-Rabbit:0:18.9::see:
-Rabbit:0:18.9::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:18.9::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:18.8::move:
 "Turn 42"
-Rabbit:0:18.8::see:
-Rabbit:0:18.8::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:18.8::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:18.7::move:
 "Turn 43"
-Rabbit:0:18.7::see:
-Rabbit:0:18.7::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:18.7::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:17.7::move:
 "Turn 44"
-Rabbit:0:17.7::see:
-Rabbit:0:17.7::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:17.7::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:17.6::move:
 "Turn 45"
-Rabbit:0:17.6::see:
-Rabbit:0:17.6::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:17.6::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:18.6::move:
 "Turn 46"
-Rabbit:0:18.6::see:
-Rabbit:0:18.6::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:18.6::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:18.5::move:
 "Turn 47"
-Rabbit:0:18.5::see:
-Rabbit:0:18.5::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:18.5::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:18.4::move:
 "Turn 48"
-Rabbit:0:18.4::see:
-Rabbit:0:18.4::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:18.4::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:18.5::move:
 "Turn 49"
-Rabbit:0:18.5::see:
-Rabbit:0:18.5::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:18.5::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:17.5::move:
 "Turn 50"
-Rabbit:0:17.5::see:
-Rabbit:0:17.5::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:17.5::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:17.6::move:
-Rabbit:0:17.6::sleep:
 "Turn 51"
-Rabbit:0:17.6:sleeping::
 "Turn 52"
-Rabbit:0:17.6:sleeping::
+Carrot:5:6.7
 "Turn 53"
-Rabbit:0:17.6:sleeping::
 "Turn 54"
-Rabbit:0:17.6:sleeping::
 "Turn 55"
-Rabbit:0:17.6:sleeping::
 "Turn 56"
-Rabbit:0:17.6:sleeping::
 "Turn 57"
-Rabbit:0:17.6:sleeping::
 "Turn 58"
-Rabbit:0:17.6:sleeping::
 "Turn 59"
-Rabbit:0:17.6:sleeping::
 "Turn 60"
-Rabbit:0:17.6:sleeping::
 "Turn 61"
-Rabbit:0:17.6::see:
-Rabbit:0:17.6::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:17.6::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:18.6::move:
 "Turn 62"
-Rabbit:0:18.6::see:
-Rabbit:0:18.6::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:18.6::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.6::move:
 "Turn 63"
-Rabbit:0:19.6::see:
-Rabbit:0:19.6::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.6::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.5::move:
 "Turn 64"
-Rabbit:0:19.5::see:
-Rabbit:0:19.5::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.5::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.4::move:
 "Turn 65"
-Rabbit:0:19.4::see:
-Rabbit:0:19.4::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.4::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.3::move:
 "Turn 66"
-Rabbit:0:19.3::see:
-Rabbit:0:19.3::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.3::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.2::move:
 "Turn 67"
-Rabbit:0:19.2::see:
-Rabbit:0:19.2::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.2::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.1::move:
 "Turn 68"
-Rabbit:0:19.1::see:
-Rabbit:0:19.1::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.1::hear:"Rabbit (0), Wolf (0), Carrot(0)"
 "Turn 69"
-Rabbit:0:19.1::see:
-Rabbit:0:19.1::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.1::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.0::move:
 "Turn 70"
-Rabbit:0:19.0::see:
-Rabbit:0:19.0::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.0::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.1::move:
-Rabbit:0:19.1::sleep:
 "Turn 71"
-Rabbit:0:19.1:sleeping::
 "Turn 72"
-Rabbit:0:19.1:sleeping::
 "Turn 73"
-Rabbit:0:19.1:sleeping::
 "Turn 74"
-Rabbit:0:19.1:sleeping::
 "Turn 75"
-Rabbit:0:19.1:sleeping::
 "Turn 76"
-Rabbit:0:19.1:sleeping::
 "Turn 77"
-Rabbit:0:19.1:sleeping::
 "Turn 78"
-Rabbit:0:19.1:sleeping::
 "Turn 79"
-Rabbit:0:19.1:sleeping::
 "Turn 80"
-Rabbit:0:19.1:sleeping::
 "Turn 81"
-Rabbit:0:19.1::see:
-Rabbit:0:19.1::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:19.1::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:18.1::move:
 "Turn 82"
-Rabbit:0:18.1::see:
-Rabbit:0:18.1::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:18.1::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:17.1::move:
 "Turn 83"
-Rabbit:0:17.1::see:
-Rabbit:0:17.1::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:17.1::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:18.1::move:
 "Turn 84"
-Rabbit:0:18.1::see:
-Rabbit:0:18.1::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:18.1::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:18.2::move:
 "Turn 85"
-Rabbit:0:18.2::see:
-Rabbit:0:18.2::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:18.2::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:17.2::move:
 "Turn 86"
-Rabbit:0:17.2::see:
-Rabbit:0:17.2::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:17.2::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:17.1::move:
 "Turn 87"
-Rabbit:0:17.1::see:
-Rabbit:0:17.1::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:17.1::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:16.1::move:
 "Turn 88"
-Rabbit:0:16.1::see:
-Rabbit:0:16.1::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:16.1::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:16.0::move:
 "Turn 89"
-Rabbit:0:16.0::see:
-Rabbit:0:16.0::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:16.0::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:16.1::move:
 "Turn 90"
-Rabbit:0:16.1::see:
-Rabbit:0:16.1::smell:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:16.1::hear:"Rabbit (0), Wolf (0), Carrot(0)"
-Rabbit:0:16.0::move:
-Rabbit:0:16.0::sleep:
 "Turn 91"
-Rabbit:0:16.0:sleeping::
 "Turn 92"
-Rabbit:0:16.0:sleeping::
 "Turn 93"
-Rabbit:0:16.0:sleeping::
 "Turn 94"
-Rabbit:0:16.0:sleeping::
 "Turn 95"
-Rabbit:0:16.0:sleeping::
 "Turn 96"
-Rabbit:0:16.0:sleeping::
 "Turn 97"
-Rabbit:0:16.0:sleeping::
 "Turn 98"
-Rabbit:0:16.0:sleeping::
 "Turn 99"
-Rabbit:0:16.0:sleeping::
 "Turn 100"
-Rabbit:0:16.0:sleeping::
+"Turn 101"
+"Turn 102"
+"Turn 103"
+Carrot:6:2.12
+"Turn 104"
+"Turn 105"
+"Turn 106"
+"Turn 107"
+"Turn 108"
+"Turn 109"
+"Turn 110"
+"Turn 111"
+"Turn 112"
+"Turn 113"
+"Turn 114"
+"Turn 115"
+"Turn 116"
+"Turn 117"
+"Turn 118"
+"Turn 119"
+"Turn 120"
+"Turn 121"
+"Turn 122"
+"Turn 123"
+"Turn 124"
+"Turn 125"
+"Turn 126"
+"Turn 127"
+"Turn 128"
+"Turn 129"
+"Turn 130"
+"Turn 131"
+"Turn 132"
+"Turn 133"
+"Turn 134"
+"Turn 135"
+"Turn 136"
+"Turn 137"
+"Turn 138"
+"Turn 139"
+"Turn 140"
+"Turn 141"
+"Turn 142"
+"Turn 143"
+"Turn 144"
+"Turn 145"
+"Turn 146"
+"Turn 147"
+"Turn 148"
+"Turn 149"
+"Turn 150"
+"Turn 151"
+"Turn 152"
+"Turn 153"
+"Turn 154"
+Carrot:7:17.18
+"Turn 155"
+"Turn 156"
+"Turn 157"
+"Turn 158"
+"Turn 159"
+"Turn 160"
+"Turn 161"
+"Turn 162"
+"Turn 163"
+"Turn 164"
+"Turn 165"
+"Turn 166"
+"Turn 167"
+"Turn 168"
+"Turn 169"
+"Turn 170"
+"Turn 171"
+"Turn 172"
+"Turn 173"
+"Turn 174"
+"Turn 175"
+"Turn 176"
+"Turn 177"
+"Turn 178"
+"Turn 179"
+"Turn 180"
+"Turn 181"
+"Turn 182"
+"Turn 183"
+"Turn 184"
+"Turn 185"
+"Turn 186"
+"Turn 187"
+"Turn 188"
+"Turn 189"
+"Turn 190"
+"Turn 191"
+"Turn 192"
+"Turn 193"
+"Turn 194"
+"Turn 195"
+"Turn 196"
+"Turn 197"
+"Turn 198"
+"Turn 199"
+"Turn 200"

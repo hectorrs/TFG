@@ -130,6 +130,8 @@
 		'Select a file' => 'Select a file',
 		'0 to avoid the regeneration of carrots' => '0 to avoid the regeneration of carrots',
 		'Rabbits - Be not sleepy for (cycles)' => 'Rabbits - Be not sleepy for (cycles)',
-		'Wolves - Be not sleepy for (cycles)' => 'Wolves - Be not sleepy for (cycles)'
+		'Wolves - Be not sleepy for (cycles)' => 'Wolves - Be not sleepy for (cycles)',
+		'Stricking carrots' => 'Stricking carrots',
+		'Lifetime of carrots (cycles)' => 'Lifetime of carrots (cycles)'
 	);
 ?>

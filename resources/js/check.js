@@ -22,7 +22,7 @@ function check(){
 		'element' : [
 			amountElements(values['carrot'], values['tree'], values['lair'], values['rabbit'], values['wolf'], values['sizeX'], values['sizeY']), 
 			moreCarrot(values['eachCarrot'], values['amountCarrot'], values['totalPeriod']),
-
+			strickingCarrot(values['lifetimeCarrot'], values['carrot'])
 		],
 		'restriction' : [
 			maxEat(values['eatRabbit'], values['eatWolf'], values['rabbit'], values['wolf']),
@@ -140,6 +140,7 @@ function getValues(){
 	var sleepComfortWolf = document.getElementById('sleepComfortWolf').value;
 	var notSleepyRabbit = document.getElementById('notSleepyRabbit').value;
 	var notSleepyWolf = document.getElementById('notSleepyWolf').value;
+	var lifetimeCarrot = document.getElementById('lifetimeCarrot').value;
 
 	return {
 		'totalPeriod' : totalPeriod,
@@ -194,7 +195,8 @@ function getValues(){
 		'sleepComfortRabbit' : sleepComfortRabbit,
 		'sleepComfortWolf' : sleepComfortWolf,
 		'notSleepyRabbit' : notSleepyRabbit,
-		'notSleepyWolf' : notSleepyWolf
+		'notSleepyWolf' : notSleepyWolf,
+		'lifetimeCarrot' : lifetimeCarrot
 	};
 }
 
@@ -751,14 +753,57 @@ function moreCarrot(each, amount, totalPeriod){
 			return true;
 		}
 	}else{
-		document.getElementById('amountMoreCarrot').value = '';
+		document.getElementById('amountMoreCarrot').value = 0;
 
 		return true;
 	}
 }
 
 /**
- * It checks if the inputs 'period without eat' has the correct format and changes the colour of the input 
+ * It checks if the inputs 'lifetime carrots' have the correct format and changes the colour of the input 
+ * (green if it is correct or red if not) and throw a new message if it has an error
+ *
+ * @param {String}
+ * @param {String}
+ *
+ * @return {Boolean}
+ */
+function strickingCarrot(lifetimeCarrot, amountCarrot){
+	fail = 0;
+
+	if(amountCarrot > 0){
+		if(lifetimeCarrot == ''){
+			document.getElementById('lifetimeCarrot').style.borderColor = '#a94442';
+			document.getElementById('lifetimeCarrot').style.borderWidth = '2px';
+			document.getElementById('alert55').className = 'alert alert-danger show';
+			document.getElementById('error55').innerHTML = translate('Lifetime of carrots - Empty field', language);
+
+			fail++;
+		}else if(!(/^([0-9])*$/.test(lifetimeCarrot))){
+			document.getElementById('lifetimeCarrot').style.borderColor = '#a94442';
+			document.getElementById('lifetimeCarrot').style.borderWidth = '2px';
+			document.getElementById('alert55').className = 'alert alert-danger show';
+			document.getElementById('error55').innerHTML = translate('Lifetime of carrots - Wrong format', language);
+
+			fail++;
+		}else{
+			document.getElementById('lifetimeCarrot').style.borderColor = '#3c763d';
+			document.getElementById('lifetimeCarrot').style.borderWidth = '2px';
+			document.getElementById('alert55').className = 'alert alert-danger hide';
+		}
+	}else{
+		document.getElementById('lifetimeCarrot').value = 0;
+	}
+
+	if(fail == 0){
+		return true;
+	}else{
+		return false;
+	}
+}
+
+/**
+ * It checks if the input 'period without eat' has the correct format and changes the colour of the input 
  * (green if it is correct or red if not) and throw a new message if it has an error
  *
  * @param {String}

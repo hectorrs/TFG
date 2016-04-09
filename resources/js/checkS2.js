@@ -22,7 +22,7 @@ function check(){
 		'element' : [
 			amountElements(values['carrot'], values['tree'], values['lair'], values['rabbit'], values['wolf'], values['sizeX'], values['sizeY']), 
 			moreCarrot(values['eachCarrot'], values['amountCarrot'], values['totalPeriod']),
-
+			strickingCarrot(values['lifetimeCarrot'], values['carrot'])
 		],
 		'restriction' : [
 			maxEat(values['eatRabbit'], values['eatWolf'], values['rabbit'], values['wolf']),
@@ -149,6 +149,7 @@ function getValues(){
 	var codeWolf = document.getElementById('codeWolf').value;
 	var notSleepyRabbit = document.getElementById('notSleepyRabbit').value;
 	var notSleepyWolf = document.getElementById('notSleepyWolf').value;
+	var lifetimeCarrot = document.getElementById('lifetimeCarrot').value;
 
 	return {
 		'totalPeriod' : totalPeriod,
@@ -205,7 +206,8 @@ function getValues(){
 		'codeRabbit' : codeRabbit,
 		'codeWolf' : codeWolf,
 		'notSleepyRabbit' : notSleepyRabbit,
-		'notSleepyWolf' : notSleepyWolf
+		'notSleepyWolf' : notSleepyWolf,
+		'lifetimeCarrot' : lifetimeCarrot
 	};
 }
 
@@ -765,6 +767,49 @@ function moreCarrot(each, amount, totalPeriod){
 		document.getElementById('amountMoreCarrot').value = '';
 
 		return true;
+	}
+}
+
+/**
+ * It checks if the inputs 'lifetime carrots' have the correct format and changes the colour of the input 
+ * (green if it is correct or red if not) and throw a new message if it has an error
+ *
+ * @param {String}
+ * @param {String}
+ *
+ * @return {Boolean}
+ */
+function strickingCarrot(lifetimeCarrot, amountCarrot){
+	fail = 0;
+
+	if(amountCarrot > 0){
+		if(lifetimeCarrot == ''){
+			document.getElementById('lifetimeCarrot').style.borderColor = '#a94442';
+			document.getElementById('lifetimeCarrot').style.borderWidth = '2px';
+			document.getElementById('alert57').className = 'alert alert-danger show';
+			document.getElementById('error57').innerHTML = translate('Lifetime of carrots - Empty field', language);
+
+			fail++;
+		}else if(!(/^([0-9])*$/.test(lifetimeCarrot))){
+			document.getElementById('lifetimeCarrot').style.borderColor = '#a94442';
+			document.getElementById('lifetimeCarrot').style.borderWidth = '2px';
+			document.getElementById('alert57').className = 'alert alert-danger show';
+			document.getElementById('error57').innerHTML = translate('Lifetime of carrots - Wrong format', language);
+
+			fail++;
+		}else{
+			document.getElementById('lifetimeCarrot').style.borderColor = '#3c763d';
+			document.getElementById('lifetimeCarrot').style.borderWidth = '2px';
+			document.getElementById('alert57').className = 'alert alert-danger hide';
+		}
+	}else{
+		document.getElementById('lifetimeCarrot').value = 0;
+	}
+
+	if(fail == 0){
+		return true;
+	}else{
+		return false;
 	}
 }
 

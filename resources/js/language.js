@@ -169,7 +169,9 @@ var es = {
 	'Rabbits - Be not sleepy for (cycles) - The number of cycles must be less than the time without sleep' : 'Conejos - Sin sueño durante (ciclos) - El número de ciclos tiene que ser menor que el tiempo que pueden pasar sin dormir',
 	'Wolves - Be not sleepy for (cycles) - Empty field' : 'Lobos - Sin sueño durante (ciclos) - Campo vacío',
 	'Wolves - Be not sleepy for (cycles) - Wrong format' : 'Lobos - Sin sueño durante (ciclos) - Formato incorrecto',
-	'Wolves - Be not sleepy for (cycles) - The number of cycles must be less than the time without sleep' : 'Lobos - Sin sueño durante (ciclos) - El número de ciclos tiene que ser menor que el tiempo que pueden pasar sin dormir'
+	'Wolves - Be not sleepy for (cycles) - The number of cycles must be less than the time without sleep' : 'Lobos - Sin sueño durante (ciclos) - El número de ciclos tiene que ser menor que el tiempo que pueden pasar sin dormir',
+	'Lifetime of carrots - Empty field' : 'Tiempo de vida de las zanahorias - Campo vacío',
+	'Lifetime of carrots - Wrong format' : 'Tiempo de vida de las zanahorias - Formato incorrecto'
 };
 
 /**
@@ -324,7 +326,9 @@ var ga = {
 	'Rabbits - Be not sleepy for (cycles) - The number of cycles must be less than the time without sleep' : 'Coellos - Sen sono durante (ciclos) - O número de ciclos ten que ser menor que o tempo que poden pasar sen durmir',
 	'Wolves - Be not sleepy for (cycles) - Empty field' : 'Lobos - Sen sono durante (ciclos) - Campo baleiro',
 	'Wolves - Be not sleepy for (cycles) - Wrong format' : 'Lobos - Sen sono durante (ciclos) - Formato incorrecto',
-	'Wolves - Be not sleepy for (cycles) - The number of cycles must be less than the time without sleep' : 'Lobos - Sen sono durante (ciclos) - O número de ciclos ten que ser menor que o tempo que poden pasar sen durmir'
+	'Wolves - Be not sleepy for (cycles) - The number of cycles must be less than the time without sleep' : 'Lobos - Sen sono durante (ciclos) - O número de ciclos ten que ser menor que o tempo que poden pasar sen durmir',
+	'Lifetime of carrots - Empty field' : 'Tempo de vida das cenorias - Campo baleiro',
+	'Lifetime of carrots - Wrong format' : 'Tempo de vida das cenorias - Formato incorrecto'
 };
 
 /**
@@ -479,5 +483,7 @@ var en = {
 	'Rabbits - Be not sleepy for (cycles) - The number of cycles must be less than the time without sleep' : 'Rabbits - Be not sleepy for (cycles) - The number of cycles must be less than the time without sleep',
 	'Wolves - Be not sleepy for (cycles) - Empty field' : 'Wolves - Be not sleepy for (cycles) - Empty field',
 	'Wolves - Be not sleepy for (cycles) - Wrong format' : 'Wolves - Be not sleepy for (cycles) - Wrong format',
-	'Wolves - Be not sleepy for (cycles) - The number of cycles must be less than the time without sleep' : 'Wolves - Be not sleepy for (cycles) - The number of cycles must be less than the time without sleep'
+	'Wolves - Be not sleepy for (cycles) - The number of cycles must be less than the time without sleep' : 'Wolves - Be not sleepy for (cycles) - The number of cycles must be less than the time without sleep',
+	'Lifetime of carrots - Empty field' : 'Lifetime of carrots - Empty field',
+	'Lifetime of carrots - Wrong format' : 'Lifetime of carrots - Wrong format'
 };

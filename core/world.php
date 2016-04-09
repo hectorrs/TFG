@@ -11,24 +11,24 @@
 
 	register_shutdown_function(
 		function(){
-			$error = error_get_last();
+			if(isset($_POST['from'])){
+				$error = error_get_last();
 
-			if($error != ''){
-				$err = array();
+				if($error != ''){
+					$err = array();
 
-				$err['type'] = $error['type'];
-				$err['file'] = $error['file'];
-				$err['line'] = $error['line'];
-				$err['message'] = $error['message'];
+					$err['type'] = $error['type'];
+					$err['file'] = $error['file'];
+					$err['line'] = $error['line'];
+					$err['message'] = $error['message'];
 
-				$dir = substr(__DIR__, 0, -4);
-				$errorFile = fopen($dir . 'resources/log/error.json', 'w');
+					$dir = substr(__DIR__, 0, -4);
+					$errorFile = fopen($dir . 'resources/log/error.json', 'w');
 
-				fwrite($errorFile, json_encode($err, JSON_PRETTY_PRINT));
+					fwrite($errorFile, json_encode($err, JSON_PRETTY_PRINT));
 
-				fclose($errorFile);
+					fclose($errorFile);
 
-				if($_POST['from'] == '2'){
 					header('Location: ../view/inputS2.php?lang=' . $GLOBALS['lang']);
 				}
 			}
@@ -180,6 +180,11 @@
 		writeFile('Conf', '**** Amount' . "\n");
 		writeFile('Conf', $_POST['amountMoreCarrot'] . ' carrots' . "\n\n");
 		$conf['amountMoreCarrot'] = $_POST['amountMoreCarrot'];
+
+		writeFile('Conf', '**** ------------------------ Striking of carrots ------------------------ ****' . "\n");
+		writeFile('Conf', '**** Lifetime' . "\n");
+		writeFile('Conf', $_POST['lifetimeCarrot'] . ' cycles' . "\n");
+		$conf['lifetimeCarrot'] = $_POST['lifetimeCarrot'];
 
 		writeFile('Conf', '******** ----------------------- Restrictions ------------------------ ********' . "\n");
 
@@ -770,6 +775,7 @@
             }
 
             $carrot->setPosition(array($row, $col));
+            $carrot->setLifeTime($_POST['lifetimeCarrot']);
 
             addPrize($carrot);
 
@@ -1662,6 +1668,15 @@
 				useAction($element, 'max');
 
 				$element->setBredAgo($element->getBredAgo() + 1);
+			}
+		}
+
+		// Striking of carrots
+		foreach(getPrize() as $carrot){
+			if($carrot->getLifeTime() == 0){
+				delPrize($carrot);
+			}else{
+				$carrot->setLifeTime($carrot->getLifeTime() - 1);
 			}
 		}
 

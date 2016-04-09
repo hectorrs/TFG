@@ -130,6 +130,8 @@
 		'Select a file' => 'Selecciona un ficheiro',
 		'0 to avoid the regeneration of carrots' => '0 para evitar a rexeneración de cenorias',
 		'Rabbits - Be not sleepy for (cycles)' => 'Coellos - Sen sono durante (ciclos)',
-		'Wolves - Be not sleepy for (cycles)' => 'Lobos - Sen sono durante (ciclos)'
+		'Wolves - Be not sleepy for (cycles)' => 'Lobos - Sen sono durante (ciclos)',
+		'Stricking carrots' => 'Eliminación de cenorias',
+		'Lifetime of carrots (cycles)' => 'Tempo de vida das cenorias (ciclos)'
 	);
 ?>

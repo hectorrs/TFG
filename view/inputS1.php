@@ -337,6 +337,27 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <h3><?php echo translate('Stricking carrots', $lang); ?></h3>
+                            <hr class="dividing">
+                        </div>
+                    </div>
+
+                    <!-- Error - regeneration of carrots - amount -->
+                    <div class="hide" id="alert55">
+                        <label id="error55"></label>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                            <label><?php echo translate('Lifetime of carrots (cycles)', $lang); ?></label>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="lifetimeCarrot" id="lifetimeCarrot" value="">
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="hide" id="restriction">
