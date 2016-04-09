@@ -127,6 +127,9 @@
 		'Choose between upload a settings file or make the settings manually' => 'Choose between upload a settings file or make the settings manually',
 		'Load a configuration file' => 'Load a configuration file',
 		'Settings manually' => 'Settings manually',
-		'Select a file' => 'Select a file'
+		'Select a file' => 'Select a file',
+		'0 to avoid the regeneration of carrots' => '0 to avoid the regeneration of carrots',
+		'Rabbits - Be not sleepy for (cycles)' => 'Rabbits - Be not sleepy for (cycles)',
+		'Wolves - Be not sleepy for (cycles)' => 'Wolves - Be not sleepy for (cycles)'
 	);
 ?>

@@ -1,22 +1,42 @@
 <?php
-	/*if(file_exists('../model/customRabbit.php') && file_exists('../model/customWolf.php')){
-		exec('php ../model/customRabbit.php', $customRabbit);
-		//exec('php ../model/customWolf.php', $customWolf);
-		if($customRabbit != null){
-			foreach($customRabbit as $line){
-				echo $line . '<br>';
+	// Language
+	require_once('../core/language.php');
+
+	global $lang;
+    if(!isset($_GET['lang'])){
+        $lang = 'en';
+    }else{
+        $lang = $_GET['lang'];
+    }
+
+	register_shutdown_function(
+		function(){
+			$error = error_get_last();
+
+			if($error != ''){
+				$err = array();
+
+				$err['type'] = $error['type'];
+				$err['file'] = $error['file'];
+				$err['line'] = $error['line'];
+				$err['message'] = $error['message'];
+
+				$dir = substr(__DIR__, 0, -4);
+				$errorFile = fopen($dir . 'resources/log/error.json', 'w');
+
+				fwrite($errorFile, json_encode($err, JSON_PRETTY_PRINT));
+
+				fclose($errorFile);
+
+				if($_POST['from'] == '2'){
+					header('Location: ../view/inputS2.php?lang=' . $GLOBALS['lang']);
+				}
 			}
 		}
-		echo '<br>';
-			if($customWolf != null){
-			var_dump($customWolf);
-		}
-		echo 'aquí';
-		exit();
-	}*/
+	);
 
-	require_once('../Model/element.php');
-	require_once('../Model/elements.php');
+	require_once('../model/element.php');
+	require_once('../model/elements.php');
 
 	$timeStart = microtime(true);
 
@@ -200,6 +220,7 @@
 
 		writeFile('Conf', '******** -------------------------- Cycles --------------------------- ********' . "\n");
 
+		$GLOBALS['vars']['turnEatRabbit'] = $_POST['turnEatRabbit'];
 		writeFile('Conf', '**** ------------------------------- Eat --------------------------------- ****' . "\n");
 		writeFile('Conf', '**** Rabbit' . "\n");
 		writeFile('Conf', 'Need ' . $_POST['turnEatRabbit'] . ' cycles to eat' . "\n");
@@ -207,20 +228,31 @@
 		$conf['turnEatRabbit'] = $_POST['turnEatRabbit'];
 		$conf['noNeedToEatRabbit'] = $_POST['noNeedToEatRabbit'];
 		
+		$GLOBALS['vars']['turnEatWolf'] = $_POST['turnEatWolf'];
 		writeFile('Conf', '**** Wolf' . "\n");
 		writeFile('Conf', 'Need ' . $_POST['turnEatWolf'] . ' cycles to eat' . "\n");
 		writeFile('Conf', 'Are sated until ' . $_POST['noNeedToEatWolf'] . ' after eat' . "\n\n");
 		$conf['turnEatWolf'] = $_POST['turnEatWolf'];
 		$conf['noNeedToEatWolf'] = $_POST['noNeedToEatWolf'];
 
+		$GLOBALS['vars']['turnSleepRabbit'] = $_POST['turnSleepRabbit'];
 		writeFile('Conf', '**** ------------------------------ Sleep -------------------------------- ****' . "\n");
 		writeFile('Conf', '**** Rabbit' . "\n");
 		writeFile('Conf', 'Need ' . $_POST['turnSleepRabbit'] . ' cycles to sleep' . "\n\n");
 		$conf['turnSleepRabbit'] = $_POST['turnSleepRabbit'];
 
+		$GLOBALS['vars']['turnSleepWolf'] = $_POST['turnSleepWolf'];
 		writeFile('Conf', '**** Wolf' . "\n");
 		writeFile('Conf', 'Need ' . $_POST['turnSleepWolf'] . ' cycles to sleep' . "\n\n");
 		$conf['turnSleepWolf'] = $_POST['turnSleepWolf'];
+
+		writeFile('Conf', '**** Rabbit' . "\n");
+		writeFile('Conf', 'Be not sleepy for ' . $_POST['notSleepyRabbit'] . 'cycles' . "\n");
+		$conf['notSleepyRabbit'] = $_POST['notSleepyRabbit'];
+
+		writeFile('Conf', '**** Wolf' . "\n");
+		writeFile('Conf', 'Be not sleepy for ' . $_POST['notSleepyWolf'] . 'cycles' . "\n");
+		$conf['notSleepyWolf'] = $_POST['notSleepyWolf'];
 
 		writeFile('Conf', '******** ------------------------- Actions --------------------------- ********' . "\n");
 
@@ -301,7 +333,7 @@
 		if(isset($_POST['codeRabbit'])){
 			$codeRabbit = fopen('../model/customRabbit.php', 'w');
 
-			fputs($codeRabbit, '<?php' . "\n");
+			fputs($codeRabbit, '<?php ');
 			$code = strip_tags($_POST['codeRabbit']);
 			fputs($codeRabbit, $code);
 			fputs($codeRabbit, "\n" . '?>');
@@ -314,8 +346,8 @@
 		if(isset($_POST['codeWolf'])){
 			$codeWolf = fopen('../model/customWolf.php', 'w');
 
-			fputs($codeWolf, '<?php' . "\n");
-			$code = strip_tags($_POST['codeRabbit']);
+			fputs($codeWolf, '<?php ');
+			$code = strip_tags($_POST['codeWolf']);
 			fputs($codeWolf, strip_tags($code));
 			fputs($codeWolf, "\n" . '?>');
 
@@ -675,7 +707,6 @@
             $rabbit->setPosition(array($row, $col));
             $rabbit->setActPerTurn($_POST['maxUseRabbit']);
             $rabbit->setHidden(false);
-            $rabbit->setAteAgo(0);
 
             addDynamic($rabbit);
 
@@ -709,7 +740,6 @@
 
             $wolf->setPosition(array($row, $col));
             $wolf->setActPerTurn($_POST['maxUseWolf']);
-            $wolf->setAteAgo(0);
 
             addDynamic($wolf);
 
@@ -1169,9 +1199,9 @@
 	 * @param Element Element
 	 */
 	function toSleep($element){
-		if(getTime() >= ((getLengthDay() + getLengthNight()) * getiTime() - getLengthNight() / 2 - (intval(getLengthNight() * 25 / 100))) && getTime() < ((getLengthDay() + getLengthNight()) * getiTime())){
-			switch(get_class($element)){
-				case 'Rabbit':
+		switch(get_class($element)){
+			case 'Rabbit':
+				if($element->getSleptAgo() >= $_POST['notSleepyRabbit']){
 					if($_POST['placeToSleepRabbit'] == 'ground'){
 						$element->setSleeping(getTurnSleepRabbit());
 						$element->setSleptAgo(0);
@@ -1187,15 +1217,15 @@
 							//writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - sleep - Denied' . "\n");
 						}
 					}
-					break;
-				case 'Wolf':
-					$element->setSleeping(getTurnSleepRabbit());
-					$element->setSleptAgo(0);
-					writeFileCSV('Log', array(get_class($element), $element->getId(), $element->getPosition()[0] . '.' . $element->getPosition()[1], '', 'sleep', ''));
-					break;
-			}
-		}else{
-			//writeFile('Log', get_class($element) . ' ' . $element->getId() . ' - sleep - Denied' . "\n");
+				}else{
+					
+				}
+				break;
+			case 'Wolf':
+				$element->setSleeping(getTurnSleepRabbit());
+				$element->setSleptAgo(0);
+				writeFileCSV('Log', array(get_class($element), $element->getId(), $element->getPosition()[0] . '.' . $element->getPosition()[1], '', 'sleep', ''));
+				break;
 		}
 	}
 
@@ -1693,6 +1723,7 @@
 	closeFile('Conf');
 
 	$memory = memory_get_usage(true);
+	$memory2 = memory_get_peak_usage(true);
     $timeFinish = microtime(true);
 	
 	session_start();

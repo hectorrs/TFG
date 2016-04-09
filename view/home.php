@@ -62,20 +62,15 @@
 	            </div>
 
 	            <div class="row">
-	            	<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"></div>
+	            	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
 
-		        	<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-		        		<div class="form-group">
-		        			<select class="form-control" id="language">
-		        				<option value="select"><?php echo translate('Language', $lang); ?>...</option>
-		        				<option value="es"><?php echo translate('Spanish', $lang); ?></option>
-		        				<option value="ga"><?php echo translate('Galician', $lang); ?></option>
-		        				<option value="en"><?php echo translate('English', $lang); ?></option>
-		        			</select>
-		        		</div>
+		        	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+		        		<img src="../resources/img/es.png" onclick="return reloadLanguage('es')">
+		        		<img src="../resources/img/ga.png" onclick="return reloadLanguage('ga')">
+		        		<img src="../resources/img/en.png" onclick="return reloadLanguage('en')">
 		        	</div>
 
-	            	<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"></div>
+	            	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
         		</div>
 	        </div>
         </div>

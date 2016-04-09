@@ -127,6 +127,9 @@
 		'Choose between upload a settings file or make the settings manually' => 'Elige cargar un archivo de configuración o realizar la configuración manualmente',
 		'Load a configuration file' => 'Cargar un archivo de configuración',
 		'Settings manually' => 'Configuración manual',
-		'Select a file' => 'Selecciona un archivo'
+		'Select a file' => 'Selecciona un archivo',
+		'0 to avoid the regeneration of carrots' => '0 para evitar la regeneración de zanahorias',
+		'Rabbits - Be not sleepy for (cycles)' => 'Conejos - Sin sueño durante (ciclos)',
+		'Wolves - Be not sleepy for (cycles)' => 'Lobos - Sin sueño durante (ciclos)'
 	);
 ?>

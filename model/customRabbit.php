@@ -1,5 +1,4 @@
-<?php
-$see = actionManager($this, 'see');
+<?php $see = actionManager($this, 'see');
 $smell = actionManager($this, 'smell');
 $hear = actionManager($this, 'hear');
 $move = array('up', 'down', 'left', 'right');

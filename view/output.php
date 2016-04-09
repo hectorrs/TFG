@@ -420,10 +420,10 @@
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<h3><u><?php echo translate('Downloads', $lang); ?></u></h3>
-				<h4><a href="../resources/log/conf.txt"><?php echo translate('Begining configuration', $lang); ?></a></h4>
+				<h4><a href="../resources/log/conf.txt" download><?php echo translate('Begining configuration', $lang); ?></a></h4>
 				<h4><a href="../resources/conf/settings.json" download><?php echo translate('Begining configuration', $lang); ?></a></h4>
-				<h4><a href="../resources/log/log.csv"><?php echo translate('Actions log', $lang); ?></a></h4>
-				<h4><a href="../resources/log/world.txt"><?php echo translate('World', $lang); ?></a></h4>
+				<h4><a href="../resources/log/log.csv" download><?php echo translate('Actions log', $lang); ?></a></h4>
+				<h4><a href="../resources/log/world.txt" download><?php echo translate('World', $lang); ?></a></h4>
 			</div>
 		</div>
 

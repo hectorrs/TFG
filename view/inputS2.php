@@ -19,6 +19,8 @@
     <?php
         require_once('../core/language.php');
         $lang = $_GET['lang'];
+
+
     ?>
 </head>
 <body style="background-color: #E8E8E8;">
@@ -73,6 +75,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="btn-group btn-group-lg btn-block">
                             <form action="../core/world.php?lang=<?php echo $lang; ?>" method="post" onsubmit="return check()">
+                            <input type="hidden" name="from" value="2">
                             <button type="submit" class="btn btn-danger btn-lg btn-block"><?php echo translate('Run', $lang); ?></button>
                         </div>
                     </div>
@@ -322,6 +325,10 @@
                             <div class="form-group">
                                 <input type="text" class="form-control" name="timeMoreCarrot" id="timeMoreCarrot" value="" required>
                             </div>
+
+                            <div class="alert alert-info">
+                                <label style="text-align: justify;"><?php echo translate('0 to avoid the regeneration of carrots', $lang); ?></label>
+                            </div>
                         </div>
 
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
@@ -569,6 +576,16 @@
                         <label id="error26"></label>
                     </div>
 
+                    <!-- Error - Be not sleepy for (cycles) - Rabbits -->
+                    <div class="hide" id="alert55">
+                        <label id="error55"></label>
+                    </div>
+
+                    <!-- Error - Be not sleepy for (cycles) - Wolfs -->
+                    <div class="hide" id="alert56">
+                        <label id="error56"></label>
+                    </div>
+
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                             <label><?php echo translate('Rabbits - Need (cycles)', $lang); ?></label>
@@ -589,6 +606,22 @@
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
                             <div class="alert alert-info">
                                 <label><?php echo translate('0 to sleep in the same cycle', $lang); ?></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                            <label><?php echo translate('Rabbits - Be not sleepy for (cycles)', $lang); ?></label>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="notSleepyRabbit" id="notSleepyRabbit" value="">
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                            <label><?php echo translate('Wolves - Be not sleepy for (cycles)', $lang); ?></label>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="notSleepyWolf" id="notSleepyWolf" value="">
                             </div>
                         </div>
                     </div>
@@ -953,8 +986,10 @@
                                 <label id="error53"></label>
                             </div>
 
-                            <label><?php echo translate('Rabbits', $lang); ?></label>
-                            <textarea class="text-editor" name="codeRabbit" id="codeRabbit"></textarea>
+                            <div class="form-group">
+                                <label><?php echo translate('Rabbits', $lang); ?></label>
+                                <textarea class="form-control" name="codeRabbit" id="codeRabbit" rows="10" style="resize: none;"></textarea>
+                            </div>
 
                             <br>
 
@@ -964,7 +999,7 @@
                             </div>
 
                             <label><?php echo translate('Wolves', $lang); ?></label>
-                            <textarea class="text-editor" name="codeWolf" id="codeWolf"></textarea>
+                            <textarea class="form-control" name="codeWolf" id="codeWolf" rows="10" style="resize: none;"></textarea>
                         </div>
                     </div>
                 </div>
@@ -982,16 +1017,6 @@
     <script src="../resources/js/checkS2.js"></script>
     <script src="../resources/js/language.js"></script>
 
-    <!-- Custom JS for text editor -->
-    <script src='//cdn.tinymce.com/4/tinymce.min.js'></script>
-    <script>
-        tinymce.init({
-            selector: '.text-editor',
-            toolbar: 'undo redo | cut copy | outdent indent',
-            menubar: false,
-        });
-    </script>
-
     <!-- Custom JavaScript for the Menu Toggle -->
     <script>
         $("#menu-toggle").click(function(e) {
@@ -1003,12 +1028,38 @@
     <?php
         if(file_exists('../resources/conf/settings.json')){
             $conf = file_get_contents('../resources/conf/settings.json');
-            ?>
+    ?>
             <script type="text/javascript">
                 var conf = <?php echo json_encode($conf); ?>;
                 refill(conf);
             </script>
-            <?php
+    <?php
+        }
+
+        if(file_exists('../resources/log/error.json')){
+            $err = file_get_contents('../resources/log/error.json');
+    ?>
+            <script type="text/javascript">
+                behaviour();
+
+                var errors = JSON.parse(<?php echo json_encode(file_get_contents('../resources/log/error.json')); ?>);
+
+                message = errors['message'];
+                message = message.split(' in ');
+
+                if(errors['file'].indexOf('customRabbit') != -1){
+                    document.getElementById('codeRabbit').style.borderColor = '#a94442';
+                    document.getElementById('codeRabbit').style.borderWidth = '2px';
+                    document.getElementById('alert53').className = 'alert alert-danger show';
+                    document.getElementById('error53').innerHTML = /*translate('Type', language) + ': ' + errors['type'] + '<br>' + translate('File') + ': ' + errors['file'] + '<br>' + */translate('Line', language) + ': ' + errors['line'] + '<br>' + translate('Message', language) + ': ' + message[0];
+                }else{
+                    document.getElementById('codeWolf').style.borderColor = '#a94442';
+                    document.getElementById('codeWolf').style.borderWidth = '2px';
+                    document.getElementById('alert54').className = 'alert alert-danger show';
+                    document.getElementById('error54').innerHTML = /*translate('Type', language) + ': ' + errors['type'] + '<br>' + translate('File') + ': ' + errors['file'] + '<br>' + */translate('Line', language) + ': ' + errors['line'] + '<br>' + translate('Message', language) + ': ' + message[0];
+                }
+            </script>
+        <?php
         }
     ?>
 </body>

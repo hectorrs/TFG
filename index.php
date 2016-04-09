@@ -3,6 +3,11 @@
 	if(file_exists('resources/conf/settings.json')){
 		unlink('resources/conf/settings.json');
 	}
+
+	// Deleting error file
+	if(file_exists('resources/log/error.json')){
+		unlink('resources/log/error.json');
+	}
 ?>
 
 <script type="text/javascript">

@@ -51,10 +51,10 @@
 	            	<div class="col-sm-3 col-md-3 col-lg-3"></div>
 
 	            	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-		            	<form enctype="multipart/form-data" action="../core/uploadFileS2.php?lang=<?php echo $lang; ?>" method="POST">
-		            		<div class="image-upload">
+		            	<form enctype="multipart/form-data" action="../core/uploadFileS2.php?lang=<?php echo $lang; ?>" method="POST" id="form-file">
+		            		<div class="image-upload" id="errorFile">
 							    <label for="file-input">
-							        <img src="../resources/img/loadFile.png"/>
+							        <img src="../resources/img/loadFile.png"/ id="load-image">
 							    </label>
 
 							    <input id="file-input" name="uploadFile" type="file" />
@@ -64,7 +64,7 @@
 								<div class="col-xs-2 col-sm-3 col-md-3 col-lg-3"></div>
 
 								<div class="col-xs-8 col-sm-6 col-md-6 col-lg-6">
-									<input type="submit" class="btn btn-info btn-block" name="btnLoadFile" value="Aceptar">
+									<input type="submit" class="btn btn-info btn-block" name="btnLoadFile" value="Aceptar" onclick="return isFile();">
 								</div>
 
 								<div class="col-xs-2 col-sm-3 col-md-3 col-lg-3"></div>
@@ -77,5 +77,25 @@
 	            </div>
 	        </div>
         </div>
+
+        <script type="text/javascript">
+        	function isFile(){
+        		validExtension = 'json';
+
+        		file = document.getElementById('file-input');
+        		name = file.value;
+
+        		if(name.substr(name.length - validExtension.length, validExtension.length). toLowerCase() == validExtension.toLowerCase()){
+        			return true;
+        		}else{
+        			/*document.getElementById('errorFile').style.borderColor = '#a94442';
+	        		document.getElementById('errorFile').style.borderStyle = 'solid';
+	        		document.getElementById('errorFile').style.borderWidth = '2px';*/
+	        		document.getElementById('load-image').src = '../resources/img/loadFileFail.png';
+
+	        		return false;
+        		}
+	        }
+        </script>
     </body>
 </html>

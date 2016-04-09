@@ -1,4 +1,9 @@
 /**
+ * var Language
+ */
+var language = location.search.substring(6);
+
+/**
  * Show the tab 'world' and hide the others
  */
 function world(){
@@ -180,6 +185,8 @@ function refill(file){
 	document.getElementById('turnEatWolf').value = file['turnEatWolf'];
 	document.getElementById('turnSleepRabbit').value = file['turnSleepRabbit'];
 	document.getElementById('turnSleepWolf').value = file['turnSleepWolf'];
+	document.getElementById('notSleepyRabbit').values = file['notSleepyRabbit'];
+	document.getElementById('notSleepyWolf').values = file['notSleepyWolf'];
 	document.getElementById('maxUseRabbit').value = file['maxUseRabbit'];
 	document.getElementById('maxUseWolf').value = file['maxUseWolf'];
 	document.getElementById('smellRabbitUse').value = file['smellRabbitUse'];
