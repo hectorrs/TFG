@@ -4,6 +4,11 @@
 var language = location.search.substring(6);
 
 /**
+ * var Speed play
+ */
+var speed = 1000;
+
+/**
  * Show the first step of the world when the web page is loaded
  */
 onload = function(){

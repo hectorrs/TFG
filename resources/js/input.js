@@ -138,6 +138,7 @@ function refill(file){
 	document.getElementById('wolf').value = file['wolf'];
 	document.getElementById('timeMoreCarrot').value = file['timeMoreCarrot'];
 	document.getElementById('amountMoreCarrot').value = file['amountMoreCarrot'];
+	document.getElementById('lifetimeCarrot').value = file['lifetimeCarrot'];
 	document.getElementById('maxEatRabbit').value = file['maxEatRabbit'];
 	document.getElementById('maxEatWolf').value = file['maxEatWolf'];
 	document.getElementById('maxSleepRabbit').value = file['maxSleepRabbit'];

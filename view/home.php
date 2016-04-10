@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <title>Simulador</title>
 
         <!-- CSS -->
@@ -19,6 +20,8 @@
 	    ?>
 
 	    <!-- JavaScript -->
+	    <script src="../resources/js/bootstrap.js"></script>
+	    
 	    <script type="text/javascript">
 	    	var language = <?php echo json_encode($lang); ?>;
 	    </script>

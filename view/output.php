@@ -33,7 +33,6 @@
 	<?php
 		// File which generates the world
 		$file = file_get_contents('../resources/log/world.txt');
-		//$file = file_get_contents('../resources/log/world.csv');
 
 		$data = explode('.', $file);
 		//$data = explode('\n\n', $file);
@@ -142,7 +141,7 @@
 			<div class='col-sm-2 col-md-2 col-lg-2'>
 				<div class="row">
 					<div class="col-xs-4 col-sm-12 col-md-12 col-lg-12">
-						<input type="button" class="btn btn-default btn-success" style="width: 100%" onclick="transition = setInterval(function(){play()}, 350)" value="<?php echo translate('Play', $lang); ?>" />
+						<input type="button" class="btn btn-default btn-success" style="width: 100%" onclick="pause(); transition = setInterval(function(){play()}, speed)" value="<?php echo translate('Play', $lang); ?>" />
 						<div class="dividingBtn"></div>
 					</div>
 
@@ -188,6 +187,19 @@
 							<span class="input-group-btn">
 								<input type="button" class="btn btn-default btn-primary" value="<?php echo translate('Go to', $lang); ?>" onclick="update('goTo')" />
 							</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="dividing"></div>
+
+				<div class="row">
+					<div class="col-xs-6 col-sm-12 col-md-12 col-lg-12">
+						<div class="input-group">
+							<span><strong>Velocidad de reproducción</strong></span>
+							<input type="button" class="btn btn-default" style="margin-right: 10px" value="x1" onclick="speed = 1000; pause(); transition = setInterval(function(){play()}, speed);">
+							<input type="button" class="btn btn-default" style="margin-right: 10px" value="x2" onclick="speed = 500; pause(); transition = setInterval(function(){play()}, speed);">
+							<input type="button" class="btn btn-default" style="margin-right: 10px" value="x3" onclick="speed = 250; pause(); transition = setInterval(function(){play()}, speed);">
 						</div>
 					</div>
 				</div>

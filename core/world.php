@@ -4,7 +4,7 @@
 
 	global $lang;
     if(!isset($_GET['lang'])){
-        $lang = 'en';
+        $lang = 'es';
     }else{
         $lang = $_GET['lang'];
     }
@@ -31,6 +31,8 @@
 
 					header('Location: ../view/inputS2.php?lang=' . $GLOBALS['lang']);
 				}
+			}else if(error_get_last() != ''){
+				header('Location: ../view/error.php');
 			}
 		}
 	);
@@ -76,7 +78,6 @@
 	$vars['fileLog'] = openFileCSV('log');
 	//$vars['fileWorld'] = openFileCSV('world');
 	$vars['fileWorld'] = openFile('world');
-	//$vars['fileLog'] = openFile('log');
 	$vars['fileDebug'] = openFile('debug');
 
 	/* ** Statistics ** */
@@ -364,8 +365,6 @@
 		fwrite($fileConf, json_encode($conf, JSON_PRETTY_PRINT));
 
 		fclose($fileConf);
-
-		
 	}
 
 	/**
@@ -412,16 +411,23 @@
 	 * It writes in a text file the contents of the world
 	 */
 	function writeWorld(){
+		//$fileWorld = fopen('../resources/log/world.csv', 'a');
+
 		for($row = 0; $row < getSizeWorld()['row']; $row++){
 			for($col = 0; $col < getSizeWorld()['col']; $col++){
 				if(get_class($GLOBALS['vars']['world'][$row][$col]) != 'Ground'){
 					writeFile('World', $row . ':' . $col . ':' . substr(get_class($GLOBALS['vars']['world'][$row][$col]), 0, 1) . ';');
-					//writeFileCSV('World', array($row, $col, substr(get_class($GLOBALS['vars']['world'][$row][$col]), 0, 1)));
+
+					//fputcsv($fileWorld, array($row, $col, substr(get_class($GLOBALS['vars']['world'][$row][$col]), 0, 1)));
+					//array_push($world, $row . ':' . $col . ':' . substr(get_class($GLOBALS['vars']['world'][$row][$col]), 0, 1));
 				}
 			}
 		}
+
 		writeFile('World', '.');
-		//writeFileCSV('World', array());
+
+		//fputcsv($fileWorld);
+		//fclose($fileWorld);
 	}
 
 	/**
@@ -1521,9 +1527,6 @@
 	/* **** Main **** */
 	conf();
 	createWorld();
-
-	//writeFile('Log', '----Turn 0' . "\n");
-	writeFileCSV('Log', array('Turn 0'));
 
 	for($i = 0; $i < $_POST['rabbit']; $i++) addRabbit();
 	for($i = 0; $i < $_POST['wolf']; $i++) addWolf();

@@ -3,13 +3,13 @@
 ******** -------------------------- World ---------------------------- ********
 **** ---------------------------- Life cycle ----------------------------- ****
 **** Total period
-100 cycles
+200 cycles
 
 **** Daylight period
-8 cycles
+80 cycles
 
 **** Night period
-2 cycles
+20 cycles
 
 **** ------------------------------ Size --------------------------------- ****
 Width: 20
@@ -23,115 +23,115 @@ night
 sunny
 
 **** Change weather each
-2 cycles
+40 cycles
 
 ******** ------------------------- Elements --------------------------- *******
 **** --------------------- First amount of elements ---------------------- ****
-2 carrots
-2 trees
-2 lairs
-2 rabbits
-2 wolfs
+4 carrots
+0 trees
+0 lairs
+0 rabbits
+0 wolfs
 
 **** ---------------------- Regeneration of carrots ---------------------- ****
 **** Each
-2 cycles
+0 cycles
 
 **** Amount
-2 carrots
+0 carrots
 
 **** ------------------------ Striking of carrots ------------------------ ****
 **** Lifetime
-234 cycles
+2 cycles
 ******** ----------------------- Restrictions ------------------------ ********
 **** ------------------------------- Eat --------------------------------- ****
 **** Rabbit
-Can be 2 cycles without eat
+Can be 0 cycles without eat
 
 **** Wolf
-Can be 2 cycles without eat
+Can be 0 cycles without eat
 
 **** ------------------------------ Sleep -------------------------------- ****
 **** Rabbit
-Can be 2 cycles without sleep
+Can be 0 cycles without sleep
 Place to sleep: ground
 
 **** Wolf
-Can be 2 cycles without sleep
+Can be 0 cycles without sleep
 
 **** ------------------------------ Breed -------------------------------- ****
 **** Rabbit
-Each 2 cycles
-2 new rabbits
+Each 0 cycles
+0 new rabbits
 
 **** Wolf
-Each 2 cycles
-2 new wolves
+Each 0 cycles
+0 new wolves
 
 ********************************** Elements ***********************************
 ******** -------------------------- Cycles --------------------------- ********
 **** ------------------------------- Eat --------------------------------- ****
 **** Rabbit
-Need 2 cycles to eat
-Are sated until 1 after eat
+Need 0 cycles to eat
+Are sated until 0 after eat
 
 **** Wolf
-Need 2 cycles to eat
-Are sated until 1 after eat
+Need 0 cycles to eat
+Are sated until 0 after eat
 
 **** ------------------------------ Sleep -------------------------------- ****
 **** Rabbit
-Need 2 cycles to sleep
+Need 0 cycles to sleep
 
 **** Wolf
-Need 2 cycles to sleep
+Need 0 cycles to sleep
 
 **** Rabbit
-Be not sleepy for 1cycles
+Be not sleepy for 10cycles
 **** Wolf
-Be not sleepy for 1cycles
+Be not sleepy for 10cycles
 ******** ------------------------- Actions --------------------------- ********
 **** ----------------- Points per cycle to do actions -------------------- ****
 **** Rabbit
-6 points
+0 points
 
 **** Wolf
-6 points
+0 points
 
 **** ------------------------- Use per action ---------------------------- ****
 **** Rabbit
-Smell: 1 points
-Hear: 1 points
-See: 1 points
-Move: 1 points
-Sleep: 1 points
-Breed: 1 points
+Smell: 0 points
+Hear: 0 points
+See: 0 points
+Move: 0 points
+Sleep: 0 points
+Breed: 0 points
 
 **** Wolf
-Smell: 1 points
-Hear: 1 points
-See: 1 points
-Move: 1 points
-Sleep: 1 points
-Breed: 1 points
+Smell: 0 points
+Hear: 0 points
+See: 0 points
+Move: 0 points
+Sleep: 0 points
+Breed: 0 points
 
 ******** -------------------------- Ranges --------------------------- ********
 **** ------------------------------ Ranges ------------------------------- ****
 **** Rabbit
-See: 1
-Smell: 1
-Hear: 1
+See: 0
+Smell: 0
+Hear: 0
 
 **** Wolf
-See: 1
-Smell: 1
-Hear: 1
+See: 0
+Smell: 0
+Hear: 0
 
 **** --------------------------- Comfort zone ---------------------------- ****
 **** Rabbit
-Until 1 cycles after eat
-Until 1 cycles after sleep
+Until 0 cycles after eat
+Until 0 cycles after sleep
 
 **** Wolf
-Until 1 cycles after eat
-Until 1 cycles after sleep
+Until 0 cycles after eat
+Until 0 cycles after sleep
