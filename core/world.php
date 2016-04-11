@@ -76,7 +76,6 @@
 	$vars['fileConf'] = openFile('conf');
 	$vars['fileLog'] = openFileCSV('log');
 	$vars['fileWorldDraw'] = openFileCSV('world');
-	$vars['fileWorld'] = openFile('world');
 	$vars['fileDebug'] = openFile('debug');
 
 	/* ** Statistics ** */
@@ -1714,7 +1713,7 @@
 	}
 
 	closeFile('Log');
-	closeFile('World');
+	closeFile('WorldDraw');
 	closeFile('Debug');
 	closeFile('Conf');
 

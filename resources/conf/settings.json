@@ -54,5 +54,7 @@
     "eatComfortRabbit": "20",
     "sleepComfortRabbit": "40",
     "eatComfortWolf": "35",
-    "sleepComfortWolf": "55"
+    "sleepComfortWolf": "55",
+    "codeRabbit": "$see = actionManager($this, 'see');\r\n$smell = actionManager($this, 'smell');\r\n$hear = actionManager($this, 'hear');\r\n$move = array('up', 'down', 'left', 'right');\r\nactionManager($this, 'move', $move[rand(0, 3)]);\r\nactionManager($this, 'sleep');\r\nactionManager($this, 'breed');",
+    "codeWolf": "$see = actionManager($this, 'see');\r\n$smell = actionManager($this, 'smell');\r\n$hear = actionManager($this, 'hear');\r\n$move = array('up', 'down', 'left', 'right');\r\nactionManager($this, 'move', $move[rand(0, 3)]);\r\nactionManager($this, 'sleep');\r\nactionManager($this, 'breed');"
 }

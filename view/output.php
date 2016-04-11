@@ -443,7 +443,7 @@
 				<h4><a href="../resources/log/conf.txt" download><?php echo translate('Begining configuration', $lang); ?></a></h4>
 				<h4><a href="../resources/conf/settings.json" download><?php echo translate('Begining configuration', $lang); ?></a></h4>
 				<h4><a href="../resources/log/log.csv" download><?php echo translate('Actions log', $lang); ?></a></h4>
-				<h4><a href="../resources/log/world.txt" download><?php echo translate('World', $lang); ?></a></h4>
+				<h4><a href="../resources/log/world.csv" download><?php echo translate('World', $lang); ?></a></h4>
 			</div>
 		</div>
 
