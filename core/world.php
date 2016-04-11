@@ -62,7 +62,6 @@
 	$vars['ground'] = null;
 
 	$vars['moreCarrot'] = 0;
-	$vars['moreWolf'] = 0;
 
 	/* ** Element ** */
 	$vars['static'] = array();
@@ -173,6 +172,7 @@
 		$conf['rabbit'] = $_POST['rabbit'];
 		$conf['wolf'] = $_POST['wolf'];
 
+		$GLOBALS['vars']['moreCarrot'] = $_POST['timeMoreCarrot'];
 		writeFile('Conf', '**** ---------------------- Regeneration of carrots ---------------------- ****' . "\n");
 		writeFile('Conf', '**** Each' . "\n");
 		writeFile('Conf', $_POST['timeMoreCarrot'] . ' cycles' . "\n\n");
@@ -416,7 +416,7 @@
 		for($row = 0; $row < getSizeWorld()['row']; $row++){
 			for($col = 0; $col < getSizeWorld()['col']; $col++){
 				if(get_class($GLOBALS['vars']['world'][$row][$col]) != 'Ground'){
-					writeFile('World', $row . ':' . $col . ':' . substr(get_class($GLOBALS['vars']['world'][$row][$col]), 0, 1) . ';');
+					//writeFile('World', $row . ':' . $col . ':' . substr(get_class($GLOBALS['vars']['world'][$row][$col]), 0, 1) . ';');
 
 					array_push($world, $row);
 					array_push($world, $col);
@@ -427,7 +427,7 @@
 
 		writeFileCSV('WorldDraw', $world);
 
-		writeFile('World', '.');
+		//writeFile('World', '.');
 	}
 
 	/**
@@ -1663,7 +1663,8 @@
 		}
 
 		// Regeneration of carrots
-        if($GLOBALS['vars']['moreCarrot'] > 0){
+		writeFile('Debug', getTime() . ' + ' . $GLOBALS['vars']['moreCarrot'] . "\n");
+        if($GLOBALS['vars']['moreCarrot'] > 1){
             $GLOBALS['vars']['moreCarrot']--;
         }else{
             for($i = 0; $i < $_POST['amountMoreCarrot']; $i++){

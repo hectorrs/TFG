@@ -88,38 +88,37 @@
 
 	<script type='text/javascript'>
 		// World
-		var data = <?php echo json_encode($data); ?>;
 		var dataWorld = <?php echo json_encode($dataWorld); ?>;
-
+		
 		// Size
 		var row = <?php echo json_encode($row); ?>;
 		var col = <?php echo json_encode($col); ?>;
-
+		
 		// TWeather
 		var weather = <?php echo json_encode($weather); ?>;
-
+		
 		// Population of elements
 		var amountRabbit = <?php echo json_encode($amountRabbit); ?>;
 		var amountWolf = <?php echo json_encode($amountWolf); ?>;
 		var amountCarrot = <?php echo json_encode($amountCarrot); ?>;
-
+		
 		// Hunted rabbits
 		var huntedRabbit = <?php echo json_encode($huntedRabbit); ?>;
-
+		
 		// Eaten carrots
 		var eatenCarrot = <?php echo json_encode($eatenCarrot); ?>;
-
+		
 		// Dead rabbits and wolves for not eating
 		var deadEatRabbit = <?php echo json_encode($deadEatRabbit); ?>;
 		var deadEatWolf = <?php echo json_encode($deadEatWolf); ?>;
-
+		
 		// Dead rabbits and wolves for not sleeping
 		var deadSleepRabbit = <?php echo json_encode($deadSleepRabbit); ?>;
 		var deadSleepWolf = <?php echo json_encode($deadSleepWolf); ?>;
-
+		
 		// Breed of rabbits
 		var bornRabbit = <?php echo json_encode($bornRabbit); ?>;
-
+		
 		// Breed of wolves
 		var bornWolf = <?php echo json_encode($bornWolf); ?>;
 	</script>
@@ -208,6 +207,7 @@
 							<input type="button" class="btn btn-default" style="margin-right: 10px" value="x1" onclick="speed = 1000; pause(); transition = setInterval(function(){play()}, speed);">
 							<input type="button" class="btn btn-default" style="margin-right: 10px" value="x2" onclick="speed = 500; pause(); transition = setInterval(function(){play()}, speed);">
 							<input type="button" class="btn btn-default" style="margin-right: 10px" value="x3" onclick="speed = 250; pause(); transition = setInterval(function(){play()}, speed);">
+							<input type="button" class="btn btn-default" style="margin-right: 10px" value="x4" onclick="speed = 125; pause(); transition = setInterval(function(){play()}, speed);">
 						</div>
 					</div>
 				</div>

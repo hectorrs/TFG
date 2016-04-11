@@ -26,50 +26,50 @@ function update(option){
 	switch(option){
 		case 'begin':
 			time = 0;
-			var current = data[time].split(';');
-			//var current = data[time].split('\n');
-			current.pop();
+
+			var current = dataWorld[time];
 			printWorld(current);
+
 			main.innerHTML = '<h4><strong>' + translate('Current cycle', language) + ': ' + time + '</strong></h4>';
 			break;
 		case 'previous':
 			if(time > 0){
 				time--;
-				var current = data[time].split(';');
-				//var current = data[time].split('\n');
-				current.pop();
+
+				var current = dataWorld[time];
 				printWorld(current);
+
 				main.innerHTML = '<h4><strong>' + translate('Current cycle', language) + ': ' + time + '</strong></h4>';
 			}
 			break;
 		case 'next':
-			if(time < data.length - 2){
+			if(time < dataWorld.length - 2){
 				time++;
-				var current = data[time].split(';');
-				//var current = data[time].split('\n');
-				current.pop();
+
+				var current = dataWorld[time];
 				printWorld(current);
+
 				main.innerHTML = '<h4><strong>' + translate('Current cycle', language) + ': ' + time + '</strong></h4>';
 			}
 			break;
 		case 'end':
-			time = data.length - 2;
-			var current = data[time].split(';');
-			//var current = data[time].split('\n');
-			current.pop();
+			time = dataWorld.length - 1;
+
+			var current = dataWorld[time];
 			printWorld(current);
+
 			main.innerHTML = '<h4><strong>' + translate('Current cycle', language) + ': ' + time + '</strong></h4>';
 			break;
 		case 'goTo':
 			var goTo = document.getElementById('goTo').value;
 			document.getElementById('goTo').value = '';
 			if((/^([0-9])*$/.test(goTo)) && goTo != ''){
-				if(goTo < data.length - 1){
+				if(goTo < dataWorld.length - 1){
 					time = goTo;
-					var current = data[time].split(';');
-					//var current = data[time].split('\n');
-					current.pop();
+
+					var current = dataWorld[time];
 					printWorld(current);
+
 					main.innerHTML = '<h4><strong>' + translate('Current cycle', language) + ': ' + time + '</strong></h4>';
 				}
 			}
@@ -90,10 +90,14 @@ function printWorld(current){
 		}
 	}
 
-	for(x = 0; x < current.length; x++){
-		position = current[x].split(':');
-		cell = document.getElementById('row' + position[0].toString() + 'col' + position[1].toString());
-		switch(position[2]){
+	current = current[0].split(';');
+	console.log(current);
+
+	for(x = 0; x < current.length; x += 3){
+		rowAux = current[x];
+		colAux = current[x + 1];
+		cell = document.getElementById('row' + rowAux + 'col' + colAux);
+		switch(current[x + 2]){
 			case 'R':
 				cell.style.backgroundColor = 'blue';
 				break;
@@ -118,12 +122,12 @@ function printWorld(current){
  * When it arrives the last step, it stops calling the method pause()
  */
 function play(){
-	if(time < data.length - 1){
-		var current = data[time].split(";");
-		//var current = data[time].split('\n');
-		current.pop();
+	if(time < dataWorld.length - 1){
+		var current = dataWorld[time];
 		printWorld(current);
+
 		main.innerHTML = '<h4><strong>' + translate('Current cycle', language) + ': ' + time + '</strong></h4>';
+
 		time++;
 	}else{
 		pause();
@@ -146,10 +150,11 @@ function stop(){
 	if(transition != null){
 		clearInterval(transition);
 	}
+
 	time = 0;
-	var current = data[time].split(";");
-	//var current = data[time].split('\n');
-	current.pop();
+
+	var current = dataWorld[time];
 	printWorld(current);
+
 	main.innerHTML = '<h4><strong>' + translate('Current cycle', language) + ': ' + time + '</strong></h4>';
 }
