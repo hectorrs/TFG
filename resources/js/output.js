@@ -43,7 +43,7 @@ function update(option){
 			}
 			break;
 		case 'next':
-			if(time < dataWorld.length - 2){
+			if(time < dataWorld.length - 1){
 				time++;
 
 				var current = dataWorld[time];
@@ -122,7 +122,7 @@ function printWorld(current){
  * When it arrives the last step, it stops calling the method pause()
  */
 function play(){
-	if(time < dataWorld.length - 1){
+	if(time < dataWorld.length){
 		var current = dataWorld[time];
 		printWorld(current);
 
