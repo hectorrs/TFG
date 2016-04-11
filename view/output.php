@@ -34,8 +34,15 @@
 		// File which generates the world
 		$file = file_get_contents('../resources/log/world.txt');
 
+		$dataWorld = array();
+
+		if(($fileWorld = fopen('../resources/log/world.csv', 'r'))){
+			while(($data = fgetcsv($fileWorld)) !== false){
+				array_push($dataWorld, $data);
+			}
+		}
+
 		$data = explode('.', $file);
-		//$data = explode('\n\n', $file);
 
 		session_start();
 
@@ -82,6 +89,7 @@
 	<script type='text/javascript'>
 		// World
 		var data = <?php echo json_encode($data); ?>;
+		var dataWorld = <?php echo json_encode($dataWorld); ?>;
 
 		// Size
 		var row = <?php echo json_encode($row); ?>;

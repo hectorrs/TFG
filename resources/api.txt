@@ -1,11 +1,14 @@
----- API ----
-/**
- * It checks if the world is full
- *
- * @return bool True, if it is full; false, in the opposite case
- */
-function isFull();
+-- Inputs --
+Ciclo actual
+Día actual
+Día / Noche
+Tiempo atmosférico
 
+
+
+
+
+---- API ----
 /**
  * It returns the status of the day (daylight or night)
  *

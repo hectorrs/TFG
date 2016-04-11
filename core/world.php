@@ -76,7 +76,7 @@
 	/* ** File ** */
 	$vars['fileConf'] = openFile('conf');
 	$vars['fileLog'] = openFileCSV('log');
-	//$vars['fileWorld'] = openFileCSV('world');
+	$vars['fileWorldDraw'] = openFileCSV('world');
 	$vars['fileWorld'] = openFile('world');
 	$vars['fileDebug'] = openFile('debug');
 
@@ -411,23 +411,23 @@
 	 * It writes in a text file the contents of the world
 	 */
 	function writeWorld(){
-		//$fileWorld = fopen('../resources/log/world.csv', 'a');
+		$world = array();
 
 		for($row = 0; $row < getSizeWorld()['row']; $row++){
 			for($col = 0; $col < getSizeWorld()['col']; $col++){
 				if(get_class($GLOBALS['vars']['world'][$row][$col]) != 'Ground'){
 					writeFile('World', $row . ':' . $col . ':' . substr(get_class($GLOBALS['vars']['world'][$row][$col]), 0, 1) . ';');
 
-					//fputcsv($fileWorld, array($row, $col, substr(get_class($GLOBALS['vars']['world'][$row][$col]), 0, 1)));
-					//array_push($world, $row . ':' . $col . ':' . substr(get_class($GLOBALS['vars']['world'][$row][$col]), 0, 1));
+					array_push($world, $row);
+					array_push($world, $col);
+					array_push($world, substr(get_class($GLOBALS['vars']['world'][$row][$col]), 0, 1));
 				}
 			}
 		}
 
-		writeFile('World', '.');
+		writeFileCSV('WorldDraw', $world);
 
-		//fputcsv($fileWorld);
-		//fclose($fileWorld);
+		writeFile('World', '.');
 	}
 
 	/**
@@ -561,7 +561,7 @@
 
 	/* --------------------------------------------------------------------- */
 
-	/* ----------------------------- Elementos ----------------------------- */
+	/* ----------------------------- Elements ----------------------------- */
 	/**
 	 * It returns the period which the Rabbit element needs to eat
 	 *
@@ -1577,6 +1577,8 @@
 	$timeWeather = 1;
 
 	while(getTime() <= getLength()){
+		writeFileCSV('Log', array(getTime(), 'New cycle', '', '', '', '', '', ''));
+
 		// Change day status (daylight / night)
 		if(getTime() == (getLengthDay() + getLengthNight()) * getiTime() - intval(getLengthNight() / 2) || getTime() == (getLengthDay() + getLengthNight()) * (getiTime() - 1) + intval(getLengthNight() / 2) + $x){
 			setStatusDay();
@@ -1716,7 +1718,6 @@
 	closeFile('Conf');
 
 	$memory = memory_get_usage(true);
-	$memory2 = memory_get_peak_usage(true);
     $timeFinish = microtime(true);
 	
 	session_start();

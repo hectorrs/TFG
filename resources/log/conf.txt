@@ -3,7 +3,7 @@
 ******** -------------------------- World ---------------------------- ********
 **** ---------------------------- Life cycle ----------------------------- ****
 **** Total period
-200 cycles
+100 cycles
 
 **** Daylight period
 80 cycles
@@ -12,8 +12,8 @@
 20 cycles
 
 **** ------------------------------ Size --------------------------------- ****
-Width: 20
-Height: 20
+Width: 10
+Height: 10
 
 **** ----------------------------- Weather ------------------------------- ****
 **** Status day
@@ -23,115 +23,115 @@ night
 sunny
 
 **** Change weather each
-40 cycles
+35 cycles
 
 ******** ------------------------- Elements --------------------------- *******
 **** --------------------- First amount of elements ---------------------- ****
-4 carrots
-0 trees
-0 lairs
-0 rabbits
-0 wolfs
+30 carrots
+15 trees
+20 lairs
+10 rabbits
+2 wolfs
 
 **** ---------------------- Regeneration of carrots ---------------------- ****
 **** Each
-0 cycles
+20 cycles
 
 **** Amount
-0 carrots
+4 carrots
 
 **** ------------------------ Striking of carrots ------------------------ ****
 **** Lifetime
-2 cycles
+75 cycles
 ******** ----------------------- Restrictions ------------------------ ********
 **** ------------------------------- Eat --------------------------------- ****
 **** Rabbit
-Can be 0 cycles without eat
+Can be 80 cycles without eat
 
 **** Wolf
-Can be 0 cycles without eat
+Can be 80 cycles without eat
 
 **** ------------------------------ Sleep -------------------------------- ****
 **** Rabbit
-Can be 0 cycles without sleep
+Can be 90 cycles without sleep
 Place to sleep: ground
 
 **** Wolf
-Can be 0 cycles without sleep
+Can be 90 cycles without sleep
 
 **** ------------------------------ Breed -------------------------------- ****
 **** Rabbit
-Each 0 cycles
-0 new rabbits
+Each 50 cycles
+2 new rabbits
 
 **** Wolf
-Each 0 cycles
-0 new wolves
+Each 50 cycles
+1 new wolves
 
 ********************************** Elements ***********************************
 ******** -------------------------- Cycles --------------------------- ********
 **** ------------------------------- Eat --------------------------------- ****
 **** Rabbit
-Need 0 cycles to eat
-Are sated until 0 after eat
+Need 3 cycles to eat
+Are sated until 35 after eat
 
 **** Wolf
-Need 0 cycles to eat
-Are sated until 0 after eat
+Need 3 cycles to eat
+Are sated until 35 after eat
 
 **** ------------------------------ Sleep -------------------------------- ****
 **** Rabbit
-Need 0 cycles to sleep
+Need 20 cycles to sleep
 
 **** Wolf
-Need 0 cycles to sleep
+Need 20 cycles to sleep
 
 **** Rabbit
-Be not sleepy for 10cycles
+Be not sleepy for 60cycles
 **** Wolf
-Be not sleepy for 10cycles
+Be not sleepy for 60cycles
 ******** ------------------------- Actions --------------------------- ********
 **** ----------------- Points per cycle to do actions -------------------- ****
 **** Rabbit
-0 points
+6 points
 
 **** Wolf
-0 points
+6 points
 
 **** ------------------------- Use per action ---------------------------- ****
 **** Rabbit
-Smell: 0 points
-Hear: 0 points
-See: 0 points
-Move: 0 points
-Sleep: 0 points
-Breed: 0 points
+Smell: 1 points
+Hear: 1 points
+See: 1 points
+Move: 1 points
+Sleep: 1 points
+Breed: 1 points
 
 **** Wolf
-Smell: 0 points
-Hear: 0 points
-See: 0 points
-Move: 0 points
-Sleep: 0 points
-Breed: 0 points
+Smell: 1 points
+Hear: 1 points
+See: 1 points
+Move: 1 points
+Sleep: 1 points
+Breed: 1 points
 
 ******** -------------------------- Ranges --------------------------- ********
 **** ------------------------------ Ranges ------------------------------- ****
 **** Rabbit
-See: 0
-Smell: 0
-Hear: 0
+See: 1
+Smell: 1
+Hear: 1
 
 **** Wolf
-See: 0
-Smell: 0
-Hear: 0
+See: 1
+Smell: 1
+Hear: 1
 
 **** --------------------------- Comfort zone ---------------------------- ****
 **** Rabbit
-Until 0 cycles after eat
-Until 0 cycles after sleep
+Until 25 cycles after eat
+Until 50 cycles after sleep
 
 **** Wolf
-Until 0 cycles after eat
-Until 0 cycles after sleep
+Until 25 cycles after eat
+Until 50 cycles after sleep
