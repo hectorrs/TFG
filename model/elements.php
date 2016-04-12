@@ -8,6 +8,11 @@
 	 */
 	class Rabbit extends Dynamic{
 		/**
+		 * @var Array Data storage
+		 */
+		protected $data;
+		
+		/**
 		 * It lets Rabbit to do an action
 		 */
 		public function act(){
@@ -25,6 +30,11 @@
 	 * It represents an element Wolf in the world
 	 */
 	class Wolf extends Dynamic{
+		/**
+		 * @var Array Data storage
+		 */
+		protected $data;
+		
 		/**
 		 * It lets Wolf to do an action
 		 */

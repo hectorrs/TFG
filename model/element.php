@@ -112,6 +112,7 @@
 			$this->ateAgo = 0;
 			$this->sleptAgo = 0;
 			$this->bredAgo = 0;
+			$data = array();
 		}
 
 		/**
