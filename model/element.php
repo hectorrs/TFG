@@ -156,7 +156,7 @@
 		/**
 		 * It returns the period since last time the element ate
 		 *
-		 * @return bool Period
+		 * @return int Period
 		 */
 		public function getAteAgo(){
 			return $this->ateAgo;
@@ -165,7 +165,7 @@
 		/**
 		 * It returns the period since last time the element slept
 		 *
-		 * @return bool Period
+		 * @return int Period
 		 */
 		public function getSleptAgo(){
 			return $this->sleptAgo;

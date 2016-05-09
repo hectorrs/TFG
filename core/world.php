@@ -57,7 +57,7 @@
 	$vars['weather'] = array('sunny', 'rainy', 'windy', 'foggy');
 	$vars['currentWeather'] = '';
 	$vars['changeWeather'] = 0;
-	$vars['time'] = 1;
+	$vars['time'] = 0;
 	$vars['iTime'] = 1;
 	$vars['ground'] = null;
 
@@ -1575,6 +1575,8 @@
 
 	$timeWeather = 1;
 
+	$GLOBALS['vars']['time']++;
+
 	while(getTime() <= getLength()){
 		writeFileCSV('Log', array(getTime(), 'New cycle', '', '', '', '', '', ''));
 
@@ -1639,7 +1641,7 @@
 			}else if($element->getSleeping() > 0){
 				$element->setSleeping($element->getSleeping() - 1);
 
-				writeFileCSV('Log', array(getTime(), '', get_class($element), $element->getId(), '[' . $element->getPosition()[0] . ' - ' . $element->getPosition()[1] . ' ]', 'eating', '', ''));
+				writeFileCSV('Log', array(getTime(), '', get_class($element), $element->getId(), '[' . $element->getPosition()[0] . ' - ' . $element->getPosition()[1] . ' ]', 'sleeping', '', ''));
 			}else{
 				$element->setAteAgo($element->getAteAgo() + 1);
 				$element->setSleptAgo($element->getSleptAgo() + 1);
