@@ -18,12 +18,28 @@
     <!-- Selected language -->
     <?php
         require_once('../core/language.php');
-        $lang = $_GET['lang'];
 
-
+        if(!isset($_GET['lang'])){
+            $lang = 'en';
+        }else{
+            $lang = $_GET['lang'];
+        }
     ?>
 </head>
 <body style="background-color: #E8E8E8;">
+    <div class="row hide text-center" id="loading" style="width: 100%; height: 100%; text-align: center; margin-top: 7%">
+        <div class="col-xs-2 col-sm-2 col-md-3 col-lg-3"></div>
+
+        <div class="col-xs-8 col-sm-8 col-md-6 col-lg-6">
+            <img src="../resources/img/loading.gif" width="50%" height="50%">
+            <br><br><br>
+            <h3><?php echo translate('The proccess can take a few minutes...', $lang); ?></h3>
+            <h4><?php echo translate('Take some popcorn and enjoy ;)', $lang); ?></h4>
+        </div>
+
+        <div class="col-xs-2 col-sm-2 col-md-3 col-lg-3"></div>
+    </div>
+
     <div id="wrapper" style="overflow: hidden;">
         <!-- Sidebar -->
         <div id="sidebar-wrapper" style="background-color: #424242;">
@@ -1047,8 +1063,23 @@
     </script>
 
     <?php
+        @session_start();
+
+        $sessionId = session_id();
+
+        session_write_close();
+
         if(file_exists('../resources/conf/settings.json')){
             $conf = file_get_contents('../resources/conf/settings.json');
+            rename('../resources/conf/settings.json', '../resources/conf/settings_' . $sessionId . '.json');
+    ?>
+            <script type="text/javascript">
+                var conf = <?php echo json_encode($conf); ?>;
+                refill(conf);
+            </script>
+    <?php
+        }else if(file_exists('../resources/conf/settings_' . $sessionId . '.json')){
+            $conf = file_get_contents('../resources/conf/settings_' . $sessionId . '.json');
     ?>
             <script type="text/javascript">
                 var conf = <?php echo json_encode($conf); ?>;
@@ -1057,13 +1088,13 @@
     <?php
         }
 
-        if(file_exists('../resources/log/error.json')){
-            $err = file_get_contents('../resources/log/error.json');
+        if(file_exists('../resources/log/error_' . $sessionId . '.json')){
+            $err = file_get_contents('../resources/log/error_' . $sessionId . '.json');
     ?>
             <script type="text/javascript">
                 behaviour();
 
-                var errors = JSON.parse(<?php echo json_encode(file_get_contents('../resources/log/error.json')); ?>);
+                var errors = JSON.parse(<?php echo json_encode(file_get_contents('../resources/log/error_' . $sessionId . '.json')); ?>);
 
                 message = errors['message'];
                 message = message.split(' in ');
@@ -1080,7 +1111,7 @@
                     document.getElementById('error54').innerHTML = /*translate('Type', language) + ': ' + errors['type'] + '<br>' + translate('File') + ': ' + errors['file'] + '<br>' + */translate('Line', language) + ': ' + errors['line'] + '<br>' + translate('Message', language) + ': ' + message[0];
                 }
             </script>
-        <?php
+    <?php
         }
     ?>
 </body>

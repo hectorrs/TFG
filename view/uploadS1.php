@@ -64,7 +64,7 @@
 								<div class="col-xs-2 col-sm-3 col-md-3 col-lg-3"></div>
 
 								<div class="col-xs-8 col-sm-6 col-md-6 col-lg-6">
-									<input type="submit" class="btn btn-info btn-block" name="btnLoadFile" value="Aceptar" onclick="return isFile();">
+									<input type="submit" class="btn btn-info btn-block" name="btnLoadFile" value="<?php echo translate('Accept', $lang); ?>" onclick="return isFile();">
 								</div>
 
 								<div class="col-xs-2 col-sm-3 col-md-3 col-lg-3"></div>
@@ -82,9 +82,10 @@
         		validExtension = 'json';
 
         		file = document.getElementById('file-input');
+        		//file.value = 'settings';
         		name = file.value;
 
-        		if(name.substr(name.length - validExtension.length, validExtension.length). toLowerCase() == validExtension.toLowerCase()){
+        		if(name.substr(name.length - validExtension.length, validExtension.length).toLowerCase() == validExtension.toLowerCase()){
         			return true;
         		}else{
 	        		document.getElementById('load-image').src = '../resources/img/loadFileFail.png';

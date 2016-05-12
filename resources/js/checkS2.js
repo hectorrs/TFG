@@ -85,6 +85,9 @@ function check(){
 		}
 	}
 
+	document.getElementById('loading').className = 'row show text-center';
+	document.getElementById('wrapper').className = 'hide';
+
 	return true;
 }
 

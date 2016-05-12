@@ -158,6 +158,8 @@ function behaviour(){
 function refill(file){
 	file = JSON.parse(file);
 
+	console.log(file);
+
 	document.getElementById('totalPeriod').value = file['totalPeriod'];
 	document.getElementById('dayPeriod').value = file['dayPeriod'];
 	document.getElementById('nightPeriod').value = file['nightPeriod'];

@@ -1,12 +1,22 @@
 <?php
 	// Language
 	require_once('../core/language.php');
+	
+	session_start();
 
 	global $lang;
     if(!isset($_GET['lang'])){
         $lang = 'es';
     }else{
         $lang = $_GET['lang'];
+    }
+
+    // Session id
+    global $sessionId;
+    $sessionId = session_id();
+
+    if(file_exists('../resources/log/error_' . $GLOBALS['sessionId'] . '.json')){
+    	unlink('../resources/log/error_' . $GLOBALS['sessionId'] . '.json');
     }
 
 	register_shutdown_function(
@@ -23,7 +33,7 @@
 					$err['message'] = $error['message'];
 
 					$dir = substr(__DIR__, 0, -4);
-					$errorFile = fopen($dir . 'resources/log/error.json', 'w');
+					$errorFile = fopen($dir . 'resources/log/error_' . $GLOBALS['sessionId'] . '.json', 'w');
 
 					fwrite($errorFile, json_encode($err, JSON_PRETTY_PRINT));
 
@@ -112,7 +122,7 @@
 	 * It gets the data of the first configuration of the world and log's files
 	 */
 	function conf(){
-		$fileConf = fopen('../resources/conf/settings.json', 'w');
+		$fileConf = fopen('../resources/conf/settings_' . $GLOBALS['sessionId'] . '.json', 'w');
 		$conf = array();
 
 		writeFile('Conf', '********************** Archivo de configuración inicial ***********************' . "\n");
@@ -1478,7 +1488,7 @@
 	 * @param string File
 	 */
 	function openFile($file){
-		$file = fopen('../Resources/log/' . $file . '.txt', 'w');
+		$file = fopen('../resources/log/' . $file . '_' . $GLOBALS['sessionId'] . '.txt', 'w');
 		return $file;
 	}
 
@@ -1498,7 +1508,7 @@
 	 * @param string File
 	 */
 	function openFileCSV($file){
-		$file = fopen('../resources/log/' . $file . '.csv', 'w');
+		$file = fopen('../resources/log/' . $file . '_' . $GLOBALS['sessionId'] . '.csv', 'w');
 		return $file;
 	}
 
@@ -1664,7 +1674,6 @@
 		}
 
 		// Regeneration of carrots
-		writeFile('Debug', getTime() . ' + ' . $GLOBALS['vars']['moreCarrot'] . "\n");
         if($GLOBALS['vars']['moreCarrot'] > 1){
             $GLOBALS['vars']['moreCarrot']--;
         }else{
@@ -1722,7 +1731,7 @@
 	$memory = memory_get_usage(true);
     $timeFinish = microtime(true);
 	
-	session_start();
+	//session_start();
 
 	// World
 	// Size

@@ -5,6 +5,12 @@
     	$lang = $_GET['lang'];
     }
 
+    session_start();
+
+    $sessionId = session_id();
+
+    session_write_close();
+
 	$dirUpload = '../resources/conf/';
 	$uploadedFile = $dirUpload . 'settings.json';
 	$name = $_FILES['uploadFile']['name'];

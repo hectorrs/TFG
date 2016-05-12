@@ -34,3 +34,8 @@
     width: 20px;
     height: 20px;
 }
+
+.centerDiv{
+    margin:17% auto;
+    text-align:center;
+}

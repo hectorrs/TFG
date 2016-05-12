@@ -18,6 +18,7 @@
     <!-- Selected language -->
     <?php
         require_once('../core/language.php');
+
         if(!isset($_GET['lang'])){
             $lang = 'en';
         }else{
@@ -26,6 +27,19 @@
     ?>
 </head>
 <body style="background-color: #E8E8E8;">
+    <div class="row hide text-center" id="loading" style="width: 100%; height: 100%; text-align: center; margin-top: 7%">
+        <div class="col-xs-2 col-sm-2 col-md-3 col-lg-3"></div>
+
+        <div class="col-xs-8 col-sm-8 col-md-6 col-lg-6">
+            <img src="../resources/img/loading.gif" width="50%" height="50%">
+            <br><br><br>
+            <h3><?php echo translate('The proccess can take a few minutes...', $lang); ?></h3>
+            <h4><?php echo translate('Take some popcorn and enjoy ;)', $lang); ?></h4>
+        </div>
+
+        <div class="col-xs-2 col-sm-2 col-md-3 col-lg-3"></div>
+    </div>
+
     <div id="wrapper" style="overflow: hidden;">
         <!-- Sidebar -->
         <div id="sidebar-wrapper" style="background-color: #424242;">
@@ -74,7 +88,7 @@
                 <div class="row" style="margin-left: 7px; margin-right: 10px">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="btn-group btn-group-lg btn-block">
-                            <form action="../core/world.php?lang=<?php echo $lang; ?>" method="post" onsubmit="return check()">
+                            <form action="../core/world.php?lang=<?php echo $lang; ?>" method="post" onsubmit="return check();">
                             <button type="submit" class="btn btn-danger btn-lg btn-block"><?php echo translate('Run', $lang); ?></button>
                         </div>
                     </div>
@@ -1014,15 +1028,30 @@
     </script>
 
     <?php
+        @session_start();
+
+        $sessionId = session_id();
+
+        session_write_close();
+
         if(file_exists('../resources/conf/settings.json')){
             $conf = file_get_contents('../resources/conf/settings.json');
-            ?>
+            rename('../resources/conf/settings.json', '../resources/conf/settings_' . $sessionId . '.json');
+    ?>
             <script type="text/javascript">
                 var conf = <?php echo json_encode($conf); ?>;
                 refill(conf);
             </script>
-            <?php
-        }
+    <?php
+        }/*else if(file_exists('../resources/conf/settings_' . $sessionId . '.json')){
+            $conf = file_get_contents('../resources/conf/settings_' . $sessionId . '.json');
+    ?>
+            <script type="text/javascript">
+                var conf = <?php echo json_encode($conf); ?>;
+                refill(conf);
+            </script>
+    <?php
+        }*/
     ?>
 </body>
 </html>

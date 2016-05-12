@@ -31,20 +31,45 @@
 </head>
 <body style='background-color: #E8E8E8; overflow-x: hidden;'>
 	<?php
-		// File which generates the world
-		$file = file_get_contents('../resources/log/world.txt');
+		//var_dump(opcache_compile_file('../model/customRabbit.php'));
+		//var_dump(opcache_get_configuration());
+		//var_dump(exec('php -l ../model/customRabbit.php'));
+		//var_dump(exec('php -l ../core/test.php'));
+
+		// Search and delete old files
+		$files = scandir('../resources/log');
+
+		foreach($files as $file){
+			if(file_exists('../resources/log/' . $file) && $file != '.' && $file != '..'){
+				$time = time() - filectime('../resources/log/' . $file);
+				if($time > 6 * 60 * 60){
+					unlink('../resources/log/' . $file);
+				}
+			}
+		}
+
+		$files = scandir('../resources/conf');
+
+		foreach($files as $file){
+			if(file_exists('../resources/conf/' . $file) && $file != '.' && $file != '..'){
+				$time = time() - filectime('../resources/conf/' . $file);
+				if($time > 6 * 60 * 60){
+					unlink('../resources/conf/' . $file);
+				}
+			}
+		}
+
+		session_start();
+
+		$sessionId = session_id();
 
 		$dataWorld = array();
 
-		if(($fileWorld = fopen('../resources/log/world.csv', 'r'))){
+		if(($fileWorld = fopen('../resources/log/world_' . $sessionId . '.csv', 'r'))){
 			while(($data = fgetcsv($fileWorld)) !== false){
 				array_push($dataWorld, $data);
 			}
 		}
-
-		$data = explode('.', $file);
-
-		session_start();
 
 		// Size
 		$row = $_SESSION['row'];
@@ -440,10 +465,10 @@
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<h3><u><?php echo translate('Downloads', $lang); ?></u></h3>
-				<h4><a href="../resources/log/conf.txt" download><?php echo translate('Begining configuration', $lang); ?></a></h4>
-				<h4><a href="../resources/conf/settings.json" download><?php echo translate('Begining configuration', $lang); ?></a></h4>
-				<h4><a href="../resources/log/log.csv" download><?php echo translate('Actions log', $lang); ?></a></h4>
-				<h4><a href="../resources/log/world.csv" download><?php echo translate('World', $lang); ?></a></h4>
+				<h4><a href="../resources/log/conf_<?php echo $GLOBALS['sessionId']; ?>.txt" download><?php echo translate('Begining configuration', $lang); ?></a></h4>
+				<h4><a href="../resources/conf/settings_<?php echo $GLOBALS['sessionId']; ?>.json" download><?php echo translate('Begining configuration', $lang); ?></a></h4>
+				<h4><a href="../resources/log/log_<?php echo $GLOBALS['sessionId']; ?>.csv" download><?php echo translate('Actions log', $lang); ?></a></h4>
+				<h4><a href="../resources/log/world_<?php echo $GLOBALS['sessionId']; ?>.csv" download><?php echo translate('World', $lang); ?></a></h4>
 			</div>
 		</div>
 
