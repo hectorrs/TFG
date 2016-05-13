@@ -1095,6 +1095,7 @@
                 behaviour();
 
                 var errors = JSON.parse(<?php echo json_encode(file_get_contents('../resources/log/error_' . $sessionId . '.json')); ?>);
+                console.log(errors);
 
                 message = errors['message'];
                 message = message.split(' in ');

@@ -345,6 +345,7 @@
 		writeFileCSV('Log', array('Cycle', 'World (warning)', 'Element', 'ID', 'Position', 'Status', 'Action', 'Effect'));
 
 		/* Rabbits and wolf customization */
+		$error = 0;
 		if(isset($_POST['codeRabbit'])){
 			$codeRabbit = fopen('../model/customRabbit.php', 'w');
 
@@ -356,6 +357,33 @@
 			fclose($codeRabbit);
 
 			$conf['codeRabbit'] = $code;
+
+			// Check syntax error custom elements
+			exec('c:\\xampp\\php\\php.exe -f testPrey.php', $output);
+			var_dump($output);
+			echo count($output);
+			//exit;
+			//exit;
+			//if(!preg_match('/^No syntax error/', $output[0])){
+			if(count($output) > 0){
+				$err = array();
+
+				$err['file'] = 'customRabbit';
+				$err['message'] = $output[1];
+
+				$dir = substr(__DIR__, 0, -4);
+				$errorFile = fopen('../resources/log/error_' . $GLOBALS['sessionId'] . '.json', 'w');
+
+				fwrite($errorFile, json_encode($err, JSON_PRETTY_PRINT));
+
+				fclose($errorFile);
+
+				$error++;
+
+				//header('Location: ../view/inputS2.php?lang=' . $GLOBALS['lang']);
+
+				//exit();
+			}
 		}
 
 		if(isset($_POST['codeWolf'])){
@@ -369,11 +397,38 @@
 			fclose($codeWolf);
 
 			$conf['codeWolf'] = $code;
+
+			// Check syntax error custom elements
+			exec('c:\\xampp\\php\\php.exe -f testPredator.php', $output2);
+			//if(!preg_match('/^No syntax error/', $output[0])){
+			if(count($output2) > 0 && $error = 0){
+				$err = array();
+
+				$err['file'] = 'customWolf';
+				$err['message'] = $output2[1];
+
+				$dir = substr(__DIR__, 0, -4);
+				$errorFile = fopen($dir . '../resources/log/error_' . $GLOBALS['sessionId'] . '.json', 'w');
+
+				fwrite($errorFile, json_encode($err, JSON_PRETTY_PRINT));
+
+				fclose($errorFile);
+
+				$error++;
+
+				//header('Location: ../view/inputS2.php?lang=' . $GLOBALS['lang']);
+			}
 		}
 
 		fwrite($fileConf, json_encode($conf, JSON_PRETTY_PRINT));
 
 		fclose($fileConf);
+
+		if($error > 0){
+			header('Location: ../view/inputS2.php?lang=' . $GLOBALS['lang']);
+
+			exit;
+		}
 	}
 
 	/**
@@ -1774,6 +1829,12 @@
 	session_write_close();
 
 	$lang = $_GET['lang'];
+
+	// Clean custom files
+	$customRabbit = fopen('../model/customRabbit.php', 'w+');
+	$customWolf = fopen('../model/customWolf.php', 'w+');
+	fclose($customRabbit);
+	fclose($customWolf);
 
 	header('Location: ../View/output.php?lang=' . $lang, false);
 ?>

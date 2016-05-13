@@ -1,0 +1,451 @@
+Cycle;"World (warning)";Element;ID;Position;Status;Action;Effect
+0;"New element";Rabbit;0;"[ 5 - 8 ]";;;
+0;"New element";Rabbit;1;"[ 2 - 5 ]";;;
+0;"New element";Rabbit;2;"[ 15 - 1 ]";;;
+0;"New element";Rabbit;3;"[ 21 - 4 ]";;;
+0;"New element";Rabbit;4;"[ 1 - 17 ]";;;
+0;"New element";Rabbit;5;"[ 9 - 7 ]";;;
+0;"New element";Rabbit;6;"[ 19 - 1 ]";;;
+0;"New element";Rabbit;7;"[ 14 - 3 ]";;;
+0;"New element";Rabbit;8;"[ 11 - 12 ]";;;
+0;"New element";Rabbit;9;"[ 23 - 19 ]";;;
+0;"New element";Rabbit;10;"[ 8 - 22 ]";;;
+0;"New element";Rabbit;11;"[ 10 - 21 ]";;;
+0;"New element";Rabbit;12;"[ 3 - 13 ]";;;
+0;"New element";Rabbit;13;"[ 11 - 10 ]";;;
+0;"New element";Rabbit;14;"[ 1 - 8 ]";;;
+0;"New element";Rabbit;15;"[ 2 - 2 ]";;;
+0;"New element";Rabbit;16;"[ 21 - 13 ]";;;
+0;"New element";Rabbit;17;"[ 18 - 24 ]";;;
+0;"New element";Rabbit;18;"[ 18 - 1 ]";;;
+0;"New element";Rabbit;19;"[ 10 - 15 ]";;;
+0;"New element";Rabbit;20;"[ 10 - 6 ]";;;
+0;"New element";Rabbit;21;"[ 12 - 4 ]";;;
+0;"New element";Rabbit;22;"[ 2 - 23 ]";;;
+0;"New element";Rabbit;23;"[ 1 - 4 ]";;;
+0;"New element";Rabbit;24;"[ 13 - 10 ]";;;
+0;"New element";Rabbit;25;"[ 13 - 18 ]";;;
+0;"New element";Rabbit;26;"[ 22 - 15 ]";;;
+0;"New element";Rabbit;27;"[ 21 - 12 ]";;;
+0;"New element";Rabbit;28;"[ 23 - 20 ]";;;
+0;"New element";Rabbit;29;"[ 13 - 12 ]";;;
+0;"New element";Rabbit;30;"[ 21 - 21 ]";;;
+0;"New element";Rabbit;31;"[ 13 - 8 ]";;;
+0;"New element";Rabbit;32;"[ 9 - 3 ]";;;
+0;"New element";Rabbit;33;"[ 7 - 3 ]";;;
+0;"New element";Rabbit;34;"[ 18 - 11 ]";;;
+0;"New element";Rabbit;35;"[ 19 - 11 ]";;;
+0;"New element";Rabbit;36;"[ 16 - 4 ]";;;
+0;"New element";Rabbit;37;"[ 8 - 4 ]";;;
+0;"New element";Rabbit;38;"[ 11 - 14 ]";;;
+0;"New element";Rabbit;39;"[ 11 - 17 ]";;;
+0;"New element";Rabbit;40;"[ 0 - 2 ]";;;
+0;"New element";Rabbit;41;"[ 8 - 17 ]";;;
+0;"New element";Rabbit;42;"[ 4 - 12 ]";;;
+0;"New element";Rabbit;43;"[ 15 - 10 ]";;;
+0;"New element";Rabbit;44;"[ 12 - 23 ]";;;
+0;"New element";Rabbit;45;"[ 12 - 19 ]";;;
+0;"New element";Rabbit;46;"[ 20 - 23 ]";;;
+0;"New element";Rabbit;47;"[ 19 - 2 ]";;;
+0;"New element";Rabbit;48;"[ 17 - 16 ]";;;
+0;"New element";Rabbit;49;"[ 15 - 6 ]";;;
+0;"New element";Rabbit;50;"[ 1 - 16 ]";;;
+0;"New element";Rabbit;51;"[ 19 - 12 ]";;;
+0;"New element";Rabbit;52;"[ 10 - 0 ]";;;
+0;"New element";Rabbit;53;"[ 10 - 19 ]";;;
+0;"New element";Rabbit;54;"[ 17 - 9 ]";;;
+0;"New element";Rabbit;55;"[ 7 - 9 ]";;;
+0;"New element";Rabbit;56;"[ 8 - 20 ]";;;
+0;"New element";Rabbit;57;"[ 16 - 3 ]";;;
+0;"New element";Rabbit;58;"[ 10 - 22 ]";;;
+0;"New element";Rabbit;59;"[ 3 - 10 ]";;;
+0;"New element";Rabbit;60;"[ 7 - 18 ]";;;
+0;"New element";Rabbit;61;"[ 1 - 2 ]";;;
+0;"New element";Rabbit;62;"[ 0 - 23 ]";;;
+0;"New element";Rabbit;63;"[ 1 - 11 ]";;;
+0;"New element";Rabbit;64;"[ 24 - 13 ]";;;
+0;"New element";Rabbit;65;"[ 9 - 9 ]";;;
+0;"New element";Rabbit;66;"[ 5 - 5 ]";;;
+0;"New element";Rabbit;67;"[ 18 - 5 ]";;;
+0;"New element";Rabbit;68;"[ 4 - 0 ]";;;
+0;"New element";Rabbit;69;"[ 9 - 19 ]";;;
+0;"New element";Rabbit;70;"[ 19 - 13 ]";;;
+0;"New element";Rabbit;71;"[ 0 - 10 ]";;;
+0;"New element";Rabbit;72;"[ 14 - 22 ]";;;
+0;"New element";Rabbit;73;"[ 20 - 24 ]";;;
+0;"New element";Rabbit;74;"[ 12 - 16 ]";;;
+0;"New element";Rabbit;75;"[ 14 - 20 ]";;;
+0;"New element";Rabbit;76;"[ 24 - 22 ]";;;
+0;"New element";Rabbit;77;"[ 11 - 19 ]";;;
+0;"New element";Rabbit;78;"[ 1 - 6 ]";;;
+0;"New element";Rabbit;79;"[ 4 - 4 ]";;;
+0;"New element";Rabbit;80;"[ 3 - 20 ]";;;
+0;"New element";Rabbit;81;"[ 6 - 4 ]";;;
+0;"New element";Rabbit;82;"[ 19 - 9 ]";;;
+0;"New element";Rabbit;83;"[ 5 - 3 ]";;;
+0;"New element";Rabbit;84;"[ 22 - 4 ]";;;
+0;"New element";Rabbit;85;"[ 21 - 14 ]";;;
+0;"New element";Rabbit;86;"[ 14 - 11 ]";;;
+0;"New element";Rabbit;87;"[ 18 - 20 ]";;;
+0;"New element";Rabbit;88;"[ 24 - 0 ]";;;
+0;"New element";Rabbit;89;"[ 4 - 7 ]";;;
+0;"New element";Rabbit;90;"[ 3 - 12 ]";;;
+0;"New element";Rabbit;91;"[ 23 - 21 ]";;;
+0;"New element";Rabbit;92;"[ 16 - 0 ]";;;
+0;"New element";Rabbit;93;"[ 0 - 14 ]";;;
+0;"New element";Rabbit;94;"[ 16 - 5 ]";;;
+0;"New element";Rabbit;95;"[ 20 - 18 ]";;;
+0;"New element";Rabbit;96;"[ 7 - 7 ]";;;
+0;"New element";Rabbit;97;"[ 0 - 17 ]";;;
+0;"New element";Rabbit;98;"[ 22 - 6 ]";;;
+0;"New element";Rabbit;99;"[ 2 - 18 ]";;;
+0;"New element";Rabbit;100;"[ 2 - 12 ]";;;
+0;"New element";Rabbit;101;"[ 21 - 1 ]";;;
+0;"New element";Rabbit;102;"[ 23 - 13 ]";;;
+0;"New element";Rabbit;103;"[ 17 - 6 ]";;;
+0;"New element";Rabbit;104;"[ 13 - 24 ]";;;
+0;"New element";Rabbit;105;"[ 9 - 18 ]";;;
+0;"New element";Rabbit;106;"[ 12 - 10 ]";;;
+0;"New element";Rabbit;107;"[ 15 - 17 ]";;;
+0;"New element";Rabbit;108;"[ 24 - 4 ]";;;
+0;"New element";Rabbit;109;"[ 2 - 4 ]";;;
+0;"New element";Rabbit;110;"[ 22 - 1 ]";;;
+0;"New element";Rabbit;111;"[ 21 - 15 ]";;;
+0;"New element";Rabbit;112;"[ 22 - 22 ]";;;
+0;"New element";Rabbit;113;"[ 3 - 17 ]";;;
+0;"New element";Rabbit;114;"[ 13 - 6 ]";;;
+0;"New element";Rabbit;115;"[ 10 - 17 ]";;;
+0;"New element";Rabbit;116;"[ 23 - 18 ]";;;
+0;"New element";Rabbit;117;"[ 0 - 11 ]";;;
+0;"New element";Rabbit;118;"[ 0 - 24 ]";;;
+0;"New element";Rabbit;119;"[ 14 - 7 ]";;;
+0;"New element";Rabbit;120;"[ 5 - 0 ]";;;
+0;"New element";Rabbit;121;"[ 8 - 1 ]";;;
+0;"New element";Rabbit;122;"[ 0 - 1 ]";;;
+0;"New element";Rabbit;123;"[ 13 - 9 ]";;;
+0;"New element";Rabbit;124;"[ 20 - 5 ]";;;
+0;"New element";Rabbit;125;"[ 12 - 20 ]";;;
+0;"New element";Rabbit;126;"[ 13 - 17 ]";;;
+0;"New element";Rabbit;127;"[ 6 - 18 ]";;;
+0;"New element";Rabbit;128;"[ 2 - 17 ]";;;
+0;"New element";Rabbit;129;"[ 19 - 6 ]";;;
+0;"New element";Rabbit;130;"[ 1 - 15 ]";;;
+0;"New element";Rabbit;131;"[ 8 - 8 ]";;;
+0;"New element";Rabbit;132;"[ 12 - 0 ]";;;
+0;"New element";Rabbit;133;"[ 22 - 18 ]";;;
+0;"New element";Rabbit;134;"[ 19 - 8 ]";;;
+0;"New element";Rabbit;135;"[ 14 - 19 ]";;;
+0;"New element";Rabbit;136;"[ 11 - 16 ]";;;
+0;"New element";Rabbit;137;"[ 2 - 20 ]";;;
+0;"New element";Rabbit;138;"[ 6 - 3 ]";;;
+0;"New element";Rabbit;139;"[ 11 - 13 ]";;;
+0;"New element";Rabbit;140;"[ 0 - 5 ]";;;
+0;"New element";Rabbit;141;"[ 2 - 21 ]";;;
+0;"New element";Rabbit;142;"[ 14 - 13 ]";;;
+0;"New element";Rabbit;143;"[ 21 - 10 ]";;;
+0;"New element";Rabbit;144;"[ 14 - 12 ]";;;
+0;"New element";Rabbit;145;"[ 9 - 2 ]";;;
+0;"New element";Rabbit;146;"[ 11 - 23 ]";;;
+0;"New element";Rabbit;147;"[ 13 - 22 ]";;;
+0;"New element";Rabbit;148;"[ 6 - 17 ]";;;
+0;"New element";Rabbit;149;"[ 18 - 6 ]";;;
+0;"New element";Wolf;150;"[ 12 - 9 ]";;;
+0;"New element";Wolf;151;"[ 2 - 22 ]";;;
+0;"New element";Wolf;152;"[ 18 - 18 ]";;;
+0;"New element";Wolf;153;"[ 24 - 12 ]";;;
+0;"New element";Wolf;154;"[ 10 - 3 ]";;;
+0;"New element";Carrot;155;"[ 15 - 7 ]";;;
+0;"New element";Carrot;156;"[ 19 - 24 ]";;;
+0;"New element";Carrot;157;"[ 23 - 6 ]";;;
+0;"New element";Carrot;158;"[ 16 - 18 ]";;;
+0;"New element";Carrot;159;"[ 21 - 0 ]";;;
+0;"New element";Carrot;160;"[ 22 - 7 ]";;;
+0;"New element";Carrot;161;"[ 17 - 12 ]";;;
+0;"New element";Carrot;162;"[ 15 - 3 ]";;;
+0;"New element";Carrot;163;"[ 5 - 9 ]";;;
+0;"New element";Carrot;164;"[ 3 - 4 ]";;;
+0;"New element";Carrot;165;"[ 22 - 2 ]";;;
+0;"New element";Carrot;166;"[ 20 - 3 ]";;;
+0;"New element";Carrot;167;"[ 10 - 8 ]";;;
+0;"New element";Carrot;168;"[ 1 - 21 ]";;;
+0;"New element";Carrot;169;"[ 4 - 16 ]";;;
+0;"New element";Carrot;170;"[ 24 - 15 ]";;;
+0;"New element";Carrot;171;"[ 20 - 11 ]";;;
+0;"New element";Carrot;172;"[ 12 - 13 ]";;;
+0;"New element";Carrot;173;"[ 24 - 7 ]";;;
+0;"New element";Carrot;174;"[ 8 - 21 ]";;;
+0;"New element";Carrot;175;"[ 5 - 23 ]";;;
+0;"New element";Carrot;176;"[ 17 - 14 ]";;;
+0;"New element";Carrot;177;"[ 24 - 14 ]";;;
+0;"New element";Carrot;178;"[ 22 - 8 ]";;;
+0;"New element";Carrot;179;"[ 15 - 9 ]";;;
+0;"New element";Carrot;180;"[ 18 - 2 ]";;;
+0;"New element";Carrot;181;"[ 20 - 13 ]";;;
+0;"New element";Carrot;182;"[ 24 - 11 ]";;;
+0;"New element";Carrot;183;"[ 20 - 14 ]";;;
+0;"New element";Carrot;184;"[ 17 - 18 ]";;;
+0;"New element";Carrot;185;"[ 4 - 6 ]";;;
+0;"New element";Carrot;186;"[ 3 - 9 ]";;;
+0;"New element";Carrot;187;"[ 24 - 10 ]";;;
+0;"New element";Carrot;188;"[ 20 - 22 ]";;;
+0;"New element";Carrot;189;"[ 11 - 22 ]";;;
+0;"New element";Carrot;190;"[ 22 - 5 ]";;;
+0;"New element";Carrot;191;"[ 1 - 9 ]";;;
+0;"New element";Carrot;192;"[ 17 - 0 ]";;;
+0;"New element";Carrot;193;"[ 9 - 17 ]";;;
+0;"New element";Carrot;194;"[ 7 - 13 ]";;;
+0;"New element";Carrot;195;"[ 20 - 15 ]";;;
+0;"New element";Carrot;196;"[ 15 - 21 ]";;;
+0;"New element";Carrot;197;"[ 4 - 19 ]";;;
+0;"New element";Carrot;198;"[ 9 - 16 ]";;;
+0;"New element";Carrot;199;"[ 16 - 23 ]";;;
+0;"New element";Carrot;200;"[ 9 - 23 ]";;;
+0;"New element";Carrot;201;"[ 11 - 21 ]";;;
+0;"New element";Carrot;202;"[ 17 - 15 ]";;;
+0;"New element";Carrot;203;"[ 15 - 8 ]";;;
+0;"New element";Carrot;204;"[ 19 - 18 ]";;;
+0;"New element";Carrot;205;"[ 12 - 5 ]";;;
+0;"New element";Carrot;206;"[ 6 - 21 ]";;;
+0;"New element";Carrot;207;"[ 11 - 20 ]";;;
+0;"New element";Carrot;208;"[ 17 - 1 ]";;;
+0;"New element";Carrot;209;"[ 13 - 5 ]";;;
+0;"New element";Carrot;210;"[ 7 - 4 ]";;;
+0;"New element";Carrot;211;"[ 19 - 0 ]";;;
+0;"New element";Carrot;212;"[ 14 - 8 ]";;;
+0;"New element";Carrot;213;"[ 14 - 2 ]";;;
+0;"New element";Carrot;214;"[ 8 - 9 ]";;;
+0;"New element";Carrot;215;"[ 18 - 9 ]";;;
+0;"New element";Carrot;216;"[ 3 - 7 ]";;;
+0;"New element";Carrot;217;"[ 15 - 2 ]";;;
+0;"New element";Carrot;218;"[ 14 - 18 ]";;;
+0;"New element";Carrot;219;"[ 21 - 22 ]";;;
+0;"New element";Carrot;220;"[ 5 - 16 ]";;;
+0;"New element";Carrot;221;"[ 16 - 21 ]";;;
+0;"New element";Carrot;222;"[ 16 - 10 ]";;;
+0;"New element";Carrot;223;"[ 8 - 16 ]";;;
+0;"New element";Carrot;224;"[ 9 - 0 ]";;;
+0;"New element";Carrot;225;"[ 22 - 13 ]";;;
+0;"New element";Carrot;226;"[ 18 - 19 ]";;;
+0;"New element";Carrot;227;"[ 3 - 15 ]";;;
+0;"New element";Carrot;228;"[ 9 - 6 ]";;;
+0;"New element";Carrot;229;"[ 7 - 6 ]";;;
+0;"New element";Carrot;230;"[ 15 - 12 ]";;;
+0;"New element";Carrot;231;"[ 7 - 24 ]";;;
+0;"New element";Carrot;232;"[ 13 - 16 ]";;;
+0;"New element";Carrot;233;"[ 8 - 11 ]";;;
+0;"New element";Carrot;234;"[ 14 - 21 ]";;;
+0;"New element";Carrot;235;"[ 0 - 16 ]";;;
+0;"New element";Carrot;236;"[ 7 - 1 ]";;;
+0;"New element";Carrot;237;"[ 15 - 13 ]";;;
+0;"New element";Carrot;238;"[ 10 - 20 ]";;;
+0;"New element";Carrot;239;"[ 22 - 14 ]";;;
+0;"New element";Carrot;240;"[ 13 - 1 ]";;;
+0;"New element";Carrot;241;"[ 24 - 5 ]";;;
+0;"New element";Carrot;242;"[ 22 - 12 ]";;;
+0;"New element";Carrot;243;"[ 10 - 16 ]";;;
+0;"New element";Carrot;244;"[ 6 - 0 ]";;;
+0;"New element";Carrot;245;"[ 14 - 24 ]";;;
+0;"New element";Carrot;246;"[ 14 - 9 ]";;;
+0;"New element";Carrot;247;"[ 12 - 6 ]";;;
+0;"New element";Carrot;248;"[ 6 - 23 ]";;;
+0;"New element";Carrot;249;"[ 20 - 6 ]";;;
+0;"New element";Carrot;250;"[ 21 - 20 ]";;;
+0;"New element";Carrot;251;"[ 7 - 21 ]";;;
+0;"New element";Carrot;252;"[ 23 - 14 ]";;;
+0;"New element";Carrot;253;"[ 22 - 23 ]";;;
+0;"New element";Carrot;254;"[ 10 - 18 ]";;;
+0;"New element";Lair;255;8.7
+0;"New element";Lair;256;17.22
+0;"New element";Lair;257;16.19
+0;"New element";Lair;258;20.8
+0;"New element";Lair;259;7.19
+0;"New element";Lair;260;21.11
+0;"New element";Lair;261;14.15
+0;"New element";Lair;262;16.9
+0;"New element";Lair;263;5.15
+0;"New element";Lair;264;21.16
+0;"New element";Lair;265;19.22
+0;"New element";Lair;266;12.2
+0;"New element";Lair;267;1.18
+0;"New element";Lair;268;10.1
+0;"New element";Lair;269;12.17
+0;"New element";Lair;270;6.15
+0;"New element";Lair;271;20.1
+0;"New element";Lair;272;16.11
+0;"New element";Lair;273;2.8
+0;"New element";Lair;274;9.1
+0;"New element";Lair;275;17.23
+0;"New element";Lair;276;21.9
+0;"New element";Lair;277;6.9
+0;"New element";Lair;278;19.4
+0;"New element";Lair;279;0.19
+0;"New element";Lair;280;6.24
+0;"New element";Lair;281;15.0
+0;"New element";Lair;282;9.21
+0;"New element";Lair;283;8.6
+0;"New element";Lair;284;2.3
+0;"New element";Lair;285;12.8
+0;"New element";Lair;286;2.0
+0;"New element";Lair;287;22.11
+0;"New element";Lair;288;19.20
+0;"New element";Lair;289;7.8
+0;"New element";Lair;290;23.15
+0;"New element";Lair;291;18.3
+0;"New element";Lair;292;7.0
+0;"New element";Lair;293;4.2
+0;"New element";Lair;294;4.13
+0;"New element";Lair;295;20.2
+0;"New element";Lair;296;21.18
+0;"New element";Lair;297;11.9
+0;"New element";Lair;298;2.14
+0;"New element";Lair;299;5.10
+0;"New element";Lair;300;20.17
+0;"New element";Lair;301;20.0
+0;"New element";Lair;302;16.20
+0;"New element";Lair;303;18.12
+0;"New element";Lair;304;15.23
+0;"New element";Tree;305;"[ 2 - 19 ]";;;
+0;"New element";Tree;306;"[ 1 - 10 ]";;;
+0;"New element";Tree;307;"[ 3 - 24 ]";;;
+0;"New element";Tree;308;"[ 16 - 17 ]";;;
+0;"New element";Tree;309;"[ 6 - 11 ]";;;
+0;"New element";Tree;310;"[ 15 - 14 ]";;;
+0;"New element";Tree;311;"[ 23 - 16 ]";;;
+0;"New element";Tree;312;"[ 18 - 0 ]";;;
+0;"New element";Tree;313;"[ 11 - 15 ]";;;
+0;"New element";Tree;314;"[ 6 - 19 ]";;;
+0;"New element";Tree;315;"[ 19 - 23 ]";;;
+0;"New element";Tree;316;"[ 21 - 8 ]";;;
+0;"New element";Tree;317;"[ 6 - 12 ]";;;
+0;"New element";Tree;318;"[ 21 - 6 ]";;;
+0;"New element";Tree;319;"[ 20 - 10 ]";;;
+0;"New element";Tree;320;"[ 2 - 1 ]";;;
+0;"New element";Tree;321;"[ 8 - 18 ]";;;
+0;"New element";Tree;322;"[ 4 - 9 ]";;;
+0;"New element";Tree;323;"[ 21 - 7 ]";;;
+0;"New element";Tree;324;"[ 0 - 0 ]";;;
+0;"New element";Tree;325;"[ 6 - 10 ]";;;
+0;"New element";Tree;326;"[ 17 - 8 ]";;;
+0;"New element";Tree;327;"[ 23 - 7 ]";;;
+0;"New element";Tree;328;"[ 23 - 3 ]";;;
+0;"New element";Tree;329;"[ 11 - 3 ]";;;
+0;"New element";Tree;330;"[ 18 - 8 ]";;;
+0;"New element";Tree;331;"[ 23 - 12 ]";;;
+0;"New element";Tree;332;"[ 15 - 15 ]";;;
+0;"New element";Tree;333;"[ 24 - 18 ]";;;
+0;"New element";Tree;334;"[ 4 - 18 ]";;;
+0;"New element";Tree;335;"[ 16 - 1 ]";;;
+0;"New element";Tree;336;"[ 9 - 22 ]";;;
+0;"New element";Tree;337;"[ 8 - 0 ]";;;
+0;"New element";Tree;338;"[ 23 - 11 ]";;;
+0;"New element";Tree;339;"[ 1 - 14 ]";;;
+0;"New element";Tree;340;"[ 17 - 20 ]";;;
+0;"New element";Tree;341;"[ 15 - 4 ]";;;
+0;"New element";Tree;342;"[ 13 - 23 ]";;;
+0;"New element";Tree;343;"[ 17 - 19 ]";;;
+0;"New element";Tree;344;"[ 12 - 14 ]";;;
+0;"New element";Tree;345;"[ 3 - 18 ]";;;
+0;"New element";Tree;346;"[ 6 - 14 ]";;;
+0;"New element";Tree;347;"[ 17 - 10 ]";;;
+0;"New element";Tree;348;"[ 14 - 16 ]";;;
+0;"New element";Tree;349;"[ 13 - 19 ]";;;
+0;"New element";Tree;350;"[ 18 - 16 ]";;;
+0;"New element";Tree;351;"[ 7 - 11 ]";;;
+0;"New element";Tree;352;"[ 7 - 12 ]";;;
+0;"New element";Tree;353;"[ 3 - 5 ]";;;
+0;"New element";Tree;354;"[ 15 - 16 ]";;;
+1;"New cycle";;;;;;
+2;"New cycle";;;;;;
+3;"New cycle";;;;;;
+3;"Status day changed to day";;;;;;
+4;"New cycle";;;;;;
+5;"New cycle";;;;;;
+6;"New cycle";;;;;;
+7;"New cycle";;;;;;
+8;"New cycle";;;;;;
+9;"New cycle";;;;;;
+10;"New cycle";;;;;;
+11;"New cycle";;;;;;
+12;"New cycle";;;;;;
+13;"New cycle";;;;;;
+14;"New cycle";;;;;;
+15;"New cycle";;;;;;
+15;"Weather changed to foggy";;;;;;
+16;"New cycle";;;;;;
+17;"New cycle";;;;;;
+18;"New cycle";;;;;;
+19;"New cycle";;;;;;
+20;"New cycle";;;;;;
+21;"New cycle";;;;;;
+22;"New cycle";;;;;;
+23;"New cycle";;;;;;
+24;"New cycle";;;;;;
+25;"New cycle";;;;;;
+26;"New cycle";;;;;;
+27;"New cycle";;;;;;
+28;"New cycle";;;;;;
+29;"New cycle";;;;;;
+30;"New cycle";;;;;;
+30;"Weather changed to sunny";;;;;;
+31;"New cycle";;;;;;
+32;"New cycle";;;;;;
+33;"New cycle";;;;;;
+34;"New cycle";;;;;;
+35;"New cycle";;;;;;
+36;"New cycle";;;;;;
+37;"New cycle";;;;;;
+38;"New cycle";;;;;;
+39;"New cycle";;;;;;
+40;"New cycle";;;;;;
+41;"New cycle";;;;;;
+42;"New cycle";;;;;;
+43;"New cycle";;;;;;
+44;"New cycle";;;;;;
+45;"New cycle";;;;;;
+45;"Weather changed to rainy";;;;;;
+46;"New cycle";;;;;;
+47;"New cycle";;;;;;
+48;"New cycle";;;;;;
+48;"Status day changed to night";;;;;;
+49;"New cycle";;;;;;
+50;"New cycle";;;;;;
+51;"New cycle";;;;;;
+52;"New cycle";;;;;;
+53;"New cycle";;;;;;
+53;"Status day changed to day";;;;;;
+54;"New cycle";;;;;;
+55;"New cycle";;;;;;
+56;"New cycle";;;;;;
+57;"New cycle";;;;;;
+58;"New cycle";;;;;;
+59;"New cycle";;;;;;
+60;"New cycle";;;;;;
+60;"Weather changed to rainy";;;;;;
+61;"New cycle";;;;;;
+62;"New cycle";;;;;;
+63;"New cycle";;;;;;
+64;"New cycle";;;;;;
+65;"New cycle";;;;;;
+66;"New cycle";;;;;;
+67;"New cycle";;;;;;
+68;"New cycle";;;;;;
+69;"New cycle";;;;;;
+70;"New cycle";;;;;;
+71;"New cycle";;;;;;
+72;"New cycle";;;;;;
+73;"New cycle";;;;;;
+74;"New cycle";;;;;;
+75;"New cycle";;;;;;
+75;"Weather changed to rainy";;;;;;
+76;"New cycle";;;;;;
+77;"New cycle";;;;;;
+78;"New cycle";;;;;;
+79;"New cycle";;;;;;
+80;"New cycle";;;;;;
+81;"New cycle";;;;;;
+82;"New cycle";;;;;;
+83;"New cycle";;;;;;
+84;"New cycle";;;;;;
+85;"New cycle";;;;;;
+86;"New cycle";;;;;;
+87;"New cycle";;;;;;
