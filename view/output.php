@@ -31,11 +31,6 @@
 </head>
 <body style='background-color: #E8E8E8; overflow-x: hidden;'>
 	<?php
-		//var_dump(opcache_compile_file('../model/customRabbit.php'));
-		//var_dump(opcache_get_configuration());
-		//var_dump(exec('php -l ../model/customRabbit.php'));
-		//var_dump(exec('php -l ../core/test.php'));
-
 		// Search and delete old files
 		$files = scandir('../resources/log');
 

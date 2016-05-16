@@ -1095,7 +1095,6 @@
                 behaviour();
 
                 var errors = JSON.parse(<?php echo json_encode(file_get_contents('../resources/log/error_' . $sessionId . '.json')); ?>);
-                console.log(errors);
 
                 message = errors['message'];
                 message = message.split(' in ');
@@ -1104,12 +1103,12 @@
                     document.getElementById('codeRabbit').style.borderColor = '#a94442';
                     document.getElementById('codeRabbit').style.borderWidth = '2px';
                     document.getElementById('alert53').className = 'alert alert-danger show';
-                    document.getElementById('error53').innerHTML = /*translate('Type', language) + ': ' + errors['type'] + '<br>' + translate('File') + ': ' + errors['file'] + '<br>' + */translate('Line', language) + ': ' + errors['line'] + '<br>' + translate('Message', language) + ': ' + message[0];
+                    document.getElementById('error53').innerHTML = /*translate('Type', language) + ': ' + errors['type'] + '<br>' + translate('File') + ': ' + errors['file'] + '<br>' + translate('Line', language) + ': ' + errors['line'] + '<br>' + */ translate('Message', language) + ': ' + message[0];
                 }else{
                     document.getElementById('codeWolf').style.borderColor = '#a94442';
                     document.getElementById('codeWolf').style.borderWidth = '2px';
                     document.getElementById('alert54').className = 'alert alert-danger show';
-                    document.getElementById('error54').innerHTML = /*translate('Type', language) + ': ' + errors['type'] + '<br>' + translate('File') + ': ' + errors['file'] + '<br>' + */translate('Line', language) + ': ' + errors['line'] + '<br>' + translate('Message', language) + ': ' + message[0];
+                    document.getElementById('error54').innerHTML = /*translate('Type', language) + ': ' + errors['type'] + '<br>' + translate('File') + ': ' + errors['file'] + '<br>' + translate('Line', language) + ': ' + errors['line'] + '<br>' + */ translate('Message', language) + ': ' + message[0];
                 }
             </script>
     <?php

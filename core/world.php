@@ -2,7 +2,7 @@
 	// Language
 	require_once('../core/language.php');
 	
-	session_start();
+	@session_start();
 
 	global $lang;
     if(!isset($_GET['lang'])){
@@ -360,11 +360,7 @@
 
 			// Check syntax error custom elements
 			exec('c:\\xampp\\php\\php.exe -f testPrey.php', $output);
-			var_dump($output);
-			echo count($output);
-			//exit;
-			//exit;
-			//if(!preg_match('/^No syntax error/', $output[0])){
+
 			if(count($output) > 0){
 				$err = array();
 
@@ -379,10 +375,6 @@
 				fclose($errorFile);
 
 				$error++;
-
-				//header('Location: ../view/inputS2.php?lang=' . $GLOBALS['lang']);
-
-				//exit();
 			}
 		}
 
@@ -400,7 +392,7 @@
 
 			// Check syntax error custom elements
 			exec('c:\\xampp\\php\\php.exe -f testPredator.php', $output2);
-			//if(!preg_match('/^No syntax error/', $output[0])){
+
 			if(count($output2) > 0 && $error = 0){
 				$err = array();
 
@@ -415,8 +407,6 @@
 				fclose($errorFile);
 
 				$error++;
-
-				//header('Location: ../view/inputS2.php?lang=' . $GLOBALS['lang']);
 			}
 		}
 
@@ -1281,14 +1271,17 @@
 						}
 					}
 				}else{
-					
+					writeFileCSV('Log', array(getTime(), 'Denied', get_class($element), $element->getId(), '[ ' . $element->getPosition()[0] . ' - ' . $element->getPosition()[1] . ' ]', '', 'sleep', ''));
 				}
 				break;
 			case 'Wolf':
-				$element->setSleeping(getTurnSleepRabbit());
-				$element->setSleptAgo(0);
-
-				writeFileCSV('Log', array(getTime(), '', get_class($element), $element->getId(), '[ ' . $element->getPosition()[0] . ' - ' . $element->getPosition()[1] . ' ]', 'sleeping', 'sleep', ''));
+				if($element->getSleptAgo() >= $_POST['notSleepyWolf']){
+					$element->setSleeping(getTurnSleepRabbit());
+					$element->setSleptAgo(0);
+					writeFileCSV('Log', array(getTime(), '', get_class($element), $element->getId(), '[ ' . $element->getPosition()[0] . ' - ' . $element->getPosition()[1] . ' ]', 'sleeping', 'sleep', ''));
+				}else{
+					writeFileCSV('Log', array(getTime(), 'Denied', get_class($element), $element->getId(), '[ ' . $element->getPosition()[0] . ' - ' . $element->getPosition()[1] . ' ]', '', 'sleep', ''));
+				}
 				break;
 		}
 	}
