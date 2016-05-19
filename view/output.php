@@ -58,6 +58,10 @@
 
 		$sessionId = session_id();
 
+		if(file_exists('../resources/log/error_' . $sessionId . '.json')){
+	    	unlink('../resources/log/error_' . $sessionId . '.json');
+	    }
+
 		$dataWorld = array();
 
 		if(($fileWorld = fopen('../resources/log/world_' . $sessionId . '.csv', 'r'))){

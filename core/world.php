@@ -15,9 +15,9 @@
     global $sessionId;
     $sessionId = session_id();
 
-    if(file_exists('../resources/log/error_' . $GLOBALS['sessionId'] . '.json')){
+    /*if(file_exists('../resources/log/error_' . $GLOBALS['sessionId'] . '.json')){
     	unlink('../resources/log/error_' . $GLOBALS['sessionId'] . '.json');
-    }
+    }*/
 
 	register_shutdown_function(
 		function(){
@@ -359,6 +359,7 @@
 			$conf['codeRabbit'] = $code;
 
 			// Check syntax error custom elements
+			// exec('php -f testPrey.php', $output);
 			exec('c:\\xampp\\php\\php.exe -f testPrey.php', $output);
 
 			if(count($output) > 0){
@@ -391,16 +392,16 @@
 			$conf['codeWolf'] = $code;
 
 			// Check syntax error custom elements
+			// exec('php -f testPredator.php', $output2);
 			exec('c:\\xampp\\php\\php.exe -f testPredator.php', $output2);
 
-			if(count($output2) > 0 && $error = 0){
+			if(count($output2) > 0 && $error == 0){
 				$err = array();
 
 				$err['file'] = 'customWolf';
 				$err['message'] = $output2[1];
 
-				$dir = substr(__DIR__, 0, -4);
-				$errorFile = fopen($dir . '../resources/log/error_' . $GLOBALS['sessionId'] . '.json', 'w');
+				$errorFile = fopen('../resources/log/error_' . $GLOBALS['sessionId'] . '.json', 'w');
 
 				fwrite($errorFile, json_encode($err, JSON_PRETTY_PRINT));
 
@@ -1769,7 +1770,13 @@
 		array_push($GLOBALS['vars']['amountRabbit'], $amountRabbit);
 		array_push($GLOBALS['vars']['amountWolf'], $amountWolf);
 		array_push($GLOBALS['vars']['amountCarrot'], count(getPrize()));
+
+		/* Loading screen counter */
+		/*$loadingFile = fopen('../resources/log/loading_' . $GLOBALS['sessionId'] . '.txt', 'w');
+		fputs($loadingFile, getTime());*/
 	}
+
+	//fclose($loadingFile);
 
 	closeFile('Log');
 	closeFile('WorldDraw');
@@ -1829,5 +1836,5 @@
 	fclose($customRabbit);
 	fclose($customWolf);
 
-	header('Location: ../View/output.php?lang=' . $lang, false);
+	header('Location: ../view/output.php?lang=' . $lang, false);
 ?>

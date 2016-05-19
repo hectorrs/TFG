@@ -28,6 +28,7 @@ function update(option){
 			time = 0;
 
 			var current = dataWorld[time];
+			console.log('update(begin) : ' + current);
 			printWorld(current);
 
 			main.innerHTML = '<h4><strong>' + translate('Current cycle', language) + ': ' + time + '</strong></h4>';
@@ -90,31 +91,34 @@ function printWorld(current){
 		}
 	}
 
-	current = current[0].split(';');
 	console.log(current);
+	if(current[0] != null){
+		current = current[0].split(';');
 
-	for(x = 0; x < current.length; x += 3){
-		rowAux = current[x];
-		colAux = current[x + 1];
-		cell = document.getElementById('row' + rowAux + 'col' + colAux);
-		switch(current[x + 2]){
-			case 'R':
-				cell.style.backgroundColor = 'blue';
-				break;
-			case 'W':
-				cell.style.backgroundColor = 'red';
-				break;
-			case 'C':
-				cell.style.backgroundColor = 'orange';
-				break;
-			case 'L':
-				cell.style.backgroundColor = 'grey';
-				break;
-			case 'T':
-				cell.style.backgroundColor = 'purple';
-				break;
+		for(x = 0; x < current.length; x += 3){
+			rowAux = current[x];
+			colAux = current[x + 1];
+			cell = document.getElementById('row' + rowAux + 'col' + colAux);
+			switch(current[x + 2]){
+				case 'R':
+					cell.style.backgroundColor = 'blue';
+					break;
+				case 'W':
+					cell.style.backgroundColor = 'red';
+					break;
+				case 'C':
+					cell.style.backgroundColor = 'orange';
+					break;
+				case 'L':
+					cell.style.backgroundColor = 'grey';
+					break;
+				case 'T':
+					cell.style.backgroundColor = 'purple';
+					break;
+			}
 		}
 	}
+
 }
 
 /**

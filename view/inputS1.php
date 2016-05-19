@@ -25,6 +25,20 @@
             $lang = $_GET['lang'];
         }
     ?>
+
+    <script type="text/javascript">
+        /*function loading(){
+            setInterval(function(){
+                var reader = new FileReader();
+
+                reader.onload = function(e){
+                    var text = reader.result;
+                }
+
+                reader.readAsText()
+            });
+        }*/
+    </script>
 </head>
 <body style="background-color: #E8E8E8;">
     <div class="row hide text-center" id="loading" style="width: 100%; height: 100%; text-align: center; margin-top: 7%">
