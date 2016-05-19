@@ -1,3 +1,9 @@
+<?php
+	session_start();
+	session_regenerate_id();
+	session_write_close();
+?>
+
 <script type="text/javascript">
 	function getLanguage(){
 		language = navigator.language;

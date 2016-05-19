@@ -156,6 +156,13 @@
 
 	<!-- Content -->
 	<div class='row' style='padding-top: 35px; padding-bottom: 35px; padding-left: 35px; padding-right: 35px; margin-left: 0px; margin-right: 0px;'>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="alert alert-info">
+					<?php echo translate('The rendering of the page may take a few seconds. Please wait until it is completed to navigate the page.', $lang); ?>
+				</div>
+			</div>
+		</div>
 		<div class='row well'>
 			<div class='col-xs-12 col-sm-10 col-md-10 col-lg-10'>
 				<div class='containerWorld'>
@@ -464,7 +471,6 @@
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<h3><u><?php echo translate('Downloads', $lang); ?></u></h3>
-				<h4><a href="../resources/log/conf_<?php echo $GLOBALS['sessionId']; ?>.txt" download><?php echo translate('Begining configuration', $lang); ?></a></h4>
 				<h4><a href="../resources/conf/settings_<?php echo $GLOBALS['sessionId']; ?>.json" download><?php echo translate('Begining configuration', $lang); ?></a></h4>
 				<h4><a href="../resources/log/log_<?php echo $GLOBALS['sessionId']; ?>.csv" download><?php echo translate('Actions log', $lang); ?></a></h4>
 				<h4><a href="../resources/log/world_<?php echo $GLOBALS['sessionId']; ?>.csv" download><?php echo translate('World', $lang); ?></a></h4>
@@ -479,7 +485,14 @@
 				<h4><?php echo translate('Execution time', $lang); ?>: <?php echo $time; ?> <?php echo translate('seconds', $lang); ?></h4>
 			</div>
 		</div>
+
+		<div class="dividing"></div>
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+				<input type="button" class="btn btn-default btn-info" style="width: 100%" onclick="location.href='../index.php'" value="<?php echo translate('Back to start', $lang); ?>" />
+			</div>
+		</div>
 	</div>
-	<?php session_destroy(); ?>
 </body>
 </html>

@@ -135,6 +135,8 @@
 		'Lifetime of carrots (cycles)' => 'Lifetime of food for preys (cycles)',
 		'The proccess can take a few minutes...' => 'The proccess can take a few minutes...',
 		'Take some popcorn and enjoy ;)' => 'Take some popcorn and enjoy ;)',
-		'Accept' => 'Upload'
+		'Accept' => 'Upload',
+		'The rendering of the page may take a few seconds. Please wait until it is completed to navigate the page.' => 'The rendering of the page may take a few seconds. Please wait until it is completed to navigate the page.',
+		'Back to start' => 'Back to start'
 	);
 ?>

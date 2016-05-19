@@ -54,5 +54,7 @@
     "eatComfortRabbit": "25",
     "sleepComfortRabbit": "25",
     "eatComfortWolf": "25",
-    "sleepComfortWolf": "25"
+    "sleepComfortWolf": "25",
+    "codeRabbit": "echo 'hola';",
+    "codeWolf": "echo 'hola';"
 }

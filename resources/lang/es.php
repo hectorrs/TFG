@@ -135,6 +135,8 @@
 		'Lifetime of carrots (cycles)' => 'Tiempo de vida de la comida para presas (ciclos)',
 		'The proccess can take a few minutes...' => 'El proceso puede durar varios minutos...',
 		'Take some popcorn and enjoy ;)' => 'Coge unas palomitas y disfruta ;)',
-		'Accept' => 'Subir'
+		'Accept' => 'Subir',
+		'The rendering of the page may take a few seconds. Please wait until it is completed to navigate the page.' => 'El renderizado de la página puede tardar unos segundos. Por favor, espere hasta que se complete para navegar por la página.',
+		'Back to start' => 'Volver a inicio'
 	);
 ?>
