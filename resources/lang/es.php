@@ -135,6 +135,6 @@
 		'Lifetime of carrots (cycles)' => 'Tiempo de vida de la comida para presas (ciclos)',
 		'The proccess can take a few minutes...' => 'El proceso puede durar varios minutos...',
 		'Take some popcorn and enjoy ;)' => 'Coge unas palomitas y disfruta ;)',
-		'Accept' => 'Aceptar'
+		'Accept' => 'Subir'
 	);
 ?>

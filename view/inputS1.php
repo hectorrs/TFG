@@ -25,20 +25,6 @@
             $lang = $_GET['lang'];
         }
     ?>
-
-    <script type="text/javascript">
-        /*function loading(){
-            setInterval(function(){
-                var reader = new FileReader();
-
-                reader.onload = function(e){
-                    var text = reader.result;
-                }
-
-                reader.readAsText()
-            });
-        }*/
-    </script>
 </head>
 <body style="background-color: #E8E8E8;">
     <div class="row hide text-center" id="loading" style="width: 100%; height: 100%; text-align: center; margin-top: 7%">
@@ -49,6 +35,8 @@
             <br><br><br>
             <h3><?php echo translate('The proccess can take a few minutes...', $lang); ?></h3>
             <h4><?php echo translate('Take some popcorn and enjoy ;)', $lang); ?></h4>
+            <br>
+            <div id="loadingCont"></div>
         </div>
 
         <div class="col-xs-2 col-sm-2 col-md-3 col-lg-3"></div>
@@ -1023,7 +1011,6 @@
         </div>
     </div>
 
-
     <!-- JavaScript -->
     <script src="../resources/js/jquery-1.10.2.js"></script>
     <script src="../resources/js/bootstrap.js"></script>
@@ -1067,5 +1054,28 @@
     <?php
         }*/
     ?>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        language = location.search.substring(6);
+
+        function loading(){
+            setInterval(function(){
+                $.ajax({
+                    url:'../resources/log/loading_' + <?php echo json_encode($sessionId); ?> + '.txt',
+                    type:'HEAD',
+                    error: function(){
+                        // file not exists
+                    },
+                    success: function(){
+                        // file exists
+                        $.get('../resources/log/loading_' + <?php echo json_encode($sessionId); ?> + '.txt', function(data){
+                            document.getElementById('loadingCont').innerHTML = translate('Execution cycle', language) + ': ' + data;
+                        }, 'text');
+                    }
+                });
+            }, 2000);
+        }
+    </script>
 </body>
 </html>

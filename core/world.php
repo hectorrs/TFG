@@ -1772,11 +1772,14 @@
 		array_push($GLOBALS['vars']['amountCarrot'], count(getPrize()));
 
 		/* Loading screen counter */
-		/*$loadingFile = fopen('../resources/log/loading_' . $GLOBALS['sessionId'] . '.txt', 'w');
-		fputs($loadingFile, getTime());*/
+		$loadingFile = fopen('../resources/log/loading_' . $GLOBALS['sessionId'] . '.txt', 'w');
+		fputs($loadingFile, getTime());
+		fclose($loadingFile);
 	}
 
-	//fclose($loadingFile);
+	$loadingFile = fopen('../resources/log/loading_' . $GLOBALS['sessionId'] . '.txt', 'w');
+	fputs($loadingFile, 0);
+	fclose($loadingFile);
 
 	closeFile('Log');
 	closeFile('WorldDraw');

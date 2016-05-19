@@ -35,6 +35,8 @@
             <br><br><br>
             <h3><?php echo translate('The proccess can take a few minutes...', $lang); ?></h3>
             <h4><?php echo translate('Take some popcorn and enjoy ;)', $lang); ?></h4>
+            <br>
+            <div id="loadingCont"></div>
         </div>
 
         <div class="col-xs-2 col-sm-2 col-md-3 col-lg-3"></div>
@@ -1114,5 +1116,30 @@
     <?php
         }
     ?>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        language = location.search.substring(6);
+
+        function loading(){
+            setInterval(function(){
+                $.ajax({
+                    url:'../resources/log/loading_' + <?php echo json_encode($sessionId); ?> + '.txt',
+                    type:'HEAD',
+                    error: function(){
+                        // file not exists
+                    },
+                    success: function(){
+                        // file exists
+                        $.get('../resources/log/loading_' + <?php echo json_encode($sessionId); ?> + '.txt', function(data){
+                            document.getElementById('loadingCont').innerHTML = translate('Execution cycle', language) + ': ' + data;
+                        }, 'text');
+                    }
+                });
+                
+            }, 2000);
+        }
+    </script>
 </body>
 </html>

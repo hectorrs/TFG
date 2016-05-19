@@ -135,6 +135,6 @@
 		'Lifetime of carrots (cycles)' => 'Lifetime of food for preys (cycles)',
 		'The proccess can take a few minutes...' => 'The proccess can take a few minutes...',
 		'Take some popcorn and enjoy ;)' => 'Take some popcorn and enjoy ;)',
-		'Accept' => 'Accept'
+		'Accept' => 'Upload'
 	);
 ?>

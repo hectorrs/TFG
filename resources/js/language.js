@@ -171,7 +171,8 @@ var es = {
 	'Wolves - Be not sleepy for (cycles) - Wrong format' : 'Depredadores - Sin sueño durante (ciclos) - Formato incorrecto',
 	'Wolves - Be not sleepy for (cycles) - The number of cycles must be less than the time without sleep' : 'Depredadores - Sin sueño durante (ciclos) - El número de ciclos tiene que ser menor que el tiempo que pueden pasar sin dormir',
 	'Lifetime of carrots - Empty field' : 'Tiempo de vida de la comida para presas - Campo vacío',
-	'Lifetime of carrots - Wrong format' : 'Tiempo de vida de la comida para presas - Formato incorrecto'
+	'Lifetime of carrots - Wrong format' : 'Tiempo de vida de la comida para presas - Formato incorrecto',
+	'Execution cycle' : 'Ciclo de ejecución'
 };
 
 /**
@@ -328,7 +329,8 @@ var ga = {
 	'Wolves - Be not sleepy for (cycles) - Wrong format' : 'Depredadores - Sen sono durante (ciclos) - Formato incorrecto',
 	'Wolves - Be not sleepy for (cycles) - The number of cycles must be less than the time without sleep' : 'Depredadores - Sen sono durante (ciclos) - O número de ciclos ten que ser menor que o tempo que poden pasar sen durmir',
 	'Lifetime of carrots - Empty field' : 'Tempo de vida da comida para presas - Campo baleiro',
-	'Lifetime of carrots - Wrong format' : 'Tempo de vida da comida para presas - Formato incorrecto'
+	'Lifetime of carrots - Wrong format' : 'Tempo de vida da comida para presas - Formato incorrecto',
+	'Execution cycle' : 'Ciclo de execución'
 };
 
 /**
@@ -485,5 +487,6 @@ var en = {
 	'Wolves - Be not sleepy for (cycles) - Wrong format' : 'Predators - Be not sleepy for (cycles) - Wrong format',
 	'Wolves - Be not sleepy for (cycles) - The number of cycles must be less than the time without sleep' : 'Predators - Be not sleepy for (cycles) - The number of cycles must be less than the time without sleep',
 	'Lifetime of carrots - Empty field' : 'Lifetime of food for preys - Empty field',
-	'Lifetime of carrots - Wrong format' : 'Lifetime of food for preys - Wrong format'
+	'Lifetime of carrots - Wrong format' : 'Lifetime of food for preys - Wrong format',
+	'Execution cycle' : 'Execution cycle'
 };

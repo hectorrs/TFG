@@ -28,7 +28,6 @@ function update(option){
 			time = 0;
 
 			var current = dataWorld[time];
-			console.log('update(begin) : ' + current);
 			printWorld(current);
 
 			main.innerHTML = '<h4><strong>' + translate('Current cycle', language) + ': ' + time + '</strong></h4>';
@@ -91,7 +90,6 @@ function printWorld(current){
 		}
 	}
 
-	console.log(current);
 	if(current[0] != null){
 		current = current[0].split(';');
 

@@ -81,6 +81,8 @@ function check(){
 	document.getElementById('loading').className = 'row show text-center';
 	document.getElementById('wrapper').className = 'hide';
 
+	loading();
+
 	return true;
 }
 
