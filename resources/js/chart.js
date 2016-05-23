@@ -641,7 +641,7 @@ function drawChartBornWolf(){
         },
         legend: {position: 'top'},
         backgroundColor: '#f1f8e9',
-        colors: ['#F2B50F']
+        colors: ['#F90101']
     };
 
     var prevButton = document.getElementById('prevBornWolf');

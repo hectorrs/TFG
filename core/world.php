@@ -1798,7 +1798,7 @@
 
 	// Memory and execution time
 	$_SESSION['memory'] = $memory / 1024 / 1024;
-	$_SESSION['time'] = bcsub($timeFinish, $timeStart, 2);
+	$_SESSION['time'] = round($timeFinish - $timeStart, 2);
 
 	// Statistics
 	// Weather
