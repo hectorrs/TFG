@@ -1076,6 +1076,8 @@
                 });
             }, 2000);
         }
+
+        //loading();
     </script>
 </body>
 </html>

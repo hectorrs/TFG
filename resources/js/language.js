@@ -31,6 +31,7 @@ var es = {
 	'Behaviour' : 'Comportamiento',
 	'Total period - Wrong format' : 'Duración total - Formato incorrecto',
 	'Total period - It must be equal or more than 2' : 'Duración total - Tiene que ser igual o mayor que 2',
+	'Total period - It must be equal or less than 20.000' : 'Duración total - Tiene que ser igual o menor que 20.000',
 	'Daylight period - Wrong format' : 'Duración del día - Formato incorrecto',
 	'Daylight period - It must be equal or more than 1' : 'Duración del día - Tiene que ser igual o mayor que 1',
 	'Night period - Wrong format' : 'Duración de la noche - Formato incorrecto',
@@ -172,7 +173,8 @@ var es = {
 	'Wolves - Be not sleepy for (cycles) - The number of cycles must be less than the time without sleep' : 'Depredadores - Sin sueño durante (ciclos) - El número de ciclos tiene que ser menor que el tiempo que pueden pasar sin dormir',
 	'Lifetime of carrots - Empty field' : 'Tiempo de vida de la comida para presas - Campo vacío',
 	'Lifetime of carrots - Wrong format' : 'Tiempo de vida de la comida para presas - Formato incorrecto',
-	'Execution cycle' : 'Ciclo de ejecución'
+	'Execution cycle' : 'Ciclo de ejecución',
+	'Maximum size excedeed - It must be equal or less than 2000' : 'Tamaño máximo superado - Debe ser igual o menor a 2000'
 };
 
 /**
@@ -188,6 +190,7 @@ var ga = {
 	'Behaviour' : 'Comportamento',
 	'Total period - Wrong format' : 'Duración total - Formato incorrecto',
 	'Total period - It must be equal or more than 2' : 'Duración total - Ten que ser igual ou maior que 2',
+	'Total period - It must be equal or less than 20.000' : 'Duración total - Ten que ser igual ou menor que 20.000',
 	'Daylight period - Wrong format' : 'Duración do día - Formato incorrecto',
 	'Daylight period - It must be equal or more than 1' : 'Duración do día - Ten que ser igual ou maior que 1',
 	'Night period - Wrong format' : 'Duración da noite - Formato incorrecto',
@@ -330,7 +333,8 @@ var ga = {
 	'Wolves - Be not sleepy for (cycles) - The number of cycles must be less than the time without sleep' : 'Depredadores - Sen sono durante (ciclos) - O número de ciclos ten que ser menor que o tempo que poden pasar sen durmir',
 	'Lifetime of carrots - Empty field' : 'Tempo de vida da comida para presas - Campo baleiro',
 	'Lifetime of carrots - Wrong format' : 'Tempo de vida da comida para presas - Formato incorrecto',
-	'Execution cycle' : 'Ciclo de execución'
+	'Execution cycle' : 'Ciclo de execución',
+	'Maximum size excedeed - It must be equal or less than 2000' : 'Tamaño máximo superado - Debe ser menor ou igual que 2000'
 };
 
 /**
@@ -346,6 +350,7 @@ var en = {
 	'Behaviour' : 'Behaviour',
 	'Total period - Wrong format' : 'Total period - Wrong format',
 	'Total period - It must be equal or more than 2' : 'Total period - It must be equal or more than 2',
+	'Total period - It must be equal or less than 20.000' : 'Total period - It must be equal or less than 20.000',
 	'Daylight period - Wrong format' : 'Daylight period - Wrong format',
 	'Daylight period - It must be equal or more than 1' : 'Daylight period - It must be equal or more than 1',
 	'Night period - Wrong format' : 'Night period - Wrong format',
@@ -488,5 +493,6 @@ var en = {
 	'Wolves - Be not sleepy for (cycles) - The number of cycles must be less than the time without sleep' : 'Predators - Be not sleepy for (cycles) - The number of cycles must be less than the time without sleep',
 	'Lifetime of carrots - Empty field' : 'Lifetime of food for preys - Empty field',
 	'Lifetime of carrots - Wrong format' : 'Lifetime of food for preys - Wrong format',
-	'Execution cycle' : 'Execution cycle'
+	'Execution cycle' : 'Execution cycle',
+	'Maximum size excedeed - It must be equal or less than 2000' : 'Maximum size excedeed - It must be equal or less than 2000'
 };

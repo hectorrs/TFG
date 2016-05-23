@@ -163,7 +163,7 @@
 				</div>
 			</div>
 		</div>
-		<div class='row well'>
+		<div class='row'>
 			<div class='col-xs-12 col-sm-10 col-md-10 col-lg-10'>
 				<div class='containerWorld'>
 				<?php for($i = 0; $i < $row; $i++){ ?>

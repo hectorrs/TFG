@@ -238,6 +238,13 @@ function totalPeriod(totalPeriod){
 			document.getElementById('error1').innerHTML = translate('Total period - It must be equal or more than 2', language);
 
 			return false;
+		}else if(totalPeriod > 20000){
+			document.getElementById('totalPeriod').style.borderColor = '#a94442';
+			document.getElementById('totalPeriod').style.borderWidth = '2px';
+			document.getElementById('alert1').className = 'alert alert-danger show';
+			document.getElementById('error1').innerHTML = translate('Total period - It must be equal or less than 20.000', language);
+			
+			return false;
 		}else{
 			document.getElementById('totalPeriod').style.borderColor = '#3c763d';
 			document.getElementById('totalPeriod').style.borderWidth = '2px';
@@ -431,14 +438,26 @@ function dimensions(sizeX, sizeY){
 
 			return false;
 		}else{
-			document.getElementById('sizeX').style.borderColor = '#3c763d';
-			document.getElementById('sizeX').style.borderWidth = '2px';
-			document.getElementById('sizeY').style.borderColor = '#3c763d';
-			document.getElementById('sizeY').style.borderWidth = '2px';
-			document.getElementById('alert4').className = 'hide';
-			document.getElementById('alert5').className = 'hide';
-			
-			return true;
+			if(sizeX * sizeY > 2000){
+				document.getElementById('sizeX').style.borderColor = '#a94442';
+				document.getElementById('sizeX').style.borderWidth = '2px';
+				document.getElementById('alert4').className = 'alert alert-danger show';
+				document.getElementById('error4').innerHTML = translate('Maximum size excedeed - It must be equal or less than 2000' , language);
+
+				document.getElementById('sizeY').style.borderColor = '#a94442';
+				document.getElementById('sizeY').style.borderWidth = '2px';
+
+				return false;
+			}else{
+				document.getElementById('sizeX').style.borderColor = '#3c763d';
+				document.getElementById('sizeX').style.borderWidth = '2px';
+				document.getElementById('sizeY').style.borderColor = '#3c763d';
+				document.getElementById('sizeY').style.borderWidth = '2px';
+				document.getElementById('alert4').className = 'hide';
+				document.getElementById('alert5').className = 'hide';
+				
+				return true;
+			}
 		}
 	}
 }
