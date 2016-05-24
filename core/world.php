@@ -360,8 +360,8 @@
 			$conf['codeRabbit'] = $code;
 
 			// Check syntax error custom elements
-			// exec('php -f testPrey.php', $output);
-			exec('c:\\xampp\\php\\php.exe -f testPrey.php', $output);
+			exec('php -f testPrey.php', $output);
+			// exec('c:\\xampp\\php\\php.exe -f testPrey.php', $output);
 
 			if(count($output) > 0){
 				$err = array();
@@ -393,8 +393,8 @@
 			$conf['codeWolf'] = $code;
 
 			// Check syntax error custom elements
-			// exec('php -f testPredator.php', $output2);
-			exec('c:\\xampp\\php\\php.exe -f testPredator.php', $output2);
+			exec('php -f testPredator.php', $output2);
+			// exec('c:\\xampp\\php\\php.exe -f testPredator.php', $output2);
 
 			if(count($output2) > 0 && $error == 0){
 				$err = array();
